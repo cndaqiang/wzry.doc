@@ -380,31 +380,22 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="python语法注入文件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      [示例]设定游戏的运行时间
+      示例
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="示例">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      [示例]开启礼包功能
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      [示例] 前2局标准对战并移动
+      设定游戏的运行时间
     </span>
   </a>
   
@@ -413,7 +404,25 @@
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      [示例] 指定对战的分路和英雄
+      开启礼包功能
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      前2局标准对战并移动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      指定对战的分路和英雄
     </span>
   </a>
   
@@ -739,31 +748,22 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="python语法注入文件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      [示例]设定游戏的运行时间
+      示例
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="示例">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      [示例]开启礼包功能
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      [示例] 前2局标准对战并移动
+      设定游戏的运行时间
     </span>
   </a>
   
@@ -772,7 +772,25 @@
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      [示例] 指定对战的分路和英雄
+      开启礼包功能
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      前2局标准对战并移动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      指定对战的分路和英雄
     </span>
   </a>
   
@@ -819,11 +837,11 @@
 </thead>
 <tbody>
 <tr>
-<td>WZRY.oneday.txt</td>
+<td><code>WZRY.oneday.txt</code></td>
 <td>用户手动创建。存在该文件时，则本脚本在完成日常对战礼包活动后自动退出程序以及关闭模拟器。里面记录了总对战次数，再次运行脚本时，会读取其中的对战次数。<strong>建议创建</strong>，后续程序自动更新。</td>
 </tr>
 <tr>
-<td>WZRY.TOUCH.txt</td>
+<td><code>WZRY.TOUCH.txt</code></td>
 <td>用户手动创建。存在该文件时，则在5v5的对战过程中,自动移动和平A。可以通过活动的挂机检测。</td>
 </tr>
 </tbody>
@@ -843,43 +861,44 @@
 </thead>
 <tbody>
 <tr>
-<td><code>WZRY.{self.mynode}.临时初始化.txt</code></td>
+<td><code>WZRY.mynode.临时初始化.txt</code></td>
 <td>控制脚本功能：运行时间、<a href="/wzry.doc/guide/libao/">礼包</a>等功能的开启关闭。</td>
 </tr>
 <tr>
-<td><code>WZRY.{self.mynode}.对战前插入.txt</code></td>
+<td><code>WZRY.mynode.对战前插入.txt</code></td>
 <td>控制对局过程：<a href="/wzry.doc/guide/duizhanmoshi/">对战模式(快速对战、标准对战、TOUCH模式)</a>、对战分路、对战英雄、<a href="/wzry.doc/guide/shuliandu/">自动选择熟练度最低的英雄</a>。</td>
 </tr>
 <tr>
-<td><code>WZRY.{self.mynode}.重新设置英雄.txt</code></td>
+<td><code>WZRY.mynode.重新设置英雄.txt</code></td>
 <td>覆盖上面的设定，选择指定英雄</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>替换文件名中的<code>{self.mynode}</code>为需要调控的账户编号<code>mynode</code></strong>, 需要控制哪个账户，就<strong>自己新建</strong>对应mynode的注入文件。</p>
+<p><strong>替换文件名中的<code>mynode</code>为需要调控的账户编号<code>mynode</code></strong>, 需要控制哪个账户，就<strong>自己新建</strong>对应mynode的注入文件。</p>
 </div>
-<h3 id="_3">[示例]设定游戏的运行时间</h3>
-<p>仅在每天的5点到17点执行脚本，在<code>WZRY.{self.mynode}.临时初始化.txt</code> 中填写</p>
+<h2 id="_3">示例</h2>
+<h3 id="_4">设定游戏的运行时间</h3>
+<p>仅在每天的5点到17点执行脚本，在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
 <pre><code>self.对战时间=[5,17]
 </code></pre>
-<p>每天只对战5局，在<code>WZRY.{self.mynode}.临时初始化.txt</code> 中填写</p>
+<p>每天只对战5局，在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
 <pre><code>if self.jinristep &gt;=  5:  self.对战时间[0]=0.1
 if self.jinristep &gt;=  5:  self.对战时间[1]=0.2
 </code></pre>
-<h3 id="_4">[示例]开启礼包功能</h3>
-<p>在<code>WZRY.{self.mynode}.临时初始化.txt</code> 中填写</p>
+<h3 id="_5">开启礼包功能</h3>
+<p>在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
 <pre><code># 礼包功能默认关闭，设置为True，开启礼包功能
 self.启动礼包功能 = True
 </code></pre>
-<h3 id="2">[示例] 前2局标准对战并移动</h3>
-<p>在<code>WZRY.{self.mynode}.对战前插入.txt</code> 中填写</p>
+<h3 id="2">前2局标准对战并移动</h3>
+<p>在<code>WZRY.mynode.对战前插入.txt</code> 中填写</p>
 <pre><code>self.标准模式 = self.触摸对战 = False
 if self.jinristep &lt;= 2: self.标准模式 = self.触摸对战 = True
 </code></pre>
-<h3 id="_5">[示例] 指定对战的分路和英雄</h3>
-<p>在<code>WZRY.{self.mynode}.重新设置英雄.txt</code>中填写下面内容</p>
+<h3 id="_6">指定对战的分路和英雄</h3>
+<p>在<code>WZRY.mynode.重新设置英雄.txt</code>中填写下面内容</p>
 <pre><code>#选择对抗路-八戒对战
 tmp_参战英雄线路=Template(r&quot;tpl1689665490071.png&quot;, record_pos=(-0.315, -0.257), resolution=(960, 540)) #对抗路
 tmp_参战英雄头像=Template(r&quot;tpl1701573854122.png&quot;, record_pos=(-0.315, -0.257), resolution=(960, 540))
