@@ -1,0 +1,39 @@
+site_name: WZRY
+site_url: https://cndaqiang.github.io/wzry.doc/
+repo_url: https://github.com/cndaqiang/wzry.doc/
+nav:
+    - 项目介绍: index.md
+    - 使用手册:
+      - 安装指南: guide/install.md
+      - 配置文件: guide/config.md
+      - 高级功能: guide/file.md
+      - 对战模式: guide/duizhanmoshi.md
+      - 礼包功能: guide/libao.md
+      - 自动选择熟练度: guide/shuliandu.md
+      - 组队教程: guide/zudui.md
+      - 更新资源: guide/upfig.md
+      - 基础的图文教程: guide/tuwen.md
+
+      #- 配置文件BlueStack 多开示例
+      #- BlueStack 多开示例
+      #- 计划任务
+    - 常见问题: QA.md
+    - 提出问题: https://github.com/cndaqiang/WZRY/issues
+    - 关于:
+      - 更新日志: about/update.md
+      - 许可: about/license.md
+theme:
+#  name: gitbook
+  name: material
+
+# markdown拓展语法
+markdown_extensions:
+  - admonition #MkDocs 警告框， 语法https://lifeinzucc.github.io/help/markdown/admonition/
+  - footnotes #脚注
+  - meta #自定义文章元数据
+  - pymdownx.caret #下划线
+  - pymdownx.mark #文本高亮
+  - pymdownx.tilde #删除线
+#  - toc: # 大纲
+#      permalink: true
+#      slugify: !!python/name:pymdownx.slugs.uslugify
