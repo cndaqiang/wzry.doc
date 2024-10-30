@@ -27,7 +27,7 @@ python -m pip install airtest_mobileauto --upgrade
 
 ### 更新资源
 * 通常是不需要更新资源的。
-* **WZRY有特殊活动(比如周年庆)时，可以看看我是否提供了**[资源更新包](https://github.com/cndaqiang/WZRY/issues/8)。
+* **WZRY有特殊活动(比如周年庆)时，可以看看我是否提供了**[资源更新包](/wzry.doc/guide/upfig)。
 * * 也可以自己使用AirTestIDE修改对应的图片。
 * 活动结束后，删除下载的更新资源。
 

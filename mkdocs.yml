@@ -38,3 +38,12 @@ markdown_extensions:
 #  - toc: # 大纲
 #      permalink: true
 #      slugify: !!python/name:pymdownx.slugs.uslugify
+
+# 中文搜索
+# https://cloud-atlas.readthedocs.io/zh-cn/latest/devops/docs/mkdocs/mkdocs_chinese_search.html
+plugins:
+    - search:
+        lang:
+            - en
+            - ja
+        separator: '[\s\-\.]+'

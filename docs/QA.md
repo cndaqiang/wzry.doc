@@ -86,7 +86,7 @@
 logfile:
     0: "result.0.txt"
 ```
-会将`mynode=0`的模拟器日志输出到`result.0.txt`, 提issues时，可以附上这个日志文件。
+会将`mynode=0`的账户的运行日志输出到`result.0.txt`, 提issues时，可以附上这个日志文件。
 
 ## 我想精准控制每一局采用何种模式对战，怎么改配置文件
 * 利用`self.jinristep`变量，代表今天的第几次对战
