@@ -428,9 +428,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法1.   使用字典文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方法1. 使用字典文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      生成字典的方法
+      生成坐标字典的方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法2. [极简] 将坐标直接写进来
     </span>
   </a>
   
@@ -673,9 +697,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法1.   使用字典文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方法1. 使用字典文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      生成字典的方法
+      生成坐标字典的方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法2. [极简] 将坐标直接写进来
     </span>
   </a>
   
@@ -707,8 +755,10 @@
 <li>则在<code>wzry.py</code>所在的文件夹，创建<code>WZRY.mynode.对战前插入.txt</code>文件</li>
 <li><strong>把<code>mynode</code>替换为你的账户编号</strong></li>
 <li>文件为UTF8格式编码, 内容为标准的python语法，不支持超过一行的python语句。</li>
+<li>提前在选英雄界面设置为<em>熟练度</em>排序,而不是<em>赛季常用</em>等选项</li>
 </ul>
-<p>在文件内部填入</p>
+<h2 id="1">方法1.   使用字典文件</h2>
+<p>在<code>WZRY.mynode.对战前插入.txt</code>文件内填入</p>
 <pre><code>字典位置文件=[]
 字典位置文件.append(&quot;字典.中路.android.var_dict_N.yaml&quot;)
 字典位置文件.append(&quot;字典.打野.android.var_dict_N.yaml&quot;)
@@ -724,29 +774,31 @@ for key in [&quot;参战英雄线路&quot;,&quot;参战英雄头像&quot;]: self
 <img alt="" src="/wzry.doc/fig/shuliandu.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>我提供的字典文件<a href="/wzry.doc/file/字典.分路.android.var_dict_N.zip">字典.分路.android.var_dict_N.zip</a>并不会实时更新，
+<p>我提供的字典文件<a href="/wzry.doc/file/字典.分路.android.var_dict_N.zip">字典.分路.android.var_dict_N.zip</a>停止并且不再更新。
 当出现新英雄时，该字典不会选择新英雄。
 如果你的分辨率不是960x540也不要使用这个字典。
-这两种情况你应该生成自己的字典文件，并将"字典.分路.android.var_dict_N.yaml"中的坐标，替换为你的模拟器的坐标。
-仅需替换<code>参战英雄头像</code>和<code>参战英雄线路</code></p>
+这两种情况你应该生成自己的字典文件，并将"字典.分路.android.var_dict_N.yaml"中的<strong>坐标字典</strong>，替换为你的模拟器的坐标。
+仅需替换<code>参战英雄头像</code>和<code>参战英雄线路</code>。</p>
 </div>
-<pre><code>参战英雄头像: !!python/tuple
-- 764
-- 291
-参战英雄线路: !!python/tuple
+<pre><code>参战英雄线路: !!python/tuple
 - 655
 - 25
+参战英雄头像: !!python/tuple
+- 764
+- 291
 </code></pre>
-<h2 id="_2">生成字典的方法</h2>
-<p>在选择英雄界面，使用AirtestIDE截取新英雄头像的中心位置，可以得到这样一串代码</p>
-<pre><code>Template(r&quot;tpl1689665490071.png&quot;, record_pos=(-0.315, -0.257), resolution=(960, 540))
+<h3 id="_2">生成坐标字典的方法</h3>
+<p>在选择英雄界面，使用AirtestIDE截取分路的中心位置</p>
+<p><img alt="" src="/wzry.doc/fig/touch.figure.png" /></p>
+<p>可以得到这样一串代码</p>
+<pre><code>touch(Template(r&quot;tpl1730369563802.png&quot;, record_pos=(-0.314, -0.26), resolution=(960, 540)))
 </code></pre>
-<p>根据我的经验，新英雄的位置就是</p>
-<pre><code>参战英雄头像: !!python/tuple
-- 0.5*960+(-0.315*960)
-- 0.5*540+(-0.257*960)
+<p>根据我的经验，新分路的位置就是<code>record_pos</code>和<code>resolution</code>的组合，即</p>
+<pre><code>参战英雄线路: !!python/tuple
+- 0.5*960+(-0.314*960)
+- 0.5*540+(-0.26*960)
 </code></pre>
-<p>新分路的位置同理。</p>
+<p>新英雄的位置同理，务必选择英雄头像中间的区域，越小<code>record_pos</code>越精准。</p>
 <p>我也将该规则集成到了airtest_mobileauto的模块当中</p>
 <pre><code class="language-python">    def cal_record_pos(self, record_pos=(0.5, 0.5), resolution=(960, 540), keystr=&quot;&quot;, savepos=False):
         x = 0.5*resolution[0]+record_pos[0]*resolution[0]
@@ -757,9 +809,32 @@ for key in [&quot;参战英雄线路&quot;,&quot;参战英雄头像&quot;]: self
             self.save_dict(self.var_dict, self.var_dict_file)
         return pos
 </code></pre>
+<h2 id="2">方法2. [极简] 将坐标直接写进来</h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>在你已经熟练掌握方法1, 并且理解了逻辑之后。其实，我们完全可以把坐标直接写在<code>WZRY.mynode.对战前插入.txt</code>里面。
+对于<strong>分辨率960x540,dpi=169</strong>的模拟器，英雄列表共<code>(9列,5行)</code>，两个相邻英雄的相对位置差约为<code>(0.09,0.11)</code>，
+第1列第1行的英雄为<code>(-0.45,-0.2)</code>,第<code>i</code>列第<code>j</code>行的英雄坐标应该为<code>(-0.54+i*0.09,-0.31+j*0.11)</code>**。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果你使用<strong>分辨率960x540,dpi=169</strong>的模拟器，可以直接抄我下面的配置，填到你的<code>WZRY.mynode.对战前插入.txt</code>中
+对于其他分辨率的设备，自行使用AirtestIDE截图获得<code>record_pos</code>后，并计算相应的坐标规则。</p>
+</div>
+<pre><code>分路名称=[&quot;对抗&quot;, &quot;打野&quot;,&quot;中路&quot;,&quot;发育&quot;,&quot;游走&quot;]
+index=(self.runstep+self.mynode)%len(分路名称)
+TimeECHO(f&quot;本次{self.runstep}对战分路: {分路名称[index]}&quot;)
+#
+# 第(列,行)的英雄位置
+pos=[(6,5),(9,5),(4,4),(9,2),(2,4)][index]
+参战英雄头像坐标=(-0.54+pos[0]*0.09,-0.31+pos[1]*0.11)
+参战英雄线路坐标=[(-0.314, -0.26),  (-0.194, -0.26), (-0.069, -0.26), (0.037, -0.26),  (0.18, -0.26)][index]
+self.Tool.cal_record_pos(参战英雄头像坐标, self.移动端.resolution, &quot;参战英雄头像&quot;, savepos=True)
+self.Tool.cal_record_pos(参战英雄线路坐标, self.移动端.resolution, &quot;参战英雄线路&quot;, savepos=True)
+</code></pre>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>如果是960x540的设备，出现新英雄时，不想使用AirtestIDE，修改一下"字典.分路.android.var_dict_N.yaml"其中的英雄坐标即可，把横向的数字加大一些试试就出来了。</p>
+<p>该功能也可以用于刷特定分路、特定的英雄. 即直接设置<code>pos</code>和<code>参战英雄线路坐标</code>的值。</p>
 </div>
 
 

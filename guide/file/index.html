@@ -419,15 +419,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      指定对战的分路和英雄
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -787,15 +778,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      指定对战的分路和英雄
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -868,10 +850,6 @@
 <td><code>WZRY.mynode.对战前插入.txt</code></td>
 <td>控制对局过程：<a href="/wzry.doc/guide/duizhanmoshi/">对战模式(快速对战、标准对战、TOUCH模式)</a>、对战分路、对战英雄、<a href="/wzry.doc/guide/shuliandu/">自动选择熟练度最低的英雄</a>。</td>
 </tr>
-<tr>
-<td><code>WZRY.mynode.重新设置英雄.txt</code></td>
-<td>覆盖上面的设定，选择指定英雄</td>
-</tr>
 </tbody>
 </table>
 <div class="admonition note">
@@ -897,22 +875,6 @@ self.启动礼包功能 = True
 <pre><code>self.标准模式 = self.触摸对战 = False
 if self.jinristep &lt;= 2: self.标准模式 = self.触摸对战 = True
 </code></pre>
-<h3 id="_6">指定对战的分路和英雄</h3>
-<p>在<code>WZRY.mynode.重新设置英雄.txt</code>中填写下面内容</p>
-<pre><code>#选择对抗路-八戒对战
-tmp_参战英雄线路=Template(r&quot;tpl1689665490071.png&quot;, record_pos=(-0.315, -0.257), resolution=(960, 540)) #对抗路
-tmp_参战英雄头像=Template(r&quot;tpl1701573854122.png&quot;, record_pos=(-0.315, -0.257), resolution=(960, 540))
-#点击屏幕
-self.Tool.existsTHENtouch(tmp_参战英雄线路,&quot;tmp_参战英雄线路&quot;)
-sleep(2)
-self.Tool.existsTHENtouch(tmp_参战英雄头像,&quot;tmp_参战英雄头像&quot;)
-</code></pre>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>其他分辨率、分路、英雄，请进入选英雄界面后，使用AirtestIDE的touch进行截取图。把AirtestIDE截到的图片复制到脚本目录，并替换上面代码中的Template为AirtestIDE生成的Template语法。截取的范围见<code>assets</code>文件夹的<code>tpl1689665490071.png</code>和<code>tpl1701573854122.png</code>,即
-<img alt="" src="https://cndaqiang.github.io/WZRY/assets/tpl1689665490071.png" />
-<img alt="" src="https://cndaqiang.github.io/WZRY/assets/tpl1701573854122.png" /></p>
-</div>
 
 
 

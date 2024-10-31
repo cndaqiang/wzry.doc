@@ -1038,7 +1038,7 @@
 <tr>
 <td>mynode</td>
 <td>0</td>
-<td>本脚本控制的<strong>账户编号</strong>。多排组队时由程序自动生成，<code>mynode=0,1,2,...,totalnode-1</code>。<strong>单排时可以手动设置为任意值</strong>。</td>
+<td>本脚本控制的<strong>账户编号</strong>。<strong>多排组队时不用设置</strong>，由程序自动生成，<code>mynode=0,1,2,...,totalnode-1</code>。<strong>单排时可以手动设置为任意值</strong>。</td>
 </tr>
 <tr>
 <td>multiprocessing</td>
@@ -1048,7 +1048,7 @@
 <tr>
 <td>LINK_dict</td>
 <td>None</td>
-<td>每个账户所在的模拟器ADB地址<code>LINK_dict[mynode]="Android:///ip:端口"</code>。所以账户的ADB地址都要填写。</td>
+<td>每个账户所在的模拟器ADB地址<code>LINK_dict[mynode]="Android:///ip:端口"</code>。所有账户的ADB地址都要配置。</td>
 </tr>
 </tbody>
 </table>
@@ -1062,6 +1062,7 @@ LINK_dict:
 totalnode: 2
 # 多进程配置
 multiprocessing: True
+# 所有账户的ADB地址
 LINK_dict:
     0: Android:///127.0.0.1:5555
     1: Android:///127.0.0.1:5557
@@ -1079,7 +1080,7 @@ LINK_dict:
 <tr>
 <td>logfile</td>
 <td>None</td>
-<td>将每个账户的脚本执行日志输出到指定文件，例如<code>{mynode:"restul.mynode.txt"}</code>。<strong>推荐设置</strong>。在脚本总是报错时，可以开启此参数，将运行日志上传到github提问。</td>
+<td>将每个账户的脚本执行日志输出到指定文件，例如<code>{mynode:"restul.mynode.txt"}</code>。<strong>推荐设置</strong>。在脚本总是报错时，可以开启此参数，将运行日志上传到<a href="https://github.com/cndaqiang/WZRY/issues">github</a>提问。</td>
 </tr>
 <tr>
 <td>figdir</td>
@@ -1169,7 +1170,7 @@ logfile:
 <pre><code>mynode: 0
 LINK_dict:
   0: Android:///127.0.0.1:5555
-LDPlayerdir: D:\GreenSoft\雷电模拟器.9.0.65.0.x64.去广告绿色版\LDPlayer\
+LDPlayerdir: D:\GreenSoft\雷电模拟器.9.0.65.0.x64.去广告绿色版\LDPlayer
 LDPlayer_Instance:
     0: &quot;0&quot;
 </code></pre>
@@ -1206,7 +1207,7 @@ BlueStack_Windows:
 <h4 id="_10">账户编号与模拟器实例编号的区别</h4>
 <ul>
 <li>账户编号mynode是游戏账户的编号，默认从0开始.<code>mynode=0,1,2,...,totalnode-1</code>。</li>
-<li>模拟器实例编号Instance是在模拟器在对应模拟器的多开管理器内部的编号。通常也是<code>0,1,2,...</code></li>
+<li>模拟器实例编号Instance是模拟器的多开管理器内部的编号。通常也是<code>0,1,2,...</code></li>
 <li>两者之间的映射关系通过<code>xxx_Instance</code>数组指定，<code>xxx_Instance</code>是为了控制模拟器的开机关机等模拟器的操作。</li>
 </ul>
 <div class="admonition tips">
@@ -1259,7 +1260,7 @@ LINK_dict:
 <h4 id="docker_1">docker容器的创建与配置</h4>
 <p>依次创建3个docker容器，并映射端口号到<code>5555</code>，分辨率务必设置为<code>960x540</code>,dpi为<code>160</code></p>
 <pre><code>N=0 #1,2
-port=5555 #5575,5585
+port=5555 #5565,5575
 #下面是我在oracle的arm服务器上的配置示例，替换镜像为你自己的服务架构。
 docker run -itd  --privileged \
     -p $port:5555 \
