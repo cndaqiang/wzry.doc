@@ -846,9 +846,9 @@ for key in [&quot;参战英雄线路&quot;,&quot;参战英雄头像&quot;]: self
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>在你已经熟练掌握方法1, 并且理解了逻辑之后。其实，我们完全可以把坐标直接写在<code>WZRY.mynode.对战前插入.txt</code>里面。
-对于<strong>分辨率960x540,dpi=169</strong>的模拟器，英雄列表共<code>(9列,5行)</code>，两个相邻英雄的相对坐标<code>record_pos</code>差约为<code>(0.09,0.11)</code>，
+对于<strong>分辨率960x540,dpi=160</strong>的模拟器，英雄列表共<code>(9列,5行)</code>，两个相邻英雄的相对坐标<code>record_pos</code>差约为<code>(0.09,0.11)</code>，
 第1列第1行的英雄的record_pos为<code>(-0.45,-0.2)</code>,第<code>i</code>列第<code>j</code>行的英雄坐标为<code>(-0.54+i*0.09,-0.31+j*0.11)</code>。
-如果你使用分辨率960x540,dpi=169的模拟器，可以直接抄我下面的配置，填到的<code>WZRY.mynode.对战前插入.txt</code>中</p>
+如果你使用分辨率960x540,dpi=160的模拟器，可以直接抄我下面的配置，填到的<code>WZRY.mynode.对战前插入.txt</code>中</p>
 </div>
 <pre><code>分路名称=[&quot;对抗&quot;, &quot;打野&quot;,&quot;中路&quot;,&quot;发育&quot;,&quot;游走&quot;]
 index=(self.runstep+self.mynode)%len(分路名称)
@@ -868,7 +868,7 @@ self.Tool.cal_record_pos(参战英雄线路坐标, self.移动端.resolution, &q
 </div>
 <h2 id="_4">选择特定分路和英雄</h2>
 <ul>
-<li>对于<strong>分辨率960x540,dpi=169</strong>的模拟器，在<code>WZRY.mynode.对战前插入.txt</code>文件内填入下面内容，则会选中对抗路和第6列第5行的英雄。</li>
+<li>对于<strong>分辨率960x540,dpi=160</strong>的模拟器，在<code>WZRY.mynode.对战前插入.txt</code>文件内填入下面内容，则会选中对抗路和第6列第5行的英雄。</li>
 <li>其他的分辨率，阅读上面的<em>循环选熟练度最低的英雄</em>内容, 就知道怎么操作了。</li>
 </ul>
 <pre><code>分路名称=[&quot;对抗&quot;, &quot;打野&quot;,&quot;中路&quot;,&quot;发育&quot;,&quot;游走&quot;]
