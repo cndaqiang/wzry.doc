@@ -385,42 +385,9 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      示例
+      注入示例: 运行时间
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="示例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      设定游戏的运行时间
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      开启礼包功能
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      前2局标准对战并移动
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -444,7 +411,7 @@
         
   
   <span class="md-ellipsis">
-    对战模式
+    &nbsp;■&nbsp;对战模式
   </span>
   
 
@@ -465,7 +432,7 @@
         
   
   <span class="md-ellipsis">
-    礼包功能
+    &nbsp;■&nbsp;礼包功能
   </span>
   
 
@@ -486,7 +453,7 @@
         
   
   <span class="md-ellipsis">
-    选择英雄
+    &nbsp;■&nbsp;选择英雄
   </span>
   
 
@@ -694,7 +661,7 @@
         
   
   <span class="md-ellipsis">
-    IOS怎么控制手机
+    怎么控制苹果手机
   </span>
   
 
@@ -891,42 +858,9 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      示例
+      注入示例: 运行时间
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="示例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      设定游戏的运行时间
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      开启礼包功能
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      前2局标准对战并移动
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -977,9 +911,8 @@
 </table>
 <h2 id="python">python语法注入文件</h2>
 <ul>
-<li>直接在程序执行的过程中注入python的命令，任意修改脚本的运行模式。</li>
+<li>在程序执行的过程中注入python的命令，随时修改脚本的运行模式。</li>
 <li>标准的python语法，不支持超过一行的python语句。</li>
-<li>目前支持下面三种文件。</li>
 </ul>
 <table>
 <thead>
@@ -991,36 +924,26 @@
 <tbody>
 <tr>
 <td><code>WZRY.mynode.临时初始化.txt</code></td>
-<td>控制脚本功能：运行时间、<a href="/wzry.doc/guide/libao/">礼包</a>等功能的开启关闭。</td>
+<td>控制脚本功能：<a href="./#_3">运行时间</a>、<a href="/wzry.doc/guide/libao/">礼包功能</a>等。</td>
 </tr>
 <tr>
 <td><code>WZRY.mynode.对战前插入.txt</code></td>
-<td>控制对局过程：<a href="/wzry.doc/guide/duizhanmoshi/">对战模式(快速对战、标准对战、TOUCH模式)</a>、对战分路、对战英雄、<a href="/wzry.doc/guide/shuliandu/">自动选择熟练度最低的英雄</a>。</td>
+<td>控制对局过程：<a href="/wzry.doc/guide/duizhanmoshi/">对战模式</a>、<a href="/wzry.doc/guide/shuliandu/">选择英雄</a>等。</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>替换文件名中的<code>mynode</code>为需要调控的账户编号<code>mynode</code></strong>, 需要控制哪个账户，就<strong>自己新建</strong>对应mynode的注入文件。</p>
+<p class="admonition-title">mynode是账户编号</p>
+<p><strong>替换文件名中的<code>mynode</code>为需要调控的账户编号<code>mynode</code></strong>, 需要控制哪个账户，就<strong>自己新建</strong>对应mynode的注入文件。
+<img alt="" src="/wzry.doc/fig/linshi.png" /></p>
 </div>
-<h2 id="_3">示例</h2>
-<h3 id="_4">设定游戏的运行时间</h3>
-<p>仅在每天的5点到17点执行脚本，在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
+<h2 id="_3">注入示例: 运行时间</h2>
+<p>仅在每天的5点到17点执行脚本，在<code>WZRY.mynode.临时初始化.txt</code> </p>
 <pre><code>self.对战时间=[5,17]
 </code></pre>
-<p>每天只对战5局，在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
+<p>每天只对战5局，则在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
 <pre><code>if self.jinristep &gt;=  5:  self.对战时间[0]=0.1
 if self.jinristep &gt;=  5:  self.对战时间[1]=0.2
-</code></pre>
-<h3 id="_5">开启礼包功能</h3>
-<p>在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
-<pre><code># 礼包功能默认关闭，设置为True，开启礼包功能
-self.启动礼包功能 = True
-</code></pre>
-<h3 id="2">前2局标准对战并移动</h3>
-<p>在<code>WZRY.mynode.对战前插入.txt</code> 中填写</p>
-<pre><code>self.标准模式 = self.触摸对战 = False
-if self.jinristep &lt;= 2: self.标准模式 = self.触摸对战 = True
 </code></pre>
 
 
