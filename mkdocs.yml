@@ -57,15 +57,17 @@ theme:
 
 # markdown拓展语法
 markdown_extensions:
-  - admonition #MkDocs 警告框， 语法https://lifeinzucc.github.io/help/markdown/admonition/
+  - admonition #MkDocs 警告框，!!!note 语法https://lifeinzucc.github.io/help/markdown/admonition/
   - footnotes #脚注
+  - codehilite # 代码高亮？
   - meta #自定义文章元数据
   - pymdownx.caret #下划线
   - pymdownx.mark #文本高亮
   - pymdownx.tilde #删除线
-#  - toc: # 大纲
-#      permalink: true
-#      slugify: !!python/name:pymdownx.slugs.uslugify
+  # 开启这个拓展，才能使用中文的标题生成各个标题的链接（锚点），进行跳转引用
+  - toc: # 大纲
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
 
 
 

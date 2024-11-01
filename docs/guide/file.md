@@ -12,23 +12,20 @@
 ## python语法注入文件
 * 在程序执行的过程中注入python的命令,随时修改脚本的运行模式.
 * 标准的python语法,不支持超过一行的python语句.
+* 下面文件名中的mynode代表[账户编号](config.md#mynode与instance的区别), 需要控制哪个账户就创建对应的注入文件.
 
 |文件名|推荐填写的控制命令|
 |-|-|
-|`WZRY.mynode.临时初始化.txt`    | 控制脚本功能：[运行时间](#_3)、[礼包功能](libao.md)等.|
+|`WZRY.mynode.临时初始化.txt`    | 控制脚本功能：[运行时间](#控制运行时间示例)、[礼包功能](libao.md)等.|
 |`WZRY.mynode.对战前插入.txt`    | 控制对局过程：[对战模式](duizhanmoshi.md)、[选择英雄](shuliandu.md)等.|
 
-!!! note    "mynode是账户编号"
-    **替换文件名中的`mynode`为需要调控的账户编号`mynode`**, 需要控制哪个账户,就**自己新建**对应mynode的注入文件.
-    ![](../fig/linshi.png)
 
-
-
-## 注入示例: 运行时间
-仅在每天的5点到17点执行脚本,在`WZRY.mynode.临时初始化.txt` 
+### 控制运行时间示例
+mynode=0的账户，仅在每天的5点到17点执行脚本,在`WZRY.0.临时初始化.txt`中添加
 ```
 self.对战时间=[5,17]
 ```
+![](../fig/linshi.png)
 
 
 每天只对战5局,则在`WZRY.mynode.临时初始化.txt` 中填写
