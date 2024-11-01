@@ -2,8 +2,8 @@
 
 ## 2024-10-17 之后需要更新
 * 活动: 周年庆
-* 更新资源: [update.zip](/wzry.doc/file/2017-12-11-update/update.zip)
+* 更新资源: [update.zip](../file/2017-12-11-update/update.zip)
 
 !!! tip "更新方式,下载后解压到脚本目录"
-    ![update](/wzry.doc/fig/update.png)
+    ![update](../fig/update.png)
 

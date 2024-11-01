@@ -1,6 +1,5 @@
 # 添加url后也会自动生成sitemap.xml，github的push地址
 # 在readthedocs中不要填写site_url
-site_url: https://cndaqiang.github.io/wzry.doc
 #
 site_name: WZRY
 site_author: cndaqiang

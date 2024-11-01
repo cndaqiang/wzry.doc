@@ -82,7 +82,8 @@ LDPlayerdir: D:\GreenSoft\雷电模拟器.9.0.65.0.x64.去广告绿色版\LDPlay
 LDPlayer_Instance:
     0: "0"
 ```
-![](/wzry.doc/fig/ld_instance.png)
+![](../fig/ld_instance.png)
+
 ##### MuMu模拟器
 下图对应配置
 ```
@@ -93,7 +94,7 @@ MuMudir: D:\Program Files\Netease\MuMu Player 12\shell
 MuMu_Instance:
     0: "0"
 ```
-![](/wzry.doc/fig/mumu_instance.png)
+![](../fig/mumu_instance.png)
 ##### BlueStacks
 下图对应配置
 ```
@@ -106,7 +107,7 @@ BlueStack_Instance:
 BlueStack_Windows:
     1: BlueStacks1
 ```
-![](/wzry.doc/fig/blue_instance.png)
+![](../fig/blue_instance.png)
 
 #### BlueStacks窗口名称
 `BlueStack_Windows`参数是每个多开账户的模拟器的名字,可以在多开管理器里修改名称.下图的名称对应的配置为
@@ -115,7 +116,7 @@ BlueStack_Windows:
     0: BlueStacks0
     1: BlueStacks1
 ```
-![](/wzry.doc/fig/blue_win.png)
+![](../fig/blue_win.png)
 
 #### 账户编号与模拟器实例编号的区别
 * 账户编号mynode是游戏账户的编号,默认从0开始.`mynode=0,1,2,...,totalnode-1`.

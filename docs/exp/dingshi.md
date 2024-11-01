@@ -15,10 +15,10 @@ self.限时组队时间=12
 ## windows计划任务
 在代码目录创建`run.bat`,`wzry.oneday.txt`
 ```
-%USERPROFILE%\AppData\Local\anaconda3\python.exe wzry.py  config.win.yaml
+%USERPROFILE%\AppData\Local\anaconda3\python.exe wzry.py config.win.yaml
 ```
 
-![](/wzry.doc/fig/crontab_win.png)
+![](../fig/crontab_win.png)
 
 
 ## linux计划任务

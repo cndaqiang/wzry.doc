@@ -1,5 +1,5 @@
 ## 我只想简单的刷日常活动,没有能力阅读你这么长的教程
-就按照这个[基础的图文教程](/wzry.doc/guide/tuwen/),一步一步的抄作业.
+就按照这个[基础的图文教程](tuwen.md),一步一步的抄作业.
 
 ## 配置python环境
 ### 安装python
@@ -30,7 +30,7 @@ python -m pip install airtest_mobileauto --upgrade
 
 ### 更新资源
 * 通常是不需要更新资源的.
-* **WZRY有特殊活动(比如周年庆)时,可以看看我是否提供了**[资源更新包](/wzry.doc/guide/upfig).
+* **WZRY有特殊活动(比如周年庆)时,可以看看我是否提供了**[资源更新包](upfig.md).
 * * 也可以自己使用AirTestIDE修改对应的图片.
 * 活动结束后,删除下载的更新资源.
 
@@ -49,8 +49,8 @@ python -u wzry.py
 
 ### 方式2. 使用配置文件运行
 !!! Note
-    在使用MuMu模拟器或者直接运行无法连接模拟器时,需要在[配置文件](/wzry.doc/guide/config/)中填写模拟器的ADB地址.
-    详见[配置文件的写法](/wzry.doc/guide/config/).
+    在使用MuMu模拟器或者直接运行无法连接模拟器时,需要在[配置文件](config.md)中填写模拟器的ADB地址.
+    详见[配置文件的写法](config.md).
 
 MuMu模拟器使用配置文件示例
 

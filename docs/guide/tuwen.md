@@ -12,27 +12,27 @@
 ```
 python -m pip install airtest_mobileauto --upgrade
 ```
-![](/wzry.doc/fig/anaconda_powershell_prompt.png)
-![](/wzry.doc/fig/anaconda_powershell_prompt2.png)
+![](../fig/anaconda_powershell_prompt.png)
+![](../fig/anaconda_powershell_prompt2.png)
 
 ## 下载
 * 打开[代码页面](https://github.com/cndaqiang/WZRY), 点击右上角的star,👻立刻获得免费下载资格.
 * 点击[Releases页面](https://github.com/cndaqiang/WZRY/releases),下载最新的`Source code (zip)`.
 * 解压到`WZRY-x.x.x`(x.x.x为版本号).本次演示版本为`WZRY-2.2.0`
-![](/wzry.doc/fig/wzry.png)
+![](../fig/wzry.png)
 
 
 ## 更新资源
-* [更新资源](/wzry.doc/guide/upfig/)会提示是否需要更新资源.
+* [更新资源](upfig.md)会提示是否需要更新资源.
 * **如果没有提示,就不用更新**, 活动结束后,也要删除对应的更新资源.
-* 按照[更新资源](/wzry.doc/guide/upfig/)的提示下载更新包update.zip,并解压到程序目录
-![](/wzry.doc/fig/update.png)
+* 按照[更新资源](upfig.md)的提示下载更新包update.zip,并解压到程序目录
+![](../fig/update.png)
 
 
 ## 安装雷电模拟器
 * **确保你的电脑上没有其他模拟器在运行**
 * **全新安装雷电模拟器并打开**,并设置分辨率,dpi,并开启ADB调试, **参数必须和图片中一致**.
-![](/wzry.doc/fig/LDplayer.png)
+![](../fig/LDplayer.png)
 
 
 ## 安装王者荣耀APP到雷电模拟器
@@ -51,7 +51,7 @@ python -m pip install airtest_mobileauto --upgrade
 cd D:\Download\WZRY-2.2.0
 python -u wzry.py
 ```
-![](/wzry.doc/fig/wzry.ld.png)
+![](../fig/wzry.ld.png)
 
 * 如果最后没有连接成功,请再次按照本流程重新做一遍.
 * **务必使用anaconda, 并设置好模拟器**

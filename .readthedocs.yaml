@@ -12,10 +12,18 @@ build:
     # rust: "1.64"
     # golang: "1.19"
 
+# 这样就可以使用mkdocs的主题了
 mkdocs:
   configuration: mkdocs.yml  # MkDocs 配置文件路径
+  #configuration: mkdocs.readthedocs.yml  # MkDocs 配置文件路径
+
+# Optionally build your docs in additional formats such as PDF and ePub
+# formats:
+#    - pdf
+#    - epub
 
 python:
+  # 在这里填写mkdocs的主题了
   install:
    - requirements: docs/requirements.txt
 

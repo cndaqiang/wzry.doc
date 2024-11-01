@@ -23,11 +23,11 @@ dictfile=self.Tool.read_dict(字典位置文件[此步位置文件])
 for key in ["参战英雄线路","参战英雄头像"]: self.Tool.var_dict[key]=dictfile[key]
 ```
 
-我提前录制了960x540分辨率的字典文件,[字典.分路.android.var_dict_N.zip](/wzry.doc/file/字典.分路.android.var_dict_N.zip).解压在脚本目录
-![](/wzry.doc/fig/shuliandu.png)
+我提前录制了960x540分辨率的字典文件,[字典.分路.android.var_dict_N.zip](../file/字典.分路.android.var_dict_N.zip).解压在脚本目录
+![](../fig/shuliandu.png)
 
 !!! Note
-    我提供的字典文件[字典.分路.android.var_dict_N.zip](/wzry.doc/file/字典.分路.android.var_dict_N.zip)停止并且不再更新.
+    我提供的字典文件[字典.分路.android.var_dict_N.zip](../file/字典.分路.android.var_dict_N.zip)停止并且不再更新.
     当出现新英雄时,该字典不会选择新英雄.
     如果你的分辨率不是960x540也不要使用这个字典.
     这两种情况你应该使用AirtestIDE截取分路的中心位置、英雄头像的中间区域,获得相对坐标`record_pos`,然后计算出你自己的`参战英雄线路`和`参战英雄头像`的绝对坐标.
@@ -35,7 +35,7 @@ for key in ["参战英雄线路","参战英雄头像"]: self.Tool.var_dict[key]=
 #### 计算绝对坐标的方法
 在选择英雄界面,使用AirtestIDE截取分路的中心位置
 
-![](/wzry.doc/fig/touch.figure.png)
+![](../fig/touch.figure.png)
 
 
 可以得到这样一串代码

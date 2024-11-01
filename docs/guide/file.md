@@ -15,12 +15,12 @@
 
 |文件名|推荐填写的控制命令|
 |-|-|
-|`WZRY.mynode.临时初始化.txt`    | 控制脚本功能：[运行时间](./#_3)、[礼包功能](/wzry.doc/guide/libao/)等.|
-|`WZRY.mynode.对战前插入.txt`    | 控制对局过程：[对战模式](/wzry.doc/guide/duizhanmoshi/)、[选择英雄](/wzry.doc/guide/shuliandu/)等.|
+|`WZRY.mynode.临时初始化.txt`    | 控制脚本功能：[运行时间](#_3)、[礼包功能](libao.md)等.|
+|`WZRY.mynode.对战前插入.txt`    | 控制对局过程：[对战模式](duizhanmoshi.md)、[选择英雄](shuliandu.md)等.|
 
 !!! note    "mynode是账户编号"
     **替换文件名中的`mynode`为需要调控的账户编号`mynode`**, 需要控制哪个账户,就**自己新建**对应mynode的注入文件.
-    ![](/wzry.doc/fig/linshi.png)
+    ![](../fig/linshi.png)
 
 
 

@@ -15,7 +15,7 @@
 ## 进入不了大厅
 
 *  **新用户,建议先手动进入大厅.**
-* 活动更新了图标,检查我是否提供了[更新资源](/wzry.doc/guide/upfig/),若我无法及时更新,请自行更新图标. 
+* 活动更新了图标,检查我是否提供了[更新资源](guide/upfig.md),若我无法及时更新,请自行更新图标. 
 * 模拟器的分辨率不是960x540、dpi不是160, 有些图标无法识别,自行调试脚本,不予解决
 * 模拟器配置太低,王者卡住了.
 
@@ -26,7 +26,7 @@
 
 ## 进入不了人机房间
 
-* 活动更新了图标,检查我是否提供了[更新资源](/wzry.doc/guide/upfig/),若我无法及时更新,请自行更新图标. 
+* 活动更新了图标,检查我是否提供了[更新资源](guide/upfig.md),若我无法及时更新,请自行更新图标. 
 * 模拟器的分辨率不是960x540、dpi不是160, 有些图标无法识别,自行调试脚本,不予解决
 
 ## 战令、活跃礼包无法领取
@@ -40,8 +40,8 @@
 
 
 ## 连接不上模拟器
-* 认真阅读[安装指南](/wzry.doc/guide/install/)
-* 配置文件写错了,认真阅读[配置文件](/wzry.doc/guide/config/)
+* 认真阅读[安装指南](guide/install.md)
+* 配置文件写错了,认真阅读[配置文件](guide/config.md)
 * 同时运行的模拟器太多,互相冲突.
 * 模拟器没有开启ADB端口
 * 手机没有通过电脑的ADB信任
@@ -145,7 +145,7 @@ if self.jinristep == 1: self.触摸对战 = True
 * 参考官方教程 https://airtest.doc.io.netease.com/IDEdocs/3.1getting_started/mainwindow_intro/
 * 我就只用AirtestIDE右侧的连接设备,左侧的touch按钮,截图后,把图片复制到`assets`目录,把截图后生成的代码复制到`wzry.py`中进行再次的修改
 
-![airtestIDE](/wzry.doc/fig/airtestguirun.png)
+![airtestIDE]fig/airtestguirun.png)
 
 ## ARM设备无法执行adb
 * 使用linux的用户都是高手,你一眼就能看出这个解决办法
@@ -181,7 +181,7 @@ task_manager = TaskManager(config_file, wzry_task, 'RUN')
 NameError: name 'TaskManager' is not defined
 ```
 
-* 读一下[安装指南](/wzry.doc/guide/install/)啊, 第一条就是安装依赖
+* 读一下[安装指南](guide/install.md)啊, 第一条就是安装依赖
 ```
 python -m pip install airtest_mobileauto --upgrade
 ```
@@ -203,9 +203,9 @@ python -m pip install airtest_mobileauto --upgrade
 * 你如果没有能力阅读本手册,说明这个脚本不适合你.
 
 ## 控制游戏只打N局,打完就退出,怎么操作
-见[高级功能](/wzry.doc/guide/file)
+见[高级功能](guide/file.md)
 ## 控制游戏只在每天的12点~14点进行对局,打完就退出,怎么操作
-见[高级功能](/wzry.doc/guide/file)
+见[高级功能](guide/file.md)
 
 
 ## 如何使用模拟战刷信誉分
@@ -225,12 +225,12 @@ python -m pip install airtest_mobileauto --upgrade
 
 ## 如何刷完任务自动关机/如何自动开启模拟器
 * 在运行目录创建`WZRY.oneday.txt`文件
-* 然后阅读[配置文件](/wzry.doc/guide/config/), 添加模拟器的参数
+* 然后阅读[配置文件](guide/config.md), 添加模拟器的参数
 * 注意区分账户编号与模拟器实例编号的区别
 
 
 ## 小号没有进入大号房间
-配置文件写错了,认真阅读[组队教程](/wzry.doc/guide/zudui/)
+配置文件写错了,认真阅读[组队教程](guide/zudui.md)
 
 * 创建友情关系
 * 更新房主图片
