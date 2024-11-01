@@ -17,5 +17,5 @@ mkdocs:
 
 python:
   install:
-    - requirements: requirements.txt  # 如果有需求文件，通常是 mkdocs 相关的依赖
+   - requirements: docs/requirements.txt
 
