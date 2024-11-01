@@ -1,6 +1,8 @@
-# 添加url后也会自动生成sitemap.xml，github的push地址
-# 也可以push --remote-url https://cndaqiang.github.io/wzry.doc
+# 只要当前的remote 仓库是github的, push page就能自动推到github
+#
 site_url: https://cndaqiang.github.io/wzry.doc
+# 这个url决定了sitemap.xml中的地址，如果不设置, git page上显示的sitemap.xml里面就是空的，设置了就被强制替换为了这个
+# 此外，设置后本地预览的网址总是带一个/wzry.doc/，除了双配置文件，解决不了，不解决了
 #
 site_name: WZRY
 site_author: cndaqiang
