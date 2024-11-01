@@ -1,6 +1,20 @@
 site_name: WZRY
 # 添加url后也会自动生成sitemap.xml，github的push地址
 site_url: https://cndaqiang.github.io/wzry.doc
+site_author: cndaqiang
+copyright: © 2014 cndaqiang
+#需要转换网站上的js到本地，网页统计
+extra_javascript:
+  - javascripts/umami.tongji.js
+
+google_analytics:
+  - UA-109057291-1
+  - cndaqiang.github.io
+
+# 本地调试地址，本机可以访问各个ip, 局域网默认还是无法访问
+dev_addr: '0.0.0.0:8000'
+
+#
 # 主题右上角显示的repo地址，可以设置为开源项目地址
 repo_url: https://github.com/cndaqiang/WZRY
 repo_name: 'cndaqiang/WZRY' # 只是右上角显示的文字内容
@@ -52,13 +66,7 @@ markdown_extensions:
 #      permalink: true
 #      slugify: !!python/name:pymdownx.slugs.uslugify
 
-#需要转换网站上的js到本地，网页统计
-extra_javascript:
-  - javascripts/umami.tongji.js
 
-google_analytics:
-  - UA-109057291-1
-  - auto
 
 extra:
   # https://mkdoc-material.llango.com/setup/setting-up-the-footer/
