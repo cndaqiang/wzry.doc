@@ -80,10 +80,7 @@ extra:
       link: https://cndaqiang.github.io/wzry.doc/sitemap.xml
     - icon: fontawesome/solid/chart-area
       link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/cndaqiang.github.io
-  footer: |
-    <div style="text-align: center;">
-      <a href="https://example.com" target="_blank">点击这里以访问示例链接</a>
-    </div>
+
 
 # 中文搜索
 # https://cloud-atlas.readthedocs.io/zh-cn/latest/devops/docs/mkdocs/mkdocs_chinese_search.html
