@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#说明" class="md-skip">
           Skip to content
         </a>
       
@@ -360,7 +360,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#说明" class="md-nav__link">
     <span class="md-ellipsis">
       说明
     </span>
@@ -369,7 +369,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#控制文件" class="md-nav__link">
     <span class="md-ellipsis">
       控制文件
     </span>
@@ -378,20 +378,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
+  <a href="#python语法注入文件" class="md-nav__link">
     <span class="md-ellipsis">
       python语法注入文件
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+    <nav class="md-nav" aria-label="python语法注入文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#控制运行时间示例" class="md-nav__link">
     <span class="md-ellipsis">
-      注入示例: 运行时间
+      控制运行时间示例
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -833,7 +839,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#说明" class="md-nav__link">
     <span class="md-ellipsis">
       说明
     </span>
@@ -842,7 +848,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#控制文件" class="md-nav__link">
     <span class="md-ellipsis">
       控制文件
     </span>
@@ -851,20 +857,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
+  <a href="#python语法注入文件" class="md-nav__link">
     <span class="md-ellipsis">
       python语法注入文件
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+    <nav class="md-nav" aria-label="python语法注入文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#控制运行时间示例" class="md-nav__link">
     <span class="md-ellipsis">
-      注入示例: 运行时间
+      控制运行时间示例
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -888,13 +900,13 @@
 
   <h1>高级功能</h1>
 
-<h2 id="_1">说明</h2>
+<h2 id="说明">说明<a class="headerlink" href="#说明" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>通过创建一些文件来精细的操作代码的运行</strong></li>
 <li><strong>所有文件都放在<code>wzry.py</code>所在路径,采用txt结尾,UTF8格式编码</strong></li>
 <li>这些文件不参与仓库同步.</li>
 </ul>
-<h2 id="_2">控制文件</h2>
+<h2 id="控制文件">控制文件<a class="headerlink" href="#控制文件" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -913,10 +925,11 @@
 </tr>
 </tbody>
 </table>
-<h2 id="python">python语法注入文件</h2>
+<h2 id="python语法注入文件">python语法注入文件<a class="headerlink" href="#python语法注入文件" title="Permanent link">&para;</a></h2>
 <ul>
 <li>在程序执行的过程中注入python的命令,随时修改脚本的运行模式.</li>
 <li>标准的python语法,不支持超过一行的python语句.</li>
+<li>下面文件名中的mynode代表<a href="../config/#mynode与instance的区别">账户编号</a>, 需要控制哪个账户就创建对应的注入文件.</li>
 </ul>
 <table>
 <thead>
@@ -928,7 +941,7 @@
 <tbody>
 <tr>
 <td><code>WZRY.mynode.临时初始化.txt</code></td>
-<td>控制脚本功能：<a href="#_3">运行时间</a>、<a href="../libao/">礼包功能</a>等.</td>
+<td>控制脚本功能：<a href="#控制运行时间示例">运行时间</a>、<a href="../libao/">礼包功能</a>等.</td>
 </tr>
 <tr>
 <td><code>WZRY.mynode.对战前插入.txt</code></td>
@@ -936,19 +949,16 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">mynode是账户编号</p>
-<p><strong>替换文件名中的<code>mynode</code>为需要调控的账户编号<code>mynode</code></strong>, 需要控制哪个账户,就<strong>自己新建</strong>对应mynode的注入文件.
-<img alt="" src="../../fig/linshi.png" /></p>
-</div>
-<h2 id="_3">注入示例: 运行时间</h2>
-<p>仅在每天的5点到17点执行脚本,在<code>WZRY.mynode.临时初始化.txt</code> </p>
-<pre><code>self.对战时间=[5,17]
-</code></pre>
+<h3 id="控制运行时间示例">控制运行时间示例<a class="headerlink" href="#控制运行时间示例" title="Permanent link">&para;</a></h3>
+<p>mynode=0的账户，仅在每天的5点到17点执行脚本,在<code>WZRY.0.临时初始化.txt</code>中添加</p>
+<div class="codehilite"><pre><span></span><code>self.对战时间=[5,17]
+</code></pre></div>
+
+<p><img alt="" src="../../fig/linshi.png" /></p>
 <p>每天只对战5局,则在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
-<pre><code>if self.jinristep &gt;=  5:  self.对战时间[0]=0.1
-if self.jinristep &gt;=  5:  self.对战时间[1]=0.2
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="mi">5</span>:<span class="w">  </span><span class="nv">self</span>.对战时间[<span class="mi">0</span>]<span class="o">=</span><span class="mi">0</span>.<span class="mi">1</span>
+<span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="mi">5</span>:<span class="w">  </span><span class="nv">self</span>.对战时间[<span class="mi">1</span>]<span class="o">=</span><span class="mi">0</span>.<span class="mi">2</span>
+</code></pre></div>
 
 
 

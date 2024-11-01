@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#说明" class="md-skip">
           Skip to content
         </a>
       
@@ -673,7 +673,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#说明" class="md-nav__link">
     <span class="md-ellipsis">
       说明
     </span>
@@ -682,7 +682,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#通用本脚本自带了每天定时刷任务的功能" class="md-nav__link">
     <span class="md-ellipsis">
       [通用]本脚本自带了每天定时刷任务的功能
     </span>
@@ -691,7 +691,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
+  <a href="#windows计划任务" class="md-nav__link">
     <span class="md-ellipsis">
       windows计划任务
     </span>
@@ -700,7 +700,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
+  <a href="#linux计划任务" class="md-nav__link">
     <span class="md-ellipsis">
       linux计划任务
     </span>
@@ -833,7 +833,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#说明" class="md-nav__link">
     <span class="md-ellipsis">
       说明
     </span>
@@ -842,7 +842,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#通用本脚本自带了每天定时刷任务的功能" class="md-nav__link">
     <span class="md-ellipsis">
       [通用]本脚本自带了每天定时刷任务的功能
     </span>
@@ -851,7 +851,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
+  <a href="#windows计划任务" class="md-nav__link">
     <span class="md-ellipsis">
       windows计划任务
     </span>
@@ -860,7 +860,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
+  <a href="#linux计划任务" class="md-nav__link">
     <span class="md-ellipsis">
       linux计划任务
     </span>
@@ -888,31 +888,33 @@
 
   <h1>定时执行脚本</h1>
 
-<h2 id="_1">说明</h2>
+<h2 id="说明">说明<a class="headerlink" href="#说明" title="Permanent link">&para;</a></h2>
 <ul>
 <li>该页面是介绍我的使用经验,不是教程</li>
 <li>随着软件更新,这些经验可能不再适用</li>
 <li>谨慎阅读</li>
 </ul>
-<h2 id="_2">[通用]本脚本自带了每天定时刷任务的功能</h2>
+<h2 id="通用本脚本自带了每天定时刷任务的功能">[通用]本脚本自带了每天定时刷任务的功能<a class="headerlink" href="#通用本脚本自带了每天定时刷任务的功能" title="Permanent link">&para;</a></h2>
 <p>只要程序不退出,脚本会自动刷任务,把下面内容填到<code>WZRY.mynode.临时初始化.txt</code></p>
-<pre><code>#每日自动对战时间范围
+<div class="codehilite"><pre><span></span><code>#每日自动对战时间范围
 self.对战时间=[5,17]
 #组队的时间限制
 self.限时组队时间=12
-</code></pre>
-<h2 id="windows">windows计划任务</h2>
+</code></pre></div>
+
+<h2 id="windows计划任务">windows计划任务<a class="headerlink" href="#windows计划任务" title="Permanent link">&para;</a></h2>
 <p>在代码目录创建<code>run.bat</code>,<code>wzry.oneday.txt</code></p>
-<pre><code>%USERPROFILE%\AppData\Local\anaconda3\python.exe wzry.py config.win.yaml
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c">%USERPROFILE%\AppData\Local\anaconda3\python.exe wzry.py config.win.yaml</span>
+</code></pre></div>
+
 <p><img alt="" src="../../fig/crontab_win.png" /></p>
-<h2 id="linux">linux计划任务</h2>
+<h2 id="linux计划任务">linux计划任务<a class="headerlink" href="#linux计划任务" title="Permanent link">&para;</a></h2>
 <p>在代码目录创建<code>run.sh</code>,<code>wzry.oneday.txt</code></p>
-<pre><code>50 4 * * * pkill -f 'wzry.py'
-51 4 * * * /usr/lib/android-sdk/platform-tools/adb kill-server
-0 5 * * * cd /home/cndaqiang/soft/WZRY &amp;&amp; /bin/bash run.sh
-50 8 * * 1-5 pkill -f 'wzry.py'
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="mf">50</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pkill</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="err">&#39;</span><span class="n">wzry</span><span class="mf">.</span><span class="n">py</span><span class="err">&#39;</span>
+<span class="mf">51</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">/</span><span class="nb">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="ow">and</span><span class="n">roid</span><span class="o">-</span><span class="n">sdk</span><span class="o">/</span><span class="n">platform</span><span class="o">-</span><span class="kr">to</span><span class="n">ols</span><span class="o">/</span><span class="n">adb</span><span class="w"> </span><span class="n">kill</span><span class="o">-</span><span class="n">server</span>
+<span class="mf">0</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cndaqiang</span><span class="o">/</span><span class="n">soft</span><span class="o">/</span><span class="n">WZRY</span><span class="w"> </span><span class="err">&amp;&amp;</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span><span class="w"> </span><span class="kr">run</span><span class="mf">.</span><span class="n">sh</span>
+<span class="mf">50</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="o">-</span><span class="mf">5</span><span class="w"> </span><span class="n">pkill</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="err">&#39;</span><span class="n">wzry</span><span class="mf">.</span><span class="n">py</span><span class="err">&#39;</span>
+</code></pre></div>
 
 
 

@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#说明" class="md-skip">
           Skip to content
         </a>
       
@@ -381,7 +381,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#说明" class="md-nav__link">
     <span class="md-ellipsis">
       说明
     </span>
@@ -391,7 +391,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#根据对局次数选择对战模式" class="md-nav__link">
     <span class="md-ellipsis">
       根据对局次数选择对战模式
     </span>
@@ -821,7 +821,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#说明" class="md-nav__link">
     <span class="md-ellipsis">
       说明
     </span>
@@ -831,7 +831,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#根据对局次数选择对战模式" class="md-nav__link">
     <span class="md-ellipsis">
       根据对局次数选择对战模式
     </span>
@@ -864,32 +864,35 @@
 
   <h1>&nbsp;■&nbsp;对战模式</h1>
 
-<h2 id="_1">说明</h2>
+<h2 id="说明">说明<a class="headerlink" href="#说明" title="Permanent link">&para;</a></h2>
 <p>若需调整第<code>mynode</code>个账户的对战模式</p>
 <ul>
 <li>则在<code>wzry.py</code>所在的文件夹,创建<code>WZRY.mynode.对战前插入.txt</code>文件</li>
-<li><strong>把<code>mynode</code>替换为你的账户编号</strong></li>
+<li><strong>把<code>mynode</code>替换为你的<a href="../config/#mynode与instance的区别">账户编号</a></strong></li>
 <li>文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.</li>
 </ul>
-<p>目前支持的对战模式包括</p>
-<pre><code>self.青铜段位 = False # True 则进行青铜人机,False进行星耀人机
+<div class="admonition info">
+<p class="admonition-title">目前支持的对战模式包括</p>
+<p><pre><code>
+self.青铜段位 = False # True 则进行青铜人机,False进行星耀人机
 self.标准模式 = False # True 则进行标准人机,False进行快速人机
 self.触摸对战 = False # True 则在对战过程自动平移、平A、买装备等真人的操作.
-self.对战模式 = &quot;5v5匹配&quot; # 目前支持 &quot;5v5匹配&quot;(人机5v5), &quot;模拟战&quot;(王者模拟战)
+self.对战模式 = "5v5匹配" # 目前支持 "5v5匹配"(人机5v5), "模拟战"(王者模拟战)
 self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
-</code></pre>
+</code></pre></p>
+</div>
 <ul>
 <li><strong>更多模式请阅读wzry.py</strong></li>
 </ul>
-<h3 id="_2">根据对局次数选择对战模式</h3>
+<h3 id="根据对局次数选择对战模式">根据对局次数选择对战模式<a class="headerlink" href="#根据对局次数选择对战模式" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>self.runstep</code>,本脚本累计运行了多少次对战</li>
 <li><code>self.jinristep</code>,本脚本此次运行了多少次对战</li>
 </ul>
 <p>示例前2局标准对战并移动, 在<code>WZRY.mynode.对战前插入.txt</code> 中填写</p>
-<pre><code>self.标准模式 = self.触摸对战 = False
-if self.jinristep &lt;= 2: self.标准模式 = self.触摸对战 = True
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="nv">self</span>.标准模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span>.触摸对战<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">False</span>
+<span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span>:<span class="w"> </span><span class="nv">self</span>.标准模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span>.触摸对战<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">True</span>
+</code></pre></div>
 
 
 

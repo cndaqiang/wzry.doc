@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#说明" class="md-skip">
           Skip to content
         </a>
       
@@ -589,7 +589,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#说明" class="md-nav__link">
     <span class="md-ellipsis">
       说明
     </span>
@@ -598,7 +598,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#战令经验来源" class="md-nav__link">
     <span class="md-ellipsis">
       战令经验来源
     </span>
@@ -607,7 +607,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#最大化经验获取" class="md-nav__link">
     <span class="md-ellipsis">
       最大化经验获取
     </span>
@@ -616,7 +616,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#如何使用本脚本快速刷战令的本期任务" class="md-nav__link">
     <span class="md-ellipsis">
       如何使用本脚本快速刷战令的本期任务
     </span>
@@ -833,7 +833,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#说明" class="md-nav__link">
     <span class="md-ellipsis">
       说明
     </span>
@@ -842,7 +842,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#战令经验来源" class="md-nav__link">
     <span class="md-ellipsis">
       战令经验来源
     </span>
@@ -851,7 +851,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#最大化经验获取" class="md-nav__link">
     <span class="md-ellipsis">
       最大化经验获取
     </span>
@@ -860,7 +860,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#如何使用本脚本快速刷战令的本期任务" class="md-nav__link">
     <span class="md-ellipsis">
       如何使用本脚本快速刷战令的本期任务
     </span>
@@ -888,13 +888,13 @@
 
   <h1>战令</h1>
 
-<h2 id="_1">说明</h2>
+<h2 id="说明">说明<a class="headerlink" href="#说明" title="Permanent link">&para;</a></h2>
 <ul>
 <li>该页面是介绍我的使用经验,不是教程</li>
 <li>随着软件更新,这些经验可能不再适用</li>
 <li>谨慎阅读</li>
 </ul>
-<h2 id="_2">战令经验来源</h2>
+<h2 id="战令经验来源">战令经验来源<a class="headerlink" href="#战令经验来源" title="Permanent link">&para;</a></h2>
 <ul>
 <li>王者荣耀本日、本周任务、有上限20000/周,使用本脚本挂机模式,一上午就能达到20000/周的目标</li>
 <li>王者荣耀本期战令任务,没有上限,特别活动有时间限制.</li>
@@ -902,7 +902,7 @@
 <li>当王者荣耀本日、本周任务获得的经验达到上限后,营地也无法继续领取经验礼包.
 <img alt="" src="../../fig/zhanling.png" /></li>
 </ul>
-<h2 id="_3">最大化经验获取</h2>
+<h2 id="最大化经验获取">最大化经验获取<a class="headerlink" href="#最大化经验获取" title="Permanent link">&para;</a></h2>
 <ul>
 <li>王者荣耀日活战令经验上限20000/周</li>
 <li>达到该上限后,王者营地也无法领取</li>
@@ -911,16 +911,18 @@
 <li>周末才开启<code>wzry.py</code>脚本内的日活礼包功能.</li>
 </ul>
 <p><code>WZRY.mynode.临时初始化.txt</code>内容为</p>
-<pre><code>self.启动礼包功能 = True
+<div class="codehilite"><pre><span></span><code>self.启动礼包功能 = True
 self.每日任务礼包=self.Tool.time_getweek() &gt; 5
-# 我是在Bluestack中运行的王者荣耀, Bluestack运行王者营地会闪退,因此我没有开启`wzry.py`的营地功能
+<span class="gh">#</span> 我是在Bluestack中运行的王者荣耀, Bluestack运行王者营地会闪退,因此我没有开启`wzry.py`的营地功能
 self.外置礼包_王者营地 = False
-# 而是在MuMu里面安装的王者营地,单独使用`wzyd.py`领取MuMu里面的营地礼包
-</code></pre>
+<span class="gh">#</span> 而是在MuMu里面安装的王者营地,单独使用`wzyd.py`领取MuMu里面的营地礼包
+</code></pre></div>
+
 <p><code>WZRY.mynode.对战前插入.txt</code>内容为</p>
-<pre><code>if self.组队模式 and self.Tool.time_getweek() &lt; 6: self.触摸对战 = True
-</code></pre>
-<h2 id="_4">如何使用本脚本快速刷战令的本期任务</h2>
+<div class="codehilite"><pre><span></span><code>if self.组队模式 and self.Tool.time_getweek() &lt; 6: self.触摸对战 = True
+</code></pre></div>
+
+<h2 id="如何使用本脚本快速刷战令的本期任务">如何使用本脚本快速刷战令的本期任务<a class="headerlink" href="#如何使用本脚本快速刷战令的本期任务" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
