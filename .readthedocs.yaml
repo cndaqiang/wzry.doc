@@ -17,8 +17,9 @@ mkdocs:
   configuration: mkdocs.yml  # MkDocs 配置文件路径
 
 # 构建格式
-formats:
-  - pdf
+#pdf 依赖的库往往不好用。不用pdf
+#formats:
+#  - pdf
 
 # Optionally build your docs in additional formats such as PDF and ePub
 # formats:
