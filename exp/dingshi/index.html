@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://cndaqiang.github.io/wzry.doc/guide/install/">
+        <link rel="canonical" href="https://cndaqiang.github.io/wzry.doc/exp/dingshi/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../link/">
       
       
-        <link rel="next" href="../config/">
+        <link rel="next" href="../../about/update/">
       
       
       <link rel="icon" href="../../fig/favicon.jpg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>安装指南 - WZRY</title>
+        <title>定时执行脚本 - WZRY</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              安装指南
+              定时执行脚本
             
           </span>
         </div>
@@ -232,19 +232,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -258,7 +256,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             使用手册
@@ -269,28 +267,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    安装指南
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../guide/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -299,150 +279,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      我只想简单的刷日常活动，没有能力阅读你这么长的教程
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      配置python环境
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="配置python环境">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      安装python
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      安装依赖
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adb" class="md-nav__link">
-    <span class="md-ellipsis">
-      设置模拟器分辨率和ADB调试。
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      下载代码
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="下载代码">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      核心程序
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      更新资源
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      运行方式
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="运行方式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      方式1. 直接运行
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      方式2. 使用配置文件运行
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-vscodepycharm" class="md-nav__link">
-    <span class="md-ellipsis">
-      方式3. 在vscode/pycharm等软件中
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -455,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/" class="md-nav__link">
+      <a href="../../guide/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -476,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file/" class="md-nav__link">
+      <a href="../../guide/file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -497,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../duizhanmoshi/" class="md-nav__link">
+      <a href="../../guide/duizhanmoshi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -518,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../libao/" class="md-nav__link">
+      <a href="../../guide/libao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -539,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../shuliandu/" class="md-nav__link">
+      <a href="../../guide/shuliandu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -560,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../zudui/" class="md-nav__link">
+      <a href="../../guide/zudui/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -581,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upfig/" class="md-nav__link">
+      <a href="../../guide/upfig/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tuwen/" class="md-nav__link">
+      <a href="../../guide/tuwen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,17 +503,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -691,7 +529,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             经验分享
@@ -705,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exp/zhanling/" class="md-nav__link">
+      <a href="../zhanling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exp/moniqi/" class="md-nav__link">
+      <a href="../moniqi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -768,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exp/link/" class="md-nav__link">
+      <a href="../link/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -786,10 +624,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../exp/dingshi/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    定时执行脚本
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -798,6 +654,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      [通用]本脚本自带了每天定时刷任务的功能
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      windows计划任务
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      linux计划任务
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -921,126 +831,36 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      我只想简单的刷日常活动，没有能力阅读你这么长的教程
+      说明
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      配置python环境
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="配置python环境">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      安装python
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      安装依赖
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adb" class="md-nav__link">
-    <span class="md-ellipsis">
-      设置模拟器分辨率和ADB调试。
+      [通用]本脚本自带了每天定时刷任务的功能
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#windows" class="md-nav__link">
     <span class="md-ellipsis">
-      下载代码
+      windows计划任务
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="下载代码">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      核心程序
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      更新资源
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#linux" class="md-nav__link">
     <span class="md-ellipsis">
-      运行方式
+      linux计划任务
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="运行方式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      方式1. 直接运行
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      方式2. 使用配置文件运行
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-vscodepycharm" class="md-nav__link">
-    <span class="md-ellipsis">
-      方式3. 在vscode/pycharm等软件中
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1062,88 +882,33 @@
   
 
 
-  <h1>安装指南</h1>
+  <h1>定时执行脚本</h1>
 
-<h2 id="_1">我只想简单的刷日常活动，没有能力阅读你这么长的教程</h2>
-<p>就按照这个<a href="/wzry.doc/guide/tuwen/">基础的图文教程</a>，一步一步的抄作业。</p>
-<h2 id="python">配置python环境</h2>
-<h3 id="python_1">安装python</h3>
+<h2 id="_1">说明</h2>
 <ul>
-<li>推荐使用Anaconda。</li>
-<li>Anaconda 安装包可以到<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">TUNA</a>下载。</li>
+<li>该页面是介绍我的使用经验，不是教程</li>
+<li>随着软件更新，这些经验可能不再适用</li>
+<li>谨慎阅读</li>
 </ul>
-<h3 id="_2">安装依赖</h3>
-<ul>
-<li>使用Anaconda的用户可以打开<code>Anaconda Powershell Prompt</code>后执行</li>
-</ul>
-<pre><code>python -m pip install airtest_mobileauto --upgrade
+<h2 id="_2">[通用]本脚本自带了每天定时刷任务的功能</h2>
+<p>只要程序不退出，脚本会自动刷任务，把下面内容填到<code>WZRY.mynode.临时初始化.txt</code></p>
+<pre><code>#每日自动对战时间范围
+self.对战时间=[5,17]
+#组队的时间限制
+self.限时组队时间=12
 </code></pre>
-<h2 id="adb">设置模拟器分辨率和ADB调试。</h2>
-<ul>
-<li>推荐使用<a href="https://github.com/cndaqiang/WZRY/issues/23">BlueStack/LDPlayer/MuMu模拟器</a>。</li>
-<li>模拟器的分辨率设置为<code>960x540</code>,dpi为<code>160</code>。</li>
-<li>安装WZRY. <strong>并手动进入游戏大厅</strong>。</li>
-</ul>
-<h2 id="_3">下载代码</h2>
-<h3 id="_4">核心程序</h3>
-<ul>
-<li>从Releases页面下载最新的<a href="https://github.com/cndaqiang/WZRY/releases">Source code (zip)</a>。</li>
-<li>解压到<code>WZRY-x.x.x</code>(x.x.x为版本号)。</li>
-</ul>
-<h3 id="_5">更新资源</h3>
-<ul>
-<li>通常是不需要更新资源的。</li>
-<li><strong>WZRY有特殊活动(比如周年庆)时，可以看看我是否提供了</strong><a href="/wzry.doc/guide/upfig">资源更新包</a>。</li>
-<li>
-<ul>
-<li>也可以自己使用AirTestIDE修改对应的图片。</li>
-</ul>
-</li>
-<li>活动结束后，删除下载的更新资源。</li>
-</ul>
-<h2 id="_6">运行方式</h2>
-<h3 id="1">方式1. 直接运行</h3>
-<ul>
-<li>当使用BlueStack/LDPlayer等默认ADB是<code>127.0.0.1:5555</code>的模拟器时可以直接运行脚本。</li>
-<li>使用Anaconda的用户可以打开<code>Anaconda Powershell Prompt</code>后执行</li>
-</ul>
-<pre><code># 进入代码目录
-cd D:\Download\WZRY-2.1.2
-# 执行脚本
-python -u wzry.py
+<h2 id="windows">windows计划任务</h2>
+<p>在代码目录创建<code>run.bat</code>,<code>wzry.oneday.txt</code></p>
+<pre><code>%USERPROFILE%\AppData\Local\anaconda3\python.exe wzry.py  config.win.yaml
 </code></pre>
-<h3 id="2">方式2. 使用配置文件运行</h3>
-<ul>
-<li>在使用MuMu模拟器或者直接运行无法连接模拟器时，需要配置模拟器的ADB地址。</li>
-<li>在模拟器的设置里查看ADB的地址, 例如MuMu模拟器通常是<code>127.0.0.1:16384</code></li>
-<li>创建<code>config.win.yaml</code>,填入下面内容</li>
-</ul>
-<pre><code>mynode: 0
-LINK_dict:
-    0: Android:///127.0.0.1:16384
-logfile:
-    0: result.0.txt
+<p><img alt="" src="/wzry.doc/fig/crontab_win.png" /></p>
+<h2 id="linux">linux计划任务</h2>
+<p>在代码目录创建<code>run.sh</code>,<code>wzry.oneday.txt</code></p>
+<pre><code>50 4 * * * pkill -f 'wzry.py'
+51 4 * * * /usr/lib/android-sdk/platform-tools/adb kill-server
+0 5 * * * cd /home/cndaqiang/soft/WZRY &amp;&amp; /bin/bash run.sh
+50 8 * * 1-5 pkill -f 'wzry.py'
 </code></pre>
-<ul>
-<li>运行脚本</li>
-</ul>
-<pre><code>python -u wzry.py config.win.yaml
-</code></pre>
-<h3 id="3-vscodepycharm">方式3. 在vscode/pycharm等软件中</h3>
-<ul>
-<li>创建配置文件<code>config.win.yaml</code>,同上</li>
-<li>修改<code>wzry.py</code>中的<code>config_file = ""</code>为<code>config_file = "config.win.yaml"</code></li>
-</ul>
-<pre><code>if __name__ == &quot;__main__&quot;:
-    # 如果使用vscode/pycharm/AirTestIDE等图形界面程序运行此脚本
-    # 在此处指定config_file=config文件
-    config_file = &quot;&quot; # 修改此处
-    if len(sys.argv) &gt; 1:
-        config_file = str(sys.argv[1])
-</code></pre>
-<ul>
-<li>运行</li>
-</ul>
 
 
 
