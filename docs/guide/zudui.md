@@ -28,11 +28,12 @@ self.房主房间 = Template(r"tpl1700284856473.png", record_pos=(0.312, -0.17),
 
 ### 截图流程
 
+* 阅读[Airtest截取英雄分路坐标的流程](shuliandu.md#计算绝对坐标的步骤)
 * 大号小号分别创建房间
 * 打开AirTestIDE,连接小号的账户,截取屏幕右侧大号的`房主头像` 这个区域
-![房主头像](https://cndaqiang.github.io/WZRY/assets/tpl1716782981770.png)
+![房主头像](../fig/tpl1716782981770.png)
 * 点击进房后,可以继续截图`房主房间`这个区域
-![房主房间](https://cndaqiang.github.io/WZRY/assets/tpl1700284856473.png)
+![房主房间](../fig//tpl1700284856473.png)
 
 !!! tip
     仅更新**房主头像**就行了,我自己的账户就没有更新*房主房间*这张图.

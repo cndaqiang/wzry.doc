@@ -65,13 +65,13 @@
 原因
 
 * 抄错了控制文件
-* 控制文件名写错了: 要把`WZRY.mynode.对战前插入.txt`中的`mynode`替换为本脚本控制的**账户编号**
+* 控制文件名写错了: 要把`WZRY.mynode.对战前插入.txt`中的`mynode`替换为本脚本控制的 **[账户编号](guide/file.md)**
 * 如`WZRY.1.对战前插入.txt`,`WZRY.0.对战前插入.txt`分别调整第1和第0个王者账号.
-* 理解错了mynode和模拟器内部编号Instance的含义,把模拟器内部的编号当成了mynode.
+* 理解错了[mynode和模拟器内部编号Instance的含义](guide/config.md#mynode与instance的区别),把模拟器内部的编号当成了mynode.
 
 
 ## 触摸对战不生效
-* 配置文件写错了,同上*python语法注入文件没有生效*
+* 配置文件写错了,同上[python语法注入文件没有生效](#python语法注入文件没有生效)
 
 开启触摸对战的几种方法
 
@@ -99,6 +99,7 @@ logfile:
 
 ## 我想精准控制每一局采用何种模式对战,怎么改配置文件
 * 利用`self.jinristep`变量,代表今天的第几次对战
+* 好好读[使用手册.对战模式](guide/duizhanmoshi.md)
 
 以第一次进行青铜+标准人机+触摸对战为例,在`WZRY.mynode.对战前插入.txt`中插入标准的python语法
 ```
@@ -133,7 +134,7 @@ if self.jinristep == 1: self.触摸对战 = True
 * 两年来没收到受到处罚
 
 !!! wannring
-    模拟器太卡,网络太卡,导致没有及时点击确认匹配,会扣信誉分.模拟器的配置别给的太低.
+    模拟器太卡, 网络太卡, 以及某些时间段匹配时间过长，有极小的概率没有及时点击确认匹配, 会扣信誉分. 
     root的设备运行体验服,被被封号.关闭模拟器的root选项.
     在模拟器上安装微信,有封号风险.别安装微信.
 
@@ -143,6 +144,7 @@ if self.jinristep == 1: self.触摸对战 = True
 该问题不属于本仓库的范围
 
 * 参考官方教程 https://airtest.doc.io.netease.com/IDEdocs/3.1getting_started/mainwindow_intro/
+* 阅读[截取英雄分路坐标的流程](guide/shuliandu.md#计算绝对坐标的步骤)
 * 我就只用AirtestIDE右侧的连接设备,左侧的touch按钮,截图后,把图片复制到`assets`目录,把截图后生成的代码复制到`wzry.py`中进行再次的修改
 ![airtestIDE](fig/airtestguirun.png)
 
@@ -224,9 +226,9 @@ python -m pip install airtest_mobileauto --upgrade
 
 ## 如何刷完任务自动关机/如何自动开启模拟器
 * 在运行目录创建`WZRY.oneday.txt`文件
-* 然后阅读[配置文件](guide/config.md), 添加模拟器的参数
-* 注意区分账户编号与模拟器实例编号的区别
-
+* 然后阅读[配置文件](guide/config.md#模拟器参数), 添加模拟器的参数
+* 注意区分[账户编号与模拟器实例编号的区别](guide/config.md#mynode与instance的区别)
+* 按照[控制运行时间示例](guide/file.md#控制运行时间示例)将你希望的时间填到`WZRY.mynode.临时初始化.txt`
 
 ## 小号没有进入大号房间
 配置文件写错了,认真阅读[组队教程](guide/zudui.md)
