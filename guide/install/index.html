@@ -1117,16 +1117,19 @@ cd D:\Download\WZRY-2.1.2
 python -u wzry.py
 </code></pre>
 <h3 id="2">方式2. 使用配置文件运行</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在使用MuMu模拟器或者直接运行无法连接模拟器时,需要在<a href="/wzry.doc/guide/config/">配置文件</a>中填写模拟器的ADB地址.
+详见<a href="/wzry.doc/guide/config/">配置文件的写法</a>.</p>
+</div>
+<p>MuMu模拟器使用配置文件示例</p>
 <ul>
-<li>在使用MuMu模拟器或者直接运行无法连接模拟器时,需要配置模拟器的ADB地址.</li>
-<li>在模拟器的设置里查看ADB的地址, 例如MuMu模拟器通常是<code>127.0.0.1:16384</code></li>
+<li>在模拟器的设置里查看ADB的地址为<code>127.0.0.1:16384</code></li>
 <li>创建<code>config.win.yaml</code>,填入下面内容</li>
 </ul>
 <pre><code>mynode: 0
 LINK_dict:
     0: Android:///127.0.0.1:16384
-logfile:
-    0: result.0.txt
 </code></pre>
 <ul>
 <li>运行脚本</li>
