@@ -79,6 +79,8 @@ extra:
       link: https://github.com/cndaqiang/WZRY
     - icon: fontawesome/solid/square-rss
       link: https://cndaqiang.github.io/wzry.doc/sitemap.xml
+    - icon: fontawesome/solid/book
+      link: https://wzrydoc.rtfd.io
     - icon: fontawesome/solid/chart-area
       link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/cndaqiang.github.io
   analytics:
