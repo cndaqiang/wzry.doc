@@ -144,8 +144,7 @@ if self.jinristep == 1: self.触摸对战 = True
 
 * 参考官方教程 https://airtest.doc.io.netease.com/IDEdocs/3.1getting_started/mainwindow_intro/
 * 我就只用AirtestIDE右侧的连接设备,左侧的touch按钮,截图后,把图片复制到`assets`目录,把截图后生成的代码复制到`wzry.py`中进行再次的修改
-
-![airtestIDE]fig/airtestguirun.png)
+![airtestIDE](fig/airtestguirun.png)
 
 ## ARM设备无法执行adb
 * 使用linux的用户都是高手,你一眼就能看出这个解决办法
