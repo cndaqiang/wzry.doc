@@ -1,11 +1,15 @@
 ## 说明
-若需调整第`mynode`个账户，循环选择对战分路，并选择熟练度最低的英雄
+若需调整第`mynode`个账户的对战分路和英雄
 
-* 则在`wzry.py`所在的文件夹，创建`WZRY.mynode.对战前插入.txt`文件
+* 则在`wzry.py`所在的文件夹,创建`WZRY.mynode.对战前插入.txt`文件
 * **把`mynode`替换为你的账户编号**
-* 文件为UTF8格式编码, 内容为标准的python语法，不支持超过一行的python语句。
+* 文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.
 
-在文件内部填入
+## 循环选熟练度最低的英雄
+* 提前在选英雄界面设置为*熟练度*排序,而不是*赛季常用*等选项
+
+### 方法1.   使用字典文件
+在`WZRY.mynode.对战前插入.txt`文件内填入
 ```
 字典位置文件=[]
 字典位置文件.append("字典.中路.android.var_dict_N.yaml")
@@ -19,52 +23,78 @@ dictfile=self.Tool.read_dict(字典位置文件[此步位置文件])
 for key in ["参战英雄线路","参战英雄头像"]: self.Tool.var_dict[key]=dictfile[key]
 ```
 
-我提前录制了960x540分辨率的字典文件，[字典.分路.android.var_dict_N.zip](/wzry.doc/file/字典.分路.android.var_dict_N.zip)。解压在脚本目录
+我提前录制了960x540分辨率的字典文件,[字典.分路.android.var_dict_N.zip](/wzry.doc/file/字典.分路.android.var_dict_N.zip).解压在脚本目录
 ![](/wzry.doc/fig/shuliandu.png)
 
 !!! Note
-    我提供的字典文件[字典.分路.android.var_dict_N.zip](/wzry.doc/file/字典.分路.android.var_dict_N.zip)并不会实时更新，
-    当出现新英雄时，该字典不会选择新英雄。
-    如果你的分辨率不是960x540也不要使用这个字典。
-    这两种情况你应该生成自己的字典文件，并将"字典.分路.android.var_dict_N.yaml"中的坐标，替换为你的模拟器的坐标。
-    仅需替换`参战英雄头像`和`参战英雄线路`
+    我提供的字典文件[字典.分路.android.var_dict_N.zip](/wzry.doc/file/字典.分路.android.var_dict_N.zip)停止并且不再更新.
+    当出现新英雄时,该字典不会选择新英雄.
+    如果你的分辨率不是960x540也不要使用这个字典.
+    这两种情况你应该使用AirtestIDE截取分路的中心位置、英雄头像的中间区域,获得相对坐标`record_pos`,然后计算出你自己的`参战英雄线路`和`参战英雄头像`的绝对坐标.
+
+#### 计算绝对坐标的方法
+在选择英雄界面,使用AirtestIDE截取分路的中心位置
+
+![](/wzry.doc/fig/touch.figure.png)
+
+
+可以得到这样一串代码
 
 ```
-参战英雄头像: !!python/tuple
-- 764
-- 291
+touch(Template(r"tpl1730369563802.png", record_pos=(-0.314, -0.26), resolution=(960, 540)))
+```
+
+根据我的经验,新分路的位置就是`record_pos`和`resolution`的组合,即
+```
 参战英雄线路: !!python/tuple
-- 655
-- 25
+- 0.5*960+(-0.314*960)
+- 0.5*540+(-0.26*960)
 ```
 
-## 生成字典的方法
-在选择英雄界面，使用AirtestIDE截取新英雄头像的中心位置，可以得到这样一串代码
-```
-Template(r"tpl1689665490071.png", record_pos=(-0.315, -0.257), resolution=(960, 540))
-```
-
-根据我的经验，新英雄的位置就是
-```
-参战英雄头像: !!python/tuple
-- 0.5*960+(-0.315*960)
-- 0.5*540+(-0.257*960)
-```
-新分路的位置同理。
+新英雄的位置同理,务必选择英雄头像中间的区域,越小`record_pos`越精准.
 
 
-我也将该规则集成到了airtest_mobileauto的模块当中
-```python
-    def cal_record_pos(self, record_pos=(0.5, 0.5), resolution=(960, 540), keystr="", savepos=False):
-        x = 0.5*resolution[0]+record_pos[0]*resolution[0]
-        y = 0.5*resolution[1]+record_pos[1]*resolution[0]
-        pos = (x, y)
-        if savepos and len(keystr) > 0:
-            self.var_dict[keystr] = pos
-            self.save_dict(self.var_dict, self.var_dict_file)
-        return pos
-```
 
+
+### 方法2. [极简] 计算坐标规则
 !!! tip
-    如果是960x540的设备，出现新英雄时，不想使用AirtestIDE，修改一下"字典.分路.android.var_dict_N.yaml"其中的英雄坐标即可，把横向的数字加大一些试试就出来了。
-    
+    在你已经熟练掌握方法1, 并且理解了逻辑之后.其实,我们完全可以把坐标直接写在`WZRY.mynode.对战前插入.txt`里面.
+    对于**分辨率960x540,dpi=160**的模拟器,英雄列表共`(9列,5行)`,两个相邻英雄的相对坐标`record_pos`差约为`(0.09,0.11)`,
+    第1列第1行的英雄的record_pos为`(-0.45,-0.2)`,第`i`列第`j`行的英雄坐标为`(-0.54+i*0.09,-0.31+j*0.11)`.
+    如果你使用分辨率960x540,dpi=160的模拟器,可以直接抄我下面的配置,填到的`WZRY.mynode.对战前插入.txt`中
+
+```
+分路名称=["对抗", "打野","中路","发育","游走"]
+index=(self.runstep+self.mynode)%len(分路名称)
+TimeECHO(f"本次{self.runstep}对战分路: {分路名称[index]}")
+#
+# 第(列,行)的英雄位置
+pos=[(6,5),(9,5),(4,4),(9,2),(2,4)][index]
+参战英雄头像坐标=(-0.54+pos[0]*0.09,-0.31+pos[1]*0.11)
+参战英雄线路坐标=[(-0.314, -0.26),  (-0.194, -0.26), (-0.069, -0.26), (0.037, -0.26),  (0.18, -0.26)][index]
+self.Tool.cal_record_pos(参战英雄头像坐标, self.移动端.resolution, "参战英雄头像", savepos=True)
+self.Tool.cal_record_pos(参战英雄线路坐标, self.移动端.resolution, "参战英雄线路", savepos=True)
+```
+
+!!! Danger
+    该功能也可以用于刷特定分路、特定的英雄(此时不能按照熟练度排序). 即直接设置`pos`和`参战英雄线路坐标`的值.
+    **其他分辨率的设备,请使用AirtestIDE截图获得`record_pos`后,计算自己的坐标规则**.
+
+
+## 选择特定分路和英雄
+* 对于**分辨率960x540,dpi=160**的模拟器,在`WZRY.mynode.对战前插入.txt`文件内填入下面内容,则会选中对抗路和第6列第5行的英雄.
+* 其他的分辨率,阅读上面的*循环选熟练度最低的英雄*内容, 就知道怎么操作了.
+
+
+```
+分路名称=["对抗", "打野","中路","发育","游走"]
+index=1
+TimeECHO(f"本次{self.runstep}对战分路: {分路名称[index]}")
+#
+# 第(列,行)的英雄位置
+pos=(6,5)
+参战英雄头像坐标=(-0.54+pos[0]*0.09,-0.31+pos[1]*0.11)
+参战英雄线路坐标=[(-0.314, -0.26),  (-0.194, -0.26), (-0.069, -0.26), (0.037, -0.26),  (0.18, -0.26)][index]
+self.Tool.cal_record_pos(参战英雄头像坐标, self.移动端.resolution, "参战英雄头像", savepos=True)
+self.Tool.cal_record_pos(参战英雄线路坐标, self.移动端.resolution, "参战英雄线路", savepos=True)
+```
