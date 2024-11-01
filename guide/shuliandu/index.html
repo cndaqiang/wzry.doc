@@ -947,9 +947,9 @@
 <h2 id="_1">说明</h2>
 <p>若需调整第<code>mynode</code>个账户的对战分路和英雄</p>
 <ul>
-<li>则在<code>wzry.py</code>所在的文件夹，创建<code>WZRY.mynode.对战前插入.txt</code>文件</li>
+<li>则在<code>wzry.py</code>所在的文件夹,创建<code>WZRY.mynode.对战前插入.txt</code>文件</li>
 <li><strong>把<code>mynode</code>替换为你的账户编号</strong></li>
-<li>文件为UTF8格式编码, 内容为标准的python语法，不支持超过一行的python语句。</li>
+<li>文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.</li>
 </ul>
 <h2 id="_2">循环选熟练度最低的英雄</h2>
 <ul>
@@ -968,34 +968,34 @@ TimeECHO(f&quot;本步{self.runstep}使用字典文件{字典位置文件[此步
 dictfile=self.Tool.read_dict(字典位置文件[此步位置文件])
 for key in [&quot;参战英雄线路&quot;,&quot;参战英雄头像&quot;]: self.Tool.var_dict[key]=dictfile[key]
 </code></pre>
-<p>我提前录制了960x540分辨率的字典文件，<a href="/wzry.doc/file/字典.分路.android.var_dict_N.zip">字典.分路.android.var_dict_N.zip</a>。解压在脚本目录
+<p>我提前录制了960x540分辨率的字典文件,<a href="/wzry.doc/file/字典.分路.android.var_dict_N.zip">字典.分路.android.var_dict_N.zip</a>.解压在脚本目录
 <img alt="" src="/wzry.doc/fig/shuliandu.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>我提供的字典文件<a href="/wzry.doc/file/字典.分路.android.var_dict_N.zip">字典.分路.android.var_dict_N.zip</a>停止并且不再更新。
-当出现新英雄时，该字典不会选择新英雄。
-如果你的分辨率不是960x540也不要使用这个字典。
-这两种情况你应该使用AirtestIDE截取分路的中心位置、英雄头像的中间区域，获得相对坐标<code>record_pos</code>，然后计算出你自己的<code>参战英雄线路</code>和<code>参战英雄头像</code>的绝对坐标。</p>
+<p>我提供的字典文件<a href="/wzry.doc/file/字典.分路.android.var_dict_N.zip">字典.分路.android.var_dict_N.zip</a>停止并且不再更新.
+当出现新英雄时,该字典不会选择新英雄.
+如果你的分辨率不是960x540也不要使用这个字典.
+这两种情况你应该使用AirtestIDE截取分路的中心位置、英雄头像的中间区域,获得相对坐标<code>record_pos</code>,然后计算出你自己的<code>参战英雄线路</code>和<code>参战英雄头像</code>的绝对坐标.</p>
 </div>
 <h4 id="_3">计算绝对坐标的方法</h4>
-<p>在选择英雄界面，使用AirtestIDE截取分路的中心位置</p>
+<p>在选择英雄界面,使用AirtestIDE截取分路的中心位置</p>
 <p><img alt="" src="/wzry.doc/fig/touch.figure.png" /></p>
 <p>可以得到这样一串代码</p>
 <pre><code>touch(Template(r&quot;tpl1730369563802.png&quot;, record_pos=(-0.314, -0.26), resolution=(960, 540)))
 </code></pre>
-<p>根据我的经验，新分路的位置就是<code>record_pos</code>和<code>resolution</code>的组合，即</p>
+<p>根据我的经验,新分路的位置就是<code>record_pos</code>和<code>resolution</code>的组合,即</p>
 <pre><code>参战英雄线路: !!python/tuple
 - 0.5*960+(-0.314*960)
 - 0.5*540+(-0.26*960)
 </code></pre>
-<p>新英雄的位置同理，务必选择英雄头像中间的区域，越小<code>record_pos</code>越精准。</p>
+<p>新英雄的位置同理,务必选择英雄头像中间的区域,越小<code>record_pos</code>越精准.</p>
 <h3 id="2">方法2. [极简] 计算坐标规则</h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>在你已经熟练掌握方法1, 并且理解了逻辑之后。其实，我们完全可以把坐标直接写在<code>WZRY.mynode.对战前插入.txt</code>里面。
-对于<strong>分辨率960x540,dpi=160</strong>的模拟器，英雄列表共<code>(9列,5行)</code>，两个相邻英雄的相对坐标<code>record_pos</code>差约为<code>(0.09,0.11)</code>，
-第1列第1行的英雄的record_pos为<code>(-0.45,-0.2)</code>,第<code>i</code>列第<code>j</code>行的英雄坐标为<code>(-0.54+i*0.09,-0.31+j*0.11)</code>。
-如果你使用分辨率960x540,dpi=160的模拟器，可以直接抄我下面的配置，填到的<code>WZRY.mynode.对战前插入.txt</code>中</p>
+<p>在你已经熟练掌握方法1, 并且理解了逻辑之后.其实,我们完全可以把坐标直接写在<code>WZRY.mynode.对战前插入.txt</code>里面.
+对于<strong>分辨率960x540,dpi=160</strong>的模拟器,英雄列表共<code>(9列,5行)</code>,两个相邻英雄的相对坐标<code>record_pos</code>差约为<code>(0.09,0.11)</code>,
+第1列第1行的英雄的record_pos为<code>(-0.45,-0.2)</code>,第<code>i</code>列第<code>j</code>行的英雄坐标为<code>(-0.54+i*0.09,-0.31+j*0.11)</code>.
+如果你使用分辨率960x540,dpi=160的模拟器,可以直接抄我下面的配置,填到的<code>WZRY.mynode.对战前插入.txt</code>中</p>
 </div>
 <pre><code>分路名称=[&quot;对抗&quot;, &quot;打野&quot;,&quot;中路&quot;,&quot;发育&quot;,&quot;游走&quot;]
 index=(self.runstep+self.mynode)%len(分路名称)
@@ -1010,13 +1010,13 @@ self.Tool.cal_record_pos(参战英雄线路坐标, self.移动端.resolution, &q
 </code></pre>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>该功能也可以用于刷特定分路、特定的英雄(此时不能按照熟练度排序). 即直接设置<code>pos</code>和<code>参战英雄线路坐标</code>的值。
-<strong>其他分辨率的设备，请使用AirtestIDE截图获得<code>record_pos</code>后，计算自己的坐标规则</strong>。</p>
+<p>该功能也可以用于刷特定分路、特定的英雄(此时不能按照熟练度排序). 即直接设置<code>pos</code>和<code>参战英雄线路坐标</code>的值.
+<strong>其他分辨率的设备,请使用AirtestIDE截图获得<code>record_pos</code>后,计算自己的坐标规则</strong>.</p>
 </div>
 <h2 id="_4">选择特定分路和英雄</h2>
 <ul>
-<li>对于<strong>分辨率960x540,dpi=160</strong>的模拟器，在<code>WZRY.mynode.对战前插入.txt</code>文件内填入下面内容，则会选中对抗路和第6列第5行的英雄。</li>
-<li>其他的分辨率，阅读上面的<em>循环选熟练度最低的英雄</em>内容, 就知道怎么操作了。</li>
+<li>对于<strong>分辨率960x540,dpi=160</strong>的模拟器,在<code>WZRY.mynode.对战前插入.txt</code>文件内填入下面内容,则会选中对抗路和第6列第5行的英雄.</li>
+<li>其他的分辨率,阅读上面的<em>循环选熟练度最低的英雄</em>内容, 就知道怎么操作了.</li>
 </ul>
 <pre><code>分路名称=[&quot;对抗&quot;, &quot;打野&quot;,&quot;中路&quot;,&quot;发育&quot;,&quot;游走&quot;]
 index=1

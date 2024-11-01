@@ -936,7 +936,7 @@
 <ul>
 <li>组队方式是通过亲密好友<strong>自动进房</strong>不用验证实现的</li>
 <li><strong>大号(房主)</strong>自动进入房间</li>
-<li>小号进入人机房间后，开始检测游戏界面，当发现有<strong>房主房间</strong>这个图片时，会自动进房间。</li>
+<li>小号进入人机房间后,开始检测游戏界面,当发现有<strong>房主房间</strong>这个图片时,会自动进房间.</li>
 <li>组队前需要小号和大号建立<strong>亲密关系</strong>(王者的亲密好友进房免验证)</li>
 <li><strong>不满足上述条件无法组队</strong></li>
 </ul>
@@ -952,25 +952,25 @@ LINK_dict:
     1: Android:///127.0.0.1:5557
 </code></pre>
 <h2 id="_3">更新图片资源</h2>
-<p>源代码中，房主的头像是我的账号，你要替换代码中<code>self.房主头像</code>和<code>self.房主房间</code>对应静态图片为你的。</p>
+<p>源代码中,房主的头像是我的账号,你要替换代码中<code>self.房主头像</code>和<code>self.房主房间</code>对应静态图片为你的.</p>
 <pre><code>self.房主头像 = Template(r&quot;tpl1716782981770.png&quot;, record_pos=(0.354, -0.164), resolution=(960, 540), target_pos=9)
 self.房主房间 = Template(r&quot;tpl1700284856473.png&quot;, record_pos=(0.312, -0.17), resolution=(1136, 640), target_pos=2)
 </code></pre>
 <h3 id="_4">截图流程</h3>
 <ul>
 <li>大号小号分别创建房间</li>
-<li>打开AirTestIDE，连接小号的账户，截取屏幕右侧大号的<code>房主头像</code> 这个区域
+<li>打开AirTestIDE,连接小号的账户,截取屏幕右侧大号的<code>房主头像</code> 这个区域
 <img alt="房主头像" src="https://cndaqiang.github.io/WZRY/assets/tpl1716782981770.png" /></li>
-<li>点击进房后，可以继续截图<code>房主房间</code>这个区域
+<li>点击进房后,可以继续截图<code>房主房间</code>这个区域
 <img alt="房主房间" src="https://cndaqiang.github.io/WZRY/assets/tpl1700284856473.png" /></li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>仅更新<strong>房主头像</strong>就行了，我自己的账户就没有更新<em>房主房间</em>这张图。</p>
+<p>仅更新<strong>房主头像</strong>就行了,我自己的账户就没有更新<em>房主房间</em>这张图.</p>
 </div>
 <h3 id="_5">更新图片</h3>
 <ul>
-<li>将airtest截到的图片放到脚本目录，并复制AirtestIDE生成的<code>Template(r"tplXXXXX.png",xxxx)</code>的代码，添加到<code>WZRY.图片更新.txt</code></li>
+<li>将airtest截到的图片放到脚本目录,并复制AirtestIDE生成的<code>Template(r"tplXXXXX.png",xxxx)</code>的代码,添加到<code>WZRY.图片更新.txt</code></li>
 <li>将<code>, target_pos=9</code>和<code>, target_pos=2</code>分别添加到<code>self.房主头像</code>和<code>self.房主房间</code>后面</li>
 <li>即最终你的<code>WZRY.图片更新.txt</code>中的内容应该类似下面的内容</li>
 </ul>
@@ -979,15 +979,15 @@ self.房主房间 = Template(r&quot;tpl1700284856473.png&quot;, record_pos=(0.31
 </code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>最简单的流程，把截到的房主头像图片，重命名为<code>tpl1716782981770.png</code>放到<code>assets</code>文件夹也是可以的。
-但是不推荐这样做。因为如果你想要更新wzry.py为最新的代码,还需要重复上面的重命名操作。
-而写在<code>WZRY.图片更新.txt</code>，不受wzry.py更新的影响。</p>
+<p>最简单的流程,把截到的房主头像图片,重命名为<code>tpl1716782981770.png</code>放到<code>assets</code>文件夹也是可以的.
+但是不推荐这样做.因为如果你想要更新wzry.py为最新的代码,还需要重复上面的重命名操作.
+而写在<code>WZRY.图片更新.txt</code>,不受wzry.py更新的影响.</p>
 </div>
 <h2 id="_6">限制组队的时间</h2>
 <p>在每一个的账户的<code>WZRY.mynode.临时初始化.txt</code>中都插入</p>
 <pre><code># 所有账户的对战时间
 self.对战时间=[0.1,23.0]
-# 12点之前组队，12点之后，各自刷各自的
+# 12点之前组队,12点之后,各自刷各自的
 self.限时组队时间=12
 </code></pre>
 

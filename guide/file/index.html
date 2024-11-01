@@ -887,8 +887,8 @@
 <h2 id="_1">说明</h2>
 <ul>
 <li><strong>通过创建一些文件来精细的操作代码的运行</strong></li>
-<li><strong>所有文件都放在<code>wzry.py</code>所在路径，采用txt结尾，UTF8格式编码</strong></li>
-<li>这些文件不参与仓库同步。</li>
+<li><strong>所有文件都放在<code>wzry.py</code>所在路径,采用txt结尾,UTF8格式编码</strong></li>
+<li>这些文件不参与仓库同步.</li>
 </ul>
 <h2 id="_2">控制文件</h2>
 <table>
@@ -901,18 +901,18 @@
 <tbody>
 <tr>
 <td><code>WZRY.oneday.txt</code></td>
-<td>用户手动创建。存在该文件时，则本脚本在完成日常对战礼包活动后自动退出程序以及关闭模拟器。里面记录了总对战次数，再次运行脚本时，会读取其中的对战次数。<strong>建议创建</strong>，后续程序自动更新。</td>
+<td>用户手动创建.存在该文件时,则本脚本在完成日常对战礼包活动后自动退出程序以及关闭模拟器.里面记录了总对战次数,再次运行脚本时,会读取其中的对战次数.<strong>建议创建</strong>,后续程序自动更新.</td>
 </tr>
 <tr>
 <td><code>WZRY.TOUCH.txt</code></td>
-<td>用户手动创建。存在该文件时，则在5v5的对战过程中,自动移动和平A。可以通过活动的挂机检测。</td>
+<td>用户手动创建.存在该文件时,则在5v5的对战过程中,自动移动和平A.可以通过活动的挂机检测.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="python">python语法注入文件</h2>
 <ul>
-<li>在程序执行的过程中注入python的命令，随时修改脚本的运行模式。</li>
-<li>标准的python语法，不支持超过一行的python语句。</li>
+<li>在程序执行的过程中注入python的命令,随时修改脚本的运行模式.</li>
+<li>标准的python语法,不支持超过一行的python语句.</li>
 </ul>
 <table>
 <thead>
@@ -924,24 +924,24 @@
 <tbody>
 <tr>
 <td><code>WZRY.mynode.临时初始化.txt</code></td>
-<td>控制脚本功能：<a href="./#_3">运行时间</a>、<a href="/wzry.doc/guide/libao/">礼包功能</a>等。</td>
+<td>控制脚本功能：<a href="./#_3">运行时间</a>、<a href="/wzry.doc/guide/libao/">礼包功能</a>等.</td>
 </tr>
 <tr>
 <td><code>WZRY.mynode.对战前插入.txt</code></td>
-<td>控制对局过程：<a href="/wzry.doc/guide/duizhanmoshi/">对战模式</a>、<a href="/wzry.doc/guide/shuliandu/">选择英雄</a>等。</td>
+<td>控制对局过程：<a href="/wzry.doc/guide/duizhanmoshi/">对战模式</a>、<a href="/wzry.doc/guide/shuliandu/">选择英雄</a>等.</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">mynode是账户编号</p>
-<p><strong>替换文件名中的<code>mynode</code>为需要调控的账户编号<code>mynode</code></strong>, 需要控制哪个账户，就<strong>自己新建</strong>对应mynode的注入文件。
+<p><strong>替换文件名中的<code>mynode</code>为需要调控的账户编号<code>mynode</code></strong>, 需要控制哪个账户,就<strong>自己新建</strong>对应mynode的注入文件.
 <img alt="" src="/wzry.doc/fig/linshi.png" /></p>
 </div>
 <h2 id="_3">注入示例: 运行时间</h2>
-<p>仅在每天的5点到17点执行脚本，在<code>WZRY.mynode.临时初始化.txt</code> </p>
+<p>仅在每天的5点到17点执行脚本,在<code>WZRY.mynode.临时初始化.txt</code> </p>
 <pre><code>self.对战时间=[5,17]
 </code></pre>
-<p>每天只对战5局，则在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
+<p>每天只对战5局,则在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
 <pre><code>if self.jinristep &gt;=  5:  self.对战时间[0]=0.1
 if self.jinristep &gt;=  5:  self.对战时间[1]=0.2
 </code></pre>
