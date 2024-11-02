@@ -1,15 +1,18 @@
 # 只要当前的remote 仓库是github的, push page就能自动推到github
 #
-site_url: https://cndaqiang.github.io/wzry.doc
+site_url: https://cndaqiang.github.io/wzry.doc/
 # 这个url决定了sitemap.xml中的地址，如果不设置, git page上显示的sitemap.xml里面就是空的，设置了就被强制替换为了这个
 # 此外，设置后本地预览的网址总是带一个/wzry.doc/，除了双配置文件，解决不了，不解决了
 #
-site_name: WZRY
+site_name: WZRY.doc
 site_author: cndaqiang
-copyright: © 2014 cndaqiang
+copyright: Copyright &copy; 2024 cndaqiang
 #需要转换网站上的js到本地，网页统计
 extra_javascript:
+  # umami 统计
   - javascripts/umami.tongji.js
+  # 卜算子统计，可以，但是只能在md文件中填写 span id="busuanzi_value_site_pv"等纯html内容进行解析
+  # - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
 
 
 # 本地调试地址，本机可以访问各个ip, 局域网默认还是无法访问
@@ -53,7 +56,8 @@ theme:
   # 主题页面的log
   logo: favicon.ico
   icon:
-    repo: fontawesome/brands/github  
+    repo: fontawesome/brands/github
+
 
 # markdown拓展语法
 markdown_extensions:
@@ -85,9 +89,12 @@ extra:
       link: https://wzrydoc.rtfd.io
     - icon: fontawesome/solid/chart-area
       link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/cndaqiang.github.io
+
   analytics:
-  - provider: google
-  - G-7G7TFCTQJY
+    provider: google
+    property: G-7G7TFCTQJY
+#    property: UA-109057291-1
+#G-7G7TFCTQJY
 
 # 中文搜索
 # https://cloud-atlas.readthedocs.io/zh-cn/latest/devops/docs/mkdocs/mkdocs_chinese_search.html

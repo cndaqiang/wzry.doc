@@ -38,3 +38,8 @@
 * [停止更新]KPL观赛战令观赛领取经验升级
 * [停止更新]战队商店领取英雄碎片
 * [停止更新]商城每日免费钻石碎片随机礼包
+
+
+<span id="busuanzi_container_site_pv">
+	本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
