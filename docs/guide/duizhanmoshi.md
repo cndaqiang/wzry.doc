@@ -13,7 +13,6 @@
     self.组队模式 = True # 是否进行组队, totalnode > 1时默认组队.
     </code></pre>
 
-* **更多模式请阅读wzry.py**
 
 ### 根据对局次数选择对战模式
 * `self.runstep`,本脚本累计运行了多少次对战

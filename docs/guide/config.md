@@ -60,7 +60,7 @@ logfile:
 
 |参数|默认值|含义|
 |-|-|-|
-|LDPlayerdir|None|雷电模拟器控制程序`ldconsole.exe`所在的文件夹,例如`D:\GreenSoft\雷电模拟器.9.0.65.0.x64.去广告绿色版\LDPlayer\`|
+|LDPlayerdir|None|雷电模拟器控制程序`ldconsole.exe`所在的文件夹,例如`D:\GreenSoft\雷电模拟器.9.0.65.0.x64.去广告绿色版\LDPlayer`|
 |MuMudir|None|MuMu模拟器控制程序`MuMuManager.exe`所在的文件夹,例如`D:\Program Files\Netease\MuMu Player 12\shell`|
 |BlueStackdir|None|BlueStack模拟器控制程序`HD-Player.exe`所在的文件夹,例如`C:\Program Files\BlueStacks_nxt`|
 |LDPlayer_Instance|{mynode:"mynode"}|每个账户所在的模拟器在雷电多开管理器内部的**模拟器实例(instance)编号**, 用于启动、关闭mynode账户所在的模拟器实例. [mynode与instance的区别](#mynode与instance的区别).|

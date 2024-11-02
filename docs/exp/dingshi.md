@@ -13,7 +13,7 @@ self.限时组队时间=12
 ```
 
 ## windows计划任务
-在代码目录创建`run.bat`,`wzry.oneday.txt`
+在代码目录创建`wzry.oneday.txt`, 以及`run.bat`,内容为
 ```
 %USERPROFILE%\AppData\Local\anaconda3\python.exe wzry.py config.win.yaml
 ```
@@ -22,7 +22,7 @@ self.限时组队时间=12
 
 
 ## linux计划任务
-在代码目录创建`run.sh`,`wzry.oneday.txt`
+在代码目录创建`wzry.oneday.txt`, 以及`run.sh`,内容为
 
 ```
 50 4 * * * pkill -f 'wzry.py'
