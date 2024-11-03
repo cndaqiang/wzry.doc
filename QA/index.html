@@ -565,6 +565,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#进入不了战令页面" class="md-nav__link">
+    <span class="md-ellipsis">
+      进入不了战令页面
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#进入不了商店活动xx入口点击错误" class="md-nav__link">
+    <span class="md-ellipsis">
+      进入不了商店/活动/XX入口/点击错误
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#连接不上模拟器" class="md-nav__link">
     <span class="md-ellipsis">
       连接不上模拟器
@@ -1127,6 +1145,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#进入不了战令页面" class="md-nav__link">
+    <span class="md-ellipsis">
+      进入不了战令页面
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#进入不了商店活动xx入口点击错误" class="md-nav__link">
+    <span class="md-ellipsis">
+      进入不了商店/活动/XX入口/点击错误
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#连接不上模拟器" class="md-nav__link">
     <span class="md-ellipsis">
       连接不上模拟器
@@ -1420,6 +1456,39 @@
 <li>很难一个代码适配所有设备</li>
 <li>自己查看屏幕输出,找到代码相应位置,用AirtestIDE截取你设备的图像,进行替换</li>
 <li>也可以尝试,下载最新的release程序,<strong>只复制你的config.win.yaml文件到新代码目录,重新进行礼包位置矫正</strong></li>
+</ul>
+<h2 id="进入不了战令页面">进入不了战令页面<a class="headerlink" href="#进入不了战令页面" title="Permanent link">&para;</a></h2>
+<ul>
+<li>战令入口改变了,战令图片改变了</li>
+</ul>
+<p>解决方案: 手动填写战令页面位置</p>
+<ul>
+<li>同指定英雄和分路的<a href="../guide/shuliandu/#计算绝对坐标的步骤">计算绝对坐标的步骤</a></li>
+<li>以新的界面再展示一遍
+<img alt="" src="../fig/zhanlingairtest.png" /></li>
+</ul>
+<p>然后计算</p>
+<div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="kd">base</span><span class="p">)</span><span class="w"> </span><span class="nx">PS</span><span class="w"> </span><span class="nx">D</span><span class="p">:</span><span class="err">\</span><span class="nx">SoftData</span><span class="err">\</span><span class="nx">git</span><span class="err">\</span><span class="nx">WZRY</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">python</span>
+<span class="nx">Python</span><span class="w"> </span><span class="m m-Double">3.11.7</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">packaged</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">Anaconda</span><span class="p">,</span><span class="w"> </span><span class="nx">Inc</span><span class="p">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="nx">main</span><span class="p">,</span><span class="w"> </span><span class="nx">Dec</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="mi">2023</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">47</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="nx">MSC</span><span class="w"> </span><span class="nx">v</span><span class="m m-Double">.1916</span><span class="w"> </span><span class="mi">64</span><span class="w"> </span><span class="nx">bit</span><span class="w"> </span><span class="p">(</span><span class="nx">AMD64</span><span class="p">)]</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">win32</span>
+<span class="nx">Type</span><span class="w"> </span><span class="s">&quot;help&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;copyright&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;credits&quot;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="s">&quot;license&quot;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">more</span><span class="w"> </span><span class="nx">information</span><span class="p">.</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">record_pos</span><span class="p">=(</span><span class="m m-Double">0.421</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m m-Double">0.105</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">resolution</span><span class="p">=(</span><span class="mi">960</span><span class="p">,</span><span class="w"> </span><span class="mi">540</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m m-Double">0.5</span><span class="o">*</span><span class="nx">resolution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="nx">record_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nx">resolution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m m-Double">0.5</span><span class="o">*</span><span class="nx">resolution</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="nx">record_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="nx">resolution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">pos</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">pos</span>
+<span class="p">(</span><span class="m m-Double">884.16</span><span class="p">,</span><span class="w"> </span><span class="m m-Double">169.2</span><span class="p">)</span>
+</code></pre></div>
+
+<p>然后将下面内容添加/修改到文件<code>android.var_dict_mynode.yaml</code></p>
+<div class="codehilite"><pre><span></span><code>战令入口: !!python/tuple
+- 884.16
+- 169.2
+</code></pre></div>
+
+<h2 id="进入不了商店活动xx入口点击错误">进入不了商店/活动/XX入口/点击错误<a class="headerlink" href="#进入不了商店活动xx入口点击错误" title="Permanent link">&para;</a></h2>
+<ul>
+<li>同<a href="#进入不了战令页面">进入不了战令页面</a></li>
 </ul>
 <h2 id="连接不上模拟器">连接不上模拟器<a class="headerlink" href="#连接不上模拟器" title="Permanent link">&para;</a></h2>
 <ul>
