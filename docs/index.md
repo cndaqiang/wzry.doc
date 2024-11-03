@@ -1,4 +1,5 @@
-## WZRY
+# 欢迎来到WZRY的使用文档
+
 [WZRY](https://github.com/cndaqiang/WZRY)是基于[airtest-mobileauto](https://github.com/cndaqiang/airtest_mobileauto)开发的王者荣耀农活自动化免费开源脚本. 
 
 
