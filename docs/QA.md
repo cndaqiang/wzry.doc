@@ -39,6 +39,38 @@
 * 也可以尝试,下载最新的release程序,**只复制你的config.win.yaml文件到新代码目录,重新进行礼包位置矫正**
 
 
+## 进入不了战令页面
+* 战令入口改变了,战令图片改变了
+
+解决方案: 手动填写战令页面位置
+
+* 同指定英雄和分路的[计算绝对坐标的步骤](guide/shuliandu.md#计算绝对坐标的步骤)
+* 以新的界面再展示一遍
+![](fig/zhanlingairtest.png)
+
+然后计算
+```
+(base) PS D:\SoftData\git\WZRY> python
+Python 3.11.7 | packaged by Anaconda, Inc. | (main, Dec 15 2023, 18:05:47) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> record_pos=(0.421, -0.105)
+>>> resolution=(960, 540)
+>>> x = 0.5*resolution[0]+record_pos[0]*resolution[0]
+>>> y = 0.5*resolution[1]+record_pos[1]*resolution[0]
+>>> pos = (x, y)
+>>> pos
+(884.16, 169.2)
+```
+然后将下面内容添加/修改到文件`android.var_dict_mynode.yaml`
+```
+战令入口: !!python/tuple
+- 884.16
+- 169.2
+```
+
+## 进入不了商店/活动/XX入口/点击错误
+* 同[进入不了战令页面](#进入不了战令页面)
+
 ## 连接不上模拟器
 * 认真阅读[安装指南](guide/install.md)
 * 配置文件写错了,认真阅读[配置文件](guide/config.md)

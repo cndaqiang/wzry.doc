@@ -47,12 +47,20 @@ touch(Template(r"tpl1730369563802.png", record_pos=(-0.314, -0.26), resolution=(
 
 利用**相对坐标**`record_pos`和**屏幕分辨率**`resolution`计算新分路的绝对坐标
 ```
+record_pos=(-0.314, -0.26)
+resolution=(960, 540)
+x = 0.5*resolution[0]+record_pos[0]*resolution[0]
+y = 0.5*resolution[1]+record_pos[1]*resolution[0]
+pos = (x, y)
+```
+将计算得到`(x,y)`填到`字典.分路.android.var_dict_N.yaml`文件中
+```
 参战英雄线路: !!python/tuple
-- 0.5*960+(-0.314*960)
-- 0.5*540+(-0.26*960)
+- x
+- y
 ```
 
-新英雄的位置同理,务必选择英雄头像中间的区域,越小`record_pos`越精准.
+新英雄的位置同理,务必选择英雄头像中间的区域,越小`record_pos`越精准. 当王者因为其他活动更改界面时，同样可以这样手动修改`android.var_dict_mynode.yaml`中的坐标(例如大厅的[战令入口、商店入口、活动入口](../QA.md#进入不了战令页面)的位置经常变,而且图标也跟着宣传海报变，不修改代码的前提下，直接修改记录位置的`android.var_dict_mynode.yaml`是最快的).
 
 
 
