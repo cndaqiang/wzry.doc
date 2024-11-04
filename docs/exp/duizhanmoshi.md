@@ -15,11 +15,11 @@ self.限时组队时间=uptime
 #................................................................................
 #每天组队打0,1,2,...,nstep-1共nstep场，组队5v5匹配
 #每天组队打0,1,2,...,ostep-1共ostep场，单人5v5匹配|模拟战
-nstep=2
+nstep=3
 ostep=3 if self.mynode == 0 else 1 # 为了获得更多的经验，可以将 ostep 设为模拟战 或者 0。
-self.对战模式="5v5匹配" if self.jinristep <  nstep else "模拟战" 
+self.对战模式="5v5匹配" if self.jinristep <=  nstep else "模拟战"
 # 组队模式
-self.组队模式 = self.组队模式 and self.jinristep < nstep
+self.组队模式 = self.组队模式 and self.jinristep <= nstep
 if not self.组队模式: self.Tool.touchfile(self.无法进行组队FILE)
 #................................................................................
 # 结束游戏的判定
