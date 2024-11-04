@@ -39,19 +39,3 @@
 * [停止更新]KPL观赛战令观赛领取经验升级
 * [停止更新]战队商店领取英雄碎片
 * [停止更新]商城每日免费钻石碎片随机礼包
-
-## 访问统计
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const domain = window.location.hostname; // 获取当前域名
-        const img = document.querySelector('img[name="count"]'); // 选择图片
-        if (img) {
-            const newSrc = `https://count.getloli.com/@${domain}?theme=green&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto`;
-            img.src = newSrc; // 更新图片的 src 属性
-        }
-    });
-</script>
-
-<img name="count" src="https://count.getloli.com/@wzry.doc?theme=green&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" alt="count" />
-
