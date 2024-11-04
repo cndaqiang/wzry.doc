@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 使用 URL 对象提取域名和路径
     const url = new URL(fullUrl);
     const domain = url.hostname; // 获取域名
-    const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, ''); // 只保留字母、数字、下划线
+    const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, '.'); // 只保留字母、数字、下划线
 
     // 组合域名和路径
     const sanitizedUrl = `${domain}${path}`; // 组合成完整的安全 URL
