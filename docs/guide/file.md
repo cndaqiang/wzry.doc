@@ -30,6 +30,6 @@ self.对战时间=[5,17]
 
 每天只对战5局,则在`WZRY.mynode.运行模式.txt` 中填写
 ```
-if self.jinristep >=  5:  self.对战时间[0]=0.1
-if self.jinristep >=  5:  self.对战时间[1]=0.2
+if self.jinristep >  5:  self.对战时间[0]=0.1
+if self.jinristep >  5:  self.对战时间[1]=0.2
 ```
