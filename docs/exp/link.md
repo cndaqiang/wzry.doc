@@ -7,10 +7,10 @@
 ## 建立软链接
 windows
 ```
-mklink  WZRY.1.临时初始化.txt WZRY.0.临时初始化.txt
+mklink  WZRY.1.运行模式.txt WZRY.0.运行模式.txt
 ```
 
 linux/mac
 ```
-ln -s  WZRY.0.临时初始化.txt WZRY.1.临时初始化.txt
+ln -s  WZRY.0.运行模式.txt WZRY.1.运行模式.txt
 ```

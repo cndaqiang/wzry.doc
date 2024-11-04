@@ -23,7 +23,7 @@
 * 王者荣耀对局胜利时,会默认领一些战令礼包,所以周一到周五, 我使用的都是`wzry.py`脚本的人机组队青铜5v5TOUCH模式完成了日活,并且关闭礼包功能(`self.每日任务礼包`),不会触发战令经验上限
 * 周末才开启`wzry.py`脚本内的日活礼包功能.
 
-`WZRY.mynode.临时初始化.txt`内容为
+`WZRY.mynode.运行模式.txt`内容为
 ```
 self.启动礼包功能 = True
 self.每日任务礼包=self.Tool.time_getweek() > 5
@@ -31,7 +31,7 @@ self.每日任务礼包=self.Tool.time_getweek() > 5
 self.外置礼包_王者营地 = False
 # 而是在MuMu里面安装的王者营地,单独使用`wzyd.py`领取MuMu里面的营地礼包
 ```
-`WZRY.mynode.对战前插入.txt`内容为
+`WZRY.mynode.运行模式.txt`内容为
 ```
 if self.组队模式 and self.Tool.time_getweek() < 6: self.触摸对战 = True
 ```

@@ -1,7 +1,8 @@
 # 只要当前的remote 仓库是github的, push page就能自动推到github
 #
-site_url: https://wzrydoc.readthedocs.io/
+#site_url: https://wzrydoc.readthedocs.io/
 #site_url: https://cndaqiang.github.io/wzry.doc/
+site_url: https://wzry-doc.pages.dev/
 # 这个url决定了sitemap.xml中的地址，如果不设置, git page上显示的sitemap.xml里面就是空的，设置了就被强制替换为了这个
 # 此外，设置后本地预览的网址总是带一个/wzry.doc/，除了双配置文件，解决不了，不解决了
 #
@@ -80,16 +81,26 @@ extra:
   # https://mkdoc-material.llango.com/setup/setting-up-the-footer/
   # https://fontawesome.com/search?q=blog&o=r&f=classic
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/cndaqiang
-    - icon: fontawesome/brands/python
-      link: https://github.com/cndaqiang/WZRY
-    - icon: fontawesome/solid/square-rss
-      link: https://cndaqiang.github.io/wzry.doc/sitemap.xml
+    # 镜像网站
+    - icon: fontawesome/solid/cloud
+      link: https://wzry-doc.pages.dev/
+      name: mirror
     - icon: fontawesome/solid/book
       link: https://wzrydoc.rtfd.io
+      name: mirror-doc
+    - icon: fontawesome/brands/github
+      link: https://github.com/cndaqiang
+      name: author
+    - icon: fontawesome/brands/python
+      link: https://github.com/cndaqiang/WZRY
+      name: cndaqiang/WZRY
+    - icon: fontawesome/solid/square-rss
+      link: https://cndaqiang.github.io/wzry.doc/sitemap.xml
+      name: rss
     - icon: fontawesome/solid/chart-area
       link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/cndaqiang.github.io
+      name: visitor
+
 
   analytics:
     provider: google

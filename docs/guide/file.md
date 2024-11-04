@@ -16,19 +16,19 @@
 
 |文件名|推荐填写的控制命令|
 |-|-|
-|`WZRY.mynode.临时初始化.txt`    | 控制脚本功能：[运行时间](#控制运行时间示例)、[礼包功能](libao.md)等.|
-|`WZRY.mynode.对战前插入.txt`    | 控制对局过程：[对战模式](duizhanmoshi.md)、[选择英雄](shuliandu.md)等.|
+|`WZRY.mynode.运行模式.txt`    | 自定义脚本的运行模式：[运行时间](#控制运行时间示例)、[礼包功能](libao.md)、[对战模式](duizhanmoshi.md)、[选择英雄](shuliandu.md)等.|
+|`WZRY.mynode.调试文件.txt`    | 调试文件, 用于测试某项功能是否正常, 不要使用.|
 
 
 ### 控制运行时间示例
-mynode=0的账户，仅在每天的5点到17点执行脚本,在`WZRY.0.临时初始化.txt`中添加
+mynode=0的账户，仅在每天的5点到17点执行脚本,在`WZRY.0.运行模式.txt`中添加
 ```
 self.对战时间=[5,17]
 ```
 ![](../fig/linshi.png)
 
 
-每天只对战5局,则在`WZRY.mynode.临时初始化.txt` 中填写
+每天只对战5局,则在`WZRY.mynode.运行模式.txt` 中填写
 ```
 if self.jinristep >=  5:  self.对战时间[0]=0.1
 if self.jinristep >=  5:  self.对战时间[1]=0.2
