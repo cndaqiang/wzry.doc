@@ -465,21 +465,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="docker参数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker容器的创建与配置" class="md-nav__link">
-    <span class="md-ellipsis">
-      docker容器的创建与配置
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -825,11 +810,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../../exp/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux控制docker刷日活
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://cndaqiang.github.io/2023/11/10/MobileAuto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    怎么控制苹果手机
+    控制苹果手机
   </span>
   
 
@@ -1094,21 +1100,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="docker参数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker容器的创建与配置" class="md-nav__link">
-    <span class="md-ellipsis">
-      docker容器的创建与配置
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1369,6 +1360,7 @@ BlueStack_Windows:
 <ul>
 <li>本脚本支持控制运行在docker中的安卓模拟器<a href="https://github.com/remote-android/">remote-android</a>.</li>
 <li>支持x86、arm服务器, openwrt路由器等环境运行安卓模拟器.</li>
+<li>这是我的完整安装和使用过程: <a href="../../exp/docker/">在甲骨文免费服务器上安装redroid并配置WZRY</a></li>
 </ul>
 <table>
 <thead>
@@ -1390,27 +1382,7 @@ BlueStack_Windows:
 <p class="admonition-title">Wannring</p>
 <p>remote-android默认开启了root,王者体验服检测root,会封号体验服账户,请勿在docker中安装体验服.</p>
 </div>
-<h4 id="docker容器的创建与配置">docker容器的创建与配置<a class="headerlink" href="#docker容器的创建与配置" title="Permanent link">&para;</a></h4>
-<p>依次创建3个docker容器,并映射端口号到<code>5555</code>,分辨率务必设置为<code>960x540</code>,dpi为<code>160</code></p>
-<div class="codehilite"><pre><span></span><code>N=0 #1,2
-port=5555 #5565,5575
-<span class="gh">#</span>下面是我在oracle的arm服务器上的配置示例,替换镜像为你自己的服务架构.
-docker run -itd  --privileged \
-    -p $port:5555 \
-    --name androidcontain$N \
-    redroid/redroid:8.1.0-arm64 \
-    androidboot.redroid_width=960 \
-    androidboot.redroid_height=540 \
-    androidboot.redroid_dpi=160 \
-    androidboot.hardware=WLZ-AN00 ro.secure=0 ro.boot.hwc=GLOBAL    \
-    ro.ril.oem.imei=861503068361$((100 + $RANDOM % 900)) ro.ril.oem.imei1=861503068361$((100 + $RANDOM % 900))  \
-    ro.ril.oem.imei2=861503068361$((100 + $RANDOM % 900)) ro.ril.miui.imei0=861503068361$((100 + $RANDOM % 900)) \
-    ro.product.manufacturer=HUAWEI ro.build.product=chopin \
-    androidboot.redroid_fps=5 \
-    redroid.gpu.mode=guest
-</code></pre></div>
-
-<p>3账户组队的配置参数</p>
+<p>三个账户组队示例</p>
 <div class="codehilite"><pre><span></span><code><span class="gh">#</span> 节点配置
 totalnode: 3
 multiprocessing: True
