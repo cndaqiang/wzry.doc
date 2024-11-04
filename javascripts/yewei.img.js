@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	
     // 使用 URL 对象提取域名和路径
     const url = new URL(fullUrl);
-    const domain = url.hostname.slice(0, 16); // 获取域名, 截取域名前16字符
-    const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, '.'); // 只保留字母、数字、下划线
+    const domain = url.hostname; // 获取域名,
+    const shortdomain = domain.split(".").slice(0, 2).join('.'); // 域名保留前两个部分
+    const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, ''); // 只保留字母、数字、下划线
 
     // 组合域名和路径
-    const sanitizedUrl = `${domain}${path}`.slice(0, 32); // 截取前32字符
+    const sanitizedUrl = `${shortdomain}_${path}`.slice(0, 32); // 截取前32字符
 
     // 检查构建的 URL
     console.log("Sanitized URL: ", sanitizedUrl);
