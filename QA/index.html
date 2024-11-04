@@ -1517,8 +1517,8 @@
 <p>原因</p>
 <ul>
 <li>抄错了控制文件</li>
-<li>控制文件名写错了: 要把<code>WZRY.mynode.对战前插入.txt</code>中的<code>mynode</code>替换为本脚本控制的 <strong><a href="../guide/file/">账户编号</a></strong></li>
-<li>如<code>WZRY.1.对战前插入.txt</code>,<code>WZRY.0.对战前插入.txt</code>分别调整第1和第0个王者账号.</li>
+<li>控制文件名写错了: 要把<code>WZRY.mynode.运行模式.txt</code>中的<code>mynode</code>替换为本脚本控制的 <strong><a href="../guide/file/">账户编号</a></strong></li>
+<li>如<code>WZRY.1.运行模式.txt</code>,<code>WZRY.0.运行模式.txt</code>分别调整第1和第0个王者账号.</li>
 <li>理解错了<a href="../guide/config/#mynode与instance的区别">mynode和模拟器内部编号Instance的含义</a>,把模拟器内部的编号当成了mynode.</li>
 </ul>
 <h2 id="触摸对战不生效">触摸对战不生效<a class="headerlink" href="#触摸对战不生效" title="Permanent link">&para;</a></h2>
@@ -1527,7 +1527,7 @@
 </ul>
 <p>开启触摸对战的几种方法</p>
 <ul>
-<li>在<code>WZRY.mynode.对战前插入.txt</code>中填入<code>self.触摸对战 = True</code></li>
+<li>在<code>WZRY.mynode.运行模式.txt</code>中填入<code>self.触摸对战 = True</code></li>
 <li>在运行目录创建一个 <code>WZRY.TOUCH.txt</code>文件.</li>
 <li>不推荐 <del>直接修改源码</del></li>
 </ul>
@@ -1537,7 +1537,7 @@
 </ul>
 <p>开启标准对战的几种方法</p>
 <ul>
-<li>在<code>WZRY.mynode.对战前插入.txt</code>中填入<code>self.标准模式 = True</code></li>
+<li>在<code>WZRY.mynode.运行模式.txt</code>中填入<code>self.标准模式 = True</code></li>
 <li>不推荐 <del>直接修改源码</del></li>
 </ul>
 <h2 id="运行之后很快接黑屏了我怎么查看运行报错的信息">运行之后,很快接黑屏了,我怎么查看运行报错的信息<a class="headerlink" href="#运行之后很快接黑屏了我怎么查看运行报错的信息" title="Permanent link">&para;</a></h2>
@@ -1555,7 +1555,7 @@
 <li>利用<code>self.jinristep</code>变量,代表今天的第几次对战</li>
 <li>好好读<a href="../guide/duizhanmoshi/">使用手册.对战模式</a></li>
 </ul>
-<p>以第一次进行青铜+标准人机+触摸对战为例,在<code>WZRY.mynode.对战前插入.txt</code>中插入标准的python语法</p>
+<p>以第一次进行青铜+标准人机+触摸对战为例,在<code>WZRY.mynode.运行模式.txt</code>中插入标准的python语法</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">self</span>.青铜段位<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">False</span>
 <span class="nv">self</span>.标准模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">False</span>
 <span class="nv">self</span>.触摸对战<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">False</span>
@@ -1667,7 +1667,7 @@ root的设备运行体验服,被被封号.关闭模拟器的root选项.
 <li>在娱乐模式的快捷入口添加王者模拟战</li>
 <li>自己手动进去打一轮(同意协议,领取礼包,预设阵容)</li>
 <li>返回大厅</li>
-<li>在<code>WZRY.mynode.对战前插入.txt</code>中添加<code>self.对战模式 = "模拟战"</code>, 执行<code>wzry.py</code>代码
+<li>在<code>WZRY.mynode.运行模式.txt</code>中添加<code>self.对战模式 = "模拟战"</code>, 执行<code>wzry.py</code>代码
 <img alt="image" src="https://github.com/user-attachments/assets/3cbde96b-2e89-49bb-b899-dc3ff33c8e3c" /></li>
 </ul>
 <h2 id="苹果手机怎么使用">苹果手机怎么使用<a class="headerlink" href="#苹果手机怎么使用" title="Permanent link">&para;</a></h2>
@@ -1682,7 +1682,7 @@ root的设备运行体验服,被被封号.关闭模拟器的root选项.
 <li>在运行目录创建<code>WZRY.oneday.txt</code>文件</li>
 <li>然后阅读<a href="../guide/config/#模拟器参数">配置文件</a>, 添加模拟器的参数</li>
 <li>注意区分<a href="../guide/config/#mynode与instance的区别">账户编号与模拟器实例编号的区别</a></li>
-<li>按照<a href="../guide/file/#控制运行时间示例">控制运行时间示例</a>将你希望的时间填到<code>WZRY.mynode.临时初始化.txt</code></li>
+<li>按照<a href="../guide/file/#控制运行时间示例">控制运行时间示例</a>将你希望的时间填到<code>WZRY.mynode.运行模式.txt</code></li>
 </ul>
 <h2 id="小号没有进入大号房间">小号没有进入大号房间<a class="headerlink" href="#小号没有进入大号房间" title="Permanent link">&para;</a></h2>
 <p>配置文件写错了,认真阅读<a href="../guide/zudui/">组队教程</a></p>

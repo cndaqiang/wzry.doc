@@ -948,22 +948,22 @@
 </thead>
 <tbody>
 <tr>
-<td><code>WZRY.mynode.临时初始化.txt</code></td>
-<td>控制脚本功能：<a href="#控制运行时间示例">运行时间</a>、<a href="../libao/">礼包功能</a>等.</td>
+<td><code>WZRY.mynode.运行模式.txt</code></td>
+<td>自定义脚本的运行模式：<a href="#控制运行时间示例">运行时间</a>、<a href="../libao/">礼包功能</a>、<a href="../duizhanmoshi/">对战模式</a>、<a href="../shuliandu/">选择英雄</a>等.</td>
 </tr>
 <tr>
-<td><code>WZRY.mynode.对战前插入.txt</code></td>
-<td>控制对局过程：<a href="../duizhanmoshi/">对战模式</a>、<a href="../shuliandu/">选择英雄</a>等.</td>
+<td><code>WZRY.mynode.调试文件.txt</code></td>
+<td>调试文件, 用于测试某项功能是否正常, 不要使用.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="控制运行时间示例">控制运行时间示例<a class="headerlink" href="#控制运行时间示例" title="Permanent link">&para;</a></h3>
-<p>mynode=0的账户，仅在每天的5点到17点执行脚本,在<code>WZRY.0.临时初始化.txt</code>中添加</p>
+<p>mynode=0的账户，仅在每天的5点到17点执行脚本,在<code>WZRY.0.运行模式.txt</code>中添加</p>
 <div class="codehilite"><pre><span></span><code>self.对战时间=[5,17]
 </code></pre></div>
 
 <p><img alt="" src="../../fig/linshi.png" /></p>
-<p>每天只对战5局,则在<code>WZRY.mynode.临时初始化.txt</code> 中填写</p>
+<p>每天只对战5局,则在<code>WZRY.mynode.运行模式.txt</code> 中填写</p>
 <div class="codehilite"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="mi">5</span>:<span class="w">  </span><span class="nv">self</span>.对战时间[<span class="mi">0</span>]<span class="o">=</span><span class="mi">0</span>.<span class="mi">1</span>
 <span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="mi">5</span>:<span class="w">  </span><span class="nv">self</span>.对战时间[<span class="mi">1</span>]<span class="o">=</span><span class="mi">0</span>.<span class="mi">2</span>
 </code></pre></div>

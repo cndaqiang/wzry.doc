@@ -875,7 +875,7 @@
 <h2 id="说明">说明<a class="headerlink" href="#说明" title="Permanent link">&para;</a></h2>
 <p>若需调整第<code>mynode</code>个账户的对战模式</p>
 <ul>
-<li>则在<code>wzry.py</code>所在的文件夹,创建<code>WZRY.mynode.对战前插入.txt</code>文件</li>
+<li>则在<code>wzry.py</code>所在的文件夹,创建<code>WZRY.mynode.运行模式.txt</code>文件</li>
 <li><strong>把<code>mynode</code>替换为你的<a href="../config/#mynode与instance的区别">账户编号</a></strong></li>
 <li>文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.</li>
 </ul>
@@ -894,7 +894,7 @@ self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 <li><code>self.runstep</code>,本脚本累计运行了多少次对战</li>
 <li><code>self.jinristep</code>,本脚本此次运行了多少次对战</li>
 </ul>
-<p>示例前2局标准对战并移动, 在<code>WZRY.mynode.对战前插入.txt</code> 中填写</p>
+<p>示例前2局标准对战并移动, 在<code>WZRY.mynode.运行模式.txt</code> 中填写</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">self</span>.标准模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span>.触摸对战<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">False</span>
 <span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span>:<span class="w"> </span><span class="nv">self</span>.标准模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span>.触摸对战<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">True</span>
 </code></pre></div>

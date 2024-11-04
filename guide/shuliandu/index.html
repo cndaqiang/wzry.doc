@@ -959,7 +959,7 @@
 <h2 id="说明">说明<a class="headerlink" href="#说明" title="Permanent link">&para;</a></h2>
 <p>若需调整第<code>mynode</code>个账户的对战分路和英雄</p>
 <ul>
-<li>则在<code>wzry.py</code>所在的文件夹,创建<code>WZRY.mynode.对战前插入.txt</code>文件</li>
+<li>则在<code>wzry.py</code>所在的文件夹,创建<code>WZRY.mynode.运行模式.txt</code>文件</li>
 <li><strong>把<code>mynode</code>替换为你的<a href="../config/#mynode与instance的区别">账户编号</a></strong></li>
 <li>文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.</li>
 </ul>
@@ -968,7 +968,7 @@
 <li>提前在选英雄界面设置为<em>熟练度</em>排序,而不是<em>赛季常用</em>等选项</li>
 </ul>
 <h3 id="方法1-读入英雄绝对坐标">方法1. 读入英雄绝对坐标<a class="headerlink" href="#方法1-读入英雄绝对坐标" title="Permanent link">&para;</a></h3>
-<p>在<code>WZRY.mynode.对战前插入.txt</code>文件内填入</p>
+<p>在<code>WZRY.mynode.运行模式.txt</code>文件内填入</p>
 <div class="codehilite"><pre><span></span><code><span class="n">字典位置文件</span><span class="o">=</span><span class="err">[]</span>
 <span class="n">字典位置文件</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="ss">&quot;字典.中路.android.var_dict_N.yaml&quot;</span><span class="p">)</span>
 <span class="n">字典位置文件</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="ss">&quot;字典.打野.android.var_dict_N.yaml&quot;</span><span class="p">)</span>
@@ -1016,12 +1016,12 @@ pos = (x, y)
 <h3 id="方法2-计算英雄相对坐标">方法2. 计算英雄相对坐标<a class="headerlink" href="#方法2-计算英雄相对坐标" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>在你已经熟练掌握方法1, 并且理解了逻辑之后.其实,我们完全可以把坐标直接写在<code>WZRY.mynode.对战前插入.txt</code>里面.<br>
+<p>在你已经熟练掌握方法1, 并且理解了逻辑之后.其实,我们完全可以把坐标直接写在<code>WZRY.mynode.运行模式.txt</code>里面.<br>
 对于<strong>分辨率960x540,dpi=160</strong>的模拟器, 使用 <em><a href="#计算绝对坐标的步骤">方法1中的计算绝对坐标的步骤</a></em> 可以发现：<br>
 对角线上的两个英雄之间的相对坐标<code>record_pos</code>差约为<code>(0.09,0.11)</code>。<br>
 第1列第1行的英雄的record_pos为<code>(-0.45,-0.2)</code> <br>
 英雄列表共<code>(9列,5行)</code>, 第<code>i</code>列第<code>j</code>行的英雄坐标为<code>(-0.54+i*0.09,-0.31+j*0.11)</code>. <br>
-如果你使用分辨率960x540,dpi=160的模拟器,可以直接抄我下面的配置,填到的<code>WZRY.mynode.对战前插入.txt</code>中。</p>
+如果你使用分辨率960x540,dpi=160的模拟器,可以直接抄我下面的配置,填到的<code>WZRY.mynode.运行模式.txt</code>中。</p>
 </div>
 <div class="codehilite"><pre><span></span><code><span class="n">分路名称</span><span class="o">=[</span><span class="n">&quot;对抗&quot;, &quot;打野&quot;,&quot;中路&quot;,&quot;发育&quot;,&quot;游走&quot;</span><span class="o">]</span>
 <span class="k">index</span><span class="o">=</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">runstep</span><span class="o">+</span><span class="n">self</span><span class="p">.</span><span class="n">mynode</span><span class="p">)</span><span class="o">%</span><span class="nf">len</span><span class="p">(</span><span class="n">分路名称</span><span class="p">)</span>
@@ -1042,7 +1042,7 @@ pos = (x, y)
 </div>
 <h2 id="选择特定分路和英雄">选择特定分路和英雄<a class="headerlink" href="#选择特定分路和英雄" title="Permanent link">&para;</a></h2>
 <ul>
-<li>对于<strong>分辨率960x540,dpi=160</strong>的模拟器,在<code>WZRY.mynode.对战前插入.txt</code>文件内填入下面内容,则会选中对抗路和第6列第5行的英雄.</li>
+<li>对于<strong>分辨率960x540,dpi=160</strong>的模拟器,在<code>WZRY.mynode.运行模式.txt</code>文件内填入下面内容,则会选中对抗路和第6列第5行的英雄.</li>
 <li>其他的分辨率,阅读上面的<em>循环选熟练度最低的英雄</em>内容, 就知道怎么操作了.</li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="n">分路名称</span><span class="o">=[</span><span class="n">&quot;对抗&quot;, &quot;打野&quot;,&quot;中路&quot;,&quot;发育&quot;,&quot;游走&quot;</span><span class="o">]</span>
