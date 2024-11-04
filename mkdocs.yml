@@ -59,8 +59,8 @@ theme:
   logo: favicon.ico
   icon:
     repo: fontawesome/brands/github
-  # 引入百度的验证头 meta
-  custom_dir: overrides
+  # 引入百度的验证头 meta, 引入成功了, 但是百度访问失败
+  # custom_dir: overrides
 
 
 # markdown拓展语法
