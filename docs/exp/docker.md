@@ -153,7 +153,7 @@ self.礼包功能_KPL礼包 = False
 ### 今日仍在周年庆需要更新
 从[更新资源](../guide/upfig.md)获得更新资源
 ```
-cndaqiang@oracle:~/soft/WZRY-2.2.3$ wget https://wzry-doc.pages.dev/file/2017-12-11-update/update.zip
+cndaqiang@oracle:~/soft/WZRY-2.2.3$ wget https://wzry-doc.pages.dev/file/2024-11-04-update/update.zip
 cndaqiang@oracle:~/soft/WZRY-2.2.3$ unzip -x update.zip
 ```
 
