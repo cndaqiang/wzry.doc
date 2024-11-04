@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, '.'); // 只保留字母、数字、下划线
 
     // 组合域名和路径
-    const sanitizedUrl = `${domain}${path}`; // 组合成完整的安全 URL
+    const sanitizedUrl = `${domain}${path}`.slice(0, 32); // 截取前32字符
 
     // 检查构建的 URL
     console.log("Sanitized URL: ", sanitizedUrl);
