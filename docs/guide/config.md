@@ -138,6 +138,7 @@ logfile:
 ### docker参数
 * 本脚本支持控制运行在docker中的安卓模拟器[remote-android](https://github.com/remote-android/).
 * 支持x86、arm服务器, openwrt路由器等环境运行安卓模拟器.
+* 这是我的完整安装和使用过程: [在甲骨文免费服务器上安装redroid并配置WZRY](../exp/docker.md)
 
 |参数|默认值|含义|
 |-|-|-|
@@ -146,28 +147,7 @@ logfile:
 !!! Wannring
     remote-android默认开启了root,王者体验服检测root,会封号体验服账户,请勿在docker中安装体验服.
 
-#### docker容器的创建与配置
-依次创建3个docker容器,并映射端口号到`5555`,分辨率务必设置为`960x540`,dpi为`160`
-```
-N=0 #1,2
-port=5555 #5565,5575
-#下面是我在oracle的arm服务器上的配置示例,替换镜像为你自己的服务架构.
-docker run -itd  --privileged \
-	-p $port:5555 \
-	--name androidcontain$N \
-	redroid/redroid:8.1.0-arm64 \
-	androidboot.redroid_width=960 \
-	androidboot.redroid_height=540 \
-	androidboot.redroid_dpi=160 \
-	androidboot.hardware=WLZ-AN00 ro.secure=0 ro.boot.hwc=GLOBAL    \
-	ro.ril.oem.imei=861503068361$((100 + $RANDOM % 900)) ro.ril.oem.imei1=861503068361$((100 + $RANDOM % 900))  \
-	ro.ril.oem.imei2=861503068361$((100 + $RANDOM % 900)) ro.ril.miui.imei0=861503068361$((100 + $RANDOM % 900)) \
-	ro.product.manufacturer=HUAWEI ro.build.product=chopin \
-	androidboot.redroid_fps=5 \
-	redroid.gpu.mode=guest
-```
-
-3账户组队的配置参数
+三个账户组队示例
 ```
 # 节点配置
 totalnode: 3

@@ -48,7 +48,8 @@ nav:
       - 模拟器: exp/moniqi.md
       - 多账户使用同一个控制文件: exp/link.md
       - 我在用的控制文件: exp/duizhanmoshi.md
-      - 怎么控制苹果手机: https://cndaqiang.github.io/2023/11/10/MobileAuto/
+      - linux控制docker刷日活: exp/docker.md
+      - 控制苹果手机: https://cndaqiang.github.io/2023/11/10/MobileAuto/
       - 定时执行脚本: exp/dingshi.md
     - 关于:
       - 更新日志: about/update.md
