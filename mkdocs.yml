@@ -13,9 +13,10 @@ copyright: Copyright &copy; 2024 cndaqiang
 extra_javascript:
   # umami 统计
   - javascripts/umami.tongji.js
+  # baidutongji
+  - javascripts/baidu.tongji.js
   # 卜算子统计，可以，但是只能在md文件中填写 span id="busuanzi_value_site_pv"等纯html内容进行解析
   # - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
-
 # 本地调试地址，本机可以访问各个ip, 局域网默认还是无法访问
 dev_addr: '0.0.0.0:8000'
 
