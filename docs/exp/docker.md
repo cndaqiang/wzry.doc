@@ -66,7 +66,7 @@ cndaqiang@oracle:~/soft$ unzip -x 2.2.3.zip
 cndaqiang@oracle:~/soft$ cd WZRY-2.2.3
 ```
 
-创建[docker参数](../guide/file.md#docker参数)`vi config.lin.yaml`
+创建[docker参数](../guide/config.md#docker参数)`vi config.lin.yaml`
 ```
 # 节点配置
 totalnode: 2
