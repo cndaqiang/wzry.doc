@@ -79,9 +79,12 @@ extra:
     - icon: fontawesome/solid/cloud
       link: https://wzry-doc.pages.dev/
       name: cloudflare
+    - icon: fontawesome/solid/server
+      link: https://wzry-doc.serv00.net/
+      name: untagged
     - icon: fontawesome/solid/lock
       link: https://wzrydoc.readthedocs.io
-      name: untagged
+      name: readthedocs
     - icon: fontawesome/brands/github
       link: https://github.com/cndaqiang
       name: author
@@ -117,7 +120,7 @@ extra:
     - "0.0.0.0"
     - "127.0.0.1"
     - "localhost"
-    - "wzrydoc.readthedocs.io" # 自己浏览的防统计域名
+    - "wzry-doc.serv00.net" # 自己浏览的防统计域名
     - "example.com"  # 在这里添加您的域名
 
 #extra_javascript:

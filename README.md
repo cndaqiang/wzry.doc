@@ -5,6 +5,7 @@ This repository contains a template for an open-source software manual, built wi
 - [Website on GitHub](https://cndaqiang.github.io/wzry.doc/)
 - [Mirror on pages.dev](https://wzry-doc.pages.dev/)
 - [Mirror on rtfd.io](https://wzry-doc.pages.dev/)
+- [Mirror on serv00](https://wzry-doc.serv00.net/)
 
 ## Counter
 
