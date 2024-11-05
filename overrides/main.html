@@ -18,7 +18,7 @@ if (!blockedDomains.includes(window.location.hostname)) {
 //
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://rf.revolvermaps.com/0/0/9.js?i={{ config.extra.revolvermapsID }}';
+    script.src = '//rf.revolvermaps.com/0/0/9.js?i={{ config.extra.revolvermapsID }}';
     document.head.appendChild(script);
 //
 }
@@ -34,7 +34,7 @@ if (!blockedDomains.includes(window.location.hostname)) {
   var _hmt = _hmt || [];
   (function() {
     var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?{{ config.extra.baidutongjiID }}";
+    hm.src = "//hm.baidu.com/hm.js?{{ config.extra.baidutongjiID }}";
     var s = document.getElementsByTagName("script")[0]; 
     s.parentNode.insertBefore(hm, s);
   })();
@@ -50,7 +50,7 @@ if (!blockedDomains.includes(window.location.hostname)) {
 //
     const script = document.createElement('script');
     script.defer = true;
-    script.src = 'https://cloud.umami.is/script.js';
+    script.src = '//cloud.umami.is/script.js';
     script.setAttribute('data-website-id', '{{ config.extra.umaniID }}');
     document.head.appendChild(script);
 //
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // 检查构建的 URL
   console.log("Sanitized URL: ", sanitizedUrl);
 
-  const imgSrc = `https://count.getloli.com/@${sanitizedUrl}?theme=green&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto`;
+  const imgSrc = `//count.getloli.com/@${sanitizedUrl}?theme=green&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto`;
 
   // 创建一个容器元素，使图片居中对齐
   const imgContainer = document.createElement('div');
