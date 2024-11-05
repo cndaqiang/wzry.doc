@@ -9,17 +9,6 @@ site_url: https://wzry-doc.pages.dev/
 site_name: WZRY.doc
 site_author: cndaqiang
 copyright: Copyright &copy; 2024 cndaqiang
-#需要转换网站上的js到本地，网页统计
-extra_javascript:
-  # umami 统计
-  - javascripts/umami.tongji.js
-  # baidutongji
-  - javascripts/baidu.tongji.js
-  # 页尾插入计数图片
-  - javascripts/yewei.img.js
-  # 卜算子统计，可以，但是只能在md文件中填写 span id="busuanzi_value_site_pv"等纯html内容进行解析
-  # - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
-# 本地调试地址，本机可以访问各个ip, 局域网默认还是无法访问
 dev_addr: '0.0.0.0:8000'
 
 #
@@ -55,17 +44,6 @@ nav:
     - 关于:
       - 更新日志: about/update.md
       - 许可: about/license.md
-theme:
-#  name: gitbook
-  name: material
-  # 网站的logo
-  favicon: fig/favicon.jpg
-  # 主题页面的log
-  logo: favicon.ico
-  icon:
-    repo: fontawesome/brands/github
-  # 引入百度的验证头 meta, 引入成功了, 但是百度访问失败
-  # custom_dir: overrides
 
 
 # markdown拓展语法
@@ -83,6 +61,17 @@ markdown_extensions:
       slugify: !!python/name:pymdownx.slugs.uslugify
 
 
+theme:
+#  name: gitbook
+  name: material
+  # 网站的logo
+  favicon: fig/favicon.jpg
+  # 主题页面的log
+  logo: favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  # 引入自定义的js, 例如百度的验证头, 统计等信息
+  custom_dir: overrides
 
 extra:
   # https://mkdoc-material.llango.com/setup/setting-up-the-footer/
@@ -107,14 +96,30 @@ extra:
     - icon: fontawesome/solid/chart-area
       link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/cndaqiang.github.io
       name: visitor
-
-
+  # material带的google统计
   analytics:
     provider: google
     property: G-7G7TFCTQJY
-#    property: UA-109057291-1
-#G-7G7TFCTQJY
+# 自定义的脚本,可以通过extra_javascript引入, 也可以通过theme.custom_dir.overrides引入
+# 下面是我适配的一些功能
+  # 百度统计的ID
+  baidutongjiID: "76d0fc6b8ffd3901ec51e8bece995b22"
+  # umami统计
+  umaniID: "1d2518ba-011c-47f7-bf3d-c2454778ef02"
+  # 在这些域名不进行访客统计
+  blocked_domains:
+    - "0.0.0.0"
+    - "127.0.0.1"
+    - "localhost"
+    - "example.com"  # 在这里添加您的域名
 
+#extra_javascript:
+  # 这些内容已移植overrides/main.html
+  # baidutongji
+  #- javascripts/baidu.tongji.js
+  # 卜算子统计，可以，但是只能在md文件中填写 span id="busuanzi_value_site_pv"等纯html内容进行解析
+  # - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+#
 # 中文搜索
 # https://cloud-atlas.readthedocs.io/zh-cn/latest/devops/docs/mkdocs/mkdocs_chinese_search.html
 plugins:

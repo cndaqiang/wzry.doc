@@ -1,6 +1,83 @@
 {% extends "base.html" %}
 
+<!--在head中加东西-->
 {% block extrahead %}
-<meta name="baidu-site-verification" content="codeva-55LnuJy9rf" />
-  {{ super() }}
+{{ super() }}  <!-- 保留父模板的内容 -->
+<!-- <meta name="baidu-site-verification" content="codeva-55LnuJy9rf" /> -->
+<script>
+  // 检查 blocked_domains 是否定义，如果没有定义则使用一个空数组作为默认值
+const blockedDomains = {{ config.extra.blocked_domains | tojson if config.extra.blocked_domains is defined else '[]' }};
+</script>
+<!-- baidu 统计-->
+{% if config.extra.baidutongjiID %}
+<script>
+// 检查当前域名是否在黑名单中
+if (!blockedDomains.includes(window.location.hostname)) {
+//
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?{{ config.extra.baidutongjiID }}";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+//
+}
+</script>
+{% endif %}
+<!-- umami 访客统计-->
+{% if config.extra.umaniID %}
+<script>
+// 检查当前域名是否在黑名单中
+if (!blockedDomains.includes(window.location.hostname)) {
+//
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = 'https://cloud.umami.is/script.js';
+    script.setAttribute('data-website-id', '{{ config.extra.umaniID }}');
+    document.head.appendChild(script);
+//
+}
+</script>
+{% endif %}
+<!-- 页面的像素纸片人显示次数 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 在这里定义 fullUrl，确保它在 DOMContentLoaded 事件触发时可用
+  const fullUrl = window.location.href; // 获取当前完整 URL
+
+  // 使用 URL 对象提取域名和路径
+  const url = new URL(fullUrl);
+  const domain = url.hostname; // 获取域名,
+  const shortdomain = domain.split(".").slice(0, 2).join('.'); // 域名保留前两个部分
+  const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, ''); // 只保留字母、数字、下划线
+
+  // 组合域名和路径
+  const sanitizedUrl = `${shortdomain}_${path}`.slice(0, 32); // 截取前32字符
+
+  // 检查构建的 URL
+  console.log("Sanitized URL: ", sanitizedUrl);
+
+  const imgSrc = `https://count.getloli.com/@${sanitizedUrl}?theme=green&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto`;
+
+  // 创建一个容器元素，使图片居中对齐
+  const imgContainer = document.createElement('div');
+  imgContainer.style.textAlign = 'center'; // 设置图片居中对齐
+  imgContainer.style.marginTop = '20px'; // 增加与正文间隔
+
+  // 创建图片元素
+  const img = document.createElement('img');
+  img.src = imgSrc;
+  img.alt = 'count';
+  img.style.maxWidth = '25%'; // 设置最大宽度为25%以调小图片
+  img.style.height = 'auto'; // 保持原始比例
+  imgContainer.appendChild(img);
+
+  // 将容器插入到文档内容末尾
+  const content = document.querySelector('.md-content'); // 选择主内容区域
+  if (content) {
+      content.appendChild(imgContainer);
+  }
+});
+</script>
 {% endblock %}
