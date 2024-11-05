@@ -68,7 +68,7 @@ theme:
   logo: favicon.ico
   icon:
     repo: fontawesome/brands/github
-  # 引入自定义的js, 例如百度的验证头, 统计等信息
+  # 引入自定义的js, 例如统计等信息、搜索引擎的站点认证
   custom_dir: overrides
 
 extra:
