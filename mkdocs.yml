@@ -44,11 +44,11 @@ nav:
     - 常见问题: QA.md
     - 提出问题: https://github.com/cndaqiang/WZRY/issues
     - 经验分享: 
-      - 战令: exp/zhanling.md
-      - 模拟器: exp/moniqi.md
+      - 战令经验最大化: exp/zhanling.md
+      - 模拟器推荐: exp/moniqi.md
       - 多账户使用同一个控制文件: exp/link.md
       - 我在用的控制文件: exp/duizhanmoshi.md
-      - linux控制docker刷日活: exp/docker.md
+      - 在docker内干农活: exp/docker.md
       - 控制苹果手机: https://cndaqiang.github.io/2023/11/10/MobileAuto/
       - 定时执行脚本: exp/dingshi.md
       - 在任意目录运行: exp/otherdir.md
