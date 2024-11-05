@@ -80,7 +80,7 @@ extra:
       link: https://wzry-doc.pages.dev/
       name: cloudflare
     - icon: fontawesome/solid/lock
-      link: https://wzrydoc.rtfd.io
+      link: https://wzrydoc.readthedocs.io
       name: untagged
     - icon: fontawesome/brands/github
       link: https://github.com/cndaqiang
@@ -94,6 +94,9 @@ extra:
     - icon: fontawesome/solid/chart-area
       link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/cndaqiang.github.io
       name: visitor
+    - icon: fontawesome/solid/earth-americas
+      link: https://www.revolvermaps.com/livestats/24hours/5hik3848fwe/
+      name: visitor
   # material带的google统计
   analytics:
     provider: google
@@ -104,6 +107,8 @@ extra:
   baidutongjiID: "76d0fc6b8ffd3901ec51e8bece995b22"
   # umami统计
   umaniID: "1d2518ba-011c-47f7-bf3d-c2454778ef02"
+  # revolvermaps 统计
+  revolvermapsID: "5hik3848fwe"
   # 在这些域名不进行访客统计
   blocked_domains:
     - "0.0.0.0"

@@ -10,6 +10,21 @@
 // 检查 blocked_domains 是否定义，如果没有定义则使用一个空数组作为默认值
 const blockedDomains = {{ config.extra.blocked_domains | tojson if config.extra.blocked_domains is defined else '[]' }};
 </script>
+<!-- revolvermaps 统计 -->
+{% if config.extra.revolvermapsID %}
+<script>
+// 检查当前域名是否在黑名单中
+if (!blockedDomains.includes(window.location.hostname)) {
+//
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://rf.revolvermaps.com/0/0/9.js?i={{ config.extra.revolvermapsID }}';
+    document.head.appendChild(script);
+//
+}
+</script>
+{% endif %}
+
 <!-- baidu 统计-->
 {% if config.extra.baidutongjiID %}
 <script>
