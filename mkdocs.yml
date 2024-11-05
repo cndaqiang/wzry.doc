@@ -109,6 +109,7 @@ extra:
     - "0.0.0.0"
     - "127.0.0.1"
     - "localhost"
+    - "wzrydoc.readthedocs.io"
     - "example.com"  # 在这里添加您的域名
 
 #extra_javascript:

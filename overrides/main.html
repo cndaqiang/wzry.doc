@@ -5,8 +5,9 @@
 {% block extrahead %}
 {{ super() }}  <!-- 保留父模板的内容 -->
 <!-- <meta name="baidu-site-verification" content="codeva-55LnuJy9rf" /> -->
+<!-- 如果您介意被统计, 请访问: https://wzrydoc.readthedocs.io -->
 <script>
-  // 检查 blocked_domains 是否定义，如果没有定义则使用一个空数组作为默认值
+// 检查 blocked_domains 是否定义，如果没有定义则使用一个空数组作为默认值
 const blockedDomains = {{ config.extra.blocked_domains | tojson if config.extra.blocked_domains is defined else '[]' }};
 </script>
 <!-- baidu 统计-->
