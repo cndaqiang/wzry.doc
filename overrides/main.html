@@ -25,6 +25,33 @@ if (!blockedDomains.includes(window.location.hostname)) {
 </script>
 {% endif %}
 
+<!-- google 统计-->
+{% if config.extra.googleanalysisID %}
+<script>
+  // 检查当前域名是否在黑名单中
+  if (!blockedDomains.includes(window.location.hostname)) {
+  //
+  var script = document.createElement('script');
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id={{ config.extra.googleanalysisID }}";
+  document.head.appendChild(script);
+//
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script>
+// 检查当前域名是否在黑名单中
+if (!blockedDomains.includes(window.location.hostname)) {
+//
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ config.extra.googleanalysisID }}');
+//
+}
+</script>
+{% endif %}
 <!-- baidu 统计-->
 {% if config.extra.baidutongjiID %}
 <script>
