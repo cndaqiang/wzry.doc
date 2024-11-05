@@ -149,22 +149,23 @@ if self.jinristep == 1: self.触摸对战 = True
 可以,但是会被扣信誉分,不推荐
 
 ## 该脚本有没有1v1挂机墨家机关道刷经验的功能
-* 没有,1v1会被举报.
+* 没有,1v1会被举报, 扣信誉分.
 * 刷经验建议5v5青铜人机挂机. 蓝豆升红豆,使用星耀人机.
 * 刷信誉分使用王者模拟战.
 
 ## 作者有时间加入新功能吗
 
 * 目前已是最具性价比的日活方案
-* 除非新的玩法比人机、王者模拟战更省时间能获得更多的奖励,否则不会加入
+* 除非新的玩法比人机、王者模拟战更省时间能获得更多的奖励,以及不会影响信誉分, 否则不会加入
 
 ## 有计划提供apk么
 * 无计划, 该项目初衷是为了脚本、模拟器7*24h在服务器上完成运行的
 * 手机上可以安装python, 然后在后台执行`python wzry.py`
 
 ## 建议大号使用吗
-* 所有账号均可使用,不属于外挂.
-* 两年来没收到受到处罚
+* 所有账号均可使用
+* 本脚本不更改游戏数据, 不需要root权限, 不属于外挂.
+* 自2023年4月运行至今，没有任何账户受到处罚.
 
 !!! wannring
     模拟器太卡, 网络太卡, 以及某些时间段匹配时间过长，有极小的概率没有及时点击确认匹配, 会扣信誉分. 
@@ -274,3 +275,37 @@ python -m pip install airtest_mobileauto --upgrade
 * `totalnode: 总账户数`
 * `multiprocessing: True`
 * `LINK_dict`, 0号账户必须对应房主的ADB地址
+
+## 为什么不用pypi发布本脚本
+* assets里面的静态图片太多占了存储空间的大头, 而实际代码占用的存储很小, 不太适合
+* 控制模块[airtest-mobileauto](https://pypi.org/project/airtest-mobileauto/)不依赖图片, 已被独立发布到pypi
+
+
+## 这个脚本是怎么控制模拟器启动关闭的?
+* 利用了各个模拟器多开管理器提供的接口, 例如,MuMu模拟器的接口程序就是`D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe`
+* 在脚本的运行过程中，你可以看到模拟器启动和关闭的过程, 例如
+
+连接不上模拟器时,尝试开机,并将模拟器隐藏到后台`alt+q`
+```
+[11-05 09:02:57](2)Android:///127.0.0.1:16384:开始第1/3次连接
+[11-05 09:02:58](2)Android:///127.0.0.1:16384:链接失败
+[11-05 09:03:02](2)Android:///127.0.0.1:16384:链接失败,启动设备再次连接
+[11-05 09:03:02](2)run_command.启动设备.连接设备.__init__.__init__.<module>
+[11-05 09:03:02](2)  sysrun:'D:\GreenSoft\platform-tools\adb.exe' disconnect 127.0.0.1:16384
+[11-05 09:03:24](2)尝试启动设备中...
+[11-05 09:03:24](2)touchkey_win:  alt q
+[11-05 09:03:34](2)run_command.启动设备.连接设备.__init__.__init__.<module>
+[11-05 09:03:34](2)  sysrun:'D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe' control -v 0 launch
+[11-05 09:03:56](2)touchkey_win:  alt q
+```
+任务结束关闭模拟器
+```
+[11-05 09:26:37](2)touch (saved) 营地.战令任务
+[11-05 09:26:48](2)touch (saved) 一键领取战令经验
+[11-05 09:26:56](2)关闭APP[com.tencent.gamehelper.smoba]中
+[11-05 09:27:01](2)关闭APP[com.tencent.gamehelper.smoba]中
+[11-05 09:27:06](2)尝试关闭设备中...
+[11-05 09:27:06](2)run_command.关闭设备.end.<module>
+[11-05 09:27:06](2)  sysrun:'D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe' control -v 0 shutdown
+[11-05 09:28:08](2)关闭成功
+```

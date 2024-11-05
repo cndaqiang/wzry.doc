@@ -51,6 +51,7 @@ nav:
       - linux控制docker刷日活: exp/docker.md
       - 控制苹果手机: https://cndaqiang.github.io/2023/11/10/MobileAuto/
       - 定时执行脚本: exp/dingshi.md
+      - 在任意目录运行: exp/otherdir.md
     - 关于:
       - 更新日志: about/update.md
       - 许可: about/license.md

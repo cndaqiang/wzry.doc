@@ -182,6 +182,6 @@ cndaqiang@oracle:~/soft/WZRY-2.2.3$ crontab -e
 计划任务内容
 ```
 51 4 * * * /usr/lib/android-sdk/platform-tools/adb kill-server
-0 5 * * * cd /home/cndaqiang/soft/WZRY-2.2.3 && /usr/bin/python3 ./config.lin.yaml  > result.txt 2>&1
+0 5 * * * cd /home/cndaqiang/soft/WZRY-2.2.3 && /usr/bin/python3 wzry.py ./config.lin.yaml  > result.txt 2>&1
 50 11 * * *  pkill -f 'wzry.py'
 ```

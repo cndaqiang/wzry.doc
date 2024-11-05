@@ -33,7 +33,7 @@
 
 ## Linux 容器(**稳定使用**)
 * 👍使用[remote-android](https://github.com/remote-android/)
-* 已测试debian服务器(arm)流畅王者, 也是本脚本初期的开发环境
+* 已测试[debian服务器(arm)流畅王者](docker.md), 也是本脚本初期的开发环境
 * 可能是我的openwrt路由器(arm、x86均测过)配置太低,运行王者总是闪退.
 * **由于remote-android默认开启了root,不适用于体验服**
 
