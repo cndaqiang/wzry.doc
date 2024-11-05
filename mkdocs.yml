@@ -78,10 +78,10 @@ extra:
     # 镜像网站
     - icon: fontawesome/solid/cloud
       link: https://wzry-doc.pages.dev/
-      name: mirror
-    - icon: fontawesome/solid/book
+      name: cloudflare
+    - icon: fontawesome/solid/lock
       link: https://wzrydoc.rtfd.io
-      name: mirror-doc
+      name: untagged
     - icon: fontawesome/brands/github
       link: https://github.com/cndaqiang
       name: author
