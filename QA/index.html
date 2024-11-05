@@ -816,6 +816,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#为什么不用pypi发布本脚本" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么不用pypi发布本脚本
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#这个脚本是怎么控制模拟器启动关闭的" class="md-nav__link">
+    <span class="md-ellipsis">
+      这个脚本是怎么控制模拟器启动关闭的?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1017,6 +1035,27 @@
   
   <span class="md-ellipsis">
     定时执行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exp/otherdir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    在任意目录运行
   </span>
   
 
@@ -1438,6 +1477,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#为什么不用pypi发布本脚本" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么不用pypi发布本脚本
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#这个脚本是怎么控制模拟器启动关闭的" class="md-nav__link">
+    <span class="md-ellipsis">
+      这个脚本是怎么控制模拟器启动关闭的?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1610,14 +1667,14 @@
 <p>可以,但是会被扣信誉分,不推荐</p>
 <h2 id="该脚本有没有1v1挂机墨家机关道刷经验的功能">该脚本有没有1v1挂机墨家机关道刷经验的功能<a class="headerlink" href="#该脚本有没有1v1挂机墨家机关道刷经验的功能" title="Permanent link">&para;</a></h2>
 <ul>
-<li>没有,1v1会被举报.</li>
+<li>没有,1v1会被举报, 扣信誉分.</li>
 <li>刷经验建议5v5青铜人机挂机. 蓝豆升红豆,使用星耀人机.</li>
 <li>刷信誉分使用王者模拟战.</li>
 </ul>
 <h2 id="作者有时间加入新功能吗">作者有时间加入新功能吗<a class="headerlink" href="#作者有时间加入新功能吗" title="Permanent link">&para;</a></h2>
 <ul>
 <li>目前已是最具性价比的日活方案</li>
-<li>除非新的玩法比人机、王者模拟战更省时间能获得更多的奖励,否则不会加入</li>
+<li>除非新的玩法比人机、王者模拟战更省时间能获得更多的奖励,以及不会影响信誉分, 否则不会加入</li>
 </ul>
 <h2 id="有计划提供apk么">有计划提供apk么<a class="headerlink" href="#有计划提供apk么" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1626,8 +1683,9 @@
 </ul>
 <h2 id="建议大号使用吗">建议大号使用吗<a class="headerlink" href="#建议大号使用吗" title="Permanent link">&para;</a></h2>
 <ul>
-<li>所有账号均可使用,不属于外挂.</li>
-<li>两年来没收到受到处罚</li>
+<li>所有账号均可使用</li>
+<li>本脚本不更改游戏数据, 不需要root权限, 不属于外挂.</li>
+<li>自2023年4月运行至今，没有任何账户受到处罚.</li>
 </ul>
 <div class="admonition wannring">
 <p class="admonition-title">Wannring</p>
@@ -1735,6 +1793,39 @@ root的设备运行体验服,被被封号.关闭模拟器的root选项.
 <li><code>multiprocessing: True</code></li>
 <li><code>LINK_dict</code>, 0号账户必须对应房主的ADB地址</li>
 </ul>
+<h2 id="为什么不用pypi发布本脚本">为什么不用pypi发布本脚本<a class="headerlink" href="#为什么不用pypi发布本脚本" title="Permanent link">&para;</a></h2>
+<ul>
+<li>assets里面的静态图片太多占了存储空间的大头, 而实际代码占用的存储很小, 不太适合</li>
+<li>控制模块<a href="https://pypi.org/project/airtest-mobileauto/">airtest-mobileauto</a>不依赖图片, 已被独立发布到pypi</li>
+</ul>
+<h2 id="这个脚本是怎么控制模拟器启动关闭的">这个脚本是怎么控制模拟器启动关闭的?<a class="headerlink" href="#这个脚本是怎么控制模拟器启动关闭的" title="Permanent link">&para;</a></h2>
+<ul>
+<li>利用了各个模拟器多开管理器提供的接口, 例如,MuMu模拟器的接口程序就是<code>D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe</code></li>
+<li>在脚本的运行过程中，你可以看到模拟器启动和关闭的过程, 例如</li>
+</ul>
+<p>连接不上模拟器时,尝试开机,并将模拟器隐藏到后台<code>alt+q</code></p>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">57</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">Android</span><span class="p">:</span><span class="o">///</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">16384</span><span class="p">:</span><span class="err">开始第</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="err">次连接</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">58</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">Android</span><span class="p">:</span><span class="o">///</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">16384</span><span class="p">:</span><span class="err">链接失败</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">02</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">Android</span><span class="p">:</span><span class="o">///</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">16384</span><span class="p">:</span><span class="err">链接失败</span><span class="p">,</span><span class="err">启动设备再次连接</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">02</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">run_command</span><span class="o">.</span><span class="err">启动设备</span><span class="o">.</span><span class="err">连接设备</span><span class="o">.</span><span class="n">__init__</span><span class="o">.</span><span class="n">__init__</span><span class="o">.&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">02</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="n">sysrun</span><span class="p">:</span><span class="s1">&#39;D:\GreenSoft\platform-tools</span><span class="se">\a</span><span class="s1">db.exe&#39;</span><span class="w"> </span><span class="n">disconnect</span><span class="w"> </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">16384</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">24</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="err">尝试启动设备中</span><span class="o">...</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">24</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">touchkey_win</span><span class="p">:</span><span class="w">  </span><span class="n">alt</span><span class="w"> </span><span class="n">q</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">34</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">run_command</span><span class="o">.</span><span class="err">启动设备</span><span class="o">.</span><span class="err">连接设备</span><span class="o">.</span><span class="n">__init__</span><span class="o">.</span><span class="n">__init__</span><span class="o">.&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">34</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="n">sysrun</span><span class="p">:</span><span class="s1">&#39;D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe&#39;</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">launch</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">56</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">touchkey_win</span><span class="p">:</span><span class="w">  </span><span class="n">alt</span><span class="w"> </span><span class="n">q</span>
+</code></pre></div>
+
+<p>任务结束关闭模拟器</p>
+<div class="codehilite"><pre><span></span><code>[11-05 09:26:37](2)touch (saved) 营地.战令任务
+[11-05 09:26:48](2)touch (saved) 一键领取战令经验
+[11-05 09:26:56](2)关闭APP[com.tencent.gamehelper.smoba]中
+[11-05 09:27:01](2)关闭APP[com.tencent.gamehelper.smoba]中
+[11-05 09:27:06](2)尝试关闭设备中...
+[11-05 09:27:06](2)run_command.关闭设备.end.&lt;module&gt;
+[11-05 09:27:06](2)  sysrun:&#39;D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe&#39; control -v 0 shutdown
+[11-05 09:28:08](2)关闭成功
+</code></pre></div>
 
 
 
