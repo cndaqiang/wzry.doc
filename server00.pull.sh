@@ -1,0 +1,1 @@
+git pull -f origin gh-pages
