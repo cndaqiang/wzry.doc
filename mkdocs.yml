@@ -97,10 +97,10 @@ extra:
     - icon: fontawesome/solid/earth-africa
       link: https://www.revolvermaps.com/livestats/map/5hik3848fwe/
       name: visitor
-  # material带的google统计,https://analytics.google.com/ 创建新的媒体资源
+  # material带的google统计,https://analytics.google.com/ 创建新账户、新媒体资源, 不然会和旧网站合并
   analytics:
     provider: google
-    property: G-54MFEP7FMX
+    property: GT-NM8H2HCW
 # 自定义的脚本,可以通过extra_javascript引入, 也可以通过theme.custom_dir.overrides引入
 # 下面是我适配的一些功能
   # 百度统计的ID
