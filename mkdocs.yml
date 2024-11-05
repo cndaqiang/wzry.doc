@@ -15,8 +15,6 @@ dev_addr: '0.0.0.0:8000'
 # 主题右上角显示的repo地址，可以设置为开源项目地址
 repo_url: https://github.com/cndaqiang/WZRY
 repo_name: 'cndaqiang/WZRY' # 只是右上角显示的文字内容
-# repo的start信息，在gh的page上会显示，本地url不会显示。
-#repo_name: cndaqiang/WZRY
 
 nav:
     - 项目介绍: index.md
