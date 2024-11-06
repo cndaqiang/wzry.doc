@@ -177,8 +177,11 @@ if self.jinristep == 1: self.触摸对战 = True
 ## 怎么使用AirtestIDE
 该问题不属于本仓库的范围
 
-* 参考官方教程 https://airtest.doc.io.netease.com/IDEdocs/3.1getting_started/mainwindow_intro/
+* 参考官方教程 [airtest.doc](https://airtest.doc.io.netease.com/IDEdocs/3.1getting_started/mainwindow_intro/)
+* 阅读[图片更新](guide/tupiangengxin.md)教程
 * 阅读[截取英雄分路坐标的流程](guide/shuliandu.md#计算绝对坐标的步骤)
+* 阅读[组队教程](guide/zudui.md)
+* 右上角搜索airtest
 * 我就只用AirtestIDE右侧的连接设备,左侧的touch按钮,截图后,把图片复制到`assets`目录,把截图后生成的代码复制到`wzry.py`中进行再次的修改
 ![airtestIDE](fig/airtestguirun.png)
 
