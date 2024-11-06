@@ -64,9 +64,9 @@ theme:
 #  name: gitbook
   name: material
   # 网站的logo
-  favicon: fig/favicon.jpg
+  favicon: Moba1.png #fig/favicon.jpg
   # 主题页面的log
-  logo: favicon.ico
+  logo: Moba1.png #favicon.ico
   icon:
     repo: fontawesome/brands/github
   # 引入自定义的js, 例如统计等信息、搜索引擎的站点认证
