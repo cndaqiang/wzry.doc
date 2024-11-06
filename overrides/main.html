@@ -86,11 +86,11 @@ if (!blockedDomains.includes(window.location.hostname)) {
 {% endif %}
 <!-- 多域名时, 禁止搜索引擎爬特定域名 -->
 <script>
-  // 检查 blocked_domains 是否定义，如果没有定义则使用一个空数组作为默认值
-  const blockedrobots = {{ config.extra.blocked_robots | tojson if config.extra.blocked_robots is defined else '[]' }};
-  {% if config.extra.blocked_robots %}
-  // 检查当前域名是否在黑名单中
-  if (blockedrobots.includes(window.location.hostname)) {
+  // 检查 allow_robots 是否定义，如果没有定义则使用一个空数组作为默认值
+  const blockedallow_robots = {{ config.extra.allow_robots | tojson if config.extra.allow_robots is defined else '[]' }};
+  {% if config.extra.allow_robots %}
+  // 当定义白名单时, 检查当前域名是否在白名单中
+  if (!blockedallow_robots.includes(window.location.hostname)) {
             // 创建并插入 meta 标签以阻止爬虫
             const metaTag = document.createElement("meta");
             metaTag.name = "robots";

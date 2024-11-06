@@ -128,11 +128,10 @@ extra:
     - "wzry-doc.serv00.net" # 不追踪统计的域名
     - "wzrydoc.readthedocs.io" # 不追踪统计的域名
     - "example.com"  # 在这里添加您的域名
-  # 这些域名禁止搜索引擎访问
-  blocked_robots:
-    - "wzry-doc.serv00.net"
-    - "wzrydoc.readthedocs.io"
-    - "example.com"
+  # 仅这些域名允许搜索引擎访问
+  allow_robots:
+    - "wzry-doc.pages.dev"
+    - "cndaqiang.github.io"
 
 #extra_javascript:
   # 这些内容已移植overrides/main.html
