@@ -4,6 +4,7 @@
 #site_url: https://cndaqiang.github.io/wzry.doc/
 site_url: https://wzry-doc.pages.dev/
 # 这个url决定了sitemap.xml中的地址，如果不设置, git page上显示的sitemap.xml里面就是空的，设置了就被强制替换为了这个
+# 无论是生成的sitemap.xml, 还是手动写的sitemap.txt, 还是在线工具生成的sitemap.tool56.com.xml, google都说无法读取,bing都能收录
 # 此外，如果site_url不是单独的域名, 如domain/wzry.doc, 则设置后本地预览的网址总是带一个/wzry.doc/
 #利用bing的扫描功能, 触发其他家的统计?
 #
@@ -127,6 +128,11 @@ extra:
     - "wzry-doc.serv00.net" # 不追踪统计的域名
     - "wzrydoc.readthedocs.io" # 不追踪统计的域名
     - "example.com"  # 在这里添加您的域名
+  # 这些域名禁止搜索引擎访问
+  blocked_robots:
+    - "wzry-doc.serv00.net"
+    - "wzrydoc.readthedocs.io"
+    - "example.com"
 
 #extra_javascript:
   # 这些内容已移植overrides/main.html
