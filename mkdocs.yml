@@ -64,10 +64,10 @@ theme:
 #  name: gitbook
   name: material
   # 网站的logo, 直接填写文件名字对于不同的网站可能并不友好, 因为有些域名的url是doamin/xxx/Moba1.png, 直接写名字容易变为domaoin/Moba1, 无法识别到
-  favicon: https://cndaqiang.github.io/wzry.doc/Moba1.png
+  favicon: https://cndaqiang.github.io/wzry.doc/favicon.png
   #favicon: Moba1.png
   # 主题页面的log
-  logo: https://cndaqiang.github.io/wzry.doc/Moba1.png
+  logo: https://cndaqiang.github.io/wzry.doc/favicon.png
   #logo: Moba1.png #favicon.ico
   icon:
     repo: fontawesome/brands/github
