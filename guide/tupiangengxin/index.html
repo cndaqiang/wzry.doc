@@ -135,7 +135,7 @@ if (!blockedDomains.includes(window.location.hostname)) {
 }
 </script>
 
-<!-- 多域名时, 禁止搜索引擎爬特定域名 -->
+<!-- 多域名时, 仅允许搜索引擎爬指定域名 -->
 <script>
   // 检查 allow_robots 是否定义，如果没有定义则使用一个空数组作为默认值
   const blockedallow_robots = ["wzry-doc.pages.dev", "cndaqiang.github.io"];
