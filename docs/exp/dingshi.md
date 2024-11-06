@@ -22,12 +22,11 @@ self.限时组队时间=12
 
 
 ## linux计划任务
-在代码目录创建`wzry.oneday.txt`, 以及`run.sh`,内容为
+在代码目录创建`wzry.oneday.txt`, 使用`crontab -e`创建计划任务
 
 ```
-50 4 * * * pkill -f 'wzry.py'
 51 4 * * * /usr/lib/android-sdk/platform-tools/adb kill-server
-0 5 * * * cd /home/cndaqiang/soft/WZRY && /bin/bash run.sh
-50 8 * * 1-5 pkill -f 'wzry.py'
+0 5 * * * cd /home/cndaqiang/soft/WZRY-2.2.3 && /usr/bin/python3 wzry.py ./config.lin.yaml  > result.txt 2>&1
+50 11 * * *  pkill -f 'wzry.py'
 ```
 

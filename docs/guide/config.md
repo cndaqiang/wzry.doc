@@ -63,10 +63,10 @@ logfile:
 |LDPlayerdir|None|雷电模拟器控制程序`ldconsole.exe`所在的文件夹,例如`D:\GreenSoft\雷电模拟器.9.0.65.0.x64.去广告绿色版\LDPlayer`|
 |MuMudir|None|MuMu模拟器控制程序`MuMuManager.exe`所在的文件夹,例如`D:\Program Files\Netease\MuMu Player 12\shell`|
 |BlueStackdir|None|BlueStack模拟器控制程序`HD-Player.exe`所在的文件夹,例如`C:\Program Files\BlueStacks_nxt`|
-|LDPlayer_Instance|{mynode:"mynode"}|每个账户所在的模拟器在雷电多开管理器内部的**模拟器实例(instance)编号**, 用于启动、关闭mynode账户所在的模拟器实例. [mynode与instance的区别](#mynode与instance的区别).|
-|MuMu_Instance|{mynode:"mynode"}|每个账户所在的模拟器在MuMu多开管理器内部的**模拟器实例编号**, 用于启动、关闭mynode账户所在的模拟器实例.[mynode与instance的区别](#mynode与instance的区别).|
-|BlueStack_Instance|{mynode:"Nougat32_mynode"}|每个账户所在的模拟器在BlueStacks多开管理器内部的**模拟器实例编号**, 用于启动mynode账户所在的BlueStacks模拟器实例.[mynode与instance的区别](#mynode与instance的区别).|
-|BlueStack_Windows|{mynode:"BlueStacks App Player mynode"}|BlueStacks没有提供关闭模拟器的接口,需要使用windows的命令关闭模拟器实例的窗口名称|
+|LDPlayer_Instance|{mynode:"instance"}|每个账户所在的模拟器在雷电多开管理器内部的**模拟器实例(instance)编号**, 用于启动、关闭mynode账户所在的模拟器实例. [mynode与instance的区别](#mynode与instance的区别).|
+|MuMu_Instance|{mynode:"instance"}|每个账户所在的模拟器在MuMu多开管理器内部的**模拟器实例编号**, 用于启动、关闭mynode账户所在的模拟器实例.[mynode与instance的区别](#mynode与instance的区别).|
+|BlueStack_Instance|{mynode:"Nougat32_instance"}|每个账户所在的模拟器在BlueStacks多开管理器内部的**模拟器实例编号**, 用于启动mynode账户所在的BlueStacks模拟器实例.[mynode与instance的区别](#mynode与instance的区别).|
+|BlueStack_Windows|{mynode:"BlueStacks App Player instance"}|BlueStacks没有提供关闭模拟器的接口,需要使用windows的命令关闭模拟器实例的窗口名称. **建议在多开管理器里修改为简短的名字**,例如`BlueStacks0`,`BlueStacks1`等|
 |BossKey|内置|**无需设置**,airtest_mobileauto内部已经配置了BlueStack/LDPlayer/MuMu模拟器默认的老板键.本脚本启动模拟器后,会自动隐藏模拟器窗口.若自定义了老板键或有更多需求,自行修改airtest_mobileauto的代码.|
 
 #### 雷电模拟器配置
@@ -142,7 +142,7 @@ logfile:
 
 |参数|默认值|含义|
 |-|-|-|
-|dockercontain|`{mynode: "androidcontainmynode"}`|每个账户所在的容器的容器名称, 用于启动、关闭mynode账户所在的容器.|
+|dockercontain|`{mynode: "androidcontainInstance"}`|每个账户所在的容器的容器名称, 用于启动、关闭mynode账户所在的容器.|
 
 !!! Wannring
     remote-android默认开启了root,王者体验服检测root,会封号体验服账户,请勿在docker中安装体验服.

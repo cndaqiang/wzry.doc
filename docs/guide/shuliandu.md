@@ -27,7 +27,7 @@ for key in ["参战英雄线路","参战英雄头像"]: self.Tool.var_dict[key]=
 ![](../fig/shuliandu.png)
 
 !!! Note
-    我提供的字典文件[字典.分路.android.var_dict_N.zip](../file/字典.分路.android.var_dict_N.zip)停止并且不再更新.<br>
+    我提供的字典文件[字典.分路.android.var_dict_N.zip](../file/字典.分路.android.var_dict_N.zip)仅作示例并停止更新.<br>
     当出现新英雄时,该字典不会选择新英雄.<br>
     如果你的分辨率不是960x540也不要使用这个字典.<br>
     这两种情况你应该计算出适配你账户的`参战英雄线路`和`参战英雄头像`的绝对坐标. 然后填写到对应的`字典.分路.android.var_dict_N.yaml`文件中.<br>
