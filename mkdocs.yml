@@ -102,15 +102,14 @@ extra:
     - icon: fontawesome/solid/earth-africa
       link: https://www.revolvermaps.com/livestats/map/5hik3848fwe/
       name: visitor
-  # material带的google统计,https://analytics.google.com/ 创建新账户、新媒体资源, 不然会和旧网站合并
-  # 不采用主题提供的,自己进行控制
+  # material带的google统计,https://analytics.google.com/ 不采用主题提供的,自己进行控制
   # analytics:
   #   provider: google
   #   property: GT-NM8H2HCW
 # 自定义的脚本,可以通过extra_javascript引入, 也可以通过theme.custom_dir.overrides引入
 # 下面是我适配的一些功能
-  # google 统计的ID
-  googleanalysisID: "GT-NM8H2HCW"
+  # google 统计的ID, 创建新账户、新媒体资源, 不然会和旧网站合并
+  googleanalysisID: "G-FLH4L3Q02F"
   # 百度统计的ID
   baidutongjiID: "76d0fc6b8ffd3901ec51e8bece995b22"
   # umami统计
