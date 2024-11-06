@@ -4,7 +4,8 @@
 #site_url: https://cndaqiang.github.io/wzry.doc/
 site_url: https://wzry-doc.pages.dev/
 # 这个url决定了sitemap.xml中的地址，如果不设置, git page上显示的sitemap.xml里面就是空的，设置了就被强制替换为了这个
-# 此外，设置后本地预览的网址总是带一个/wzry.doc/，除了双配置文件，解决不了，不解决了
+# 此外，如果site_url不是单独的域名, 如domain/wzry.doc, 则设置后本地预览的网址总是带一个/wzry.doc/
+#利用bing的扫描功能, 触发其他家的统计?
 #
 site_name: WZRY.doc
 site_author: cndaqiang
