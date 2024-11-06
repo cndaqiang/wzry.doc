@@ -55,7 +55,6 @@
     
     
   <!-- 保留父模板的内容 -->
-<meta name="baidu-site-verification" content="codeva-HJHDKKMMoO" />
 <!-- <meta name="baidu-site-verification" content="codeva-55LnuJy9rf" /> -->
 <!-- 如果您介意被统计, 请访问: https://wzrydoc.readthedocs.io -->
 <script>
@@ -136,6 +135,22 @@ if (!blockedDomains.includes(window.location.hostname)) {
 }
 </script>
 
+<!-- 多域名时, 禁止搜索引擎爬特定域名 -->
+<script>
+  // 检查 blocked_domains 是否定义，如果没有定义则使用一个空数组作为默认值
+  const blockedrobots = ["wzry-doc.serv00.net", "wzrydoc.readthedocs.io", "example.com"];
+  
+  // 检查当前域名是否在黑名单中
+  if (blockedrobots.includes(window.location.hostname)) {
+            // 创建并插入 meta 标签以阻止爬虫
+            const metaTag = document.createElement("meta");
+            metaTag.name = "robots";
+            metaTag.content = "noindex, nofollow";
+            document.head.appendChild(metaTag);
+  //
+  }
+ 
+</script>
 <!-- 页面的像素纸片人显示次数 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
