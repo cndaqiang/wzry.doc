@@ -254,7 +254,8 @@ python -m pip install airtest_mobileauto --upgrade
 * 自己手动进去打一轮(同意协议,领取礼包,预设阵容)
 * 返回大厅
 * 在`WZRY.mynode.运行模式.txt`中添加`self.对战模式 = "模拟战"`, 执行`wzry.py`代码
-![image](https://github.com/user-attachments/assets/3cbde96b-2e89-49bb-b899-dc3ff33c8e3c)
+
+![image](fig/monizhan.png)
 
 
 ## 苹果手机怎么使用

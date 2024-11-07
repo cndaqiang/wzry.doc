@@ -12,11 +12,10 @@
 ## python语法注入文件
 * 在程序执行的过程中注入python的命令,随时修改脚本的运行模式.
 * 标准的python语法,不支持超过一行的python语句.
-* 下面文件名中的mynode代表[账户编号](config.md#mynode与instance的区别), 需要控制哪个账户就创建对应的注入文件.
 
 |文件名|推荐填写的控制命令|
 |-|-|
-|`WZRY.mynode.运行模式.txt`    | 自定义脚本的运行模式：[运行时间](#控制运行时间示例)、[礼包功能](libao.md)、[对战模式](duizhanmoshi.md)、[选择英雄](shuliandu.md)等,**按需使用**|
+|`WZRY.mynode.运行模式.txt`    | 自定义脚本的运行模式：[运行时间](#控制运行时间示例)、[礼包功能](libao.md)、[对战模式](duizhanmoshi.md)、[选择英雄](shuliandu.md)等,**按需使用**, <br>**注意此处的mynode代表[账户编号](config.md#mynode与instance的区别), 需要为每个账户单独配置**, 即`WZRY.0.运行模式.txt,WZRY.1.运行模式.txt,...` <br>如何修改一个控制文件并对所有账户生效见[多账户使用同一个控制文件](../exp/link.md) |
 |`WZRY.mynode.调试文件.txt`    | 调试文件, 用于测试某项功能是否正常, **不要使用**.|
 |`WZRY.图片更新.txt`           | 更新静态资源图片, 所有账户使用同一个文件, 不区分mynode, 用于[活动更新图片](upfig.md)、设置组队的[房主头像](zudui.md)等需要更新识别图片的功能,使用教程[图片更新](tupiangengxin.md),**按需使用**|
 

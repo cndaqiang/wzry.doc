@@ -172,7 +172,7 @@ cndaqiang@oracle:~/soft/WZRY-2.2.3$ python3 wzry.py ./config.lin.yaml
 ![](../fig/redroid.run.png)
 
 
-## 配置开机自启
+## 配置定时启动
 
 ```
 cndaqiang@oracle:~/soft/WZRY-2.2.3$ touch WZRY.oneday.txt

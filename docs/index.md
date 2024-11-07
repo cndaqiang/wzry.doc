@@ -39,3 +39,7 @@
 * [停止更新]KPL观赛战令观赛领取经验升级
 * [停止更新]战队商店领取英雄碎片
 * [停止更新]商城每日免费钻石碎片随机礼包
+
+## 贡献
+
+![Alt](https://repobeats.axiom.co/api/embed/e3dff17ea7d3c5e7dd3f8ce8b0fd3c09618cd7fc.svg "Repobeats analytics image")
