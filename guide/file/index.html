@@ -505,15 +505,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
       
         <li class="md-nav__item">
-  <a href="#文件名及推荐填写的参数" class="md-nav__link">
-    <span class="md-ellipsis">
-      文件名及推荐填写的参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#控制运行时间示例" class="md-nav__link">
     <span class="md-ellipsis">
       控制运行时间示例
@@ -523,9 +514,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
       
         <li class="md-nav__item">
-  <a href="#更多命令" class="md-nav__link">
+  <a href="#其他功能" class="md-nav__link">
     <span class="md-ellipsis">
-      更多命令
+      其他功能
     </span>
   </a>
   
@@ -551,7 +542,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
   
   <span class="md-ellipsis">
-    &nbsp;■&nbsp;对战模式
+    &nbsp;&nbsp;&nbsp;&nbsp;■&nbsp;对战模式
   </span>
   
 
@@ -572,7 +563,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
   
   <span class="md-ellipsis">
-    &nbsp;■&nbsp;礼包功能
+    &nbsp;&nbsp;&nbsp;&nbsp;■&nbsp;礼包功能
   </span>
   
 
@@ -593,7 +584,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
   
   <span class="md-ellipsis">
-    &nbsp;■&nbsp;选择英雄
+    &nbsp;&nbsp;&nbsp;&nbsp;■&nbsp;选择英雄
   </span>
   
 
@@ -614,7 +605,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
   
   <span class="md-ellipsis">
-    &nbsp;■&nbsp;图片更新
+    &nbsp;&nbsp;&nbsp;&nbsp;■&nbsp;图片更新
   </span>
   
 
@@ -1062,15 +1053,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
       
         <li class="md-nav__item">
-  <a href="#文件名及推荐填写的参数" class="md-nav__link">
-    <span class="md-ellipsis">
-      文件名及推荐填写的参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#控制运行时间示例" class="md-nav__link">
     <span class="md-ellipsis">
       控制运行时间示例
@@ -1080,9 +1062,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
       
         <li class="md-nav__item">
-  <a href="#更多命令" class="md-nav__link">
+  <a href="#其他功能" class="md-nav__link">
     <span class="md-ellipsis">
-      更多命令
+      其他功能
     </span>
   </a>
   
@@ -1110,33 +1092,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <h2 id="说明">说明<a class="headerlink" href="#说明" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>通过创建一些文件来精细的操作代码的运行</strong></li>
-<li><strong>所有文件都放在<code>wzry.py</code>所在路径,采用txt结尾,UTF8格式编码</strong></li>
-<li>文件内容为标准的python语法,不支持超过一行的python语句.</li>
+<li>本脚本会优先进行星耀快速对战, 再星耀达到上限后自动转为青铜模式, 并持续对战到凌晨.</li>
+<li>如果希望<strong>精细的操作<a href="#控制运行时间示例">运行时间</a>、<a href="../libao/">礼包功能</a>、<a href="../duizhanmoshi/">对战模式</a>、<a href="../shuliandu/">选择英雄</a>等功能</strong></li>
+<li>可以创建<code>WZRY.mynode.运行模式.txt</code>文件调控第<code>mynode</code>账户的功能</li>
+<li><strong>把<code>mynode</code>替换为你的<a href="../config/#mynode与instance的区别">账户编号</a></strong></li>
+<li><code>WZRY.mynode.运行模式.txt</code>要放在<code>wzry.py</code>所在路径,UTF8格式编码</li>
+<li><code>WZRY.mynode.运行模式.txt</code>的内容为标准的python语法,不支持超过一行的python语句.</li>
 </ul>
-<h2 id="文件名及推荐填写的参数">文件名及推荐填写的参数<a class="headerlink" href="#文件名及推荐填写的参数" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>文件名</th>
-<th>推荐填写的控制命令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>WZRY.mynode.运行模式.txt</code></td>
-<td>自定义脚本的运行模式：<a href="#控制运行时间示例">运行时间</a>、<a href="../libao/">礼包功能</a>、<a href="../duizhanmoshi/">对战模式</a>、<a href="../shuliandu/">选择英雄</a>等,<strong>按需使用</strong>, <br><strong>注意此处的mynode代表<a href="../config/#mynode与instance的区别">账户编号</a>, 需要为每个账户单独配置</strong>, 即<code>WZRY.0.运行模式.txt,WZRY.1.运行模式.txt,...</code> <br>如何修改一个控制文件并对所有账户生效见<a href="../../exp/link/">多账户使用同一个控制文件</a></td>
-</tr>
-<tr>
-<td><code>WZRY.mynode.调试文件.txt</code></td>
-<td>调试文件, 用于测试某项功能是否正常, <strong>不要使用</strong>.</td>
-</tr>
-<tr>
-<td><code>WZRY.图片更新.txt</code></td>
-<td>更新静态资源图片, 所有账户使用同一个文件, 不区分mynode, 用于<a href="../upfig/">活动更新图片</a>、设置组队的<a href="../zudui/">房主头像</a>等需要更新识别图片的功能,使用教程<a href="../tupiangengxin/">图片更新</a>,<strong>按需使用</strong></td>
-</tr>
-</tbody>
-</table>
 <h2 id="控制运行时间示例">控制运行时间示例<a class="headerlink" href="#控制运行时间示例" title="Permanent link">&para;</a></h2>
 <p>mynode=0的账户，仅在每天的5点到17点执行脚本,在<code>WZRY.0.运行模式.txt</code>中添加</p>
 <div class="codehilite"><pre><span></span><code>self.对战时间=[5,17]
@@ -1148,7 +1110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="mi">5</span>:<span class="w">  </span><span class="nv">self</span>.对战时间[<span class="mi">1</span>]<span class="o">=</span><span class="mi">0</span>.<span class="mi">2</span>
 </code></pre></div>
 
-<h2 id="更多命令">更多命令<a class="headerlink" href="#更多命令" title="Permanent link">&para;</a></h2>
+<h2 id="其他功能">其他功能<a class="headerlink" href="#其他功能" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../duizhanmoshi/">对战模式</a></li>
 <li><a href="../libao/">礼包功能</a></li>
