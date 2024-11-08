@@ -24,10 +24,10 @@ nav:
       - 安装指南: guide/install.md
       - 配置文件: guide/config.md
       - 高级功能: guide/file.md
-      - "&nbsp;■&nbsp;对战模式": guide/duizhanmoshi.md
-      - "&nbsp;■&nbsp;礼包功能": guide/libao.md
-      - "&nbsp;■&nbsp;选择英雄": guide/shuliandu.md
-      - "&nbsp;■&nbsp;图片更新": guide/tupiangengxin.md
+      - "&nbsp;&nbsp;&nbsp;&nbsp;■&nbsp;对战模式": guide/duizhanmoshi.md
+      - "&nbsp;&nbsp;&nbsp;&nbsp;■&nbsp;礼包功能": guide/libao.md
+      - "&nbsp;&nbsp;&nbsp;&nbsp;■&nbsp;选择英雄": guide/shuliandu.md
+      - "&nbsp;&nbsp;&nbsp;&nbsp;■&nbsp;图片更新": guide/tupiangengxin.md
       - 组队教程: guide/zudui.md
       - 更新资源: guide/upfig.md
       - 图文教程: guide/tuwen.md

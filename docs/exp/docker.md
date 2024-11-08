@@ -80,6 +80,7 @@ dockercontain:
 logfile:
     0: result.0.txt
     1: result.1.txt
+prefix: wzry
 ```
 
 创建控制文件`vi WZRY.0.运行模式.txt;ln -s  WZRY.0.运行模式.txt WZRY.1.运行模式.txt`
