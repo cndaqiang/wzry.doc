@@ -313,3 +313,26 @@ python -m pip install airtest_mobileauto --upgrade
 [11-05 09:27:06](2)  sysrun:'D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe' control -v 0 shutdown
 [11-05 09:28:08](2)关闭成功
 ```
+
+
+## 报错`touch  失败`
+### `Coordinates must be a tuple or list of length 2`
+检查字典文件`android.var_dict_mynode.yaml`,里面是否有**非tuple类型**,删除该项,并下载采用最新的代码运行
+
+```
+[11-08 06:50:35](0) touch  失败
+Traceback (most recent call last):
+  File "/home/cndaqiang/.local/lib/python3.10/site-packages/airtest_mobileauto/control.py", line 593, in touch
+    result = touch_o(*args, **kwargs)
+  File "/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/logwraper.py", line 131, in wrapper
+    res = f(*args, **kwargs)
+  File "/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/core/api.py", line 373, in touch
+    pos = G.DEVICE.touch(pos, **kwargs) or pos
+  File "/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/core/android/android.py", line 601, in touch
+    pos = get_absolute_coordinate(pos, self)
+  File "/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/snippet.py", line 192, in get_absolute_coordinate
+    assert isinstance(coord, (tuple, list)) and len(coord) == 2, "Coordinates must be a tuple or list of length 2"
+AssertionError: Coordinates must be a tuple or list of length 2
+
+During handling of the above exception, another exception occurred:
+```

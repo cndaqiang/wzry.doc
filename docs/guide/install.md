@@ -17,7 +17,7 @@ python -m pip install airtest_mobileauto --upgrade
 ## 设置模拟器分辨率和ADB调试.
 * 推荐使用[BlueStack/LDPlayer/MuMu模拟器](../exp/moniqi.md).
 * 模拟器的分辨率设置为`960x540`,dpi为`160`.
-* 安装WZRY. **并手动进入游戏大厅**.
+* 安装WZRY, 下载所有游戏资源, **并手动进入游戏大厅**.
 
 
 ## 下载代码
@@ -30,9 +30,9 @@ python -m pip install airtest_mobileauto --upgrade
 
 ### 更新资源
 * 通常是不需要更新资源的.
-* **WZRY有特殊活动(比如周年庆)时,可以看看我是否提供了**[资源更新包](upfig.md).
-* * 也可以自己使用AirTestIDE修改对应的图片.
-* 活动结束后,删除下载的更新资源.
+* **WZRY有特殊活动(比如周年庆)时,登陆界面的对战按钮等图片元素会改变, 此时需要更新这些图片**.
+* 查看页面**[资源更新包](upfig.md)**确定是否需要更新资源以及更新方法.
+
 
 
 ## 运行方式

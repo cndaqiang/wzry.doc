@@ -29,6 +29,7 @@ python -m pip install airtest_mobileauto --upgrade
 ![](../fig/update.png)
 
 
+
 ## 安装雷电模拟器
 * **确保你的电脑上没有其他模拟器在运行**
 * **全新安装雷电模拟器并打开**,并设置分辨率,dpi,并开启ADB调试, **参数必须和图片中一致**.
