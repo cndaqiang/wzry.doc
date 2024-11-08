@@ -266,8 +266,7 @@ python -m pip install airtest_mobileauto --upgrade
 
 
 ## 如何刷完任务自动关机/如何自动开启模拟器
-* 在运行目录创建`WZRY.oneday.txt`文件
-* 然后阅读[配置文件](guide/config.md#模拟器参数), 添加模拟器的参数
+* 阅读[配置文件](guide/config.md#模拟器参数), 添加模拟器的参数
 * 注意区分[账户编号与模拟器实例编号的区别](guide/config.md#mynode与instance的区别)
 * 按照[控制运行时间示例](guide/file.md#控制运行时间示例)将你希望的时间填到`WZRY.mynode.运行模式.txt`
 

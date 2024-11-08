@@ -40,7 +40,9 @@ LINK_dict:
 |参数|默认值|含义|
 |-|-|-|
 |logfile|None|将每个账户的脚本执行日志输出到指定文件,例如`{mynode:"restul.mynode.txt"}`.**推荐设置**.在脚本总是报错时,可以开启此参数,将运行日志上传到[github](https://github.com/cndaqiang/WZRY/issues)提问.|
-|figdir|assets|脚本图片资源所在目录,适合[在任意目录运行脚本](../exp/otherdir.md), **通常无需设置**.|
+|figdir|`assets`|脚本图片资源所在目录,适合[在任意目录运行脚本](../exp/otherdir.md), **通常无需设置**.|
+|prefix|`airtest_mobileauto`|使用airtest_mobileauto库开发的程序, **通常无需设置**, 如果你使用airtest_mobileauto开发了其他程序,可以设置`prefix="WZRY"`|
+|tmpdir|`系统临时目录/airtest_mobileauto/prefix`|airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,**通常无需设置**. 不想使用本脚本了,可以到`tmpdir`文件夹删除临时文件, 如`C:\Users\用户名\AppData\Local\Temp\airtest_mobileauto\WZRY`|
 |outputnode|None|只输出账户编号mynode等于outputnode的日志,**无需设置**.|
 |logger_level|1|日志等级,`0 DEBUG, 1 INFO, 2 WARNING, 3 ERROR, 4 CRITICAL`,**无需设置**.|
 

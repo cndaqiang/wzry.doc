@@ -175,7 +175,6 @@ cndaqiang@oracle:~/soft/WZRY-2.2.3$ python3 wzry.py ./config.lin.yaml
 ## 配置定时启动
 
 ```
-cndaqiang@oracle:~/soft/WZRY-2.2.3$ touch WZRY.oneday.txt
 cndaqiang@oracle:~/soft/WZRY-2.2.3$ crontab -e
 ```
 

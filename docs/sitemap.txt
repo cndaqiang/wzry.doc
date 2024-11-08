@@ -17,6 +17,9 @@ https://wzry-doc.pages.dev/guide/shuliandu
 https://wzry-doc.pages.dev/guide/tuwen
 https://wzry-doc.pages.dev/guide/upfig
 https://wzry-doc.pages.dev/guide/zudui
+https://wzry-doc.pages.dev/
+https://wzry-doc.pages.dev/guide/zudui/
+https://wzry-doc.pages.dev/guide/install/
 https://cndaqiang.github.io/wzry.doc
 https://cndaqiang.github.io/wzry.doc/QA
 https://cndaqiang.github.io/wzry.doc/about/license
