@@ -881,15 +881,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
       
         <li class="md-nav__item">
-  <a href="#通用本脚本自带了每天定时刷任务的功能" class="md-nav__link">
-    <span class="md-ellipsis">
-      [通用]本脚本自带了每天定时刷任务的功能
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#windows计划任务" class="md-nav__link">
     <span class="md-ellipsis">
       windows计划任务
@@ -902,6 +893,15 @@ document.addEventListener('DOMContentLoaded', function() {
   <a href="#linux计划任务" class="md-nav__link">
     <span class="md-ellipsis">
       linux计划任务
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#测试本脚本自带了每天定时刷任务的功能" class="md-nav__link">
+    <span class="md-ellipsis">
+      [测试]本脚本自带了每天定时刷任务的功能
     </span>
   </a>
   
@@ -1062,15 +1062,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
       
         <li class="md-nav__item">
-  <a href="#通用本脚本自带了每天定时刷任务的功能" class="md-nav__link">
-    <span class="md-ellipsis">
-      [通用]本脚本自带了每天定时刷任务的功能
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#windows计划任务" class="md-nav__link">
     <span class="md-ellipsis">
       windows计划任务
@@ -1083,6 +1074,15 @@ document.addEventListener('DOMContentLoaded', function() {
   <a href="#linux计划任务" class="md-nav__link">
     <span class="md-ellipsis">
       linux计划任务
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#测试本脚本自带了每天定时刷任务的功能" class="md-nav__link">
+    <span class="md-ellipsis">
+      [测试]本脚本自带了每天定时刷任务的功能
     </span>
   </a>
   
@@ -1114,25 +1114,26 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>随着软件更新,这些经验可能不再适用</li>
 <li>谨慎阅读</li>
 </ul>
-<h2 id="通用本脚本自带了每天定时刷任务的功能">[通用]本脚本自带了每天定时刷任务的功能<a class="headerlink" href="#通用本脚本自带了每天定时刷任务的功能" title="Permanent link">&para;</a></h2>
-<p>只要程序不退出,脚本会自动刷任务,把下面内容填到<code>WZRY.mynode.运行模式.txt</code></p>
-<div class="codehilite"><pre><span></span><code>#每日自动对战时间范围
-self.对战时间=[5,17]
-#组队的时间限制
-self.限时组队时间=12
-</code></pre></div>
-
 <h2 id="windows计划任务">windows计划任务<a class="headerlink" href="#windows计划任务" title="Permanent link">&para;</a></h2>
-<p>在代码目录创建<code>wzry.oneday.txt</code>, 以及<code>run.bat</code>,内容为</p>
+<p>在代码目录创建<code>run.bat</code>,内容为</p>
 <div class="codehilite"><pre><span></span><code><span class="c">%USERPROFILE%\AppData\Local\anaconda3\python.exe wzry.py config.win.yaml</span>
 </code></pre></div>
 
 <p><img alt="" src="../../fig/crontab_win.png" /></p>
 <h2 id="linux计划任务">linux计划任务<a class="headerlink" href="#linux计划任务" title="Permanent link">&para;</a></h2>
-<p>在代码目录创建<code>wzry.oneday.txt</code>, 使用<code>crontab -e</code>创建计划任务</p>
+<p>在代码目录创建<code>run.sh</code>, 使用<code>crontab -e</code>创建计划任务</p>
 <div class="codehilite"><pre><span></span><code><span class="mf">51</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">/</span><span class="nb">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="ow">and</span><span class="n">roid</span><span class="o">-</span><span class="n">sdk</span><span class="o">/</span><span class="n">platform</span><span class="o">-</span><span class="kr">to</span><span class="n">ols</span><span class="o">/</span><span class="n">adb</span><span class="w"> </span><span class="n">kill</span><span class="o">-</span><span class="n">server</span>
-<span class="mf">0</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cndaqiang</span><span class="o">/</span><span class="n">soft</span><span class="o">/</span><span class="n">WZRY</span><span class="o">-</span><span class="mf">2.2.3</span><span class="w"> </span><span class="err">&amp;&amp;</span><span class="w"> </span><span class="o">/</span><span class="nb">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python3</span><span class="w"> </span><span class="n">wzry</span><span class="mf">.</span><span class="n">py</span><span class="w"> </span><span class="mf">.</span><span class="o">/</span><span class="n">config</span><span class="mf">.</span><span class="n">lin</span><span class="mf">.</span><span class="n">yaml</span><span class="w">  </span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="mf">.</span><span class="n">txt</span><span class="w"> </span><span class="mf">2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="mf">1</span>
+<span class="mf">0</span><span class="w">  </span><span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cndaqiang</span><span class="o">/</span><span class="n">soft</span><span class="o">/</span><span class="n">WZRY</span><span class="o">-</span><span class="mf">2.2.3</span><span class="w"> </span><span class="err">&amp;&amp;</span><span class="w"> </span><span class="o">/</span><span class="nb">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python3</span><span class="w"> </span><span class="n">wzry</span><span class="mf">.</span><span class="n">py</span><span class="w"> </span><span class="mf">.</span><span class="o">/</span><span class="n">config</span><span class="mf">.</span><span class="n">lin</span><span class="mf">.</span><span class="n">yaml</span><span class="w">  </span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="mf">.</span><span class="n">txt</span><span class="w"> </span><span class="mf">2</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="mf">1</span>
 <span class="mf">50</span><span class="w"> </span><span class="mf">11</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w">  </span><span class="n">pkill</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="err">&#39;</span><span class="n">wzry</span><span class="mf">.</span><span class="n">py</span><span class="err">&#39;</span>
+</code></pre></div>
+
+<h2 id="测试本脚本自带了每天定时刷任务的功能">[测试]本脚本自带了每天定时刷任务的功能<a class="headerlink" href="#测试本脚本自带了每天定时刷任务的功能" title="Permanent link">&para;</a></h2>
+<ul>
+<li>使用脚本自带的循环功能, 把下面内容填到<code>WZRY.mynode.运行模式.txt</code></li>
+</ul>
+<div class="codehilite"><pre><span></span><code>self.内置循环=True
+#每日自动对战时间范围
+self.对战时间=[5,17]
 </code></pre></div>
 
 

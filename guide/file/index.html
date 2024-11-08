@@ -505,25 +505,15 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
       
         <li class="md-nav__item">
-  <a href="#控制文件" class="md-nav__link">
+  <a href="#文件名及推荐填写的参数" class="md-nav__link">
     <span class="md-ellipsis">
-      控制文件
+      文件名及推荐填写的参数
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#python语法注入文件" class="md-nav__link">
-    <span class="md-ellipsis">
-      python语法注入文件
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="python语法注入文件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#控制运行时间示例" class="md-nav__link">
     <span class="md-ellipsis">
       控制运行时间示例
@@ -531,9 +521,13 @@ document.addEventListener('DOMContentLoaded', function() {
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#更多命令" class="md-nav__link">
+    <span class="md-ellipsis">
+      更多命令
+    </span>
+  </a>
   
 </li>
       
@@ -1068,25 +1062,15 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
       
         <li class="md-nav__item">
-  <a href="#控制文件" class="md-nav__link">
+  <a href="#文件名及推荐填写的参数" class="md-nav__link">
     <span class="md-ellipsis">
-      控制文件
+      文件名及推荐填写的参数
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#python语法注入文件" class="md-nav__link">
-    <span class="md-ellipsis">
-      python语法注入文件
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="python语法注入文件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#控制运行时间示例" class="md-nav__link">
     <span class="md-ellipsis">
       控制运行时间示例
@@ -1094,9 +1078,13 @@ document.addEventListener('DOMContentLoaded', function() {
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#更多命令" class="md-nav__link">
+    <span class="md-ellipsis">
+      更多命令
+    </span>
+  </a>
   
 </li>
       
@@ -1124,32 +1112,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li><strong>通过创建一些文件来精细的操作代码的运行</strong></li>
 <li><strong>所有文件都放在<code>wzry.py</code>所在路径,采用txt结尾,UTF8格式编码</strong></li>
-<li>这些文件不参与仓库同步.</li>
+<li>文件内容为标准的python语法,不支持超过一行的python语句.</li>
 </ul>
-<h2 id="控制文件">控制文件<a class="headerlink" href="#控制文件" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>文件名</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>WZRY.oneday.txt</code></td>
-<td>用户手动创建.存在该文件时,则本脚本在完成日常对战礼包活动后自动退出程序以及关闭模拟器.里面记录了总对战次数,再次运行脚本时,会读取其中的对战次数.<strong>建议创建</strong>,后续程序自动更新.</td>
-</tr>
-<tr>
-<td><code>WZRY.TOUCH.txt</code></td>
-<td>用户手动创建.存在该文件时,则在5v5的对战过程中,自动移动和平A.可以通过活动的挂机检测.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="python语法注入文件">python语法注入文件<a class="headerlink" href="#python语法注入文件" title="Permanent link">&para;</a></h2>
-<ul>
-<li>在程序执行的过程中注入python的命令,随时修改脚本的运行模式.</li>
-<li>标准的python语法,不支持超过一行的python语句.</li>
-</ul>
+<h2 id="文件名及推荐填写的参数">文件名及推荐填写的参数<a class="headerlink" href="#文件名及推荐填写的参数" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1172,7 +1137,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 </tbody>
 </table>
-<h3 id="控制运行时间示例">控制运行时间示例<a class="headerlink" href="#控制运行时间示例" title="Permanent link">&para;</a></h3>
+<h2 id="控制运行时间示例">控制运行时间示例<a class="headerlink" href="#控制运行时间示例" title="Permanent link">&para;</a></h2>
 <p>mynode=0的账户，仅在每天的5点到17点执行脚本,在<code>WZRY.0.运行模式.txt</code>中添加</p>
 <div class="codehilite"><pre><span></span><code>self.对战时间=[5,17]
 </code></pre></div>
@@ -1182,6 +1147,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="codehilite"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="mi">5</span>:<span class="w">  </span><span class="nv">self</span>.对战时间[<span class="mi">0</span>]<span class="o">=</span><span class="mi">0</span>.<span class="mi">1</span>
 <span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="mi">5</span>:<span class="w">  </span><span class="nv">self</span>.对战时间[<span class="mi">1</span>]<span class="o">=</span><span class="mi">0</span>.<span class="mi">2</span>
 </code></pre></div>
+
+<h2 id="更多命令">更多命令<a class="headerlink" href="#更多命令" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../duizhanmoshi/">对战模式</a></li>
+<li><a href="../libao/">礼包功能</a></li>
+<li><a href="../shuliandu/">选择英雄</a></li>
+<li><a href="../tupiangengxin/">图片更新</a></li>
+</ul>
 
 
 

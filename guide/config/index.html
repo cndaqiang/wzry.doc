@@ -1379,8 +1379,18 @@ LINK_dict:
 </tr>
 <tr>
 <td>figdir</td>
-<td>assets</td>
+<td><code>assets</code></td>
 <td>脚本图片资源所在目录,适合<a href="../../exp/otherdir/">在任意目录运行脚本</a>, <strong>通常无需设置</strong>.</td>
+</tr>
+<tr>
+<td>prefix</td>
+<td><code>airtest_mobileauto</code></td>
+<td>使用airtest_mobileauto库开发的程序, <strong>通常无需设置</strong>, 如果你使用airtest_mobileauto开发了其他程序,可以设置<code>prefix="WZRY"</code></td>
+</tr>
+<tr>
+<td>tmpdir</td>
+<td><code>系统临时目录/airtest_mobileauto/prefix</code></td>
+<td>airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,<strong>通常无需设置</strong>. 不想使用本脚本了,可以到<code>tmpdir</code>文件夹删除临时文件, 如<code>C:\Users\用户名\AppData\Local\Temp\airtest_mobileauto\WZRY</code></td>
 </tr>
 <tr>
 <td>outputnode</td>
