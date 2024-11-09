@@ -125,6 +125,7 @@ extra:
   blocked_domains:
     - "0.0.0.0"
     - "127.0.0.1"
+    - "192.168.192.31"
     - "localhost"
     - "wzry-doc.serv00.net" # 不追踪统计的域名
     - "wzrydoc.readthedocs.io" # 不追踪统计的域名
