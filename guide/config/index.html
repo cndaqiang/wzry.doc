@@ -1370,7 +1370,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <tr>
 <td>totalnode</td>
 <td>1</td>
-<td>本脚本一共控制<code>totalnode</code>个账户.如双排时设置<code>totalnode=2</code></td>
+<td>本脚本一共控制<code>totalnode</code>个账户. <strong>组队多排时需要设置</strong>, 如双排时设置<code>totalnode=2</code></td>
 </tr>
 <tr>
 <td>mynode</td>
@@ -1385,7 +1385,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <tr>
 <td>LINK_dict</td>
 <td>None</td>
-<td>每个账户所在的模拟器ADB地址<code>LINK_dict[mynode]="Android:///ip:端口"</code>.所有账户的ADB地址都要配置.</td>
+<td>每个账户所在的模拟器ADB地址<code>LINK_dict[mynode]="Android:///ip:端口"</code>.<strong>所有账户的ADB地址都要配置</strong>.</td>
 </tr>
 </tbody>
 </table>
@@ -1419,8 +1419,8 @@ LINK_dict:
 <tbody>
 <tr>
 <td>prefix</td>
-<td><code>""</code></td>
-<td>程序标志, <strong>推荐设置</strong>为<code>prefix="WZRY"</code>, 不设置也没问题.</td>
+<td>None</td>
+<td>程序标志, <strong>推荐设置</strong>为<code>WZRY</code>, 不设置也没问题.</td>
 </tr>
 <tr>
 <td>tmpdir</td>
