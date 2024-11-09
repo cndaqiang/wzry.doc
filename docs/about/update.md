@@ -1,6 +1,13 @@
 ## 最新项目地址
 [WZRY](https://github.com/cndaqiang/WZRY)
 
+## 2024-11-09 2.2.5-stable
+* 架构微调: 保持代码目录清爽
+* 精简控制方式. 仅保留唯一控制文件`WZRY.mynode.运行模式.txt`
+* 优化登录、进房、组队流程.
+
+
+
 ## 2024-11-01 2.2.1
 * 随着新战令release稳定包
 * 根据`airtest-mobileauto`的新函数,优化`wzry.py`中的老旧代码.
