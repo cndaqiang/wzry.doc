@@ -58,10 +58,12 @@ self.房主房间 = Template(r"tpl1700284856473.png", record_pos=(0.312, -0.17),
     
 
 ## 限制组队的时间
-在每一个的账户的`WZRY.mynode.运行模式.txt`中都插入
+在每一个的账户的[`WZRY.mynode.运行模式.txt`](file.md)中都插入
 ```
 # 所有账户的对战时间
 self.对战时间=[0.1,23.0]
 # 12点之前组队,12点之后,各自刷各自的
 self.限时组队时间=12
+# 前5局组队,之后,各自刷各自的
+if self.jinristep >  5:  self.Tool.touchfile(self.无法进行组队FILE,"对局已超过5次")
 ```
