@@ -12,10 +12,10 @@
 
 |参数|默认值|含义|
 |-|-|-|
-|totalnode|1|本脚本一共控制`totalnode`个账户.如双排时设置`totalnode=2`|
+|totalnode|1|本脚本一共控制`totalnode`个账户. **组队多排时需要设置**, 如双排时设置`totalnode=2`|
 |mynode|0|本脚本控制的**账户编号**.**多排组队时不用设置**,由程序自动生成,`mynode=0,1,2,...,totalnode-1`.**单排时可以手动设置为任意值**. |
 |multiprocessing|False|自动化多进程组队.**多排组队时一定要设置`multiprocessing=True`**.|
-|LINK_dict|None|每个账户所在的模拟器ADB地址`LINK_dict[mynode]="Android:///ip:端口"`.所有账户的ADB地址都要配置.|
+|LINK_dict|None|每个账户所在的模拟器ADB地址`LINK_dict[mynode]="Android:///ip:端口"`.**所有账户的ADB地址都要配置**.|
 
 #### 单排账户示例
 
@@ -43,7 +43,7 @@ LINK_dict:
 
 |参数|默认值|含义|
 |-|-|-|
-|prefix|`""`|程序标志, **推荐设置**为`prefix="WZRY"`, 不设置也没问题. |
+|prefix|None|程序标志, **推荐设置**为`WZRY`, 不设置也没问题. |
 |tmpdir|`系统临时目录/airtest_mobileauto/prefix`|airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,自动生成, **通常无需设置**.  如果在电脑上同时运行了很多脚本,建议为不同的脚本配置不同的`prefix`自动生成`tmpdir`.|
 |outputnode|None|只输出账户编号mynode等于outputnode的日志,**无需设置**.|
 |logger_level|1|日志等级,`0 DEBUG, 1 INFO, 2 WARNING, 3 ERROR, 4 CRITICAL`,**无需设置**.|

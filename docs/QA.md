@@ -294,6 +294,10 @@ python -m pip install airtest_mobileauto --upgrade
 * assets里面的静态图片太多占了存储空间的大头, 而实际代码占用的存储很小, 不太适合
 * 控制模块[airtest-mobileauto](https://pypi.org/project/airtest-mobileauto/)不依赖图片, 已被独立发布到pypi
 
+## 打不开下载页面/进不去github网页
+* 切换网络环境,试试宽带、流量、科学网, 换时间访问
+* 搜索GitHub镜像站下载
+
 
 ## 这个脚本是怎么控制模拟器启动关闭的?
 * 利用了各个模拟器多开管理器提供的接口, 例如,MuMu模拟器的接口程序就是`D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe`
