@@ -1357,6 +1357,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <h2 id="参数解释">参数解释<a class="headerlink" href="#参数解释" title="Permanent link">&para;</a></h2>
 <h3 id="基础参数">基础参数<a class="headerlink" href="#基础参数" title="Permanent link">&para;</a></h3>
+<p><strong>基础参数必须设置</strong></p>
 <table>
 <thead>
 <tr>
@@ -1406,6 +1407,7 @@ LINK_dict:
 </code></pre></div>
 
 <h3 id="调试参数">调试参数<a class="headerlink" href="#调试参数" title="Permanent link">&para;</a></h3>
+<p><strong>调试参数通常无需设置</strong>, 只有在调试代码或者有特定需求时才需要设置</p>
 <table>
 <thead>
 <tr>
@@ -1416,19 +1418,9 @@ LINK_dict:
 </thead>
 <tbody>
 <tr>
-<td>logfile</td>
-<td>None</td>
-<td>将每个账户的脚本执行日志输出到指定文件,例如<code>{mynode:"restul.mynode.txt"}</code>.<strong>推荐设置</strong>.在脚本总是报错时,可以开启此参数,将运行日志上传到<a href="https://github.com/cndaqiang/WZRY/issues">github</a>提问.</td>
-</tr>
-<tr>
-<td>figdir</td>
-<td><code>assets</code></td>
-<td>脚本图片资源所在目录,适合<a href="../../exp/otherdir/">在任意目录运行脚本</a>, <strong>通常无需设置</strong>.</td>
-</tr>
-<tr>
 <td>prefix</td>
 <td><code>""</code></td>
-<td>程序标志, <strong>通常无需设置</strong>, 建议设置为<code>prefix="WZRY"</code></td>
+<td>程序标志, <strong>推荐设置</strong>为<code>prefix="WZRY"</code>, 不设置也没问题.</td>
 </tr>
 <tr>
 <td>tmpdir</td>
@@ -1445,6 +1437,16 @@ LINK_dict:
 <td>1</td>
 <td>日志等级,<code>0 DEBUG, 1 INFO, 2 WARNING, 3 ERROR, 4 CRITICAL</code>,<strong>无需设置</strong>.</td>
 </tr>
+<tr>
+<td>logfile</td>
+<td>None</td>
+<td>将每个账户的脚本执行日志输出到指定文件,例如<code>{mynode:"restul.mynode.txt"}</code>.<strong>推荐设置</strong>.在脚本总是报错时,可以开启此参数,将运行日志上传到<a href="https://github.com/cndaqiang/WZRY/issues">github</a>提问.</td>
+</tr>
+<tr>
+<td>figdir</td>
+<td><code>assets</code></td>
+<td>脚本图片资源所在目录,适合<a href="../../exp/otherdir/">在任意目录运行脚本</a>, <strong>通常无需设置</strong>.</td>
+</tr>
 </tbody>
 </table>
 <p>示例</p>
@@ -1458,7 +1460,7 @@ prefix: &quot;wzry&quot;
 
 <h3 id="模拟器参数">模拟器参数<a class="headerlink" href="#模拟器参数" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>模拟器参数不用必须设置</strong>.</li>
+<li><strong>模拟器参数可以不设置</strong>.</li>
 <li>设置后,脚本支持控制模拟器的开关机,老板键自动隐藏模拟器等功能.</li>
 <li>一个配置文件中只能配置一种模拟器.仅需关注自己使用的模拟器参数.</li>
 </ul>
