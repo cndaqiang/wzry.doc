@@ -226,6 +226,17 @@ python -m pip install airtest_mobileauto --upgrade
 ```
 * python的问题,不在本脚本讨论范围内,卸载python,使用anaconda安装python
 
+## object has no attribute
+* `AttributeError: 'DQWheel' object has no attribute`
+* `AttributeError: 'deviceOB' object has no attribute`
+* `AttributeError: 'appOB' object has no attribute`
+
+新特性, 需要更新`airtest_mobileauto`
+```
+python -m pip install airtest_mobileauto --upgrade
+```
+
+
 ## 星耀模式无法组队
 
 星耀局的组队没有意义,因为
