@@ -8,6 +8,8 @@
 
 ## 参数解释
 ### 基础参数
+**基础参数必须设置**
+
 |参数|默认值|含义|
 |-|-|-|
 |totalnode|1|本脚本一共控制`totalnode`个账户.如双排时设置`totalnode=2`|
@@ -37,14 +39,16 @@ LINK_dict:
 
 
 ### 调试参数
+**调试参数通常无需设置**, 只有在调试代码或者有特定需求时才需要设置
+
 |参数|默认值|含义|
 |-|-|-|
-|logfile|None|将每个账户的脚本执行日志输出到指定文件,例如`{mynode:"restul.mynode.txt"}`.**推荐设置**.在脚本总是报错时,可以开启此参数,将运行日志上传到[github](https://github.com/cndaqiang/WZRY/issues)提问.|
-|figdir|`assets`|脚本图片资源所在目录,适合[在任意目录运行脚本](../exp/otherdir.md), **通常无需设置**.|
-|prefix|`""`|程序标志, **通常无需设置**, 建议设置为`prefix="WZRY"`|
+|prefix|`""`|程序标志, **推荐设置**为`prefix="WZRY"`, 不设置也没问题. |
 |tmpdir|`系统临时目录/airtest_mobileauto/prefix`|airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,自动生成, **通常无需设置**.  如果在电脑上同时运行了很多脚本,建议为不同的脚本配置不同的`prefix`自动生成`tmpdir`.|
 |outputnode|None|只输出账户编号mynode等于outputnode的日志,**无需设置**.|
 |logger_level|1|日志等级,`0 DEBUG, 1 INFO, 2 WARNING, 3 ERROR, 4 CRITICAL`,**无需设置**.|
+|logfile|None|将每个账户的脚本执行日志输出到指定文件,例如`{mynode:"restul.mynode.txt"}`.**推荐设置**.在脚本总是报错时,可以开启此参数,将运行日志上传到[github](https://github.com/cndaqiang/WZRY/issues)提问.|
+|figdir|`assets`|脚本图片资源所在目录,适合[在任意目录运行脚本](../exp/otherdir.md), **通常无需设置**.|
 
 示例
 ```
@@ -57,7 +61,7 @@ prefix: "wzry"
 ```
 
 ### 模拟器参数
-* **模拟器参数不用必须设置**.
+* **模拟器参数可以不设置**.
 * 设置后,脚本支持控制模拟器的开关机,老板键自动隐藏模拟器等功能.
 * 一个配置文件中只能配置一种模拟器.仅需关注自己使用的模拟器参数.
 

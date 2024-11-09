@@ -25,7 +25,7 @@ python -m pip install airtest_mobileauto --upgrade
 ## 更新资源
 * [更新资源](upfig.md)会提示是否需要更新资源.
 * **如果没有提示,就不用更新**, 活动结束后,也要删除对应的更新资源.
-* 按照[更新资源](upfig.md)的提示下载更新包update.zip,并解压到程序目录
+* 如果提示需要更新, 则按照[更新资源](upfig.md)的提示下载更新包update.zip,并解压到程序目录
 ![](../fig/update.png)
 
 
