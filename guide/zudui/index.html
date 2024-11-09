@@ -1257,11 +1257,13 @@ self.房主房间 = Template(r&quot;tpl1700284856473.png&quot;, record_pos=(0.31
 注意, 王者活动的<a href="../upfig/">更新资源</a>包也是将更新的资源填写到<code>WZRY.图片更新.txt</code>里面的.</p>
 </div>
 <h2 id="限制组队的时间">限制组队的时间<a class="headerlink" href="#限制组队的时间" title="Permanent link">&para;</a></h2>
-<p>在每一个的账户的<code>WZRY.mynode.运行模式.txt</code>中都插入</p>
-<div class="codehilite"><pre><span></span><code># 所有账户的对战时间
-self.对战时间=[0.1,23.0]
-# 12点之前组队,12点之后,各自刷各自的
-self.限时组队时间=12
+<p>在每一个的账户的<a href="../file/"><code>WZRY.mynode.运行模式.txt</code></a>中都插入</p>
+<div class="codehilite"><pre><span></span><code>#<span class="w"> </span>所有账户的对战时间
+<span class="nv">self</span>.对战时间<span class="o">=</span>[<span class="mi">0</span>.<span class="mi">1</span>,<span class="mi">23</span>.<span class="mi">0</span>]
+#<span class="w"> </span><span class="mi">12</span>点之前组队,<span class="mi">12</span>点之后,各自刷各自的
+<span class="nv">self</span>.限时组队时间<span class="o">=</span><span class="mi">12</span>
+#<span class="w"> </span>前<span class="mi">5</span>局组队,之后,各自刷各自的
+<span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="mi">5</span>:<span class="w">  </span><span class="nv">self</span>.<span class="nv">Tool</span>.<span class="nv">touchfile</span><span class="ss">(</span><span class="nv">self</span>.无法进行组队<span class="nv">FILE</span>,<span class="s2">&quot;对局已超过5次&quot;</span><span class="ss">)</span>
 </code></pre></div>
 
 
