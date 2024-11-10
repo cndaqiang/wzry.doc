@@ -52,84 +52,84 @@
     
     
     
-  <!-- 保留父模板的内容 -->
+ <!-- 保留父模板的内容 -->
 
 <script>
+  
+  // 如果您介意被统计, 请访问: blockedDomains
+  
+  // 检查 blockedDomains 和 allowDomains 是否定义
+  const blockedDomains = ["127.0.0.1", "wzry-doc.serv00.net", "wzrydoc.readthedocs.io"];
+  const allowDomains = ["wzry-doc.pages.dev", "cndaqiang.github.io"];
 
-// 如果您介意被统计, 请访问: blockedDomains
 
-// 检查 blockedDomains 和 allowDomains 是否定义
-const blockedDomains = ["127.0.0.1", "wzry-doc.serv00.net", "wzrydoc.readthedocs.io"];
-const allowDomains = ["wzry-doc.pages.dev", "cndaqiang.github.io"];
-
-
-// 将当前域名加入到 allowDomains
-if (allowDomains.length === 0) {
+  // 将当前域名加入到 allowDomains
+  if (allowDomains.length === 0) {
     allowDomains.push(window.location.hostname);
-}
+  }
 
-// 定义检查黑名单和白名单的函数
-function isDomainAllowed() {
-  return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
-}
+  // 定义检查黑名单和白名单的函数
+  function isDomainAllowed() {
+    return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
+  }
 
-// Revolvermaps 统计
+  // Revolvermaps 统计
+  
+  function loadRevolvermaps() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = '//rf.revolvermaps.com/0/0/9.js?i=5hik3848fwe';
+    document.head.appendChild(script);
+  }
+  
 
-function loadRevolvermaps() {
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = '//rf.revolvermaps.com/0/0/9.js?i=5hik3848fwe';
-  document.head.appendChild(script);
-}
+  // Google Analytics 统计
+  
+  function loadGoogleAnalytics() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-FLH4L3Q02F";
+    document.head.appendChild(script);
 
+    // Google Analytics 配置
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FLH4L3Q02F');
+  }
+  
 
-// Google Analytics 统计
+  // Baidu Tongji 统计
+  
+  function loadBaiduTongji() {
+    var _hmt = _hmt || [];
+    (function () {
+      const script = document.createElement("script");
+      script.src = "//hm.baidu.com/hm.js?76d0fc6b8ffd3901ec51e8bece995b22";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(script, s);
+    })();
+  }
+  
 
-function loadGoogleAnalytics() {
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = "https://www.googletagmanager.com/gtag/js?id=G-FLH4L3Q02F";
-  document.head.appendChild(script);
+  // Umami 统计
+  
+  function loadUmami() {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '//cloud.umami.is/script.js';
+    script.setAttribute('data-website-id', '1d2518ba-011c-47f7-bf3d-c2454778ef02');
+    document.head.appendChild(script);
+  }
+  
 
-  // Google Analytics 配置
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FLH4L3Q02F');
-}
-
-
-// Baidu Tongji 统计
-
-function loadBaiduTongji() {
-  var _hmt = _hmt || [];
-  (function() {
-    const script = document.createElement("script");
-    script.src = "//hm.baidu.com/hm.js?76d0fc6b8ffd3901ec51e8bece995b22";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(script, s);
-  })();
-}
-
-
-// Umami 统计
-
-function loadUmami() {
-  const script = document.createElement('script');
-  script.defer = true;
-  script.src = '//cloud.umami.is/script.js';
-  script.setAttribute('data-website-id', '1d2518ba-011c-47f7-bf3d-c2454778ef02');
-  document.head.appendChild(script);
-}
-
-
-// 如果当前域名允许加载统计脚本，按需调用各个统计函数
-if (isDomainAllowed()) {
-   loadRevolvermaps(); 
-   loadGoogleAnalytics(); 
-   loadBaiduTongji(); 
-   loadUmami(); 
-}
+  // 如果当前域名允许加载统计脚本，按需调用各个统计函数
+  if (isDomainAllowed()) {
+     loadRevolvermaps(); 
+     loadGoogleAnalytics(); 
+     loadBaiduTongji(); 
+     loadUmami(); 
+  }
 </script>
 
 
@@ -140,54 +140,54 @@ if (isDomainAllowed()) {
   
   // 当定义白名单时, 检查当前域名是否在白名单中
   if (!blockedallow_robots.includes(window.location.hostname)) {
-            // 创建并插入 meta 标签以阻止爬虫
-            const metaTag = document.createElement("meta");
-            metaTag.name = "robots";
-            metaTag.content = "noindex, nofollow";
-            document.head.appendChild(metaTag);
-  //
+    // 创建并插入 meta 标签以阻止爬虫
+    const metaTag = document.createElement("meta");
+    metaTag.name = "robots";
+    metaTag.content = "noindex, nofollow";
+    document.head.appendChild(metaTag);
+    //
   }
- 
+  
 </script>
 <!-- 页面的像素纸片人显示次数 -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // 在这里定义 fullUrl，确保它在 DOMContentLoaded 事件触发时可用
-  const fullUrl = window.location.href; // 获取当前完整 URL
+  document.addEventListener('DOMContentLoaded', function () {
+    // 在这里定义 fullUrl，确保它在 DOMContentLoaded 事件触发时可用
+    const fullUrl = window.location.href; // 获取当前完整 URL
 
-  // 使用 URL 对象提取域名和路径
-  const url = new URL(fullUrl);
-  const domain = url.hostname; // 获取域名,
-  const shortdomain = domain.split(".").slice(0, 2).join('.'); // 域名保留前两个部分
-  const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, ''); // 只保留字母、数字、下划线
+    // 使用 URL 对象提取域名和路径
+    const url = new URL(fullUrl);
+    const domain = url.hostname; // 获取域名,
+    const shortdomain = domain.split(".").slice(0, 2).join('.'); // 域名保留前两个部分
+    const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, ''); // 只保留字母、数字、下划线
 
-  // 组合域名和路径
-  const sanitizedUrl = `${shortdomain}_${path}`.slice(0, 32); // 截取前32字符
+    // 组合域名和路径
+    const sanitizedUrl = `${shortdomain}_${path}`.slice(0, 32); // 截取前32字符
 
-  // 检查构建的 URL
-  console.log("Sanitized URL: ", sanitizedUrl);
+    // 检查构建的 URL
+    console.log("Sanitized URL: ", sanitizedUrl);
 
-  const imgSrc = `//count.getloli.com/@${sanitizedUrl}?theme=green&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto`;
+    const imgSrc = `//count.getloli.com/@${sanitizedUrl}?theme=green&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto`;
 
-  // 创建一个容器元素，使图片居中对齐
-  const imgContainer = document.createElement('div');
-  imgContainer.style.textAlign = 'center'; // 设置图片居中对齐
-  imgContainer.style.marginTop = '20px'; // 增加与正文间隔
+    // 创建一个容器元素，使图片居中对齐
+    const imgContainer = document.createElement('div');
+    imgContainer.style.textAlign = 'center'; // 设置图片居中对齐
+    imgContainer.style.marginTop = '20px'; // 增加与正文间隔
 
-  // 创建图片元素
-  const img = document.createElement('img');
-  img.src = imgSrc;
-  img.alt = 'count';
-  img.style.maxWidth = '25%'; // 设置最大宽度为25%以调小图片
-  img.style.height = 'auto'; // 保持原始比例
-  imgContainer.appendChild(img);
+    // 创建图片元素
+    const img = document.createElement('img');
+    img.src = imgSrc;
+    img.alt = 'count';
+    img.style.maxWidth = '25%'; // 设置最大宽度为25%以调小图片
+    img.style.height = 'auto'; // 保持原始比例
+    imgContainer.appendChild(img);
 
-  // 将容器插入到文档内容末尾
-  const content = document.querySelector('.md-content'); // 选择主内容区域
-  if (content) {
+    // 将容器插入到文档内容末尾
+    const content = document.querySelector('.md-content'); // 选择主内容区域
+    if (content) {
       content.appendChild(imgContainer);
-  }
-});
+    }
+  });
 </script>
 
   </head>
