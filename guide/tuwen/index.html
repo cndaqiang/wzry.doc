@@ -58,14 +58,20 @@
 <!-- <meta name="baidu-site-verification" content="codeva-55LnuJy9rf" /> -->
 <!-- 如果您介意被统计, 请访问: https://wzrydoc.readthedocs.io -->
 <script>
-// 检查 blocked_domains 是否定义，如果没有定义则使用一个空数组作为默认值
-const blockedDomains = ["0.0.0.0", "127.0.0.1", "192.168.192.31", "localhost", "wzry-doc.serv00.net", "wzrydoc.readthedocs.io", "example.com"];
-</script>
+// 检查 blockedDomains 和 allowDomains 是否定义
+const blockedDomains = ["127.0.0.1", "wzry-doc.serv00.net", "wzrydoc.readthedocs.io"];
+const allowDomains = ["wzry-doc.pages.dev", "cndaqiang.github.io"];
+
+// 将当前域名加入到 allowDomains
+if (allowDomains.length === 0) {
+    allowDomains.push(window.location.hostname);
+}
+</script>  
 <!-- revolvermaps 统计 -->
 
 <script>
-// 检查当前域名是否在黑名单中
-if (!blockedDomains.includes(window.location.hostname)) {
+// 检查当前域名是否在黑名单中，且是否在允许名单中
+if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
 //
     const script = document.createElement('script');
     script.async = true;
@@ -79,8 +85,8 @@ if (!blockedDomains.includes(window.location.hostname)) {
 <!-- google 统计-->
 
 <script>
-  // 检查当前域名是否在黑名单中
-  if (!blockedDomains.includes(window.location.hostname)) {
+  // 检查当前域名是否在黑名单中，且是否在允许名单中
+  if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
   //
   var script = document.createElement('script');
   script.async = true;
@@ -91,8 +97,8 @@ if (!blockedDomains.includes(window.location.hostname)) {
 </script>
 <!-- Google tag (gtag.js) -->
 <script>
-// 检查当前域名是否在黑名单中
-if (!blockedDomains.includes(window.location.hostname)) {
+// 检查当前域名是否在黑名单中，且是否在允许名单中
+if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
 //
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -106,8 +112,8 @@ if (!blockedDomains.includes(window.location.hostname)) {
 <!-- baidu 统计-->
 
 <script>
-// 检查当前域名是否在黑名单中
-if (!blockedDomains.includes(window.location.hostname)) {
+// 检查当前域名是否在黑名单中，且是否在允许名单中
+if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
 //
   var _hmt = _hmt || [];
   (function() {
@@ -123,8 +129,8 @@ if (!blockedDomains.includes(window.location.hostname)) {
 <!-- umami 访客统计-->
 
 <script>
-// 检查当前域名是否在黑名单中
-if (!blockedDomains.includes(window.location.hostname)) {
+// 检查当前域名是否在黑名单中，且是否在允许名单中
+if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
 //
     const script = document.createElement('script');
     script.defer = true;
