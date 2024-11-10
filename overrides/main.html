@@ -3,141 +3,141 @@
 <!--在head中加东西-->
 <!--以site/index.html中的变化为参考,127.0.0.1:8000的结果可能只有commit之后，本地才会更新-->
 {% block extrahead %}
-{{ super() }}  <!-- 保留父模板的内容 -->
+{{ super() }} <!-- 保留父模板的内容 -->
 
 <script>
-{% if config.extra.blocked_domains %}
-// 如果您介意被统计, 请访问: blockedDomains
-{% endif %}
-// 检查 blockedDomains 和 allowDomains 是否定义
-const blockedDomains = {{ config.extra.blocked_domains | default([]) | tojson }};
-const allowDomains = {{ config.extra.allow_domains | default([]) | tojson }};
+  {% if config.extra.blocked_domains %}
+  // 如果您介意被统计, 请访问: blockedDomains
+  {% endif %}
+  // 检查 blockedDomains 和 allowDomains 是否定义
+  const blockedDomains = {{ config.extra.blocked_domains | default ([]) | tojson }};
+  const allowDomains = {{ config.extra.allow_domains | default ([]) | tojson }};
 
 
-// 将当前域名加入到 allowDomains
-if (allowDomains.length === 0) {
+  // 将当前域名加入到 allowDomains
+  if (allowDomains.length === 0) {
     allowDomains.push(window.location.hostname);
-}
+  }
 
-// 定义检查黑名单和白名单的函数
-function isDomainAllowed() {
-  return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
-}
+  // 定义检查黑名单和白名单的函数
+  function isDomainAllowed() {
+    return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
+  }
 
-// Revolvermaps 统计
-{% if config.extra.revolvermapsID %}
-function loadRevolvermaps() {
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = '//rf.revolvermaps.com/0/0/9.js?i={{ config.extra.revolvermapsID }}';
-  document.head.appendChild(script);
-}
-{% endif %}
+  // Revolvermaps 统计
+  {% if config.extra.revolvermapsID %}
+  function loadRevolvermaps() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = '//rf.revolvermaps.com/0/0/9.js?i={{ config.extra.revolvermapsID }}';
+    document.head.appendChild(script);
+  }
+  {% endif %}
 
-// Google Analytics 统计
-{% if config.extra.googleanalysisID %}
-function loadGoogleAnalytics() {
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = "https://www.googletagmanager.com/gtag/js?id={{ config.extra.googleanalysisID }}";
-  document.head.appendChild(script);
+  // Google Analytics 统计
+  {% if config.extra.googleanalysisID %}
+  function loadGoogleAnalytics() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id={{ config.extra.googleanalysisID }}";
+    document.head.appendChild(script);
 
-  // Google Analytics 配置
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ config.extra.googleanalysisID }}');
-}
-{% endif %}
+    // Google Analytics 配置
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ config.extra.googleanalysisID }}');
+  }
+  {% endif %}
 
-// Baidu Tongji 统计
-{% if config.extra.baidutongjiID %}
-function loadBaiduTongji() {
-  var _hmt = _hmt || [];
-  (function() {
-    const script = document.createElement("script");
-    script.src = "//hm.baidu.com/hm.js?{{ config.extra.baidutongjiID }}";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(script, s);
-  })();
-}
-{% endif %}
+  // Baidu Tongji 统计
+  {% if config.extra.baidutongjiID %}
+  function loadBaiduTongji() {
+    var _hmt = _hmt || [];
+    (function () {
+      const script = document.createElement("script");
+      script.src = "//hm.baidu.com/hm.js?{{ config.extra.baidutongjiID }}";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(script, s);
+    })();
+  }
+  {% endif %}
 
-// Umami 统计
-{% if config.extra.umaniID %}
-function loadUmami() {
-  const script = document.createElement('script');
-  script.defer = true;
-  script.src = '//cloud.umami.is/script.js';
-  script.setAttribute('data-website-id', '{{ config.extra.umaniID }}');
-  document.head.appendChild(script);
-}
-{% endif %}
+  // Umami 统计
+  {% if config.extra.umaniID %}
+  function loadUmami() {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '//cloud.umami.is/script.js';
+    script.setAttribute('data-website-id', '{{ config.extra.umaniID }}');
+    document.head.appendChild(script);
+  }
+  {% endif %}
 
-// 如果当前域名允许加载统计脚本，按需调用各个统计函数
-if (isDomainAllowed()) {
-  {% if config.extra.revolvermapsID %} loadRevolvermaps(); {% endif %}
-  {% if config.extra.googleanalysisID %} loadGoogleAnalytics(); {% endif %}
-  {% if config.extra.baidutongjiID %} loadBaiduTongji(); {% endif %}
-  {% if config.extra.umaniID %} loadUmami(); {% endif %}
-}
+  // 如果当前域名允许加载统计脚本，按需调用各个统计函数
+  if (isDomainAllowed()) {
+    {% if config.extra.revolvermapsID %} loadRevolvermaps(); {% endif %}
+    {% if config.extra.googleanalysisID %} loadGoogleAnalytics(); {% endif %}
+    {% if config.extra.baidutongjiID %} loadBaiduTongji(); {% endif %}
+    {% if config.extra.umaniID %} loadUmami(); {% endif %}
+  }
 </script>
 
 
 <!-- 多域名时, 仅允许搜索引擎爬指定域名 -->
 <script>
   // 检查 allow_robots 是否定义，如果没有定义则使用一个空数组作为默认值
-  const blockedallow_robots = {{ config.extra.allow_robots | default([]) | tojson }};
+  const blockedallow_robots = {{ config.extra.allow_robots | default ([]) | tojson }};
   {% if config.extra.allow_robots %}
   // 当定义白名单时, 检查当前域名是否在白名单中
   if (!blockedallow_robots.includes(window.location.hostname)) {
-            // 创建并插入 meta 标签以阻止爬虫
-            const metaTag = document.createElement("meta");
-            metaTag.name = "robots";
-            metaTag.content = "noindex, nofollow";
-            document.head.appendChild(metaTag);
-  //
+    // 创建并插入 meta 标签以阻止爬虫
+    const metaTag = document.createElement("meta");
+    metaTag.name = "robots";
+    metaTag.content = "noindex, nofollow";
+    document.head.appendChild(metaTag);
+    //
   }
- {% endif %}
+  {% endif %}
 </script>
 <!-- 页面的像素纸片人显示次数 -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // 在这里定义 fullUrl，确保它在 DOMContentLoaded 事件触发时可用
-  const fullUrl = window.location.href; // 获取当前完整 URL
+  document.addEventListener('DOMContentLoaded', function () {
+    // 在这里定义 fullUrl，确保它在 DOMContentLoaded 事件触发时可用
+    const fullUrl = window.location.href; // 获取当前完整 URL
 
-  // 使用 URL 对象提取域名和路径
-  const url = new URL(fullUrl);
-  const domain = url.hostname; // 获取域名,
-  const shortdomain = domain.split(".").slice(0, 2).join('.'); // 域名保留前两个部分
-  const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, ''); // 只保留字母、数字、下划线
+    // 使用 URL 对象提取域名和路径
+    const url = new URL(fullUrl);
+    const domain = url.hostname; // 获取域名,
+    const shortdomain = domain.split(".").slice(0, 2).join('.'); // 域名保留前两个部分
+    const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, ''); // 只保留字母、数字、下划线
 
-  // 组合域名和路径
-  const sanitizedUrl = `${shortdomain}_${path}`.slice(0, 32); // 截取前32字符
+    // 组合域名和路径
+    const sanitizedUrl = `${shortdomain}_${path}`.slice(0, 32); // 截取前32字符
 
-  // 检查构建的 URL
-  console.log("Sanitized URL: ", sanitizedUrl);
+    // 检查构建的 URL
+    console.log("Sanitized URL: ", sanitizedUrl);
 
-  const imgSrc = `//count.getloli.com/@${sanitizedUrl}?theme=green&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto`;
+    const imgSrc = `//count.getloli.com/@${sanitizedUrl}?theme=green&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto`;
 
-  // 创建一个容器元素，使图片居中对齐
-  const imgContainer = document.createElement('div');
-  imgContainer.style.textAlign = 'center'; // 设置图片居中对齐
-  imgContainer.style.marginTop = '20px'; // 增加与正文间隔
+    // 创建一个容器元素，使图片居中对齐
+    const imgContainer = document.createElement('div');
+    imgContainer.style.textAlign = 'center'; // 设置图片居中对齐
+    imgContainer.style.marginTop = '20px'; // 增加与正文间隔
 
-  // 创建图片元素
-  const img = document.createElement('img');
-  img.src = imgSrc;
-  img.alt = 'count';
-  img.style.maxWidth = '25%'; // 设置最大宽度为25%以调小图片
-  img.style.height = 'auto'; // 保持原始比例
-  imgContainer.appendChild(img);
+    // 创建图片元素
+    const img = document.createElement('img');
+    img.src = imgSrc;
+    img.alt = 'count';
+    img.style.maxWidth = '25%'; // 设置最大宽度为25%以调小图片
+    img.style.height = 'auto'; // 保持原始比例
+    imgContainer.appendChild(img);
 
-  // 将容器插入到文档内容末尾
-  const content = document.querySelector('.md-content'); // 选择主内容区域
-  if (content) {
+    // 将容器插入到文档内容末尾
+    const content = document.querySelector('.md-content'); // 选择主内容区域
+    if (content) {
       content.appendChild(imgContainer);
-  }
-});
+    }
+  });
 </script>
 {% endblock %}
