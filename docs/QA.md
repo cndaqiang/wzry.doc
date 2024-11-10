@@ -5,10 +5,10 @@
 * 在[issues](https://github.com/cndaqiang/WZRY/issues)页面友善的提出问题.
 
 
-## 如何提问能得到最快的解答
-* 附上**执行结果、配置文件、运行目录、游戏页面、模拟器设置页面、cmd/powershell/terminal/vscode/pycharm等运行界面截图**,越多越好.
-* **@cndaqiang或者为[WZRY项目](https://github.com/cndaqiang/WZRY)start加速解决问题的速度.**
-* 语气和善,没人理会你的傲慢和懒惰.请遵守[提问的礼仪](https://github.com/tvvocold/How-To-Ask-Questions-The-Smart-Way).
+???Note "如何提问能得到最快的解答?"
+    * 附上**执行结果、配置文件、运行目录、游戏页面、模拟器设置页面、cmd/powershell/terminal/vscode/pycharm等运行界面截图**,越多越好.
+    * **@cndaqiang或者为[WZRY项目](https://github.com/cndaqiang/WZRY)start加速解决问题的速度.**
+    * 语气和善,没人理会你的傲慢和懒惰.请遵守[提问的礼仪](https://github.com/tvvocold/How-To-Ask-Questions-The-Smart-Way).
 
 
 
