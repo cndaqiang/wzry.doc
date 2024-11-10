@@ -4,92 +4,86 @@
 <!--以site/index.html中的变化为参考,127.0.0.1:8000的结果可能只有commit之后，本地才会更新-->
 {% block extrahead %}
 {{ super() }}  <!-- 保留父模板的内容 -->
-<!-- <meta name="baidu-site-verification" content="codeva-55LnuJy9rf" /> -->
-<!-- 如果您介意被统计, 请访问: https://wzrydoc.readthedocs.io -->
+
 <script>
+{% if config.extra.blocked_domains %}
+// 如果您介意被统计, 请访问: blockedDomains
+{% endif %}
 // 检查 blockedDomains 和 allowDomains 是否定义
 const blockedDomains = {{ config.extra.blocked_domains | default([]) | tojson }};
 const allowDomains = {{ config.extra.allow_domains | default([]) | tojson }};
+
 
 // 将当前域名加入到 allowDomains
 if (allowDomains.length === 0) {
     allowDomains.push(window.location.hostname);
 }
-</script>  
-<!-- revolvermaps 统计 -->
-{% if config.extra.revolvermapsID %}
-<script>
-// 检查当前域名是否在黑名单中，且是否在允许名单中
-if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
-//
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = '//rf.revolvermaps.com/0/0/9.js?i={{ config.extra.revolvermapsID }}';
-    document.head.appendChild(script);
-//
+
+// 定义检查黑名单和白名单的函数
+function isDomainAllowed() {
+  return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
 }
-</script>
+
+// Revolvermaps 统计
+{% if config.extra.revolvermapsID %}
+function loadRevolvermaps() {
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = '//rf.revolvermaps.com/0/0/9.js?i={{ config.extra.revolvermapsID }}';
+  document.head.appendChild(script);
+}
 {% endif %}
 
-<!-- google 统计-->
+// Google Analytics 统计
 {% if config.extra.googleanalysisID %}
-<script>
-  // 检查当前域名是否在黑名单中，且是否在允许名单中
-  if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
-  //
-  var script = document.createElement('script');
+function loadGoogleAnalytics() {
+  const script = document.createElement('script');
   script.async = true;
   script.src = "https://www.googletagmanager.com/gtag/js?id={{ config.extra.googleanalysisID }}";
   document.head.appendChild(script);
-//
-}
-</script>
-<!-- Google tag (gtag.js) -->
-<script>
-// 检查当前域名是否在黑名单中，且是否在允许名单中
-if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
-//
+
+  // Google Analytics 配置
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', '{{ config.extra.googleanalysisID }}');
-//
 }
-</script>
 {% endif %}
-<!-- baidu 统计-->
+
+// Baidu Tongji 统计
 {% if config.extra.baidutongjiID %}
-<script>
-// 检查当前域名是否在黑名单中，且是否在允许名单中
-if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
-//
+function loadBaiduTongji() {
   var _hmt = _hmt || [];
   (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?{{ config.extra.baidutongjiID }}";
+    const script = document.createElement("script");
+    script.src = "//hm.baidu.com/hm.js?{{ config.extra.baidutongjiID }}";
     var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
+    s.parentNode.insertBefore(script, s);
   })();
-//
 }
-</script>
 {% endif %}
-<!-- umami 访客统计-->
+
+// Umami 统计
 {% if config.extra.umaniID %}
-<script>
-// 检查当前域名是否在黑名单中，且是否在允许名单中
-if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
-//
-    const script = document.createElement('script');
-    script.defer = true;
-    script.src = '//cloud.umami.is/script.js';
-    script.setAttribute('data-website-id', '{{ config.extra.umaniID }}');
-    document.head.appendChild(script);
-//
+function loadUmami() {
+  const script = document.createElement('script');
+  script.defer = true;
+  script.src = '//cloud.umami.is/script.js';
+  script.setAttribute('data-website-id', '{{ config.extra.umaniID }}');
+  document.head.appendChild(script);
+}
+{% endif %}
+
+// 如果当前域名允许加载统计脚本，按需调用各个统计函数
+if (isDomainAllowed()) {
+  {% if config.extra.revolvermapsID %} loadRevolvermaps(); {% endif %}
+  {% if config.extra.googleanalysisID %} loadGoogleAnalytics(); {% endif %}
+  {% if config.extra.baidutongjiID %} loadBaiduTongji(); {% endif %}
+  {% if config.extra.umaniID %} loadUmami(); {% endif %}
 }
 </script>
-{% endif %}
+
+
 <!-- 多域名时, 仅允许搜索引擎爬指定域名 -->
 <script>
   // 检查 allow_robots 是否定义，如果没有定义则使用一个空数组作为默认值
