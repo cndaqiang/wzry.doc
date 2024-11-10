@@ -49,91 +49,85 @@
     
     
   <!-- 保留父模板的内容 -->
-<!-- <meta name="baidu-site-verification" content="codeva-55LnuJy9rf" /> -->
-<!-- 如果您介意被统计, 请访问: https://wzrydoc.readthedocs.io -->
+
 <script>
+
+// 如果您介意被统计, 请访问: blockedDomains
+
 // 检查 blockedDomains 和 allowDomains 是否定义
 const blockedDomains = ["127.0.0.1", "wzry-doc.serv00.net", "wzrydoc.readthedocs.io"];
 const allowDomains = ["wzry-doc.pages.dev", "cndaqiang.github.io"];
+
 
 // 将当前域名加入到 allowDomains
 if (allowDomains.length === 0) {
     allowDomains.push(window.location.hostname);
 }
-</script>  
-<!-- revolvermaps 统计 -->
 
-<script>
-// 检查当前域名是否在黑名单中，且是否在允许名单中
-if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
-//
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = '//rf.revolvermaps.com/0/0/9.js?i=5hik3848fwe';
-    document.head.appendChild(script);
-//
+// 定义检查黑名单和白名单的函数
+function isDomainAllowed() {
+  return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
 }
-</script>
+
+// Revolvermaps 统计
+
+function loadRevolvermaps() {
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = '//rf.revolvermaps.com/0/0/9.js?i=5hik3848fwe';
+  document.head.appendChild(script);
+}
 
 
-<!-- google 统计-->
+// Google Analytics 统计
 
-<script>
-  // 检查当前域名是否在黑名单中，且是否在允许名单中
-  if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
-  //
-  var script = document.createElement('script');
+function loadGoogleAnalytics() {
+  const script = document.createElement('script');
   script.async = true;
   script.src = "https://www.googletagmanager.com/gtag/js?id=G-FLH4L3Q02F";
   document.head.appendChild(script);
-//
-}
-</script>
-<!-- Google tag (gtag.js) -->
-<script>
-// 检查当前域名是否在黑名单中，且是否在允许名单中
-if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
-//
+
+  // Google Analytics 配置
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-FLH4L3Q02F');
-//
 }
-</script>
 
-<!-- baidu 统计-->
 
-<script>
-// 检查当前域名是否在黑名单中，且是否在允许名单中
-if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
-//
+// Baidu Tongji 统计
+
+function loadBaiduTongji() {
   var _hmt = _hmt || [];
   (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?76d0fc6b8ffd3901ec51e8bece995b22";
+    const script = document.createElement("script");
+    script.src = "//hm.baidu.com/hm.js?76d0fc6b8ffd3901ec51e8bece995b22";
     var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
+    s.parentNode.insertBefore(script, s);
   })();
-//
+}
+
+
+// Umami 统计
+
+function loadUmami() {
+  const script = document.createElement('script');
+  script.defer = true;
+  script.src = '//cloud.umami.is/script.js';
+  script.setAttribute('data-website-id', '1d2518ba-011c-47f7-bf3d-c2454778ef02');
+  document.head.appendChild(script);
+}
+
+
+// 如果当前域名允许加载统计脚本，按需调用各个统计函数
+if (isDomainAllowed()) {
+   loadRevolvermaps(); 
+   loadGoogleAnalytics(); 
+   loadBaiduTongji(); 
+   loadUmami(); 
 }
 </script>
 
-<!-- umami 访客统计-->
-
-<script>
-// 检查当前域名是否在黑名单中，且是否在允许名单中
-if (!blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname)) {
-//
-    const script = document.createElement('script');
-    script.defer = true;
-    script.src = '//cloud.umami.is/script.js';
-    script.setAttribute('data-website-id', '1d2518ba-011c-47f7-bf3d-c2454778ef02');
-    document.head.appendChild(script);
-//
-}
-</script>
 
 <!-- 多域名时, 仅允许搜索引擎爬指定域名 -->
 <script>
