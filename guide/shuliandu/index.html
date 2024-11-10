@@ -1280,14 +1280,15 @@ pos = (x, y)
 英雄列表共<code>(9列,5行)</code>, 第<code>i</code>列第<code>j</code>行的英雄坐标为<code>(-0.54+i*0.09,-0.31+j*0.11)</code>. <br>
 如果你使用分辨率960x540,dpi=160的模拟器,可以直接抄我下面的配置,填到的<code>WZRY.mynode.运行模式.txt</code>中。</p>
 </div>
-<div class="codehilite"><pre><span></span><code><span class="n">分路名称</span><span class="o">=[</span><span class="n">&quot;对抗&quot;, &quot;打野&quot;,&quot;中路&quot;,&quot;发育&quot;,&quot;游走&quot;</span><span class="o">]</span>
+<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">打野和对抗不要相邻</span><span class="p">,</span><span class="w"> </span><span class="n">组队的时候容易英雄冲突</span>
+<span class="n">分路名称</span><span class="o">=[</span><span class="n">&quot;对抗&quot;, &quot;中路&quot;,&quot;发育&quot;,&quot;打野&quot;,&quot;游走&quot;</span><span class="o">]</span>
 <span class="k">index</span><span class="o">=</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">runstep</span><span class="o">+</span><span class="n">self</span><span class="p">.</span><span class="n">mynode</span><span class="p">)</span><span class="o">%</span><span class="nf">len</span><span class="p">(</span><span class="n">分路名称</span><span class="p">)</span>
 <span class="n">TimeECHO</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;本次{self.runstep}对战分路: {分路名称[index]}&quot;</span><span class="p">)</span>
 <span class="err">#</span>
 <span class="err">#</span><span class="w"> </span><span class="n">第</span><span class="p">(</span><span class="n">列</span><span class="p">,</span><span class="n">行</span><span class="p">)</span><span class="n">的英雄位置</span>
-<span class="n">pos</span><span class="o">=[</span><span class="n">(6,5),(9,5),(4,4),(9,2),(2,4)</span><span class="o">][</span><span class="n">index</span><span class="o">]</span>
+<span class="n">pos</span><span class="o">=[</span><span class="n">(6,5),(4,4),(9,2),(9,5),(2,4)</span><span class="o">][</span><span class="n">index</span><span class="o">]</span>
 <span class="n">参战英雄头像坐标</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.54</span><span class="o">+</span><span class="n">pos</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="mf">0.09</span><span class="p">,</span><span class="o">-</span><span class="mf">0.31</span><span class="o">+</span><span class="n">pos</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="mf">0.11</span><span class="p">)</span>
-<span class="n">参战英雄线路坐标</span><span class="o">=[</span><span class="n">(-0.314, -0.26),  (-0.194, -0.26), (-0.069, -0.26), (0.037, -0.26),  (0.18, -0.26)</span><span class="o">][</span><span class="n">index</span><span class="o">]</span>
+<span class="n">参战英雄线路坐标</span><span class="o">=[</span><span class="n">(-0.314, -0.26), (-0.069, -0.26), (0.037, -0.26),   (-0.194, -0.26), (0.18, -0.26)</span><span class="o">][</span><span class="n">index</span><span class="o">]</span>
 <span class="n">self</span><span class="p">.</span><span class="n">Tool</span><span class="p">.</span><span class="n">cal_record_pos</span><span class="p">(</span><span class="n">参战英雄头像坐标</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">移动端</span><span class="p">.</span><span class="n">resolution</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;参战英雄头像&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">savepos</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
 <span class="n">self</span><span class="p">.</span><span class="n">Tool</span><span class="p">.</span><span class="n">cal_record_pos</span><span class="p">(</span><span class="n">参战英雄线路坐标</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">移动端</span><span class="p">.</span><span class="n">resolution</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;参战英雄线路&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">savepos</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
 </code></pre></div>
@@ -1302,16 +1303,11 @@ pos = (x, y)
 <li>对于<strong>分辨率960x540,dpi=160</strong>的模拟器,在<code>WZRY.mynode.运行模式.txt</code>文件内填入下面内容,则会选中对抗路和第6列第5行的英雄.</li>
 <li>其他的分辨率,阅读上面的<em>循环选熟练度最低的英雄</em>内容, 就知道怎么操作了.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">分路名称</span><span class="o">=[</span><span class="n">&quot;对抗&quot;, &quot;打野&quot;,&quot;中路&quot;,&quot;发育&quot;,&quot;游走&quot;</span><span class="o">]</span>
-<span class="k">index</span><span class="o">=</span><span class="mi">1</span>
-<span class="n">TimeECHO</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;本次{self.runstep}对战分路: {分路名称[index]}&quot;</span><span class="p">)</span>
-<span class="err">#</span>
-<span class="err">#</span><span class="w"> </span><span class="n">第</span><span class="p">(</span><span class="n">列</span><span class="p">,</span><span class="n">行</span><span class="p">)</span><span class="n">的英雄位置</span>
-<span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">参战英雄头像坐标</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.54</span><span class="o">+</span><span class="n">pos</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="mf">0.09</span><span class="p">,</span><span class="o">-</span><span class="mf">0.31</span><span class="o">+</span><span class="n">pos</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="mf">0.11</span><span class="p">)</span>
-<span class="n">参战英雄线路坐标</span><span class="o">=[</span><span class="n">(-0.314, -0.26),  (-0.194, -0.26), (-0.069, -0.26), (0.037, -0.26),  (0.18, -0.26)</span><span class="o">][</span><span class="n">index</span><span class="o">]</span>
-<span class="n">self</span><span class="p">.</span><span class="n">Tool</span><span class="p">.</span><span class="n">cal_record_pos</span><span class="p">(</span><span class="n">参战英雄头像坐标</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">移动端</span><span class="p">.</span><span class="n">resolution</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;参战英雄头像&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">savepos</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
-<span class="n">self</span><span class="p">.</span><span class="n">Tool</span><span class="p">.</span><span class="n">cal_record_pos</span><span class="p">(</span><span class="n">参战英雄线路坐标</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">移动端</span><span class="p">.</span><span class="n">resolution</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;参战英雄线路&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">savepos</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code>pos=(6,5)
+参战英雄头像坐标=(-0.54+pos[0]*0.09,-0.31+pos[1]*0.11)
+参战英雄线路坐标=(-0.314, -0.26)
+self.Tool.cal_record_pos(参战英雄头像坐标, self.移动端.resolution, &quot;参战英雄头像&quot;, savepos=True)
+self.Tool.cal_record_pos(参战英雄线路坐标, self.移动端.resolution, &quot;参战英雄线路&quot;, savepos=True)
 </code></pre></div>
 
 

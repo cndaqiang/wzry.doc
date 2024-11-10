@@ -1177,13 +1177,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>则在<code>wzry.py</code>所在的文件夹,创建<code>WZRY.图片更新.txt</code>文件</li>
 <li>文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">为何要更新图片?</p>
+<details class="note">
+<summary>为何要更新图片?</summary>
 <p>王者因为各种活动，会临时改变登录页面的开始游戏、大厅的对战和娱乐模式、匹配房间的开始游戏和取消准备、大厅的战令、商店、活动入口等的图片资源.
 而在活动结束时, 这些图片又会恢复成默认的图片.  <br>每次活动都更新<a href="https://github.com/cndaqiang/WZRY">WZRY代码仓库</a>的静态图片没有意义.
 本脚本提供一种临时更新图片的方法, 当文件<code>WZRY.图片更新.txt</code>存在时, 则会使用这个文件中定义的图片覆盖掉默认的设置, 当该文件不存在时, 则恢复默认的图片.<br>
 在<a href="../zudui/">组队</a>的时候，不同账户的头像不同, 也可以将<a href="../zudui/#更新图片资源">房主头像</a>定义在<code>WZRY.图片更新.txt</code>中.</p>
-</div>
+</details>
 <h2 id="更新图片示例">更新图片示例<a class="headerlink" href="#更新图片示例" title="Permanent link">&para;</a></h2>
 <ul>
 <li>单张图片通过<a href="#template代码格式">Template</a>定义, 可以使用<code>self.XXXX=Template(...)</code>进行赋值</li>
