@@ -127,18 +127,18 @@ prefix: "wzry"
 * **`mynode=0`的账户必须是多开组队的大号(开房间的账户).但是`mynode=0`的账户可以使用任意一台模拟器**
     <br>例如,下面的配置中,大号(`mynode=0`)使用第1台模拟器,小号(`mynode=1`)使用第0台模拟器
     <pre><code>
-    totalnode: 2
-    multiprocessing: True
-    BlueStackdir: C:\Program Files\BlueStacks_nxt
-    BlueStack_Instance:
-        0: Pie64_1
-        1: Pie64
-    BlueStack_Windows:
-        0: BlueStacks1
-        1: BlueStacks0
-    LINK_dict:
-        0: Android:///127.0.0.1:5565
-        1: Android:///127.0.0.1:5555
+totalnode: 2
+multiprocessing: True
+BlueStackdir: C:\Program Files\BlueStacks_nxt
+BlueStack_Instance:
+    0: Pie64_1
+    1: Pie64
+BlueStack_Windows:
+    0: BlueStacks1
+    1: BlueStacks0
+LINK_dict:
+    0: Android:///127.0.0.1:5565
+    1: Android:///127.0.0.1:5555
     </code></pre>
     ![](../fig/blue_win.png)
 
