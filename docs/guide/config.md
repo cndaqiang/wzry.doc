@@ -76,8 +76,8 @@ prefix: "wzry"
 |BlueStack_Windows|{mynode:"BlueStacks App Player instance"}|BlueStacks没有提供关闭模拟器的接口,需要使用windows的命令关闭模拟器实例的窗口名称. **建议在多开管理器里修改为简短的名字**,例如`BlueStacks0`,`BlueStacks1`等|
 |BossKey|内置|**无需设置**,airtest_mobileauto内部已经配置了BlueStack/LDPlayer/MuMu模拟器默认的老板键.本脚本启动模拟器后,会自动隐藏模拟器窗口.若自定义了老板键或有更多需求,自行修改airtest_mobileauto的代码.|
 
-#### 雷电模拟器配置
-!!! Warning "雷电模拟器"
+#### 模拟器配置示例
+??? Warning  "点击展开:雷电模拟器配置示例"
     图中模拟器的Instance被鼠标选中，其对应的配置文件如下
     <pre><code>
     mynode: 0
@@ -90,8 +90,7 @@ prefix: "wzry"
     ![](../fig/ld_instance.png)
 
 
-#### MuMu模拟器配置
-!!! note "MuMu模拟器"
+??? note "点击展开:MuMu模拟器配置示例"
     图中模拟器的Instance被鼠标选中，其对应的配置文件如下
     <pre><code>
     mynode: 0
@@ -103,9 +102,8 @@ prefix: "wzry"
     </code></pre>
     ![](../fig/mumu_instance.png)
 
-#### BlueStack模拟器配置
 
-!!! Question "BlueStacks"
+??? Question "点击展开:BlueStacks模拟器配置示例"
     图中模拟器的Instance被鼠标选中，其对应的配置文件如下，**注意BlueStacks模拟器要额外提供模拟器的窗口名字`BlueStack_Windows`**
     <pre><code>
     mynode: 1

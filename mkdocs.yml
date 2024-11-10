@@ -51,6 +51,7 @@ nav:
 # markdown拓展语法
 markdown_extensions:
   - admonition #MkDocs 警告框，!!!note 语法https://lifeinzucc.github.io/help/markdown/admonition/
+  - pymdownx.details # 警告框可以使用 ???note, 然后可以展开
   - footnotes #脚注
   - codehilite # 代码高亮？
   - meta #自定义文章元数据
