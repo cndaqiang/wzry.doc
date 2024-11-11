@@ -143,28 +143,37 @@
 
 
 <script>
-  // 获取 mkdocs 配置中的域名前缀字典
-  const faviconPrefixes = {{ config.extra.favicon_prefixes | tojson }};
+  // 等待 DOM 内容加载完毕
+  document.addEventListener('DOMContentLoaded', function() {
+    // 获取 mkdocs 配置中的域名前缀字典
+    const faviconPrefixes = {{ config.extra.favicon_prefixes | tojson }};
+    
+    // 检查当前域名
+    const currentHostname = window.location.hostname;
+    
+    // 获取对应的前缀，若未找到则使用默认前缀
+    const faviconPrefix = faviconPrefixes[currentHostname] || faviconPrefixes["default"] || "";
   
-  // 检查当前域名
-  const currentHostname = window.location.hostname;
+    // 更新 <link rel="icon"> 标签
+    let faviconLink = document.querySelector('link[rel="icon"]');
+    if (faviconLink) {
+      faviconLink.href = `${faviconPrefix}/favicon.png`;
+    } else {
+      // 如果 <link rel="icon"> 标签不存在，则创建并添加新的标签
+      const newFavicon = document.createElement('link');
+      newFavicon.rel = "icon";
+      newFavicon.href = `${faviconPrefix}/favicon.png`;
+      document.head.appendChild(newFavicon);
+    }
   
-  // 获取对应的前缀，若未找到则使用默认前缀
-  const faviconPrefix = faviconPrefixes[currentHostname] || faviconPrefixes["default"] || "";
-  
-  // 查找页面中的 <link rel="icon"> 标签
-  let faviconLink = document.querySelector('link[rel="icon"]');
-  
-  // 替换或设置 favicon 的 href
-  if (faviconLink) {
-    faviconLink.href = `${faviconPrefix}/favicon.png`;
-  } else {
-    // 如果 <link rel="icon"> 标签不存在，则创建并添加新的标签
-    const newFavicon = document.createElement('link');
-    newFavicon.rel = "icon";
-    newFavicon.href = `${faviconPrefix}/favicon.png`;
-    document.head.appendChild(newFavicon);
-  }
+    // 更新 alt="logo" 的 <img> 标签中的 favicon 路径
+    document.querySelectorAll('img[alt="logo"]').forEach(img => {
+      if (img.getAttribute('src') === "favicon.png") {
+        img.setAttribute('src', `${faviconPrefix}/favicon.png`);
+      }
+    });
+  });
 </script>
+  
   
 {% endblock %}
