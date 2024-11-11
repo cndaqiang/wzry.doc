@@ -19,7 +19,7 @@
         <link rel="next" href="../config/">
       
       
-      <link rel="icon" href="https://cndaqiang.github.io/wzry.doc/favicon.png">
+      <link rel="icon" href="../../favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
@@ -192,6 +192,33 @@
   });
 </script>
 
+
+<script>
+  // 获取 mkdocs 配置中的域名前缀字典
+  const faviconPrefixes = {"cndaqiang.github.io": "/wzry.doc", "default": ""};
+  
+  // 检查当前域名
+  const currentHostname = window.location.hostname;
+  
+  // 获取对应的前缀，若未找到则使用默认前缀
+  const faviconPrefix = faviconPrefixes[currentHostname] || faviconPrefixes["default"] || "";
+  
+  // 查找页面中的 <link rel="icon"> 标签
+  let faviconLink = document.querySelector('link[rel="icon"]');
+  
+  // 替换或设置 favicon 的 href
+  if (faviconLink) {
+    faviconLink.href = `${faviconPrefix}/favicon.png`;
+  } else {
+    // 如果 <link rel="icon"> 标签不存在，则创建并添加新的标签
+    const newFavicon = document.createElement('link');
+    newFavicon.rel = "icon";
+    newFavicon.href = `${faviconPrefix}/favicon.png`;
+    document.head.appendChild(newFavicon);
+  }
+</script>
+  
+
   </head>
   
   
@@ -222,7 +249,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="WZRY.doc" class="md-header__button md-logo" aria-label="WZRY.doc" data-md-component="logo">
       
-  <img src="https://cndaqiang.github.io/wzry.doc/favicon.png" alt="logo">
+  <img src="../../favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -328,7 +355,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="WZRY.doc" class="md-nav__button md-logo" aria-label="WZRY.doc" data-md-component="logo">
       
-  <img src="https://cndaqiang.github.io/wzry.doc/favicon.png" alt="logo">
+  <img src="../../favicon.png" alt="logo">
 
     </a>
     WZRY.doc
