@@ -227,8 +227,35 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+
+<script>
+  // 检查是否已有 <meta name="description"> 标签
+  let descriptionMeta = document.querySelector('meta[name="description"]');
+  
+  // 如果没有 <meta name="description"> 标签，则创建它
+  if (!descriptionMeta) {
+    descriptionMeta = document.createElement('meta');
+    descriptionMeta.name = "description";
+  
+    // 检查是否存在 <title> 标签
+    let titleTag = document.querySelector('title');
+  
+    if (titleTag) {
+      // 如果有 <title> 标签，则用其内容作为 description
+      descriptionMeta.content = "王者荣耀自动化脚本手册: " + titleTag.textContent;
+    } else {
+      // 如果没有 <title> 标签，则使用默认描述
+      descriptionMeta.content = "王者荣耀自动化脚本手册";
+    }
+  
+    // 将新的 <meta name="description"> 插入到 <head> 中
+    document.head.appendChild(descriptionMeta);
+  }
+</script>
+
   
   
+
 
   </head>
   
@@ -1862,7 +1889,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li>同指定英雄和分路的<a href="../guide/shuliandu/#计算绝对坐标的步骤">计算绝对坐标的步骤</a></li>
 <li>以新的界面再展示一遍
-<img alt="" src="../fig/zhanlingairtest.png" /></li>
+<img alt="airtest截取战令示意图" src="../fig/zhanlingairtest.png" /></li>
 </ul>
 <p>然后计算</p>
 <div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="kd">base</span><span class="p">)</span><span class="w"> </span><span class="nx">PS</span><span class="w"> </span><span class="nx">D</span><span class="p">:</span><span class="err">\</span><span class="nx">SoftData</span><span class="err">\</span><span class="nx">git</span><span class="err">\</span><span class="nx">WZRY</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">python</span>
