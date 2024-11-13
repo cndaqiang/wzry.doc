@@ -11,7 +11,8 @@ site_name: WZRY.doc
 site_author: cndaqiang
 copyright: Copyright &copy; 2024 cndaqiang
 dev_addr: '0.0.0.0:8000'
-
+# 设置descriptionMeta, bing搜索会进行警告, 此处进行补全
+site_description: "王者荣耀自动化脚本手册"
 #
 # 主题右上角显示的repo地址，可以设置为开源项目地址
 repo_url: https://github.com/cndaqiang/WZRY
@@ -139,9 +140,8 @@ extra:
   favicon_prefixes:
     "cndaqiang.github.io": "/wzry.doc"
     "default": ""
-  # 默认主题缺少descriptionMeta, bing搜索会进行警告, 此处进行补全
-  # 此外bing 搜索建议写明图注 ![图注](), 这是最后html图片中的alt属性
-  descriptionMeta: "王者荣耀自动化脚本手册"
+  
+# 此外bing 搜索建议写明图注 ![图注](), 这是最后html图片中的alt属性
 
 #extra_javascript:
   # 这些内容已移植overrides/main.html
