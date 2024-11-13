@@ -77,6 +77,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
   # 引入自定义的js, 例如统计等信息、搜索引擎的站点认证
+  # more see C:\Users\cnche\AppData\Local\anaconda3\Lib\site-packages\material\templates
   custom_dir: overrides
 
 extra:
