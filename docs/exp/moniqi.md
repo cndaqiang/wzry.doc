@@ -56,6 +56,10 @@
 * 可能是我的openwrt路由器(arm、x86均测过)配置太低,运行王者总是闪退.
 * **由于remote-android默认开启了root,不适用于体验服**
 
+### 其他基于docker的容器
+* 不要尝试安卓SDK安装的模拟器, 基本不可用[docker版安卓模拟器测试](moniqidocker.md)
+* 非要尝试, 先试试我的微改版 [cndaqiang/docker-android](https://github.com/cndaqiang/docker-android),
+
 ## Mac
 * 未发现合适的
 * 使用虚拟机安装安卓虽然可行，但是过于吃性能
