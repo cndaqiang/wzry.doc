@@ -87,7 +87,7 @@ prefix: "wzry"
     LDPlayer_Instance:
         0: "0"
     </code></pre>
-    ![](../fig/ld_instance.png)
+    ![雷电模拟器配置示例](../fig/ld_instance.png)
 
 
 ??? note "点击展开:MuMu模拟器配置示例"
@@ -100,7 +100,7 @@ prefix: "wzry"
     MuMu_Instance:
         0: "0"
     </code></pre>
-    ![](../fig/mumu_instance.png)
+    ![MuMu模拟器配置示例](../fig/mumu_instance.png)
 
 
 ??? Question "点击展开:BlueStacks模拟器配置示例"
@@ -115,7 +115,7 @@ prefix: "wzry"
     BlueStack_Windows:
         1: BlueStacks1
     </code></pre>
-    ![](../fig/blue_instance.png)
+    ![BlueStacks模拟器配置示例](../fig/blue_instance.png)
 
 
 #### mynode与Instance的区别
@@ -138,7 +138,7 @@ LINK_dict:
     0: Android:///127.0.0.1:5565
     1: Android:///127.0.0.1:5555
     </code></pre>
-    ![](../fig/blue_win.png)
+    ![mynode与Instance随意组合](../fig/blue_win.png)
 
 ### docker参数
 * 本脚本支持控制运行在docker中的安卓模拟器[remote-android](https://github.com/remote-android/).

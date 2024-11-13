@@ -139,6 +139,9 @@ extra:
   favicon_prefixes:
     "cndaqiang.github.io": "/wzry.doc"
     "default": ""
+  # 默认主题缺少descriptionMeta, bing搜索会进行警告, 此处进行补全
+  # 此外bing 搜索建议写明图注 ![图注](), 这是最后html图片中的alt属性
+  descriptionMeta: "王者荣耀自动化脚本手册"
 
 #extra_javascript:
   # 这些内容已移植overrides/main.html
@@ -155,3 +158,5 @@ plugins:
             - en
             - ja
         separator: '[\s\-\.]+'
+
+

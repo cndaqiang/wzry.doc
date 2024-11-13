@@ -45,7 +45,7 @@ self.房主头像 = Template(r"tpl1716782981770.png", dirname = ".pngtmp",record
 * `r"tpl1716782981770.png"`, 图片的名字`tpl1716782981770.png`
 * `record_pos=(0.354, -0.164)` 图片的相对坐标
 * `resolution=(960, 540)` 模拟器的分辨率
-* `target_pos=9`, 当识别成功后, 点击图片的哪个区域, 如下图. 适合于图片元素比较小(如进房、组队等各种小图标), 截取小区域容易失败 需要截取一个较大的面积进行识别, 然后点击这个大图片中的指定区域. <br>![](../fig/tpl_target_pos.png)
+* `target_pos=9`, 当识别成功后, 点击图片的哪个区域, 如下图. 适合于图片元素比较小(如进房、组队等各种小图标), 截取小区域容易失败 需要截取一个较大的面积进行识别, 然后点击这个大图片中的指定区域. <br>![target_pos](../fig/tpl_target_pos.png)
 
 
 
@@ -63,7 +63,7 @@ self.房主头像 = Template(r"tpl1716782981770.png", dirname = ".pngtmp",record
 此时代码调整为`self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", record_pos=(-0.101, 0.147), resolution=(960, 540))`<br>
 这样所有的图片都在`".pngtmp"`目录, 代码目录会比较干净
 
-![](../fig/howtoupfig.png)
+![airtest截取对战示例](../fig/howtoupfig.png)
 
 
 其他的图片, 截取步骤同上. 本文档零零散散在各个页面也有截图教程, 善用文档的搜索功能,例如

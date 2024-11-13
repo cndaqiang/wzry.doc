@@ -31,7 +31,7 @@ cndaqiang@oracle:~$ docker run -itd  --privileged \
 ### 连接redroid
 
 使用Escrcpy连接redroid
-![](../fig/redroid.lin.png)
+![使用Escrcpy连接redroid](../fig/redroid.lin.png)
 
 ## 安装王者荣耀
 从[https://pvp.qq.com/](https://pvp.qq.com/)获得下载连接
@@ -110,7 +110,7 @@ cndaqiang@oracle:~/soft/WZRY-2.2.3$ python3 wzry.py ./config.lin.yaml
 ```
 
 运行成功截图
-![](../fig/redroid.run.png)
+![WZRY脚本运行并连接docker](../fig/redroid.run.png)
 
 
 ## 配置定时启动

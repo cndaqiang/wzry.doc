@@ -24,7 +24,7 @@ for key in ["参战英雄线路","参战英雄头像"]: self.Tool.var_dict[key]=
 ```
 
 下载[字典.分路.android.var_dict_N.zip](../file/字典.分路.android.var_dict_N.zip).解压在脚本目录
-![](../fig/shuliandu.png)
+![读入英雄绝对坐标](../fig/shuliandu.png)
 
 !!! Note
     我提供的字典文件[字典.分路.android.var_dict_N.zip](../file/字典.分路.android.var_dict_N.zip)仅作示例并停止更新.<br>
@@ -36,7 +36,7 @@ for key in ["参战英雄线路","参战英雄头像"]: self.Tool.var_dict[key]=
 #### 计算绝对坐标的步骤
 在选择英雄界面,使用AirtestIDE截取分路的中心位置
 
-![](../fig/touch.figure.png)
+![airtest截取图片相对坐标](../fig/touch.figure.png)
 
 
 可以得到这样一串代码

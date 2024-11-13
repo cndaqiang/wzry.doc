@@ -48,9 +48,9 @@ d-----         2024/11/5     10:22                runtmp
 !!! Note
     注意,如果有资源更新的话, 需要将更新资源解`update.zip`压到运行目录, 即这个runtmp目录.<br>
     同样的控制文件`WZRY.mynode.运行模式.txt`也应该放到这个目录. 即如图<br>
-    ![](../fig/runotherdir.conf.png)
+    ![WZRY脚本运行目录截图](../fig/runotherdir.conf.png)
 
 
 
 结果展示
-![](../fig/runotherdir.png)
+![WZRY脚本运行示意图](../fig/runotherdir.png)

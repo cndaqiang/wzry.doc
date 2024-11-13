@@ -52,7 +52,7 @@ docker exec -it -u0 android-container chmod 777 /dev/kvm
 docker exec -d android-container /usr/bin/emulator -avd samsung_galaxy_s10_11.0
 ```
 
-![](../fig/docker-android.png)
+![docker-android启动vnc截图](../fig/docker-android.png)
 
 
 ## 失败的容器

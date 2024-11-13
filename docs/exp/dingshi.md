@@ -9,7 +9,7 @@
 %USERPROFILE%\AppData\Local\anaconda3\python.exe wzry.py config.win.yaml
 ```
 
-![](../fig/crontab_win.png)
+![windows计划任务启动脚本刷王者荣耀日常任务](../fig/crontab_win.png)
 
 
 ## linux计划任务

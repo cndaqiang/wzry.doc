@@ -46,7 +46,7 @@
 
 * 同指定英雄和分路的[计算绝对坐标的步骤](guide/shuliandu.md#计算绝对坐标的步骤)
 * 以新的界面再展示一遍
-![](fig/zhanlingairtest.png)
+![airtest截取战令示意图](fig/zhanlingairtest.png)
 
 然后计算
 ```

@@ -11,7 +11,7 @@ mynode=0的账户，仅在每天的5点到17点执行脚本,在`WZRY.0.运行模
 ```
 self.对战时间=[5,17]
 ```
-![](../fig/linshi.png)
+![WZRY.mynode.运行模式.txt示意截图](../fig/linshi.png)
 
 
 每天只对战5局,则在`WZRY.mynode.运行模式.txt` 中填写
