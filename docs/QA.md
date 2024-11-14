@@ -1,8 +1,9 @@
 ## 如果你在运行时遇到问题
 * 可以先在本页面进行搜索
 * 其次认真阅读使用手册
+* 你的问题可以已经被修复了, 务必使用**最新的代码**[releases](https://github.com/cndaqiang/WZRY/releases)
 * 其实你读读源码`wzry.py`能解决你99%的问题
-* 在[issues](https://github.com/cndaqiang/WZRY/issues)页面友善的提出问题.
+* 在[issues](https://github.com/cndaqiang/WZRY/issues)页面**友善**的提出问题.
 
 
 ???Note "如何提问能得到最快的解答?"
