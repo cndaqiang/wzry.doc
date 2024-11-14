@@ -1373,22 +1373,22 @@ document.addEventListener('DOMContentLoaded', function() {
 <tr>
 <td>totalnode</td>
 <td>1</td>
-<td>本脚本一共控制<code>totalnode</code>个账户. <strong>组队多排时需要设置</strong>, 如双排时设置<code>totalnode=2</code></td>
+<td>本脚本一共控制<code>totalnode</code>个账户. <strong>组队多排时需要设置</strong>, 如双排时设置<code>totalnode: 2</code></td>
 </tr>
 <tr>
 <td>mynode</td>
 <td>0</td>
-<td>本脚本控制的<strong>账户编号</strong>.<strong>多排组队时不用设置</strong>,由程序自动生成,<code>mynode=0,1,2,...,totalnode-1</code>.<strong>单排时可以手动设置为任意值</strong>.</td>
+<td>本脚本控制的<strong>账户编号</strong>.<strong>多排组队时不用设置</strong>,由程序自动生成,<code>0,1,2,...,totalnode-1</code>.<strong>单排时可以手动设置为任意值</strong>,如<code>mynode: 0</code>.</td>
 </tr>
 <tr>
 <td>multiprocessing</td>
 <td>False</td>
-<td>自动化多进程组队.<strong>多排组队时一定要设置<code>multiprocessing=True</code></strong>.</td>
+<td>自动化多进程组队.<strong>多排组队时一定要设置为<code>True</code></strong>.</td>
 </tr>
 <tr>
 <td>LINK_dict</td>
 <td>None</td>
-<td>每个账户所在的模拟器ADB地址<code>LINK_dict[mynode]="Android:///ip:端口"</code>.<strong>所有账户的ADB地址都要配置</strong>.</td>
+<td>每个账户所在的模拟器ADB地址<code>mynode: "Android:///ip:端口"</code>.<strong>所有账户的ADB地址都要配置</strong>.</td>
 </tr>
 </tbody>
 </table>

@@ -1209,8 +1209,19 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>王者荣耀日活战令经验上限20000/周</li>
 <li>达到该上限后,王者营地也无法领取</li>
 <li>因此,应该优先做王者营地的专属战令任务,领2000经验. 大约800/天,周五就可以领完.</li>
-<li>王者荣耀对局胜利时,会默认领一些战令礼包,所以周一到周五, 我使用的都是<code>wzry.py</code>脚本的人机组队青铜5v5TOUCH模式完成了日活,并且关闭礼包功能(<code>self.每日任务礼包</code>),不会触发战令经验上限</li>
-<li>周末才开启<code>wzry.py</code>脚本内的日活礼包功能.</li>
+<li>下面这些事件会让王者荣耀日活战令快速刷满, 周一到周五不要做这些事情</li>
+<li>
+<ul>
+<li>王者荣耀对局胜利会默认领一些战令礼包</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><strong>抽奖、花金币也会触发战令经验</strong></li>
+</ul>
+</li>
+<li>我使用的都是<code>wzry.py</code>脚本的人机组队<strong>青铜5v5TOUCH模式</strong>(<code>self.触摸对战 = True</code>)完成了日活</li>
+<li>并且关闭礼包功能(<code>self.每日任务礼包 = False</code>)</li>
 </ul>
 <p><code>WZRY.mynode.运行模式.txt</code>内容为</p>
 <div class="codehilite"><pre><span></span><code>self.启动礼包功能 = True
@@ -1237,7 +1248,7 @@ self.外置礼包_王者营地 = False
 <tr>
 <td>累计击败250次英雄</td>
 <td>人机青铜挂机模式</td>
-<td></td>
+<td><code>self.触摸对战 = False</code></td>
 </tr>
 <tr>
 <td>英雄提升熟练度</td>
@@ -1247,7 +1258,7 @@ self.外置礼包_王者营地 = False
 <tr>
 <td>参与20场娱乐模式</td>
 <td>模拟战模式</td>
-<td></td>
+<td><code>self.对战模式 = "模拟战"</code></td>
 </tr>
 </tbody>
 </table>
