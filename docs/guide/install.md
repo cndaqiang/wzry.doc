@@ -27,6 +27,7 @@ python -m pip install airtest_mobileauto --upgrade
 ### 核心程序
 * 从Releases页面下载最新的[Source code (zip)](https://github.com/cndaqiang/WZRY/releases).
 * 解压到`WZRY-x.x.x`(x.x.x为版本号).
+* **请务必使用最新版本`>=2.2.6`**
 
 ### 更新资源
 * **通常是不需要更新资源的**.
@@ -42,7 +43,7 @@ python -m pip install airtest_mobileauto --upgrade
 * 使用Anaconda的用户可以打开`Anaconda Powershell Prompt`后执行
 ```
 # 进入代码目录
-cd D:\Download\WZRY-2.1.2
+cd D:\Download\WZRY-2.2.6
 # 执行脚本
 python -u wzry.py
 ```

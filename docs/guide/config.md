@@ -12,10 +12,10 @@
 
 |参数|默认值|含义|
 |-|-|-|
-|totalnode|1|本脚本一共控制`totalnode`个账户. **组队多排时需要设置**, 如双排时设置`totalnode=2`|
-|mynode|0|本脚本控制的**账户编号**.**多排组队时不用设置**,由程序自动生成,`mynode=0,1,2,...,totalnode-1`.**单排时可以手动设置为任意值**. |
-|multiprocessing|False|自动化多进程组队.**多排组队时一定要设置`multiprocessing=True`**.|
-|LINK_dict|None|每个账户所在的模拟器ADB地址`LINK_dict[mynode]="Android:///ip:端口"`.**所有账户的ADB地址都要配置**.|
+|totalnode|1|本脚本一共控制`totalnode`个账户. **组队多排时需要设置**, 如双排时设置`totalnode: 2`|
+|mynode|0|本脚本控制的**账户编号**.**多排组队时不用设置**,由程序自动生成,`0,1,2,...,totalnode-1`.**单排时可以手动设置为任意值**,如`mynode: 0`. |
+|multiprocessing|False|自动化多进程组队.**多排组队时一定要设置为`True`**.|
+|LINK_dict|None|每个账户所在的模拟器ADB地址`mynode: "Android:///ip:端口"`.**所有账户的ADB地址都要配置**.|
 
 #### 单排账户示例
 
