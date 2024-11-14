@@ -38,7 +38,6 @@ print("Response Text:", response.text)
 #exit()
 #增加其他的域名
 url_list = [url.replace('wzry-doc.pages.dev', 'cndaqiang.github.io/wzry.doc') for url in url_list]
-print("url_list",url_list)
 data = {
     "host": "cndaqiang.github.io",
     "key": "a02ce590e4494bf8900d5080b244ac07",
