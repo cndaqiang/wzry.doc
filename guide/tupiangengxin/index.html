@@ -21,7 +21,7 @@
         <link rel="next" href="../zudui/">
       
       
-      <link rel="icon" href="../../favicon.png">
+      <link rel="icon" href="../../wzry.favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
@@ -86,7 +86,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="王者荣耀自动化脚本手册" class="md-header__button md-logo" aria-label="王者荣耀自动化脚本手册" data-md-component="logo">
       
-  <img src="../../favicon.png" alt="logo">
+  <img src="../../wzry.favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -246,59 +246,6 @@
      loadUmami(); 
   }
 </script>
-
-
-<!-- 多域名时, 仅允许搜索引擎爬指定域名 -->
-<script>
-  // 检查 allow_robots 是否定义，如果没有定义则使用一个空数组作为默认值
-  const blockedallow_robots = ["wzry-doc.pages.dev", "cndaqiang.github.io"];
-  
-  // 当定义白名单时, 检查当前域名是否在白名单中
-  if (!blockedallow_robots.includes(window.location.hostname)) {
-    // 创建并插入 meta 标签以阻止爬虫
-    const metaTag = document.createElement("meta");
-    metaTag.name = "robots";
-    metaTag.content = "noindex, nofollow";
-    document.head.appendChild(metaTag);
-    //
-  }
-  
-</script>
-
-
-<script>
-// 等待 DOM 内容加载完毕
-document.addEventListener('DOMContentLoaded', function() {
-  // 获取 mkdocs 配置中的域名前缀字典
-  const faviconPrefixes = {"cndaqiang.github.io": "/wzry.doc", "default": ""};
-  
-  // 检查当前域名
-  const currentHostname = window.location.hostname;
-  
-  // 获取对应的前缀，若未找到则使用默认前缀
-  const faviconPrefix = faviconPrefixes[currentHostname] || faviconPrefixes["default"] || "";
-
-  // 更新 <link rel="icon"> 标签
-  let faviconLink = document.querySelector('link[rel="icon"]');
-  if (faviconLink) {
-    faviconLink.href = `${faviconPrefix}/favicon.png`;
-  } else {
-    // 如果 <link rel="icon"> 标签不存在，则创建并添加新的标签
-    const newFavicon = document.createElement('link');
-    newFavicon.rel = "icon";
-    newFavicon.href = `${faviconPrefix}/favicon.png`;
-    document.head.appendChild(newFavicon);
-  }
-
-  // 更新 alt="logo" 的 <img> 标签中的 favicon 路径
-  document.querySelectorAll('img[alt="logo"]').forEach(img => {
-    if (img.getAttribute('src') && img.getAttribute('src').includes("favicon.png")) {
-      img.setAttribute('src', `${faviconPrefix}/favicon.png`);
-    }
-  });
-});
-</script>
-
 </header>
     
     <div class="md-container" data-md-component="container">
@@ -324,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="王者荣耀自动化脚本手册" class="md-nav__button md-logo" aria-label="王者荣耀自动化脚本手册" data-md-component="logo">
       
-  <img src="../../favicon.png" alt="logo">
+  <img src="../../wzry.favicon.png" alt="logo">
 
     </a>
     王者荣耀自动化脚本手册
