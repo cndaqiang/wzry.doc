@@ -13,15 +13,7 @@ python:
     - requirements: requirements.txt  # 确保 mkdocs 和其他依赖被正确安装
 
 # 配置构建步骤
-steps:
-  - name: Install dependencies
-    command: |
-      pip install -r requirements.txt  # 安装所有依赖
-
-  - name: Generate robots.txt
-    command: |
-      python generate_robots.py  # 执行生成 robots.txt 的脚本
-
-  - name: Build the documentation
-    command: |
-      mkdocs build  # 执行 mkdocs 构建命令
+commands:
+  - pip install -r requirements.txt  # 安装所有依赖
+  - python generate_robots.py  # 执行生成 robots.txt 的脚本
+  - mkdocs build  # 执行 mkdocs 构建命令
