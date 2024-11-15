@@ -16,15 +16,15 @@ self.限时组队时间=uptime
 #每天组队打0,1,2,...,nstep-1共nstep场，组队5v5匹配&触摸, 日活检测
 #每天单人打0,1,2,...,ostep-1共ostep场，单人5v5匹配|模拟战
 nstep=3
-ostep=3 if self.Tool.time_getweek() <= 4  else 10 # 额外的对战
+ostep=3 if self.Tool.time_getweek() <= 5  else 10 # 额外的对战
 ostep=ostep if self.mynode == 0 else 2 # 小号对战少
 if self.jinristep >=  nstep+ostep: self.对战时间[1]=self.对战时间[0]+0.1
 #对战模式
-self.对战模式="模拟战" if self.Tool.time_getweek() <= 4 and self.jinristep > nstep else "5v5匹配"
-if self.jinristep <= nstep: self.标准模式 = self.触摸对战 = self.青铜段位 = self.组队模式 = True
-if self.jinristep > nstep: self.标准模式 = self.触摸对战 = self.组队模式 = False
+self.对战模式="模拟战" if self.Tool.time_getweek() <= 5 and self.jinristep > nstep else "5v5匹配"
+if self.jinristep <= nstep: self.标准模式 = self.触摸对战 = self.青铜段位 = True
+if self.jinristep  > nstep: self.标准模式 = self.触摸对战 = self.组队模式 = False
 # self.组队模式 是由脚本自动生成，手动设置无效, 我们应该给脚本一个不组队的理由
-if not self.组队模式: self.Tool.touchfile(self.无法进行组队FILE,"nstep对战结束")
+if not self.组队模式 and self.totalnode_bak > 1: self.Tool.touchfile(self.无法进行组队FILE,"nstep对战结束")
 #................................................................................
 # 选择对战线路和英雄
 分路名称=["对抗", "打野","中路","发育","游走"]
@@ -64,10 +64,10 @@ self.友情礼包_击败宝箱 = True
 # 外置礼包，暂无手册，遇到问题，请自行调试，已从主程序分离，不再领取
 self.外置礼包_王者营地 = False
 self.外置礼包_体验服 = False
-# 以下礼包不再维护，如果遇到问题，请自行调试
+# 以下礼包不再第一时间维护，如果遇到问题，请自行调试
 self.礼包功能_战队礼包 = False
 self.礼包功能_商城礼包 = False
-self.礼包功能_KPL礼包 = False
+self.礼包功能_KPL礼包 = TFalserue
 ```
 
 

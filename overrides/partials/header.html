@@ -1,0 +1,198 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% set class = "md-header" %}
+{% if "navigation.tabs.sticky" in features %}
+  {% set class = class ~ " md-header--shadow md-header--lifted" %}
+{% elif "navigation.tabs" not in features %}
+  {% set class = class ~ " md-header--shadow" %}
+{% endif %}
+<header class="{{ class }}" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      {% set icon = config.theme.icon.menu or "material/menu" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            <!-- cndaqiang 修改了这里, 换成了自定义的站点名 -->
+            {{ config.extra.site_name | default(config.site_name) }}
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            {% if page.meta and page.meta.title %}
+              {{ page.meta.title }}
+            {% else %}
+              {{ page.title }}
+            {% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
+    {% if config.theme.palette %}
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/palette.html" %}
+      {% endif %}
+    {% endif %}
+    {% if not config.theme.palette is mapping %}
+      {% include "partials/javascripts/palette.html" %}
+    {% endif %}
+    {% if config.extra.alternate %}
+      {% include "partials/alternate.html" %}
+    {% endif %}
+    {% if "material/search" in config.plugins %}
+      <label class="md-header__button md-icon" for="__search">
+        {% set icon = config.theme.icon.search or "material/magnify" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </label>
+      {% include "partials/search.html" %}
+    {% endif %}
+    {% if config.repo_url %}
+      <div class="md-header__source">
+        {% include "partials/source.html" %}
+      </div>
+    {% endif %}
+  </nav>
+  {% if "navigation.tabs.sticky" in features %}
+    {% if "navigation.tabs" in features %}
+      {% include "partials/tabs.html" %}
+    {% endif %}
+  {% endif %}
+<!--下面为我插入的内容-->
+<script>
+  {% if config.extra.blocked_domains %}
+  // 如果您介意被统计, 请访问: blockedDomains
+  {% endif %}
+  // 检查 blockedDomains 和 allowDomains 是否定义
+  const blockedDomains = {{ config.extra.blocked_domains | default ([]) | tojson }};
+  const allowDomains = {{ config.extra.allow_domains | default ([]) | tojson }};
+
+
+  // 将当前域名加入到 allowDomains
+  if (allowDomains.length === 0) {
+    allowDomains.push(window.location.hostname);
+  }
+
+  // 定义检查黑名单和白名单的函数
+  function isDomainAllowed() {
+    return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
+  }
+
+  // Revolvermaps 统计
+  {% if config.extra.revolvermapsID %}
+  function loadRevolvermaps() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = '//rf.revolvermaps.com/0/0/9.js?i={{ config.extra.revolvermapsID }}';
+    document.head.appendChild(script);
+  }
+  {% endif %}
+
+  // Google Analytics 统计
+  {% if config.extra.googleanalysisID %}
+  function loadGoogleAnalytics() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id={{ config.extra.googleanalysisID }}";
+    document.head.appendChild(script);
+
+    // Google Analytics 配置
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ config.extra.googleanalysisID }}');
+  }
+  {% endif %}
+
+  // Baidu Tongji 统计
+  {% if config.extra.baidutongjiID %}
+  function loadBaiduTongji() {
+    var _hmt = _hmt || [];
+    (function () {
+      const script = document.createElement("script");
+      script.src = "//hm.baidu.com/hm.js?{{ config.extra.baidutongjiID }}";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(script, s);
+    })();
+  }
+  {% endif %}
+
+  // Umami 统计
+  {% if config.extra.umaniID %}
+  function loadUmami() {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '//cloud.umami.is/script.js';
+    script.setAttribute('data-website-id', '{{ config.extra.umaniID }}');
+    document.head.appendChild(script);
+  }
+  {% endif %}
+
+  // 如果当前域名允许加载统计脚本，按需调用各个统计函数
+  if (isDomainAllowed()) {
+    {% if config.extra.revolvermapsID %} loadRevolvermaps(); {% endif %}
+    {% if config.extra.googleanalysisID %} loadGoogleAnalytics(); {% endif %}
+    {% if config.extra.baidutongjiID %} loadBaiduTongji(); {% endif %}
+    {% if config.extra.umaniID %} loadUmami(); {% endif %}
+  }
+</script>
+
+
+<!-- 多域名时, 仅允许搜索引擎爬指定域名 -->
+<script>
+  // 检查 allow_robots 是否定义，如果没有定义则使用一个空数组作为默认值
+  const blockedallow_robots = {{ config.extra.allow_robots | default ([]) | tojson }};
+  {% if config.extra.allow_robots %}
+  // 当定义白名单时, 检查当前域名是否在白名单中
+  if (!blockedallow_robots.includes(window.location.hostname)) {
+    // 创建并插入 meta 标签以阻止爬虫
+    const metaTag = document.createElement("meta");
+    metaTag.name = "robots";
+    metaTag.content = "noindex, nofollow";
+    document.head.appendChild(metaTag);
+    //
+  }
+  {% endif %}
+</script>
+
+{% if config.extra.favicon_prefixes %}
+<script>
+// 等待 DOM 内容加载完毕
+document.addEventListener('DOMContentLoaded', function() {
+  // 获取 mkdocs 配置中的域名前缀字典
+  const faviconPrefixes = {{ config.extra.favicon_prefixes | tojson }};
+  
+  // 检查当前域名
+  const currentHostname = window.location.hostname;
+  
+  // 获取对应的前缀，若未找到则使用默认前缀
+  const faviconPrefix = faviconPrefixes[currentHostname] || faviconPrefixes["default"] || "";
+
+  // 更新 <link rel="icon"> 标签
+  let faviconLink = document.querySelector('link[rel="icon"]');
+  if (faviconLink) {
+    faviconLink.href = `${faviconPrefix}/favicon.png`;
+  } else {
+    // 如果 <link rel="icon"> 标签不存在，则创建并添加新的标签
+    const newFavicon = document.createElement('link');
+    newFavicon.rel = "icon";
+    newFavicon.href = `${faviconPrefix}/favicon.png`;
+    document.head.appendChild(newFavicon);
+  }
+
+  // 更新 alt="logo" 的 <img> 标签中的 favicon 路径
+  document.querySelectorAll('img[alt="logo"]').forEach(img => {
+    if (img.getAttribute('src') && img.getAttribute('src').includes("favicon.png")) {
+      img.setAttribute('src', `${faviconPrefix}/favicon.png`);
+    }
+  });
+});
+</script>
+{% endif %}
+</header>

@@ -176,18 +176,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 {% endif %}
- 
-{% if config.extra.site_name %}
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // 替换 .md-header__topic 中的元素
-    const ellipsisElement = document.querySelector(".md-header__topic .md-ellipsis");
-    if (ellipsisElement) {
-      ellipsisElement.textContent = "{{ config.extra.site_name | e }}";
-    }
-  });
-</script>
-
-{% endif %}
 
 {% endblock %}

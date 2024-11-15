@@ -81,6 +81,7 @@ theme:
     repo: fontawesome/brands/github
   # 引入自定义的js, 例如统计等信息、搜索引擎的站点认证
   # more see C:\Users\cnche\AppData\Local\anaconda3\Lib\site-packages\material\templates
+  # 不再采用拓展的模式(overrides.extra),而是直接复制特定版本的html文件到这里,目录结构和templates目录一样
   custom_dir: overrides
 
 extra:
