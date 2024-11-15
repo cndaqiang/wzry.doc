@@ -6,11 +6,9 @@ build:
   tools:
     python: "3.12"
   commands:
-    - ls
-    - pwd
-    - "echo $READTHEDOCS_OUTPUT/html"
-    - "ls $READTHEDOCS_OUTPUT/html"
     # 需要在 Read the Docs 网页端把默认分支改为 gh-pages
-    #- "mkdir -p $READTHEDOCS_OUTPUT/html"
-    #- "cp -r . $READTHEDOCS_OUTPUT/html"
-    - "cat robots.ban.txt > $READTHEDOCS_OUTPUT/robots.txt"
+    - "cat robots.ban.txt > robots.txt"
+    - "mkdir -p $READTHEDOCS_OUTPUT/html"
+    - "mv ./* $READTHEDOCS_OUTPUT/html ||  echo No files to move"
+    - "mv $READTHEDOCS_OUTPUT/* $READTHEDOCS_OUTPUT/html/"
+    - "ls $READTHEDOCS_OUTPUT/html"
