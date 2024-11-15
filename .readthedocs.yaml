@@ -9,9 +9,7 @@ build:
   
   # 配置构建命令
   commands:
-    - pip install -r requirements.txt  # 安装所有依赖
     - python generate_robots.py  # 执行脚本生成 robots.txt
-    - mkdocs build  # 执行 mkdocs 构建文档
 
 # 配置 Python 环境
 python:
