@@ -38,11 +38,13 @@ nav:
     - 经验分享: 
       - 战令经验最大化: exp/zhanling.md
       - 模拟器推荐: exp/moniqi.md
+      - docker安卓模拟器不推荐: exp/moniqidocker.md
       - 多账户使用同一个控制文件: exp/link.md
       - 我在用的控制文件: exp/duizhanmoshi.md
       - 在docker内干农活: exp/docker.md
       - 控制苹果手机: https://cndaqiang.github.io/2023/11/10/MobileAuto/
       - 定时执行脚本: exp/dingshi.md
+      - 什么时间执行脚本: exp/time.md
       - 在任意目录运行: exp/otherdir.md
     - 关于:
       - 更新日志: about/update.md

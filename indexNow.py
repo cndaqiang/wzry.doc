@@ -1,4 +1,5 @@
 #推送sitemap到indexNow
+#https://www.indexnow.org/documentation
 import requests
 import xml.etree.ElementTree as ET
 
