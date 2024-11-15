@@ -2134,6 +2134,7 @@ root的设备运行体验服,被被封号.关闭模拟器的root选项.
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       // 获取当前页面的完整 URL
+      // 因为涉及到每个页面, 所以必须用js脚本生成,不然就是整个域名了
       const fullUrl = window.location.href;
       const url = new URL(fullUrl);
       const domain = url.hostname;
