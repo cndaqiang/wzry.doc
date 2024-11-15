@@ -72,11 +72,11 @@ theme:
   name: material
   # 网站的logo, 直接填写文件名字对于不同的网站可能并不友好, 因为有些域名的url是doamin/xxx/Moba1.png
   # 直接写名字容易变为domaoin/Moba1, 无法识别到
-  favicon: favicon.png
-  #favicon: Moba1.png
+  # 使用js虽然能更改用户端显示的内容, 搜索引擎检索时，不会加载js, 还是 cndaqiang.github.io/favicon.png
+  # 所以, 改favicon.png为wzry.favicon.png, 然后复制到cndaqiang.github.io/一份
+  favicon: wzry.favicon.png
   # 主题页面的log
-  logo: favicon.png
-  #logo: Moba1.png #favicon.ico
+  logo: wzry.favicon.png
   icon:
     repo: fontawesome/brands/github
   # 引入自定义的js, 例如统计等信息、搜索引擎的站点认证
@@ -137,14 +137,8 @@ extra:
   allow_domains:
     - "wzry-doc.pages.dev"
     - "cndaqiang.github.io"
-  # 仅这些域名允许搜索引擎访问
-  allow_robots:
-    - "wzry-doc.pages.dev"
-    - "cndaqiang.github.io"
-  # 有些域名或者存储空间不能访问完整的网页, 可以指定url后面的路径
-  favicon_prefixes:
-    "cndaqiang.github.io": "/wzry.doc"
-    "default": ""
+  # 由于搜索引擎不会执行js, 所以通过js禁止搜索引擎和修改图标的脚本无效, 2024-11-15开始删除
+  # readthedocs.yaml中包含生成robots.txt的内容
   # 当设置 .site_name时, 会让所有名字都变为site_name
   # 长的site_name对搜索引擎和浏览器显示的标题有作用
   # 但是页面上显示就太长了. 通过extra.site_name 设置为短的
@@ -153,11 +147,7 @@ extra:
 # 此外bing 搜索建议写明图注 ![图注](), 这是最后html图片中的alt属性
 
 #extra_javascript:
-  # 这些内容已移植overrides/main.html
-  # baidutongji
-  #- javascripts/baidu.tongji.js
-  # 卜算子统计，可以，但是只能在md文件中填写 span id="busuanzi_value_site_pv"等纯html内容进行解析
-  # - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+  # 这些内容已移植overrides
 #
 # 中文搜索
 # https://cloud-atlas.readthedocs.io/zh-cn/latest/devops/docs/mkdocs/mkdocs_chinese_search.html
