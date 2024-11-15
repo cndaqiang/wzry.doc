@@ -1,0 +1,11 @@
+version: 2
+# 当使用 gh-pages 分支时, 此文件为构建脚本
+
+build:
+  os: ubuntu-lts-latest
+  tools:
+    python: "3.12"
+  commands:
+    # 需要在 Read the Docs 网页端把默认分支改为 gh-pages
+    - cp -r . "$READTHEDOCS_OUTPUT/html"
+    - "cat robots.ban.txt > $READTHEDOCS_OUTPUT/robots.txt"
