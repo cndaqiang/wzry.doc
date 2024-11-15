@@ -6,8 +6,8 @@ site_url: https://wzry-doc.pages.dev/
 # 无论是生成的sitemap.xml, 还是手动写的sitemap.txt, 还是在线工具生成的sitemap.tool56.com.xml, google都说无法读取,bing都能收录
 # 此外，如果site_url不是单独的域名, 如domain/wzry.doc, 则设置后本地预览的网址总是带一个/wzry.doc/
 #利用bing的扫描功能, 触发其他家的统计?
-#
-site_name: WZRY.doc
+#WZRY.doc
+site_name: 王者荣耀自动化脚本手册
 site_author: cndaqiang
 copyright: Copyright &copy; 2024 cndaqiang
 dev_addr: '0.0.0.0:8000'
@@ -144,6 +144,10 @@ extra:
   favicon_prefixes:
     "cndaqiang.github.io": "/wzry.doc"
     "default": ""
+  # 当设置 .site_name时, 会让所有名字都变为site_name
+  # 长的site_name对搜索引擎和浏览器显示的标题有作用
+  # 但是页面上显示就太长了. 通过extra.site_name 设置为短的
+  site_name: "WZRY.doc"
   
 # 此外bing 搜索建议写明图注 ![图注](), 这是最后html图片中的alt属性
 
