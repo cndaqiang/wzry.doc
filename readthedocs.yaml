@@ -5,4 +5,4 @@ build:
   commands:
     # 需要在 Read the Docs 网页端把默认分支改为 gh-pages
     - cp -r . "$READTHEDOCS_OUTPUT/html"
-    - echo "User-agent: *\nDisallow: /" > "$READTHEDOCS_OUTPUT/html/robots.txt"
+    - "cat robots.ban.txt > $READTHEDOCS_OUTPUT/robots.txt"
