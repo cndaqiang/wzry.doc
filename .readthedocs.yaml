@@ -1,19 +1,19 @@
 # .readthedocs.yaml
 version: 2
 
-# Set the OS, Python version and other tools you might need
+# 设置操作系统、Python 版本和工具
 build:
   os: ubuntu-22.04
   tools:
     python: "3.12"
+  
+  # 配置构建命令
+  commands:
+    - pip install -r requirements.txt  # 安装所有依赖
+    - python generate_robots.py  # 执行脚本生成 robots.txt
+    - mkdocs build  # 执行 mkdocs 构建文档
 
-# 安装依赖项
+# 配置 Python 环境
 python:
   install:
-    - requirements: requirements.txt  # 确保 mkdocs 和其他依赖被正确安装
-
-# 配置构建步骤
-commands:
-  - pip install -r requirements.txt  # 安装所有依赖
-  - python generate_robots.py  # 执行生成 robots.txt 的脚本
-  - mkdocs build  # 执行 mkdocs 构建命令
+    - requirements: requirements.txt  # 确保安装 mkdocs 和其他依赖
