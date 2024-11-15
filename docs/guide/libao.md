@@ -24,6 +24,9 @@ self.友情礼包_铭文碎片 = False
 self.友情礼包_皮肤宝箱 = False
 self.友情礼包_回城宝箱 = False
 self.友情礼包_击败宝箱 = False
+self.友情礼包_排位保护 = False
+self.礼包功能_回忆礼册 = False
+self.礼包功能_灵宝互动 = False
 # 外置礼包,暂无手册,遇到问题,请自行调试
 # 支持自动领取相同模拟器内部的王者营地礼包
 self.外置礼包_王者营地 = False

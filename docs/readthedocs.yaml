@@ -7,5 +7,6 @@ build:
     python: "3.12"
   commands:
     # 需要在 Read the Docs 网页端把默认分支改为 gh-pages
-    - cp -r . "$READTHEDOCS_OUTPUT/html"
-    - "cat robots.ban.txt > $READTHEDOCS_OUTPUT/robots.txt"
+    - "mv -f robots.ban.txt robots.txt" 
+    - "mkdir -p $READTHEDOCS_OUTPUT/html"
+    - "mv ./* $READTHEDOCS_OUTPUT/html ||  echo No files to move"
