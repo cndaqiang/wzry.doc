@@ -12,10 +12,10 @@ build:
     # rust: "1.64"
     # golang: "1.19"
 
-# 在这里加入自定义的构建命令
-commands:
-  - python generate_robots.py  # 执行生成 robots.txt 的脚本
-  - mkdocs build  # 然后执行 MkDocs 构建命令
+  # 在这里加入自定义的构建命令
+  commands:
+    - python generate_robots.py  # 执行生成 robots.txt 的脚本
+    - mkdocs build  # 然后执行 MkDocs 构建命令
 # 这样就可以使用mkdocs的主题了
 mkdocs:
   configuration: mkdocs.yml  # MkDocs 配置文件路径
