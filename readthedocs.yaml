@@ -10,5 +10,4 @@ build:
     - "cat robots.ban.txt > robots.txt"
     - "mkdir -p $READTHEDOCS_OUTPUT/html"
     - "mv ./* $READTHEDOCS_OUTPUT/html ||  echo No files to move"
-    - "mv $READTHEDOCS_OUTPUT/* $READTHEDOCS_OUTPUT/html/"
     - "ls $READTHEDOCS_OUTPUT/html"
