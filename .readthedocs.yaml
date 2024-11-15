@@ -1,4 +1,3 @@
-# .readthedocs.yaml
 version: 2
 
 # 设置操作系统、Python 版本和工具
@@ -9,9 +8,11 @@ build:
   
   # 配置构建命令
   commands:
+    - pip install -r requirements.txt  # 安装所有依赖
     - python generate_robots.py  # 执行脚本生成 robots.txt
+    - mkdocs build --site-dir "$READTHEDOCS_OUTPUT/html"  # 设置输出目录为 $READTHEDOCS_OUTPUT/html
 
 # 配置 Python 环境
 python:
   install:
-    - requirements: requirements.txt  # 确保安装 mkdocs 和其他依赖
+    - requirements: requirements.txt  # 安装 mkdocs 和其他依赖
