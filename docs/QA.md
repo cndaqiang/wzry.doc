@@ -72,6 +72,19 @@ Type "help", "copyright", "credits" or "license" for more information.
 ## 进入不了商店/活动/XX入口/点击错误
 * 同[进入不了战令页面](#进入不了战令页面)
 
+## 注入图片没生效
+* 好好和本手册对比, 看看你错那了
+
+这是一些常犯的错误
+```
+self.大厅对战图标=touch(Template(r"tpl1730865263724.png", record_pos=(-0.101, 0.147), resolution=(960, 540)))
+# 错在, 不应该带有touch()， 正确的方式
+self.大厅对战图标=Template(r"tpl1730865263724.png", record_pos=(-0.101, 0.147), resolution=(960, 540))
+#
+# 如果你截到的图片放到了 .pngtmp目录, 还应该改为
+self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", record_pos=(-0.101, 0.147), resolution=(960, 540))
+```
+
 ## 连接不上模拟器
 * 认真阅读[安装指南](guide/install.md)
 * 配置文件写错了,认真阅读[配置文件](guide/config.md)
@@ -235,6 +248,19 @@ python -m pip install airtest_mobileauto --upgrade
 新特性, 需要更新`airtest_mobileauto`
 ```
 python -m pip install airtest_mobileauto --upgrade
+```
+
+## 安装airtest_mobileauto
+* 无法pip安装airtest_mobileauto
+* 安装哪个版本？
+
+
+* 安装最新的版本
+* 如果你网络有问题，可以使用清华的源进行安装
+* 如果依然无法安装，建议重新安装python，最好使用anaconda安装python
+
+```
+python -m pip install  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade
 ```
 
 

@@ -56,11 +56,11 @@ self.房主头像 = Template(r"tpl1716782981770.png", dirname = ".pngtmp",record
 * AirtestIDE连接设备
 * (1) touch
 * (2) 截图对战图标. (既不能过大，又要有辨识度，可以在wzry.py中搜索`self.大厅对战图标`, 然后在assets文件夹看我截取的范围)
-* 复制生成的代码(3), 如`touch(Template(r"tpl1730865263724.png", record_pos=(-0.101, 0.147), resolution=(960, 540)))`
+* 复制生成的代码(3), 如`touch(Template(r"tpl1730865263724.png", record_pos=(-0.101, 0.147), resolution=(960, 540)))`,**不要复制`touch`, 只复制`Template(...)`这部分**
 * 去(4)的文件夹把图片`tpl1730865263724.png`复制到`wzry.py`的文件夹
 * 添加`self.大厅对战图标=Template(r"tpl1730865263724.png", record_pos=(-0.101, 0.147), resolution=(960, 540))`到`WZRY.图片更新.txt`
-* 建议在`wzry.py`所在文件夹创建`.pngtmp`文件夹,然后把图片`tpl1730865263724.png`复制到`.pngtmp`文件夹<br>
-此时代码调整为`self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", record_pos=(-0.101, 0.147), resolution=(960, 540))`<br>
+* 建议在`wzry.py`所在文件夹创建`.pngtmp`文件夹,然后把图片`tpl1730865263724.png`复制到`.pngtmp`文件夹，此时代码**要添加`dirname = ".pngtmp",`**<br>
+ 即`self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", record_pos=(-0.101, 0.147), resolution=(960, 540))`<br>
 这样所有的图片都在`".pngtmp"`目录, 代码目录会比较干净
 
 ![airtest截取对战示例](../fig/howtoupfig.png)
