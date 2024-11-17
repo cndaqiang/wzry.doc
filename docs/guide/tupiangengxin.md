@@ -70,7 +70,7 @@ self.房主头像 = Template(r"tpl1716782981770.png", dirname = ".pngtmp",record
 
 * [截取对战分路和英雄](shuliandu.md#计算绝对坐标的步骤)
 * [组队设置房主头像](zudui.md#更新图片资源)
-* [截取战令入口](../QA.md#进入不了战令页面)
+* [截取战令入口](../qa/qa.md#进入不了战令页面)
 
 
 ## 最终效果

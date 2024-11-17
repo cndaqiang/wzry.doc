@@ -1,5 +1,5 @@
 ## 如果你在运行时遇到问题
-* 可以先在本页面进行搜索
+* 使用页面最上方的搜索功能
 * 其次认真阅读使用手册
 * 你的问题可以已经被修复了, 务必使用**最新的代码**[releases](https://github.com/cndaqiang/WZRY/releases)
 * 其实你读读源码`wzry.py`能解决你99%的问题
@@ -7,16 +7,44 @@
 
 
 ???Note "如何提问能得到最快的解答?"
-    * 附上**执行结果、配置文件、运行目录、游戏页面、模拟器设置页面、cmd/powershell/terminal/vscode/pycharm等运行界面截图**,越多越好.
-    * **@cndaqiang或者为[WZRY项目](https://github.com/cndaqiang/WZRY)start加速解决问题的速度.**
-    * 语气和善,没人理会你的傲慢和懒惰.请遵守[提问的礼仪](https://github.com/tvvocold/How-To-Ask-Questions-The-Smart-Way).
+    * **为[WZRY](https://github.com/cndaqiang/WZRY)star**, 为[使用手册wzry.doc](https://github.com/cndaqiang/wzry.doc)star
+    * 使用issue模板进行提问.
+    * 语气和善,没人理会你的傲慢和懒惰.
 
+
+## 没法安装airtest_mobileauto
+Q:
+
+* 无法pip安装airtest_mobileauto
+* 安装哪个版本？
+
+A:
+
+* 安装最新的版本
+* 如果你网络有问题，可以使用清华的源进行安装
+* 如果依然无法安装，建议重新安装python，最好使用anaconda安装python
+
+```
+python -m pip install  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade
+```
+
+## 没办法下载WZRY代码
+Q:
+
+* 不会魔法上网, 也无法访问github? 无法下载脚本?
+
+A:
+
+* 方法1. 使用github镜像站访问下载: `https://cdn.jsdelivr.net/gh/cndaqiang/WZRY@archive/refs/tags/2.2.8.zip`, 将`2.2.8`替换为最新的版本号(最新版本号见网页右上角)
+* 方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
+* 等你可以访问github时, 欢迎你来为[WZRY](https://github.com/cndaqiang/WZRY)项目点赞.
+![gitee下载WZRY](../fig/gitee.png)
 
 
 ## 进入不了大厅
 
 *  **新用户,建议先手动进入大厅.**
-* 活动更新了图标,检查我是否提供了[更新资源](guide/upfig.md),若我无法及时更新,请自行更新图标. 
+* 活动更新了图标,检查我是否提供了[更新资源](../guide/upfig.md),若我无法及时更新,请自行更新图标. 
 * 模拟器的分辨率不是960x540、dpi不是160, 有些图标无法识别,自行调试脚本,不予解决
 * 模拟器配置太低,王者卡住了.
 
@@ -27,7 +55,7 @@
 
 ## 进入不了人机房间
 
-* 活动更新了图标,检查我是否提供了[更新资源](guide/upfig.md),若我无法及时更新,请自行更新图标. 
+* 活动更新了图标,检查我是否提供了[更新资源](../guide/upfig.md),若我无法及时更新,请自行更新图标. 
 * 模拟器的分辨率不是960x540、dpi不是160, 有些图标无法识别,自行调试脚本,不予解决
 
 ## 战令、活跃礼包无法领取
@@ -45,9 +73,9 @@
 
 解决方案: 手动填写战令页面位置
 
-* 同指定英雄和分路的[计算绝对坐标的步骤](guide/shuliandu.md#计算绝对坐标的步骤)
+* 同指定英雄和分路的[计算绝对坐标的步骤](../guide/shuliandu.md#计算绝对坐标的步骤)
 * 以新的界面再展示一遍
-![airtest截取战令示意图](fig/zhanlingairtest.png)
+![airtest截取战令示意图](../fig/zhanlingairtest.png)
 
 然后计算
 ```
@@ -86,8 +114,8 @@ self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", r
 ```
 
 ## 连接不上模拟器
-* 认真阅读[安装指南](guide/install.md)
-* 配置文件写错了,认真阅读[配置文件](guide/config.md)
+* 认真阅读[安装指南](../guide/install.md)
+* 配置文件写错了,认真阅读[配置文件](../guide/config.md)
 * 同时运行的模拟器太多,互相冲突.
 * 模拟器没有开启ADB端口
 * 手机没有通过电脑的ADB信任
@@ -117,9 +145,9 @@ self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", r
 原因
 
 * 抄错了控制文件
-* 控制文件名写错了: 要把`WZRY.mynode.运行模式.txt`中的`mynode`替换为本脚本控制的 **[账户编号](guide/file.md)**
+* 控制文件名写错了: 要把`WZRY.mynode.运行模式.txt`中的`mynode`替换为本脚本控制的 **[账户编号](../guide/file.md)**
 * 如`WZRY.1.运行模式.txt`,`WZRY.0.运行模式.txt`分别调整第1和第0个王者账号.
-* 理解错了[mynode和模拟器内部编号Instance的含义](guide/config.md#mynode与instance的区别),把模拟器内部的编号当成了mynode.
+* 理解错了[mynode和模拟器内部编号Instance的含义](../guide/config.md#mynode与instance的区别),把模拟器内部的编号当成了mynode.
 
 
 ## 触摸对战不生效
@@ -151,7 +179,7 @@ logfile:
 
 ## 我想精准控制每一局采用何种模式对战,怎么改配置文件
 * 利用`self.jinristep`变量,代表今天的第几次对战
-* 好好读[使用手册.对战模式](guide/duizhanmoshi.md)
+* 好好读[使用手册.对战模式](../guide/duizhanmoshi.md)
 
 以第一次进行青铜+标准人机+触摸对战为例,在`WZRY.mynode.运行模式.txt`中插入标准的python语法
 ```
@@ -197,12 +225,12 @@ if self.jinristep == 1: self.触摸对战 = True
 该问题不属于本仓库的范围
 
 * 参考官方教程 [airtest.doc](https://airtest.doc.io.netease.com/IDEdocs/3.1getting_started/mainwindow_intro/)
-* 阅读[图片更新](guide/tupiangengxin.md)教程
-* 阅读[截取英雄分路坐标的流程](guide/shuliandu.md#计算绝对坐标的步骤)
-* 阅读[组队教程](guide/zudui.md)
+* 阅读[图片更新](../guide/tupiangengxin.md)教程
+* 阅读[截取英雄分路坐标的流程](../guide/shuliandu.md#计算绝对坐标的步骤)
+* 阅读[组队教程](../guide/zudui.md)
 * 右上角搜索airtest
 * 我就只用AirtestIDE右侧的连接设备,左侧的touch按钮,截图后,把图片复制到`assets`目录,把截图后生成的代码复制到`wzry.py`中进行再次的修改
-![airtestIDE](fig/airtestguirun.png)
+![airtestIDE](../fig/airtestguirun.png)
 
 ## ARM设备无法执行adb
 * 使用linux的用户都是高手,你一眼就能看出这个解决办法
@@ -239,7 +267,7 @@ task_manager = TaskManager(config_file, wzry_task, 'RUN')
 NameError: name 'TaskManager' is not defined
 ```
 
-* 读一下[安装指南](guide/install.md)啊, 第一条就是安装依赖
+* 读一下[安装指南](../guide/install.md)啊, 第一条就是安装依赖
 ```
 python -m pip install airtest_mobileauto --upgrade
 ```
@@ -255,18 +283,6 @@ python -m pip install airtest_mobileauto --upgrade
 python -m pip install airtest_mobileauto --upgrade
 ```
 
-## 安装airtest_mobileauto
-* 无法pip安装airtest_mobileauto
-* 安装哪个版本？
-
-
-* 安装最新的版本
-* 如果你网络有问题，可以使用清华的源进行安装
-* 如果依然无法安装，建议重新安装python，最好使用anaconda安装python
-
-```
-python -m pip install  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade
-```
 
 
 ## 星耀模式无法组队
@@ -285,11 +301,12 @@ python -m pip install  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple  
 * 不加好友
 * 你如果没有能力阅读本手册,说明这个脚本不适合你.
 
+
 ## 控制游戏只打N局,打完就退出,怎么操作
-见[高级功能](guide/file.md#控制运行时间示例)
+见[高级功能](../guide/file.md#控制运行时间示例)
 
 ## 控制游戏只在每天的12点~14点进行对局,打完就退出,怎么操作
-见[高级功能](guide/file.md#控制运行时间示例)
+见[高级功能](../guide/file.md#控制运行时间示例)
 
 
 ## 如何使用模拟战刷信誉分
@@ -298,7 +315,7 @@ python -m pip install  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple  
 * 返回大厅
 * 在`WZRY.mynode.运行模式.txt`中添加`self.对战模式 = "模拟战"`, 执行`wzry.py`代码
 
-![image](fig/monizhan.png)
+![image](../fig/monizhan.png)
 
 
 ## 苹果手机怎么使用
@@ -309,12 +326,12 @@ python -m pip install  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple  
 
 
 ## 如何刷完任务自动关机/如何自动开启模拟器
-* 阅读[配置文件](guide/config.md#模拟器参数), 添加模拟器的参数
-* 注意区分[账户编号与模拟器实例编号的区别](guide/config.md#mynode与instance的区别)
-* 按照[控制运行时间示例](guide/file.md#控制运行时间示例)将你希望的时间填到`WZRY.mynode.运行模式.txt`
+* 阅读[配置文件](../guide/config.md#模拟器参数), 添加模拟器的参数
+* 注意区分[账户编号与模拟器实例编号的区别](../guide/config.md#mynode与instance的区别)
+* 按照[控制运行时间示例](../guide/file.md#控制运行时间示例)将你希望的时间填到`WZRY.mynode.运行模式.txt`
 
 ## 小号没有进入大号房间
-配置文件写错了,认真阅读[组队教程](guide/zudui.md)
+配置文件写错了,认真阅读[组队教程](../guide/zudui.md)
 
 * 创建友情关系
 * 更新房主图片
