@@ -32,13 +32,16 @@ python -m pip install  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple  
 Q:
 
 * 不会魔法上网, 也无法访问github? 无法下载脚本?
+* 打不开下载页面/进不去github网页
 
 A:
 
-* 方法1. 使用github镜像站访问下载: `https://cdn.jsdelivr.net/gh/cndaqiang/WZRY@archive/refs/tags/2.2.8.zip`, 将`2.2.8`替换为最新的版本号(最新版本号见网页右上角)
+* 方法1. 从清华的镜像站下载, 访问: `https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/AutoWZRY/`,下载后需要解压两次
+![gitee下载WZRY](../fig/pypi.png)
 * 方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
-* 等你可以访问github时, 欢迎你来为[WZRY](https://github.com/cndaqiang/WZRY)项目点赞.
 ![gitee下载WZRY](../fig/gitee.png)
+* 等你可以访问github时, 欢迎你来为[WZRY](https://github.com/cndaqiang/WZRY)项目点赞.
+
 
 
 ## 进入不了大厅
@@ -339,13 +342,6 @@ python -m pip install airtest_mobileauto --upgrade
 * `multiprocessing: True`
 * `LINK_dict`, 0号账户必须对应房主的ADB地址
 
-## 为什么不用pypi发布本脚本
-* assets里面的静态图片太多占了存储空间的大头, 而实际代码占用的存储很小, 不太适合
-* 控制模块[airtest-mobileauto](https://pypi.org/project/airtest-mobileauto/)不依赖图片, 已被独立发布到pypi
-
-## 打不开下载页面/进不去github网页
-* 切换网络环境,试试宽带、流量、科学网, 换时间访问
-* 搜索GitHub镜像站下载
 
 
 ## 这个脚本是怎么控制模拟器启动关闭的?

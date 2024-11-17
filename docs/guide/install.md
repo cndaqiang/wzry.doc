@@ -29,6 +29,9 @@ python -m pip install airtest_mobileauto --upgrade
 * 从Releases页面下载最新的[Source code (zip)](https://github.com/cndaqiang/WZRY/releases).
 * 解压到`WZRY-x.x.x`(x.x.x为版本号).
 * **请务必使用最新版本`>=2.2.8`**
+* 如果你无法访问github, 可以[从pypi镜像站下载WZRY代码](../exp/pypi.md)及其历史版本
+
+
 
 ### 更新资源
 * **通常是不需要更新资源的**.
