@@ -1231,16 +1231,17 @@
 
 <span class="n">setup</span><span class="p">(</span>
 <span class="w">    </span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;AutoWZRY&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;2.2.8&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;2.2.8&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">#a1,b1,rc1,dev1,post1</span>
 <span class="w">    </span><span class="n">author</span><span class="o">=</span><span class="s1">&#39;cndaqiang&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">author_email</span><span class="o">=</span><span class="s1">&#39;who@cndaqiang.ac.cn&#39;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;王者荣耀自动化农活脚本.&#39;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">long_description</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;README.md&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
 <span class="w">    </span><span class="n">long_description_content_type</span><span class="o">=</span><span class="s1">&#39;text/markdown&#39;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;wzry&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;wzyd&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;tiyanfu&#39;</span><span class="p">],</span>
 <span class="w">    </span><span class="n">package_data</span><span class="o">=</span><span class="p">{</span>
-<span class="w">        </span><span class="s1">&#39;&#39;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;assets/*&#39;</span><span class="p">],</span>
+<span class="w">        </span><span class="s1">&#39;assets&#39;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;assets/*&#39;</span><span class="p">],</span><span class="w">  </span><span class="c1"># Include all files from assets</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="n">include_package_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="w">    </span><span class="n">include_package_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="w">  </span><span class="c1"># Ensure package_data is included</span>
 <span class="w">    </span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://github.com/cndaqiang/WZRY&#39;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="n">install_requires</span><span class="o">=</span><span class="p">[</span>
 <span class="w">        </span><span class="s1">&#39;airtest-mobileauto&gt;=2.0.12&#39;</span><span class="p">,</span>
@@ -1259,7 +1260,7 @@
 <h3 id="pypibat">pypi.bat<a class="headerlink" href="#pypibat" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="n">rmdir</span><span class="w"> </span><span class="o">/</span><span class="n">s</span><span class="w"> </span><span class="o">/</span><span class="n">q</span><span class="w"> </span><span class="n">dist</span>
 <span class="o">%</span><span class="n">USERPROFILE</span><span class="o">%</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">anaconda3</span>\<span class="n">python</span><span class="o">.</span><span class="n">exe</span><span class="w"> </span><span class="n">setup</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="n">sdist</span>
-<span class="c1">#%USERPROFILE%\AppData\Local\anaconda3\python.exe -m twine upload dist/*</span>
+<span class="o">%</span><span class="n">USERPROFILE</span><span class="o">%</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">anaconda3</span>\<span class="n">python</span><span class="o">.</span><span class="n">exe</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">twine</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">dist</span><span class="o">/*</span>
 </code></pre></div>
 
 
