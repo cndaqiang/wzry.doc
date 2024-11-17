@@ -47,7 +47,7 @@ self.Tool.cal_record_pos(线路坐标[index], self.移动端.resolution, "备战
 #................................................................................
 # 礼包功能
 self.启动礼包功能 = self.mynode == 0
-self.活动礼包 = True
+self.活动礼包 = False
 self.祈愿礼包 = False
 self.玉镖夺魁签到 = False
 self.每日任务礼包=self.Tool.time_getweek() > 5  # 战令末期不领取，前期周末领取 self.Tool.time_getweek() > 5
@@ -61,13 +61,16 @@ self.友情礼包_铭文碎片 = False
 self.友情礼包_皮肤宝箱 = True
 self.友情礼包_回城宝箱 = True
 self.友情礼包_击败宝箱 = True
+self.友情礼包_排位保护 = True
+self.礼包功能_回忆礼册 = True
+self.礼包功能_灵宝互动 = False
 # 外置礼包，暂无手册，遇到问题，请自行调试，已从主程序分离，不再领取
 self.外置礼包_王者营地 = False
 self.外置礼包_体验服 = False
 # 以下礼包不再第一时间维护，如果遇到问题，请自行调试
 self.礼包功能_战队礼包 = False
 self.礼包功能_商城礼包 = False
-self.礼包功能_KPL礼包 = TFalserue
+self.礼包功能_KPL礼包 = False
 ```
 
 
