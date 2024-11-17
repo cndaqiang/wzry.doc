@@ -18,12 +18,17 @@
 |multiprocessing|False|自动化多进程组队.**多排组队时一定要设置为`True`**.|
 |LINK_dict|None|每个账户所在的模拟器ADB地址`mynode: "Android:///ip:端口"`.**所有账户的ADB地址都要配置**.|
 
+!!! tip "虽然基础参数不包括`logfile`, 但是强烈建议新手设置,具体解释见[调试参数](#调试参数)"
+
+
 #### 单排账户示例
 
 ```
 mynode: 0
 LINK_dict:
   0: Android:///127.0.0.1:5555
+logfile:
+  0: result.0.txt
 ```
 
 #### 双排账户示例
@@ -36,6 +41,9 @@ multiprocessing: True
 LINK_dict:
     0: Android:///127.0.0.1:5555
     1: Android:///127.0.0.1:5557
+logfile:
+  0: result.0.txt
+  1: result.1.txt
 ```
 
 
