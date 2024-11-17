@@ -807,48 +807,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exp/moniqi/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    模拟器推荐
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../exp/moniqidocker/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    docker安卓模拟器不推荐
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../exp/link/" class="md-nav__link">
         
   
@@ -891,11 +849,95 @@
   
   
     <li class="md-nav__item">
+      <a href="../../exp/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    什么时间执行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/moniqi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    模拟器推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/mobile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    控制安卓手机或任意模拟器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../exp/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     在docker内干农活
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/moniqidocker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    docker安卓模拟器不推荐
   </span>
   
 
@@ -938,27 +980,6 @@
   
   <span class="md-ellipsis">
     定时执行脚本
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../exp/time/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    什么时间执行脚本
   </span>
   
 
@@ -1191,6 +1212,7 @@
 <li>小号进入人机房间后,开始检测游戏界面,当发现有<strong>房主房间</strong>这个图片时,会自动进房间.</li>
 <li>组队前需要小号和大号建立<strong>亲密关系</strong>(王者的亲密好友进房免验证)</li>
 <li><strong>不满足上述条件无法组队</strong></li>
+<li>本脚可以<strong>流畅三排组队</strong>. 不建议四排和五排, 账户越多同步时间越久.</li>
 </ul>
 <h2 id="配置文件">配置文件<a class="headerlink" href="#配置文件" title="Permanent link">&para;</a></h2>
 <p><strong><code>mynode=0</code>所对应的账户是房主, 即LINK_dict[0]是房主所在模拟器的ADB地址</strong></p>
@@ -1221,8 +1243,7 @@ self.房主房间 = Template(r&quot;tpl1700284856473.png&quot;, record_pos=(0.31
 <img alt="房主房间" src="../../fig/tpl1700284856473.png" /></li>
 </ul>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>仅更新<strong>房主头像</strong>就行了,我自己的账户就没有更新<em>房主房间</em>这张图.</p>
+<p class="admonition-title">仅更新<em>房主头像</em>就行了,我就一直没有更新<em>房主房间</em>这张图.</p>
 </div>
 <h3 id="更新图片">更新图片<a class="headerlink" href="#更新图片" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1235,10 +1256,10 @@ self.房主房间 = Template(r&quot;tpl1700284856473.png&quot;, record_pos=(0.31
 </code></pre></div>
 
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>最简单的流程,把截到的房主头像图片,重命名为<code>tpl1716782981770.png</code>放到<code>assets</code>文件夹也是可以的.
-但是不推荐这样做.因为如果你想要更新wzry.py为最新的代码,还需要重复上面的重命名操作.
-而写在<code>WZRY.图片更新.txt</code>,不受wzry.py更新的影响.<br>
+<p class="admonition-title">不想改代码,可以直接截图替换</p>
+<p>如果你不想改代码, <strong>把截到的房主头像图片,重命名为<code>tpl1716782981770.png</code>, 替换<code>assets</code>文件夹中的图片</strong>也可以.<br>
+如果你之后更新了WZRY代码,记得重复替换操作.<br>
+我更推荐写在<code>WZRY.图片更新.txt</code>,不受WZRY更新的影响.<br>
 注意, 王者活动的<a href="../upfig/">更新资源</a>包也是将更新的资源填写到<code>WZRY.图片更新.txt</code>里面的.</p>
 </div>
 <h2 id="限制组队的时间">限制组队的时间<a class="headerlink" href="#限制组队的时间" title="Permanent link">&para;</a></h2>

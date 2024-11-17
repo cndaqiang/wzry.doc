@@ -18,7 +18,7 @@
         <link rel="prev" href="../link/">
       
       
-        <link rel="next" href="../docker/">
+        <link rel="next" href="../time/">
       
       
       <link rel="icon" href="../../wzry.favicon.png">
@@ -711,48 +711,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../moniqi/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    模拟器推荐
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../moniqidocker/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    docker安卓模拟器不推荐
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../link/" class="md-nav__link">
         
   
@@ -862,11 +820,95 @@
   
   
     <li class="md-nav__item">
+      <a href="../time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    什么时间执行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../moniqi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    模拟器推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    控制安卓手机或任意模拟器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     在docker内干农活
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../moniqidocker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    docker安卓模拟器不推荐
   </span>
   
 
@@ -909,27 +951,6 @@
   
   <span class="md-ellipsis">
     定时执行脚本
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../time/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    什么时间执行脚本
   </span>
   
 
@@ -1169,7 +1190,7 @@
 <span class="err">#</span><span class="p">................................................................................</span>
 <span class="err">#</span><span class="w"> </span><span class="n">礼包功能</span>
 <span class="n">self</span><span class="p">.</span><span class="n">启动礼包功能</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">mynode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
-<span class="n">self</span><span class="p">.</span><span class="n">活动礼包</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+<span class="n">self</span><span class="p">.</span><span class="n">活动礼包</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
 <span class="n">self</span><span class="p">.</span><span class="n">祈愿礼包</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
 <span class="n">self</span><span class="p">.</span><span class="n">玉镖夺魁签到</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
 <span class="n">self</span><span class="p">.</span><span class="n">每日任务礼包</span><span class="o">=</span><span class="n">self</span><span class="p">.</span><span class="n">Tool</span><span class="p">.</span><span class="n">time_getweek</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">战令末期不领取</span><span class="err">，</span><span class="n">前期周末领取</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">Tool</span><span class="p">.</span><span class="n">time_getweek</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span>
@@ -1183,13 +1204,16 @@
 <span class="n">self</span><span class="p">.</span><span class="n">友情礼包_皮肤宝箱</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
 <span class="n">self</span><span class="p">.</span><span class="n">友情礼包_回城宝箱</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
 <span class="n">self</span><span class="p">.</span><span class="n">友情礼包_击败宝箱</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+<span class="n">self</span><span class="p">.</span><span class="n">友情礼包_排位保护</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+<span class="n">self</span><span class="p">.</span><span class="n">礼包功能_回忆礼册</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+<span class="n">self</span><span class="p">.</span><span class="n">礼包功能_灵宝互动</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
 <span class="err">#</span><span class="w"> </span><span class="n">外置礼包</span><span class="err">，</span><span class="n">暂无手册</span><span class="err">，</span><span class="n">遇到问题</span><span class="err">，</span><span class="n">请自行调试</span><span class="err">，</span><span class="n">已从主程序分离</span><span class="err">，</span><span class="n">不再领取</span>
 <span class="n">self</span><span class="p">.</span><span class="n">外置礼包_王者营地</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
 <span class="n">self</span><span class="p">.</span><span class="n">外置礼包_体验服</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
 <span class="err">#</span><span class="w"> </span><span class="n">以下礼包不再第一时间维护</span><span class="err">，</span><span class="n">如果遇到问题</span><span class="err">，</span><span class="n">请自行调试</span>
 <span class="n">self</span><span class="p">.</span><span class="n">礼包功能_战队礼包</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
 <span class="n">self</span><span class="p">.</span><span class="n">礼包功能_商城礼包</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
-<span class="n">self</span><span class="p">.</span><span class="n">礼包功能_KPL礼包</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TFalserue</span>
+<span class="n">self</span><span class="p">.</span><span class="n">礼包功能_KPL礼包</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
 </code></pre></div>
 
 <h2 id="我在使用的wzry1运行模式txt">我在使用的<code>WZRY.1.运行模式.txt</code><a class="headerlink" href="#我在使用的wzry1运行模式txt" title="Permanent link">&para;</a></h2>
