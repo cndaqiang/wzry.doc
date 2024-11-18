@@ -23,16 +23,17 @@ from setuptools import setup
 
 setup(
     name='AutoWZRY',
-    version='2.2.8',
+    version='2.2.8', #a1,b1,rc1,dev1,post1
     author='cndaqiang',
+    author_email='who@cndaqiang.ac.cn',
     description='王者荣耀自动化农活脚本.',
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     py_modules=['wzry', 'wzyd', 'tiyanfu'],
     package_data={
-        '': ['assets/*'],
+        'assets': ['assets/*'],  # Include all files from assets
     },
-    include_package_data=True,
+    include_package_data=True,  # Ensure package_data is included
     url='https://github.com/cndaqiang/WZRY', 
     install_requires=[
         'airtest-mobileauto>=2.0.12',
@@ -53,5 +54,5 @@ setup(
 ```
 rmdir /s /q dist
 %USERPROFILE%\AppData\Local\anaconda3\python.exe setup.py sdist
-#%USERPROFILE%\AppData\Local\anaconda3\python.exe -m twine upload dist/*
+%USERPROFILE%\AppData\Local\anaconda3\python.exe -m twine upload dist/*
 ```

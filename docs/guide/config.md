@@ -158,8 +158,7 @@ LINK_dict:
 |-|-|-|
 |dockercontain|`{mynode: "androidcontainInstance"}`|每个账户所在的容器的容器名称, 用于启动、关闭mynode账户所在的容器.|
 
-!!! Wannring
-    remote-android默认开启了root,王者体验服检测root,会封号体验服账户,请勿在docker中安装体验服.
+!!! danger "remote-android默认开启了root,王者体验服检测root,会封号体验服账户,请勿在docker中安装体验服."
 
 三个账户组队示例
 ```

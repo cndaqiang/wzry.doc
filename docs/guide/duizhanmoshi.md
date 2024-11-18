@@ -15,8 +15,8 @@
 
 
 ## 根据对局次数选择对战模式
-* `self.runstep`,本脚本累计运行了多少次对战
-* `self.jinristep`,本脚本此次运行了多少次对战
+* `self.runstep`,本脚累计运行了多少次对战
+* `self.jinristep`,本脚本次运行了多少次对战
 
 示例前2局标准对战并移动, 在`WZRY.mynode.运行模式.txt` 中填写
 ```

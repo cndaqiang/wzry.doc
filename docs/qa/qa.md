@@ -1,7 +1,7 @@
 ## 如果你在运行时遇到问题
 * 使用页面最上方的搜索功能
 * 其次认真阅读使用手册
-* 你的问题可以已经被修复了, 务必使用**最新的代码**[releases](https://github.com/cndaqiang/WZRY/releases)
+* 你的问题可能已经被修复了, 务必使用**最新的代码**[releases](https://github.com/cndaqiang/WZRY/releases)
 * 其实你读读源码`wzry.py`能解决你99%的问题
 * 在[issues](https://github.com/cndaqiang/WZRY/issues)页面**友善**的提出问题.
 
@@ -36,7 +36,7 @@ Q:
 
 A:
 
-* 方法1. 从清华的镜像站下载, 访问: `https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/AutoWZRY/`,下载后需要解压两次
+* 方法1. 从清华的pypi镜像站下载, 访问: [https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/autowzry/](https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/autowzry/),下载后需要解压两次
 ![gitee下载WZRY](../fig/pypi.png)
 * 方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
 ![gitee下载WZRY](../fig/gitee.png)
