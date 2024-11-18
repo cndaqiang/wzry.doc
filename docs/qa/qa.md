@@ -36,8 +36,7 @@ Q:
 
 A:
 
-* 方法1. 从清华的pypi镜像站下载, 访问: [https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/autowzry/](https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/autowzry/),下载后需要解压两次
-![gitee下载WZRY](../fig/pypi.png)
+* 方法1. 从清华的pypi镜像站下载, 详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
 * 方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
 ![gitee下载WZRY](../fig/gitee.png)
 * 等你可以访问github时, 欢迎你来为[WZRY](https://github.com/cndaqiang/WZRY)项目点赞.

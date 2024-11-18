@@ -9,9 +9,12 @@
 ### 安装依赖
 
 * 使用Anaconda的用户可以打开`Anaconda Powershell Prompt`后执行
+* 如果你无法更新`airtest_mobileauto`, 请查看[Q&A:没法安装airtest_mobileauto](../qa/qa.md#没法安装airtest_mobileauto)
+
 ```
 python -m pip install airtest_mobileauto --upgrade
 ```
+
 
 
 ## 设置模拟器分辨率和ADB调试.
@@ -23,13 +26,12 @@ python -m pip install airtest_mobileauto --upgrade
 
 ## 下载代码
 * 打开[WZRY](https://github.com/cndaqiang/WZRY)
-* 点击右上角的star👻立刻获得免费下载资格.
+* **点击右上角的star👻立刻获得免费下载资格.**
 
 ### 核心程序
 * 从Releases页面下载最新的[Source code (zip)](https://github.com/cndaqiang/WZRY/releases).
-* 解压到`WZRY-x.x.x`(x.x.x为版本号).
-* **请务必使用最新版本`>=2.2.8`**
-* 如果你无法访问github, 可以[从pypi镜像站下载WZRY代码](../exp/pypi.md)及其历史版本
+* 解压到`WZRY-x.x.x`(x.x.x为版本号).**请务必使用最新版本`x.x.x>=2.2.8`**
+* 如果你无法访问github, 请查看[Q&A:没办法下载WZRY代码](../qa/qa.md#没办法下载wzry代码)
 
 
 
