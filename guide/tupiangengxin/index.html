@@ -1273,34 +1273,7 @@ self.房主房间 = Template(r&quot;tpl1700284856473.png&quot;, dirname = &quot;
 
 
 
-<div class="md-content">
-  
-  
-  <!-- 计数图片：动态生成 URL -->
-  <div id="count-image-container" style="text-align: center; margin-top: 20px;">
-    <img id="count-image" alt="count" style="max-width: 25%; height: auto;" />
-  </div>
 
-  <!-- 动态生成计数图片的脚本 -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // 获取当前页面的完整 URL
-      // 因为涉及到每个页面, 所以必须用js脚本生成,不然就是整个域名了
-      const fullUrl = window.location.href;
-      const url = new URL(fullUrl);
-      const domain = url.hostname;
-      const shortDomain = domain.split(".").slice(0, 2).join('.'); // 保留域名前两部分
-      const path = url.pathname.replace(/[^a-zA-Z0-9_]/g, ''); // 去除路径中的特殊字符
-
-      // 组合为计数图片的 URL，限制长度为 32 字符
-      const sanitizedUrl = `${shortDomain}_${path}`.slice(0, 32);
-      const imgSrc = `//count.getloli.com/@${sanitizedUrl}?theme=green&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=auto`;
-
-      // 设置图片的 src 属性
-      document.getElementById('count-image').src = imgSrc;
-    });
-  </script>
-</div>
                 
               </article>
             </div>
