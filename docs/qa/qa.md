@@ -21,11 +21,11 @@ Q:
 A:
 
 * 安装最新的版本
-* 如果你网络有问题，可以使用清华的源进行安装
+* 如果你网络有问题，可以使用镜像源进行安装
 * 如果依然无法安装，建议重新安装python，最好使用anaconda安装python
 
 ```
-python -m pip install  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade
+python -m pip install  -i https://mirrors.cernet.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade
 ```
 
 ## 没办法下载WZRY代码
@@ -36,7 +36,7 @@ Q:
 
 A:
 
-* 方法1. 从清华的pypi镜像站下载, 详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
+* 方法1. 从镜像站下载, 详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
 * 方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
 ![gitee下载WZRY](../fig/gitee.png)
 * 等你可以访问github时, 欢迎你来为[WZRY](https://github.com/cndaqiang/WZRY)项目点赞.
@@ -313,10 +313,11 @@ python -m pip install airtest_mobileauto --upgrade
 
 ## 如何使用模拟战刷信誉分
 * 在娱乐模式的快捷入口添加王者模拟战
+* 把这些设置都关闭(不然老弹窗), 基础设置里帧率、分辨率全部设为最低.
+* ![image](../fig/monizhanshezhi.png)
 * 自己手动进去打一轮(同意协议,领取礼包,预设阵容)
 * 返回大厅
 * 在`WZRY.mynode.运行模式.txt`中添加`self.对战模式 = "模拟战"`, 执行`wzry.py`代码
-
 ![image](../fig/monizhan.png)
 
 

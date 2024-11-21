@@ -1,7 +1,7 @@
 ## 说明
 若需调整第`mynode`个账户的对战模式
 
-* 则在`wzry.py`所在的文件夹,创建`WZRY.mynode.运行模式.txt`文件
+* 则在运行目录,创建`WZRY.mynode.运行模式.txt`文件
 * **把`mynode`替换为你的[账户编号](config.md#mynode与instance的区别)**
 * 文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.
 !!! info "目前支持的对战模式包括"

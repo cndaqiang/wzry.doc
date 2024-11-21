@@ -11,7 +11,7 @@
       {% if page.meta and page.meta.description %}
         <meta name="description" content="{{ page.meta.description }}">
       {% elif config.site_description %}
-      { #- cndaqiang. 替换了这里, description一样， 会被搜索引擎举报
+      {#- cndaqiang. 替换了这里, description一样， 会被搜索引擎举报
         <meta name="description" content="{{ config.site_description }}">
         -#}
         <meta name="description" content="{{ page.title | striptags }} - {{ config.site_description }}">

@@ -3,8 +3,7 @@
 * 如果希望**精细的操作[运行时间](#控制运行时间示例)、[礼包功能](libao.md)、[对战模式](duizhanmoshi.md)、[选择英雄](shuliandu.md)等功能**
 * 可以创建`WZRY.mynode.运行模式.txt`文件调控第`mynode`账户的功能
 * **把`mynode`替换为你的[账户编号](config.md#mynode与instance的区别)**
-* `WZRY.mynode.运行模式.txt`要放在`wzry.py`所在路径,UTF8格式编码
-* `WZRY.mynode.运行模式.txt`的内容为标准的python语法,不支持超过一行的python语句.
+* `WZRY.mynode.运行模式.txt`为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.
 
 ## 控制运行时间示例
 mynode=0的账户，仅在每天的5点到17点执行脚本,在`WZRY.0.运行模式.txt`中添加

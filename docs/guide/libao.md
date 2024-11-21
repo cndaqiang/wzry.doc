@@ -1,7 +1,7 @@
 ## 王者荣耀礼包
 若需调整第`mynode`个账户领取哪些礼包
 
-* 则在`wzry.py`所在的文件夹,创建`WZRY.mynode.运行模式.txt`文件
+* 则在运行目录,创建`WZRY.mynode.运行模式.txt`文件
 * **把`mynode`替换为你的[账户编号](config.md#mynode与instance的区别)**
 * 文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.
 
@@ -49,6 +49,7 @@ self.礼包功能_KPL礼包 = False
 ## 王者营地礼包
 * 体验币换皮肤碎片、营地币换英雄碎片、战令经验包、签到、观赛等.
 * 可以独立启动、不依赖于`wzry.py`, 王者营地所在模拟器的ADB信息填到`config.ce.yaml`
+* `config.ce.yaml`的配置规则同[配置文件](guide/config.md)
 
 ```
 python -u wzyd.py config.ce.yaml

@@ -1,10 +1,8 @@
 ## 配置文件
-* 自版本2.2以来,配置文件随着[airtest_mobileauto](https://github.com/cndaqiang/airtest_mobileauto)同步升级为**utf8**编码的**yaml**文件.
-* 所有基于airtest_mobileauto开发的程序配置文件规则相同.
-* **配置文件必须采用yaml语法,可以只配置基础参数,但是不能乱抄别人的配置参数**
+* 配置文件随着是**utf8**编码的**yaml**文件.
+* **可以只配置基础参数,但是不能乱抄别人的配置参数**
 * 建议将配置文件命名为: `config.win.yaml`
 * 使用配置文件运行: `python wzry.py config.win.yaml`
-
 
 
 ## 参数解释
@@ -18,7 +16,7 @@
 |multiprocessing|False|自动化多进程组队.**多排组队时一定要设置为`True`**.|
 |LINK_dict|None|每个账户所在的模拟器ADB地址`mynode: "Android:///ip:端口"`.**所有账户的ADB地址都要配置**.|
 
-!!! tip "虽然基础参数不包括`logfile`, 但是强烈建议新手设置,具体解释见[调试参数](#调试参数)"
+!!! tip "虽然基础参数不包括`logfile`, 但是强烈建议设置,具体解释见[调试参数](#调试参数)"
 
 
 #### 单排账户示例

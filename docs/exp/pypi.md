@@ -2,16 +2,14 @@
 * 该页面是介绍我的使用经验,不是教程
 * 随着软件更新,这些经验可能不再适用
 * 谨慎阅读
-* 只有你无法访问github时, 才推荐从pypi的镜像站下载本脚本
-* pypi的脚本和github发布的脚本存在延迟和微小区别
-* **能访问github的情况下, 尽量从[WZRY](https://github.com/cndaqiang/WZRY/releases)下载最新的代码**
+* 只有你无法访问github时, 才推荐从pypi的镜像站下载[AutoWZRY@pypi](https://pypi.org/project/AutoWZRY/)
+* **能访问github的情况下, 尽量从[WZRY@GitHub](https://github.com/cndaqiang/WZRY/releases)下载最新的代码**
 
 ## 将代码推送到pypi
-* 这样国内的用户就可以从tuna下载代码了
-* 下载地址: [https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/autowzry/](https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/autowzry/)
-* 下载后需要解压两次, 得到`AutoWZRY-x.x.x`文件夹
-* 使用方法和从[WZRY](https://github.com/cndaqiang/WZRY/releases)下载的使用方法相同.
-![gitee下载WZRY](../fig/pypi.png)
+* 这样国内的用户就可以从pypi镜像站下载代码了
+* 下载地址: [https://mirrors.cernet.edu.cn/pypi/web/simple/autowzry/](https://mirrors.cernet.edu.cn/pypi/web/simple/autowzry/)
+* 下载后需要解压两次, 得到`AutoWZRY-x.x.x`文件夹, 里面的内容和[WZRY@GitHub](https://github.com/cndaqiang/WZRY/releases)有些许差别, 但使用方法完全相同.
+![pypi下载WZRY](../fig/pypi.png)
 
 
 
