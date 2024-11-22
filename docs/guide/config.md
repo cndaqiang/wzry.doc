@@ -1,5 +1,5 @@
 ## 配置文件
-* 配置文件随着是**utf8**编码的**yaml**文件.
+* 配置文件是**utf8**编码的**yaml**文件.
 * **可以只配置基础参数,但是不能乱抄别人的配置参数**
 * 建议将配置文件命名为: `config.win.yaml`
 * 使用配置文件运行: `python wzry.py config.win.yaml`
@@ -37,8 +37,8 @@ totalnode: 2
 multiprocessing: True
 # 所有账户的ADB地址
 LINK_dict:
-    0: Android:///127.0.0.1:5555
-    1: Android:///127.0.0.1:5557
+  0: Android:///127.0.0.1:5555
+  1: Android:///127.0.0.1:5557
 logfile:
   0: result.0.txt
   1: result.1.txt
