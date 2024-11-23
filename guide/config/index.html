@@ -1556,7 +1556,8 @@ BlueStack_Windows:
 <ul>
 <li>账户编号mynode是游戏账户的编号,默认从0开始.<code>mynode=0,1,2,...,totalnode-1</code>.</li>
 <li>模拟器实例编号Instance是模拟器的多开管理器内部的编号.通常也是<code>0,1,2,...</code></li>
-<li>两者之间的映射关系通过<code>xxx_Instance</code>数组指定,<code>xxx_Instance</code>是为了控制模拟器的开机关机等模拟器的操作.</li>
+<li>两者之间的映射关系通过<code>xxx_Instance[mynode]=Instance</code>字典指定</li>
+<li><code>xxx_Instance</code>是为了控制模拟器的开机关机等模拟器的操作.</li>
 <li><strong><code>mynode=0</code>的账户必须是多开组队的大号(开房间的账户).但是<code>mynode=0</code>的账户可以使用任意一台模拟器</strong>
     <br>例如,下面的配置中,大号(<code>mynode=0</code>)使用第1台模拟器,小号(<code>mynode=1</code>)使用第0台模拟器
     <pre><code>
