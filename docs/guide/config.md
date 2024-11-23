@@ -128,7 +128,8 @@ prefix: "wzry"
 #### mynode与Instance的区别
 * 账户编号mynode是游戏账户的编号,默认从0开始.`mynode=0,1,2,...,totalnode-1`.
 * 模拟器实例编号Instance是模拟器的多开管理器内部的编号.通常也是`0,1,2,...`
-* 两者之间的映射关系通过`xxx_Instance`数组指定,`xxx_Instance`是为了控制模拟器的开机关机等模拟器的操作.
+* 两者之间的映射关系通过`xxx_Instance[mynode]=Instance`字典指定
+* `xxx_Instance`是为了控制模拟器的开机关机等模拟器的操作.
 * **`mynode=0`的账户必须是多开组队的大号(开房间的账户).但是`mynode=0`的账户可以使用任意一台模拟器**
     <br>例如,下面的配置中,大号(`mynode=0`)使用第1台模拟器,小号(`mynode=1`)使用第0台模拟器
     <pre><code>
