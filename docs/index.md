@@ -1,4 +1,4 @@
-# 欢迎来到王者荣耀自动化脚本的使用文档
+# 王者荣耀农活自动化助手的使用文档
 
 [WZRY](https://github.com/cndaqiang/WZRY)是基于[airtest-mobileauto](https://github.com/cndaqiang/airtest_mobileauto)开发的王者荣耀农活自动化免费开源脚本. 
 
@@ -40,6 +40,8 @@
 * 战队商店领取英雄碎片
 * 商城每日免费钻石碎片随机礼包
 
-## 贡献
+## Star
 
-![Alt](https://repobeats.axiom.co/api/embed/e3dff17ea7d3c5e7dd3f8ce8b0fd3c09618cd7fc.svg "Repobeats analytics image")
+<div align="center">
+<img alt="" src="https://api.star-history.com/svg?repos=cndaqiang/WZRY&type=Date" width="60%"/>
+</div>

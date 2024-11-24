@@ -13,7 +13,7 @@
 
 
 ## linux计划任务
-在代码目录创建`run.sh`, 使用`crontab -e`创建计划任务
+`crontab -e`创建计划任务
 
 ```
 51 4 * * * /usr/lib/android-sdk/platform-tools/adb kill-server

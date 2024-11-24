@@ -7,7 +7,7 @@ site_url: https://wzry-doc.pages.dev/
 # 此外，如果site_url不是单独的域名, 如domain/wzry.doc, 则设置后本地预览的网址总是带一个/wzry.doc/
 #利用bing的扫描功能, 触发其他家的统计?
 #WZRY.doc
-site_name: 王者荣耀自动化脚本手册
+site_name: "WZRY · 农活自动化助手"
 site_author: cndaqiang
 copyright: Copyright &copy; 2024 cndaqiang
 dev_addr: '0.0.0.0:8000'
