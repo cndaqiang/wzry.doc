@@ -37,9 +37,10 @@ nav:
     - 提出问题: https://github.com/cndaqiang/WZRY/issues
     - 经验分享: 
       - 战令经验最大化: exp/zhanling.md
+      - 王者零氪不肝新手的精打细算: exp/xinshou.md
+      - 什么时间执行脚本: exp/time.md
       - 多账户使用同一个控制文件: exp/link.md
       - 我在用的控制文件: exp/duizhanmoshi.md
-      - 什么时间执行脚本: exp/time.md
       - 模拟器推荐: exp/moniqi.md
       - 控制安卓手机或任意模拟器: exp/mobile.md
       - 在docker内干农活: exp/docker.md
@@ -83,8 +84,18 @@ theme:
   # more see C:\Users\cnche\AppData\Local\anaconda3\Lib\site-packages\material\templates
   # 不再采用拓展的模式(overrides.extra),而是直接复制特定版本的html文件到这里,目录结构和templates目录一样
   custom_dir: overrides
-
+  palette:
+    primary:  indigo # deep purple white red purple
+  # 配色 red pink purple deep purple indigo blue light blue cyan teal green light green lime 
+  # yellow amber orange deep orange brown grey blue grey black white
+  # https://mrkeo.github.io/setup/changing-the-colors/
+  language: zh
+  #font:
+  #  text: Roboto
+  #  code: Space Mono
 extra:
+  generator: false
+  # 去除 Made with Material for MkDocs 
   # https://mkdoc-material.llango.com/setup/setting-up-the-footer/
   # https://fontawesome.com/search?q=blog&o=r&f=classic
   social:

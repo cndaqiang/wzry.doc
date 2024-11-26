@@ -1,4 +1,17 @@
-# 王者荣耀农活自动化助手的使用文档
+<div align="center">
+  <h1 align="center">
+    <img src="http://wzry-doc.pages.dev/wzry.favicon.png" width="140">
+    <br/>
+    WZRY · 农活自动化助手
+  </h1>
+</div>
+<div align="center">
+  <img alt="WZRY Release" src="https://img.shields.io/github/v/release/cndaqiang/WZRY?style=flat-square&color=ff7fbf&label=WZRY" />
+  <img alt="Stars" src="https://img.shields.io/github/stars/cndaqiang/WZRY?style=flat-square&color=66bb6a&label=Stars" />
+  <img alt="Developer" src="https://img.shields.io/badge/cndaqiang-blue?style=flat-square&color=4096d8&label=Developer" />
+</div>
+
+## WZRY
 
 [WZRY](https://github.com/cndaqiang/WZRY)是基于[airtest-mobileauto](https://github.com/cndaqiang/airtest_mobileauto)开发的王者荣耀农活自动化免费开源脚本. 
 
@@ -40,8 +53,14 @@
 * 战队商店领取英雄碎片
 * 商城每日免费钻石碎片随机礼包
 
-## Star
+## 致谢
+- *本项目的 [图标](http://wzry-doc.pages.dev/wzry.favicon.png) 由 [Cloudiiink](https://github.com/Cloudiiink) 设计并制作，版权归其所有。*  
+  特别感谢 Cloudiiink 的精心创作！  
 
-<div align="center">
-<img alt="" src="https://api.star-history.com/svg?repos=cndaqiang/WZRY&type=Date" width="60%"/>
-</div>
+- 灵感和支持来自以下项目：  
+  - [airtest_mobileauto](https://github.com/cndaqiang/airtest_mobileauto)  
+  - [WZRY_AirtestIDE](https://github.com/XRSec/WZRY_AirtestIDE)  
+  - [Airtest Project](https://github.com/AirtestProject)
+
+- 感谢所有提问 issue 和为本项目打星的用户！
+

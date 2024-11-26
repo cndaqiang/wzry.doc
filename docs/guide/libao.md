@@ -52,7 +52,7 @@ self.礼包功能_KPL礼包 = False
 ## 王者营地礼包
 * 体验币换皮肤碎片、营地币换英雄碎片、战令经验包、签到、观赛等.
 * 可以独立启动、不依赖于`wzry.py`, 王者营地所在模拟器的ADB信息填到`config.ce.yaml`
-* `config.ce.yaml`的配置规则同[配置文件](guide/config.md)
+* `config.ce.yaml`的配置规则同[配置文件](../guide/config.md)
 
 ```
 python -u wzyd.py config.ce.yaml
