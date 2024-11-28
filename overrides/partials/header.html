@@ -84,15 +84,6 @@
     return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
   }
 
-  // Revolvermaps 统计
-  {% if config.extra.revolvermapsID %}
-  function loadRevolvermaps() {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = '//rf.revolvermaps.com/0/0/9.js?i={{ config.extra.revolvermapsID }}';
-    document.head.appendChild(script);
-  }
-  {% endif %}
 
   // Google Analytics 统计
   {% if config.extra.googleanalysisID %}
@@ -136,7 +127,6 @@
 
   // 如果当前域名允许加载统计脚本，按需调用各个统计函数
   if (isDomainAllowed()) {
-    {% if config.extra.revolvermapsID %} loadRevolvermaps(); {% endif %}
     {% if config.extra.googleanalysisID %} loadGoogleAnalytics(); {% endif %}
     {% if config.extra.baidutongjiID %} loadBaiduTongji(); {% endif %}
     {% if config.extra.umaniID %} loadUmami(); {% endif %}

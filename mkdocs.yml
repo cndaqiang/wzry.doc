@@ -1,6 +1,6 @@
 # 只要当前的.git仓库是github的, push page就能自动推到github
 #
-#site_url: https://cndaqiang.github.io/wzry.doc/
+#site_url: 
 site_url: https://wzry-doc.pages.dev/
 # 这个url决定了sitemap.xml中的地址，如果不设置, git page上显示的sitemap.xml里面就是空的，设置了就被强制替换为了这个
 # 无论是生成的sitemap.xml, 还是手动写的sitemap.txt, 还是在线工具生成的sitemap.tool56.com.xml, google都说无法读取,bing都能收录
@@ -36,22 +36,22 @@ nav:
     - 常见问题: qa/qa.md
     - 提出问题: https://github.com/cndaqiang/WZRY/issues
     - 经验分享: 
-      - 战令经验最大化: exp/zhanling.md
-      - 金币最大化: exp/jinbi.md
-      - 提高英雄熟练度: exp/shuliandu.md
+      - 战令经验最大化✈️: exp/zhanling.md
+      - 刷金币: exp/jinbi.md
+      - 刷英雄熟练度: exp/shuliandu.md
       - 自动刷信誉分: exp/xinyufen.md
-      - 王者零氪不肝新手的精打细算: exp/xinshou.md
+      - 零氪不肝的王者新手必坑指南: exp/xinshou.md
       - 什么时间执行脚本: exp/time.md
       - 多账户使用同一个控制文件: exp/link.md
       - 我在用的控制文件: exp/duizhanmoshi.md
       - 模拟器推荐: exp/moniqi.md
       - 控制安卓手机或任意模拟器: exp/mobile.md
-      - 在docker内干农活: exp/docker.md
+      - 在🐳docker内干农活: exp/docker.md
       - docker安卓模拟器不推荐: exp/moniqidocker.md
       - 控制苹果手机: https://cndaqiang.github.io/2023/11/10/MobileAuto/
       - 定时执行脚本: exp/dingshi.md
       - 在任意目录运行: exp/otherdir.md
-      - 从pypi镜像站下载WZRY代码: exp/pypi.md
+      - 镜像下载WZRY脚本: exp/pypi.md
     - 关于:
       - 更新日志: about/update.md
       - 许可: about/license.md
@@ -88,7 +88,7 @@ theme:
   # 不再采用拓展的模式(overrides.extra),而是直接复制特定版本的html文件到这里,目录结构和templates目录一样
   custom_dir: overrides
   palette:
-    primary:  indigo # deep purple white red purple
+    primary: teal # deep purple white red purple blue teal 默认 indigo
   # 配色 red pink purple deep purple indigo blue light blue cyan teal green light green lime 
   # yellow amber orange deep orange brown grey blue grey black white
   # https://mrkeo.github.io/setup/changing-the-colors/
@@ -100,16 +100,13 @@ extra:
   generator: false
   # 去除 Made with Material for MkDocs 
   # https://mkdoc-material.llango.com/setup/setting-up-the-footer/
+  #
   # https://fontawesome.com/search?q=blog&o=r&f=classic
   social:
     # 镜像网站
     - icon: fontawesome/solid/cloud
-      link: https://wzry-doc.pages.dev/
+      link: https://cndaqiang.github.io/wzry.doc/
       name: cloudflare
-    # 国内有墙
-    #- icon: fontawesome/solid/server
-    #  link: https://wzry-doc.serv00.net/
-    #  name: serv00
     - icon: fontawesome/solid/lock
       link: https://wzrydoc.readthedocs.io
       name: untagged #readthedocs
@@ -124,10 +121,7 @@ extra:
       name: rss
     - icon: fontawesome/solid/chart-area
       link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/cndaqiang.github.io
-      name: visitor
-    - icon: fontawesome/solid/earth-africa
-      link: https://www.revolvermaps.com/livestats/map/5hik3848fwe/
-      name: visitor
+      name: visitormap
   # material带的google统计,https://analytics.google.com/ 不采用主题提供的,自己进行控制
   # analytics:
   #   provider: google
@@ -140,8 +134,6 @@ extra:
   baidutongjiID: "76d0fc6b8ffd3901ec51e8bece995b22"
   # umami统计
   umaniID: "1d2518ba-011c-47f7-bf3d-c2454778ef02"
-  # revolvermaps 统计
-  revolvermapsID: "5hik3848fwe"
   # 若设置了，则在这些域名禁止访客统计
   blocked_domains:
     - "127.0.0.1"
