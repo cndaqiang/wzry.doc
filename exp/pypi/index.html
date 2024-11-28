@@ -1004,39 +1004,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#如何推送到pypi" class="md-nav__link">
-    <span class="md-ellipsis">
-      如何推送到pypi
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="如何推送到pypi">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setuppy" class="md-nav__link">
-    <span class="md-ellipsis">
-      setup.py
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pypibat" class="md-nav__link">
-    <span class="md-ellipsis">
-      pypi.bat
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1179,39 +1146,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#如何推送到pypi" class="md-nav__link">
-    <span class="md-ellipsis">
-      如何推送到pypi
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="如何推送到pypi">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setuppy" class="md-nav__link">
-    <span class="md-ellipsis">
-      setup.py
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pypibat" class="md-nav__link">
-    <span class="md-ellipsis">
-      pypi.bat
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1237,53 +1171,15 @@
 <li>该页面是介绍我的使用经验,不是教程</li>
 <li>随着软件更新,这些经验可能不再适用</li>
 <li>谨慎阅读</li>
-<li>只有你无法访问github时, 才推荐从pypi的镜像站下载<a href="https://pypi.org/project/AutoWZRY/">AutoWZRY@pypi</a></li>
-<li><strong>能访问github的情况下, 尽量从<a href="https://github.com/cndaqiang/WZRY/releases">WZRY@GitHub</a>下载最新的代码</strong></li>
+<li>只有你无法访问github时, 才推荐从pypi的镜像站下载<a href="https://github.com/cndaqiang/AutoWZRY">AutoWZRY</a></li>
+<li><strong>能访问github的情况下, 尽量从GitHub下载最新的<a href="https://github.com/cndaqiang/WZRY/releases">WZRY</a>代码</strong></li>
 </ul>
 <h2 id="将代码推送到pypi">将代码推送到pypi<a class="headerlink" href="#将代码推送到pypi" title="Permanent link">&para;</a></h2>
 <ul>
-<li>这样国内的用户就可以从pypi镜像站下载代码了</li>
-<li>下载地址: <a href="https://mirrors.cernet.edu.cn/pypi/web/simple/autowzry/">https://mirrors.cernet.edu.cn/pypi/web/simple/autowzry/</a></li>
-<li>下载后需要解压两次, 得到<code>AutoWZRY-x.x.x</code>文件夹, 里面的内容和<a href="https://github.com/cndaqiang/WZRY/releases">WZRY@GitHub</a>有些许差别, 但使用方法完全相同.
+<li>AutoWZRY的国内下载地址: <a href="https://mirrors.cernet.edu.cn/pypi/web/simple/autowzry/">https://mirrors.cernet.edu.cn/pypi/web/simple/autowzry/</a></li>
+<li>下载后需要解压两次, 得到<code>AutoWZRY-x.x.x</code>文件夹, <a href="https://github.com/cndaqiang/AutoWZRY">AutoWZRY</a> 的内容和<a href="https://github.com/cndaqiang/WZRY">WZRY</a>有些许差别, 但使用方法完全相同.
 <img alt="pypi下载WZRY" src="../../fig/pypi.png" /></li>
 </ul>
-<h2 id="如何推送到pypi">如何推送到pypi<a class="headerlink" href="#如何推送到pypi" title="Permanent link">&para;</a></h2>
-<h3 id="setuppy">setup.py<a class="headerlink" href="#setuppy" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">setuptools</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">setup</span>
-
-<span class="n">setup</span><span class="p">(</span>
-<span class="w">    </span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;AutoWZRY&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;2.2.8&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">#a1,b1,rc1,dev1,post1</span>
-<span class="w">    </span><span class="n">author</span><span class="o">=</span><span class="s1">&#39;cndaqiang&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="n">author_email</span><span class="o">=</span><span class="s1">&#39;who@cndaqiang.ac.cn&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;王者荣耀自动化农活脚本.&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="n">long_description</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;README.md&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
-<span class="w">    </span><span class="n">long_description_content_type</span><span class="o">=</span><span class="s1">&#39;text/markdown&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;wzry&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;wzyd&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;tiyanfu&#39;</span><span class="p">],</span>
-<span class="w">    </span><span class="n">package_data</span><span class="o">=</span><span class="p">{</span>
-<span class="w">        </span><span class="s1">&#39;assets&#39;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;assets/*&#39;</span><span class="p">],</span><span class="w">  </span><span class="c1"># Include all files from assets</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="n">include_package_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="w">  </span><span class="c1"># Ensure package_data is included</span>
-<span class="w">    </span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://github.com/cndaqiang/WZRY&#39;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">install_requires</span><span class="o">=</span><span class="p">[</span>
-<span class="w">        </span><span class="s1">&#39;airtest-mobileauto&gt;=2.0.12&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
-<span class="w">        </span><span class="s1">&#39;Development Status :: 5 - Production/Stable&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="s1">&#39;Intended Audience :: Developers&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="s1">&#39;License :: OSI Approved :: MIT License&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="s1">&#39;Programming Language :: Python :: 3&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="s1">&#39;Topic :: Utilities&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="n">python_requires</span><span class="o">=</span><span class="s1">&#39;&gt;=3.6&#39;</span><span class="p">,</span>
-<span class="p">)</span>
-</code></pre></div>
-
-<h3 id="pypibat">pypi.bat<a class="headerlink" href="#pypibat" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="n">rmdir</span><span class="w"> </span><span class="o">/</span><span class="n">s</span><span class="w"> </span><span class="o">/</span><span class="n">q</span><span class="w"> </span><span class="n">dist</span>
-<span class="o">%</span><span class="n">USERPROFILE</span><span class="o">%</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">anaconda3</span>\<span class="n">python</span><span class="o">.</span><span class="n">exe</span><span class="w"> </span><span class="n">setup</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="n">sdist</span>
-<span class="o">%</span><span class="n">USERPROFILE</span><span class="o">%</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">anaconda3</span>\<span class="n">python</span><span class="o">.</span><span class="n">exe</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">twine</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">dist</span><span class="o">/*</span>
-</code></pre></div>
 
 
 
