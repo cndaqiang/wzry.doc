@@ -313,14 +313,7 @@ python -m pip install airtest_mobileauto --upgrade
 
 
 ## 如何使用模拟战刷信誉分
-* 在娱乐模式的快捷入口添加王者模拟战
-* 把这些设置都关闭(不然老弹窗), 基础设置里帧率、分辨率全部设为最低.
-* ![image](../fig/monizhanshezhi.png)
-* 自己手动进去打一轮(同意协议,领取礼包,预设阵容)
-* 返回大厅
-* 在`WZRY.mynode.运行模式.txt`中添加`self.对战模式 = "模拟战"`, 执行`wzry.py`代码
-![image](../fig/monizhan.png)
-
+见: [如何使用模拟战刷信誉分](../exp/xinyufen.md)
 
 ## 苹果手机怎么使用
 * **不回复相关问题**
