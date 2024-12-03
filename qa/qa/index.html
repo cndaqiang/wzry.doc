@@ -1335,6 +1335,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../exp/termux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    不使用电脑如何运行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://cndaqiang.github.io/2023/11/10/MobileAuto/" class="md-nav__link">
         
   
@@ -1913,7 +1934,7 @@
 
   <h1>常见问题</h1>
 
-<h2 id="如果你在运行时遇到问题">如果你在运行时遇到问题<a class="headerlink" href="#如果你在运行时遇到问题" title="Permanent link">&para;</a></h2>
+<div><h2 id="如果你在运行时遇到问题">如果你在运行时遇到问题<a class="headerlink" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%9C%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98" title="Permanent link">¶</a></h2>
 <ul>
 <li>使用页面最上方的搜索功能</li>
 <li>其次认真阅读使用手册</li>
@@ -1929,7 +1950,7 @@
 <li>语气和善,没人理会你的傲慢和懒惰.</li>
 </ul>
 </details>
-<h2 id="没法安装airtest_mobileauto">没法安装airtest_mobileauto<a class="headerlink" href="#没法安装airtest_mobileauto" title="Permanent link">&para;</a></h2>
+<h2 id="没法安装airtest_mobileauto">没法安装airtest_mobileauto<a class="headerlink" href="#%E6%B2%A1%E6%B3%95%E5%AE%89%E8%A3%85airtest_mobileauto" title="Permanent link">¶</a></h2>
 <p>Q:</p>
 <ul>
 <li>无法pip安装airtest_mobileauto</li>
@@ -1944,7 +1965,7 @@
 <div class="codehilite"><pre><span></span><code><span class="nx">python</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w">  </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//mirrors.cernet.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade</span>
 </code></pre></div>
 
-<h2 id="没办法下载wzry代码">没办法下载WZRY代码<a class="headerlink" href="#没办法下载wzry代码" title="Permanent link">&para;</a></h2>
+<h2 id="没办法下载wzry代码">没办法下载WZRY代码<a class="headerlink" href="#%E6%B2%A1%E5%8A%9E%E6%B3%95%E4%B8%8B%E8%BD%BDwzry%E4%BB%A3%E7%A0%81" title="Permanent link">¶</a></h2>
 <p>Q:</p>
 <ul>
 <li>不会魔法上网, 也无法访问github? 无法下载脚本?</li>
@@ -1952,12 +1973,14 @@
 </ul>
 <p>A:</p>
 <ul>
-<li>方法1. 从镜像站下载, 详见<a href="../../exp/pypi/">从pypi镜像站下载WZRY代码</a></li>
+<li>方法1. 从镜像站下载, 
+<br><code>pip download AutoWZRY -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-deps</code>
+<br>详见<a href="../../exp/pypi/">从pypi镜像站下载WZRY代码</a></li>
 <li>方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: <code>https://github.com/cndaqiang/WZRY.git</code>
-<img alt="gitee下载WZRY" src="../../fig/gitee.png" /></li>
+<img alt="gitee下载WZRY" src="../../fig/gitee.png"></li>
 <li>等你可以访问github时, 欢迎你来为<a href="https://github.com/cndaqiang/WZRY">WZRY</a>项目点赞.</li>
 </ul>
-<h2 id="进入不了大厅">进入不了大厅<a class="headerlink" href="#进入不了大厅" title="Permanent link">&para;</a></h2>
+<h2 id="进入不了大厅">进入不了大厅<a class="headerlink" href="#%E8%BF%9B%E5%85%A5%E4%B8%8D%E4%BA%86%E5%A4%A7%E5%8E%85" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>新用户,建议先手动进入大厅.</strong></li>
 <li>活动更新了图标,检查我是否提供了<a href="../../guide/upfig/">更新资源</a>,若我无法及时更新,请自行更新图标. </li>
@@ -1971,34 +1994,34 @@
 <li>如果你没有配置模拟器的参数,本脚本在首次运行时,不知道模拟器当前处在什么界面,会进行大厅、房间、对战等状态的判断,在最后无法判断出来后(<strong>这需要时间</strong>),本脚本才会重新关闭打开王者,进行登录.十分钟以内可以进入,要有耐心.</li>
 <li>若配置了模拟器的参数,并且运行脚本前,模拟器是关机状态,本脚本会自动启动模拟器,则会先执行登录命令,此时会加速进入大厅的速度.</li>
 </ul>
-<h2 id="进入不了人机房间">进入不了人机房间<a class="headerlink" href="#进入不了人机房间" title="Permanent link">&para;</a></h2>
+<h2 id="进入不了人机房间">进入不了人机房间<a class="headerlink" href="#%E8%BF%9B%E5%85%A5%E4%B8%8D%E4%BA%86%E4%BA%BA%E6%9C%BA%E6%88%BF%E9%97%B4" title="Permanent link">¶</a></h2>
 <ul>
 <li>活动更新了图标,检查我是否提供了<a href="../../guide/upfig/">更新资源</a>,若我无法及时更新,请自行更新图标. </li>
 <li>模拟器的分辨率不是960x540、dpi不是160, 有些图标无法识别,自行调试脚本,不予解决</li>
 </ul>
-<h2 id="战令活跃礼包无法领取">战令、活跃礼包无法领取<a class="headerlink" href="#战令活跃礼包无法领取" title="Permanent link">&para;</a></h2>
+<h2 id="战令活跃礼包无法领取">战令、活跃礼包无法领取<a class="headerlink" href="#%E6%88%98%E4%BB%A4%E6%B4%BB%E8%B7%83%E7%A4%BC%E5%8C%85%E6%97%A0%E6%B3%95%E9%A2%86%E5%8F%96" title="Permanent link">¶</a></h2>
 <ul>
-<li>同上 <em><a href="#进入不了人机房间">进入不了人机房间</a></em></li>
+<li>同上 <em><a href="#%E8%BF%9B%E5%85%A5%E4%B8%8D%E4%BA%86%E4%BA%BA%E6%9C%BA%E6%88%BF%E9%97%B4">进入不了人机房间</a></em></li>
 <li>在新战令或者新模拟器上登录账号后,需要强制观看新战令的宣传,脚本检测不到战令界面.第一次手动点进去观看之后,王者就不强制观看了.</li>
 <li>王者的礼包界面天天变,氪金不氪金界面不同,不同分辨率甚至QQ和微信登录后的界面也有很大差异</li>
 <li>很难一个代码适配所有设备</li>
 <li>自己查看屏幕输出,找到代码相应位置,用AirtestIDE截取你设备的图像,进行替换</li>
 <li>也可以尝试,下载最新的release程序,<strong>只复制你的config.win.yaml文件到新代码目录,重新进行礼包位置矫正</strong></li>
 </ul>
-<h2 id="进入不了战令页面">进入不了战令页面<a class="headerlink" href="#进入不了战令页面" title="Permanent link">&para;</a></h2>
+<h2 id="进入不了战令页面">进入不了战令页面<a class="headerlink" href="#%E8%BF%9B%E5%85%A5%E4%B8%8D%E4%BA%86%E6%88%98%E4%BB%A4%E9%A1%B5%E9%9D%A2" title="Permanent link">¶</a></h2>
 <ul>
 <li>战令入口改变了,战令图片改变了</li>
 </ul>
 <p>解决方案: 手动填写战令页面位置</p>
 <ul>
-<li>同指定英雄和分路的<a href="../../guide/shuliandu/#计算绝对坐标的步骤">计算绝对坐标的步骤</a></li>
+<li>同指定英雄和分路的<a href="../../guide/shuliandu/#%E8%AE%A1%E7%AE%97%E7%BB%9D%E5%AF%B9%E5%9D%90%E6%A0%87%E7%9A%84%E6%AD%A5%E9%AA%A4">计算绝对坐标的步骤</a></li>
 <li>以新的界面再展示一遍
-<img alt="airtest截取战令示意图" src="../../fig/zhanlingairtest.png" /></li>
+<img alt="airtest截取战令示意图" src="../../fig/zhanlingairtest.png"></li>
 </ul>
 <p>然后计算</p>
 <div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="kd">base</span><span class="p">)</span><span class="w"> </span><span class="nx">PS</span><span class="w"> </span><span class="nx">D</span><span class="p">:</span><span class="err">\</span><span class="nx">SoftData</span><span class="err">\</span><span class="nx">git</span><span class="err">\</span><span class="nx">WZRY</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">python</span>
 <span class="nx">Python</span><span class="w"> </span><span class="m m-Double">3.11.7</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">packaged</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">Anaconda</span><span class="p">,</span><span class="w"> </span><span class="nx">Inc</span><span class="p">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="nx">main</span><span class="p">,</span><span class="w"> </span><span class="nx">Dec</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="mi">2023</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">47</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="nx">MSC</span><span class="w"> </span><span class="nx">v</span><span class="m m-Double">.1916</span><span class="w"> </span><span class="mi">64</span><span class="w"> </span><span class="nx">bit</span><span class="w"> </span><span class="p">(</span><span class="nx">AMD64</span><span class="p">)]</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">win32</span>
-<span class="nx">Type</span><span class="w"> </span><span class="s">&quot;help&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;copyright&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;credits&quot;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="s">&quot;license&quot;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">more</span><span class="w"> </span><span class="nx">information</span><span class="p">.</span>
+<span class="nx">Type</span><span class="w"> </span><span class="s">"help"</span><span class="p">,</span><span class="w"> </span><span class="s">"copyright"</span><span class="p">,</span><span class="w"> </span><span class="s">"credits"</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="s">"license"</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">more</span><span class="w"> </span><span class="nx">information</span><span class="p">.</span>
 <span class="o">&gt;&gt;</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">record_pos</span><span class="p">=(</span><span class="m m-Double">0.421</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m m-Double">0.105</span><span class="p">)</span>
 <span class="o">&gt;&gt;</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">resolution</span><span class="p">=(</span><span class="mi">960</span><span class="p">,</span><span class="w"> </span><span class="mi">540</span><span class="p">)</span>
 <span class="o">&gt;&gt;</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m m-Double">0.5</span><span class="o">*</span><span class="nx">resolution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="nx">record_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nx">resolution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -2014,24 +2037,24 @@
 - 169.2
 </code></pre></div>
 
-<h2 id="进入不了商店活动xx入口点击错误">进入不了商店/活动/XX入口/点击错误<a class="headerlink" href="#进入不了商店活动xx入口点击错误" title="Permanent link">&para;</a></h2>
+<h2 id="进入不了商店活动xx入口点击错误">进入不了商店/活动/XX入口/点击错误<a class="headerlink" href="#%E8%BF%9B%E5%85%A5%E4%B8%8D%E4%BA%86%E5%95%86%E5%BA%97%E6%B4%BB%E5%8A%A8xx%E5%85%A5%E5%8F%A3%E7%82%B9%E5%87%BB%E9%94%99%E8%AF%AF" title="Permanent link">¶</a></h2>
 <ul>
-<li>同<a href="#进入不了战令页面">进入不了战令页面</a></li>
+<li>同<a href="#%E8%BF%9B%E5%85%A5%E4%B8%8D%E4%BA%86%E6%88%98%E4%BB%A4%E9%A1%B5%E9%9D%A2">进入不了战令页面</a></li>
 </ul>
-<h2 id="注入图片没生效">注入图片没生效<a class="headerlink" href="#注入图片没生效" title="Permanent link">&para;</a></h2>
+<h2 id="注入图片没生效">注入图片没生效<a class="headerlink" href="#%E6%B3%A8%E5%85%A5%E5%9B%BE%E7%89%87%E6%B2%A1%E7%94%9F%E6%95%88" title="Permanent link">¶</a></h2>
 <ul>
 <li>好好和本手册对比, 看看你错那了</li>
 </ul>
 <p>这是一些常犯的错误</p>
-<div class="codehilite"><pre><span></span><code>self.大厅对战图标=touch(Template(r&quot;tpl1730865263724.png&quot;, record_pos=(-0.101, 0.147), resolution=(960, 540)))
+<div class="codehilite"><pre><span></span><code>self.大厅对战图标=touch(Template(r"tpl1730865263724.png", record_pos=(-0.101, 0.147), resolution=(960, 540)))
 <span class="gh">#</span> 错在, 不应该带有touch()， 正确的方式
-self.大厅对战图标=Template(r&quot;tpl1730865263724.png&quot;, record_pos=(-0.101, 0.147), resolution=(960, 540))
+self.大厅对战图标=Template(r"tpl1730865263724.png", record_pos=(-0.101, 0.147), resolution=(960, 540))
 <span class="gh">#</span>
 # 如果你截到的图片放到了 .pngtmp目录, 还应该改为
-self.大厅对战图标=Template(r&quot;tpl1730865263724.png&quot;, dirname = &quot;.pngtmp&quot;, record_pos=(-0.101, 0.147), resolution=(960, 540))
+self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", record_pos=(-0.101, 0.147), resolution=(960, 540))
 </code></pre></div>
 
-<h2 id="连接不上模拟器">连接不上模拟器<a class="headerlink" href="#连接不上模拟器" title="Permanent link">&para;</a></h2>
+<h2 id="连接不上模拟器">连接不上模拟器<a class="headerlink" href="#%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E6%A8%A1%E6%8B%9F%E5%99%A8" title="Permanent link">¶</a></h2>
 <ul>
 <li>认真阅读<a href="../../guide/install/">安装指南</a></li>
 <li>配置文件写错了,认真阅读<a href="../../guide/config/">配置文件</a></li>
@@ -2042,19 +2065,19 @@ self.大厅对战图标=Template(r&quot;tpl1730865263724.png&quot;, dirname = &q
 <li>在脚本运行过程中使用了escrcpy、airtestIDE、各种安卓玩机助手、ADB操作了模拟器</li>
 <li>这些程序会阻断脚本的ADB连接,并且这些程序在退出的时候,会强制断开本脚本的ADB连接</li>
 </ul>
-<h2 id="关闭不了模拟器">关闭不了模拟器<a class="headerlink" href="#关闭不了模拟器" title="Permanent link">&para;</a></h2>
+<h2 id="关闭不了模拟器">关闭不了模拟器<a class="headerlink" href="#%E5%85%B3%E9%97%AD%E4%B8%8D%E4%BA%86%E6%A8%A1%E6%8B%9F%E5%99%A8" title="Permanent link">¶</a></h2>
 <ul>
 <li>模拟器路径、名字、instance等写错了</li>
-<li>查看手册<a href="../../guide/config/#模拟器参数">配置文件</a>, 检查你的模拟器参数填对了吗, 有没有多填空格,打错字母</li>
+<li>查看手册<a href="../../guide/config/#%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%8F%82%E6%95%B0">配置文件</a>, 检查你的模拟器参数填对了吗, 有没有多填空格,打错字母</li>
 </ul>
-<h2 id="脚本正在运行突然提示连接不上模拟器各种报错但是模拟器正常">脚本正在运行、突然提示连接不上模拟器,各种报错,但是模拟器正常<a class="headerlink" href="#脚本正在运行突然提示连接不上模拟器各种报错但是模拟器正常" title="Permanent link">&para;</a></h2>
+<h2 id="脚本正在运行突然提示连接不上模拟器各种报错但是模拟器正常">脚本正在运行、突然提示连接不上模拟器,各种报错,但是模拟器正常<a class="headerlink" href="#%E8%84%9A%E6%9C%AC%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%AA%81%E7%84%B6%E6%8F%90%E7%A4%BA%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%90%84%E7%A7%8D%E6%8A%A5%E9%94%99%E4%BD%86%E6%98%AF%E6%A8%A1%E6%8B%9F%E5%99%A8%E6%AD%A3%E5%B8%B8" title="Permanent link">¶</a></h2>
 <ul>
 <li>本脚本在各种报错后,会主动尝试修复,耐心等待即可.</li>
-<li>同上 <em><a href="#连接不上模拟器">连接不上模拟器</a></em></li>
+<li>同上 <em><a href="#%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E6%A8%A1%E6%8B%9F%E5%99%A8">连接不上模拟器</a></em></li>
 </ul>
-<h2 id="连接失败没有找到xxx设备">连接失败,没有找到XXX设备<a class="headerlink" href="#连接失败没有找到xxx设备" title="Permanent link">&para;</a></h2>
-<p>同上 <em><a href="#连接不上模拟器">连接不上模拟器</a></em></p>
-<h2 id="python语法注入文件没有生效">python语法注入文件没有生效<a class="headerlink" href="#python语法注入文件没有生效" title="Permanent link">&para;</a></h2>
+<h2 id="连接失败没有找到xxx设备">连接失败,没有找到XXX设备<a class="headerlink" href="#%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E6%B2%A1%E6%9C%89%E6%89%BE%E5%88%B0xxx%E8%AE%BE%E5%A4%87" title="Permanent link">¶</a></h2>
+<p>同上 <em><a href="#%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E6%A8%A1%E6%8B%9F%E5%99%A8">连接不上模拟器</a></em></p>
+<h2 id="python语法注入文件没有生效">python语法注入文件没有生效<a class="headerlink" href="#python%E8%AF%AD%E6%B3%95%E6%B3%A8%E5%85%A5%E6%96%87%E4%BB%B6%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88" title="Permanent link">¶</a></h2>
 <p>例如</p>
 <ul>
 <li>无法自动选择熟练度最低的英雄</li>
@@ -2065,11 +2088,11 @@ self.大厅对战图标=Template(r&quot;tpl1730865263724.png&quot;, dirname = &q
 <li>抄错了控制文件</li>
 <li>控制文件名写错了: 要把<code>WZRY.mynode.运行模式.txt</code>中的<code>mynode</code>替换为本脚本控制的 <strong><a href="../../guide/file/">账户编号</a></strong></li>
 <li>如<code>WZRY.1.运行模式.txt</code>,<code>WZRY.0.运行模式.txt</code>分别调整第1和第0个王者账号.</li>
-<li>理解错了<a href="../../guide/config/#mynode与instance的区别">mynode和模拟器内部编号Instance的含义</a>,把模拟器内部的编号当成了mynode.</li>
+<li>理解错了<a href="../../guide/config/#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB">mynode和模拟器内部编号Instance的含义</a>,把模拟器内部的编号当成了mynode.</li>
 </ul>
-<h2 id="触摸对战不生效">触摸对战不生效<a class="headerlink" href="#触摸对战不生效" title="Permanent link">&para;</a></h2>
+<h2 id="触摸对战不生效">触摸对战不生效<a class="headerlink" href="#%E8%A7%A6%E6%91%B8%E5%AF%B9%E6%88%98%E4%B8%8D%E7%94%9F%E6%95%88" title="Permanent link">¶</a></h2>
 <ul>
-<li>配置文件写错了,同上<a href="#python语法注入文件没有生效">python语法注入文件没有生效</a></li>
+<li>配置文件写错了,同上<a href="#python%E8%AF%AD%E6%B3%95%E6%B3%A8%E5%85%A5%E6%96%87%E4%BB%B6%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88">python语法注入文件没有生效</a></li>
 </ul>
 <p>开启触摸对战的几种方法</p>
 <ul>
@@ -2077,7 +2100,7 @@ self.大厅对战图标=Template(r&quot;tpl1730865263724.png&quot;, dirname = &q
 <li>在运行目录创建一个 <code>WZRY.TOUCH.txt</code>文件.</li>
 <li>不推荐 <del>直接修改源码</del></li>
 </ul>
-<h2 id="标准对战不生效">标准对战不生效<a class="headerlink" href="#标准对战不生效" title="Permanent link">&para;</a></h2>
+<h2 id="标准对战不生效">标准对战不生效<a class="headerlink" href="#%E6%A0%87%E5%87%86%E5%AF%B9%E6%88%98%E4%B8%8D%E7%94%9F%E6%95%88" title="Permanent link">¶</a></h2>
 <ul>
 <li>同上</li>
 </ul>
@@ -2086,17 +2109,17 @@ self.大厅对战图标=Template(r&quot;tpl1730865263724.png&quot;, dirname = &q
 <li>在<code>WZRY.mynode.运行模式.txt</code>中填入<code>self.标准模式 = True</code></li>
 <li>不推荐 <del>直接修改源码</del></li>
 </ul>
-<h2 id="运行之后很快接黑屏了我怎么查看运行报错的信息">运行之后,很快接黑屏了,我怎么查看运行报错的信息<a class="headerlink" href="#运行之后很快接黑屏了我怎么查看运行报错的信息" title="Permanent link">&para;</a></h2>
+<h2 id="运行之后很快接黑屏了我怎么查看运行报错的信息">运行之后,很快接黑屏了,我怎么查看运行报错的信息<a class="headerlink" href="#%E8%BF%90%E8%A1%8C%E4%B9%8B%E5%90%8E%E5%BE%88%E5%BF%AB%E6%8E%A5%E9%BB%91%E5%B1%8F%E4%BA%86%E6%88%91%E6%80%8E%E4%B9%88%E6%9F%A5%E7%9C%8B%E8%BF%90%E8%A1%8C%E6%8A%A5%E9%94%99%E7%9A%84%E4%BF%A1%E6%81%AF" title="Permanent link">¶</a></h2>
 <ul>
 <li>方法1. 在powershell中执行<code>python wzry.py config.win.yaml</code>, 向上滚可以查看日志</li>
 <li>方法2. 在配置文件中添加日志输出</li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="n">logfile</span><span class="o">:</span>
-<span class="w">    </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;result.0.txt&quot;</span>
+<span class="w">    </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="s2">"result.0.txt"</span>
 </code></pre></div>
 
 <p>会将<code>mynode=0</code>的账户的运行日志输出到<code>result.0.txt</code>, 提issues时,可以附上这个日志文件.</p>
-<h2 id="我想精准控制每一局采用何种模式对战怎么改配置文件">我想精准控制每一局采用何种模式对战,怎么改配置文件<a class="headerlink" href="#我想精准控制每一局采用何种模式对战怎么改配置文件" title="Permanent link">&para;</a></h2>
+<h2 id="我想精准控制每一局采用何种模式对战怎么改配置文件">我想精准控制每一局采用何种模式对战,怎么改配置文件<a class="headerlink" href="#%E6%88%91%E6%83%B3%E7%B2%BE%E5%87%86%E6%8E%A7%E5%88%B6%E6%AF%8F%E4%B8%80%E5%B1%80%E9%87%87%E7%94%A8%E4%BD%95%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%AF%B9%E6%88%98%E6%80%8E%E4%B9%88%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" title="Permanent link">¶</a></h2>
 <ul>
 <li>利用<code>self.jinristep</code>变量,代表今天的第几次对战</li>
 <li>好好读<a href="../../guide/duizhanmoshi/">使用手册.对战模式</a></li>
@@ -2110,25 +2133,25 @@ self.大厅对战图标=Template(r&quot;tpl1730865263724.png&quot;, dirname = &q
 <span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span>:<span class="w"> </span><span class="nv">self</span>.触摸对战<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">True</span>
 </code></pre></div>
 
-<h2 id="试问这个脚本可以直接拿去打排位或者匹配吗">试问这个脚本可以直接拿去打排位或者匹配吗？<a class="headerlink" href="#试问这个脚本可以直接拿去打排位或者匹配吗" title="Permanent link">&para;</a></h2>
+<h2 id="试问这个脚本可以直接拿去打排位或者匹配吗">试问这个脚本可以直接拿去打排位或者匹配吗？<a class="headerlink" href="#%E8%AF%95%E9%97%AE%E8%BF%99%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E6%8B%BF%E5%8E%BB%E6%89%93%E6%8E%92%E4%BD%8D%E6%88%96%E8%80%85%E5%8C%B9%E9%85%8D%E5%90%97" title="Permanent link">¶</a></h2>
 <p>可以,但是会被扣信誉分,不推荐</p>
-<h2 id="该脚本有没有1v1挂机墨家机关道刷经验的功能">该脚本有没有1v1挂机墨家机关道刷经验的功能<a class="headerlink" href="#该脚本有没有1v1挂机墨家机关道刷经验的功能" title="Permanent link">&para;</a></h2>
+<h2 id="该脚本有没有1v1挂机墨家机关道刷经验的功能">该脚本有没有1v1挂机墨家机关道刷经验的功能<a class="headerlink" href="#%E8%AF%A5%E8%84%9A%E6%9C%AC%E6%9C%89%E6%B2%A1%E6%9C%891v1%E6%8C%82%E6%9C%BA%E5%A2%A8%E5%AE%B6%E6%9C%BA%E5%85%B3%E9%81%93%E5%88%B7%E7%BB%8F%E9%AA%8C%E7%9A%84%E5%8A%9F%E8%83%BD" title="Permanent link">¶</a></h2>
 <ul>
 <li>没有,1v1会被举报, 扣信誉分.</li>
 <li>刷经验建议5v5青铜人机挂机. 蓝豆升红豆,使用星耀人机.</li>
 <li>刷信誉分使用王者模拟战.</li>
 </ul>
-<h2 id="作者有时间加入新功能吗">作者有时间加入新功能吗<a class="headerlink" href="#作者有时间加入新功能吗" title="Permanent link">&para;</a></h2>
+<h2 id="作者有时间加入新功能吗">作者有时间加入新功能吗<a class="headerlink" href="#%E4%BD%9C%E8%80%85%E6%9C%89%E6%97%B6%E9%97%B4%E5%8A%A0%E5%85%A5%E6%96%B0%E5%8A%9F%E8%83%BD%E5%90%97" title="Permanent link">¶</a></h2>
 <ul>
 <li>目前已是最具性价比的日活方案</li>
 <li>除非新的玩法比人机、王者模拟战更省时间能获得更多的奖励,以及不会影响信誉分, 否则不会加入</li>
 </ul>
-<h2 id="有计划提供apk么">有计划提供apk么<a class="headerlink" href="#有计划提供apk么" title="Permanent link">&para;</a></h2>
+<h2 id="有计划提供apk么">有计划提供apk么<a class="headerlink" href="#%E6%9C%89%E8%AE%A1%E5%88%92%E6%8F%90%E4%BE%9Bapk%E4%B9%88" title="Permanent link">¶</a></h2>
 <ul>
 <li>无计划, 该项目初衷是为了脚本、模拟器7*24h在服务器上完成运行的</li>
-<li>手机上可以安装python, 然后在后台执行<code>python wzry.py</code></li>
+<li>在手机上安装termux+Anlinux,可以运行python, 进而控制脚本, 例如<a href="../../exp/termux/">在模拟器内运行自动化脚本</a></li>
 </ul>
-<h2 id="建议大号使用吗">建议大号使用吗<a class="headerlink" href="#建议大号使用吗" title="Permanent link">&para;</a></h2>
+<h2 id="建议大号使用吗">建议大号使用吗<a class="headerlink" href="#%E5%BB%BA%E8%AE%AE%E5%A4%A7%E5%8F%B7%E4%BD%BF%E7%94%A8%E5%90%97" title="Permanent link">¶</a></h2>
 <ul>
 <li>所有账号均可使用</li>
 <li>本脚本不更改游戏数据, 不需要root权限, 不属于外挂.</li>
@@ -2137,22 +2160,22 @@ self.大厅对战图标=Template(r&quot;tpl1730865263724.png&quot;, dirname = &q
 <div class="admonition wannring">
 <p class="admonition-title">Wannring</p>
 <p>模拟器太卡, 网络太卡, 以及某些时间段匹配时间过长，有极小的概率没有及时点击确认匹配, 会扣信誉分. <br>
-偶尔扣的一点信誉分可以通过<a href="#如何使用模拟战刷信誉分">模拟战</a>刷回来.
+偶尔扣的一点信誉分可以通过<a href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%8B%9F%E6%88%98%E5%88%B7%E4%BF%A1%E8%AA%89%E5%88%86">模拟战</a>刷回来.
 root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 在模拟器上安装微信,有封号风险.别安装微信.<br></p>
 </div>
-<h2 id="怎么使用airtestide">怎么使用AirtestIDE<a class="headerlink" href="#怎么使用airtestide" title="Permanent link">&para;</a></h2>
+<h2 id="怎么使用airtestide">怎么使用AirtestIDE<a class="headerlink" href="#%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8airtestide" title="Permanent link">¶</a></h2>
 <p>该问题不属于本仓库的范围</p>
 <ul>
 <li>参考官方教程 <a href="https://airtest.doc.io.netease.com/IDEdocs/3.1getting_started/mainwindow_intro/">airtest.doc</a></li>
 <li>阅读<a href="../../guide/tupiangengxin/">图片更新</a>教程</li>
-<li>阅读<a href="../../guide/shuliandu/#计算绝对坐标的步骤">截取英雄分路坐标的流程</a></li>
+<li>阅读<a href="../../guide/shuliandu/#%E8%AE%A1%E7%AE%97%E7%BB%9D%E5%AF%B9%E5%9D%90%E6%A0%87%E7%9A%84%E6%AD%A5%E9%AA%A4">截取英雄分路坐标的流程</a></li>
 <li>阅读<a href="../../guide/zudui/">组队教程</a></li>
 <li>右上角搜索airtest</li>
 <li>我就只用AirtestIDE右侧的连接设备,左侧的touch按钮,截图后,把图片复制到<code>assets</code>目录,把截图后生成的代码复制到<code>wzry.py</code>中进行再次的修改
-<img alt="airtestIDE" src="../../fig/airtestguirun.png" /></li>
+<img alt="airtestIDE" src="../../fig/airtestguirun.png"></li>
 </ul>
-<h2 id="arm设备无法执行adb">ARM设备无法执行adb<a class="headerlink" href="#arm设备无法执行adb" title="Permanent link">&para;</a></h2>
+<h2 id="arm设备无法执行adb">ARM设备无法执行adb<a class="headerlink" href="#arm%E8%AE%BE%E5%A4%87%E6%97%A0%E6%B3%95%E6%89%A7%E8%A1%8Cadb" title="Permanent link">¶</a></h2>
 <ul>
 <li>使用linux的用户都是高手,你一眼就能看出这个解决办法</li>
 </ul>
@@ -2161,30 +2184,30 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 <span class="nx">ln</span><span class="w"> </span><span class="o">-</span><span class="nx">s</span><span class="w"> </span><span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">bin</span><span class="o">/</span><span class="nx">adb</span><span class="w"> </span><span class="p">.</span>
 </code></pre></div>
 
-<h2 id="苹果笔记本macos无法控制安卓">苹果笔记本(MacOS)无法控制安卓<a class="headerlink" href="#苹果笔记本macos无法控制安卓" title="Permanent link">&para;</a></h2>
+<h2 id="苹果笔记本macos无法控制安卓">苹果笔记本(MacOS)无法控制安卓<a class="headerlink" href="#%E8%8B%B9%E6%9E%9C%E7%AC%94%E8%AE%B0%E6%9C%ACmacos%E6%97%A0%E6%B3%95%E6%8E%A7%E5%88%B6%E5%AE%89%E5%8D%93" title="Permanent link">¶</a></h2>
 <ul>
 <li>在苹果设备上使用python脚本的你,这个命令对你来说也是小意思</li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="nx">chmod</span><span class="w"> </span><span class="o">+</span><span class="nx">x</span><span class="w"> </span><span class="o">~/</span><span class="nx">anaconda3</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.11</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">airtest</span><span class="o">/</span><span class="nx">core</span><span class="o">/</span><span class="nx">android</span><span class="o">/</span><span class="nx">static</span><span class="o">/</span><span class="nx">adb</span><span class="o">/</span><span class="nx">mac</span><span class="o">/</span><span class="nx">adb</span>
 </code></pre></div>
 
-<h2 id="在-cmdpowershell-中执行时程序偶尔卡住回车后继续">在 cmd/powershell 中执行时,程序偶尔卡住,回车后继续<a class="headerlink" href="#在-cmdpowershell-中执行时程序偶尔卡住回车后继续" title="Permanent link">&para;</a></h2>
+<h2 id="在-cmdpowershell-中执行时程序偶尔卡住回车后继续">在 cmd/powershell 中执行时,程序偶尔卡住,回车后继续<a class="headerlink" href="#%E5%9C%A8-cmdpowershell-%E4%B8%AD%E6%89%A7%E8%A1%8C%E6%97%B6%E7%A8%8B%E5%BA%8F%E5%81%B6%E5%B0%94%E5%8D%A1%E4%BD%8F%E5%9B%9E%E8%BD%A6%E5%90%8E%E7%BB%A7%E7%BB%AD" title="Permanent link">¶</a></h2>
 <p>windows的cmd默认开启了快速编辑模式,如果在执行过程中,有复制选中等行为,会强制让命令停住</p>
 <p><strong>搜索取消windows cmd快速编辑</strong>,下面是一些解决方案</p>
 <ul>
 <li>https://www.cnblogs.com/mq0036/p/12100632.html</li>
 <li>https://www.cnblogs.com/LRolinx/p/16695671.html</li>
 </ul>
-<h2 id="模块airtest_mobileauto不存在-尝试安装">模块[airtest_mobileauto]不存在, 尝试安装<a class="headerlink" href="#模块airtest_mobileauto不存在-尝试安装" title="Permanent link">&para;</a></h2>
+<h2 id="模块airtest_mobileauto不存在-尝试安装">模块[airtest_mobileauto]不存在, 尝试安装<a class="headerlink" href="#%E6%A8%A1%E5%9D%97airtest_mobileauto%E4%B8%8D%E5%AD%98%E5%9C%A8-%E5%B0%9D%E8%AF%95%E5%AE%89%E8%A3%85" title="Permanent link">¶</a></h2>
 <ul>
 <li><code>RuntimeError: module compiled against ABI version 0x1000009 but this version of numpy is 0x2000000</code></li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="n">模块</span><span class="o">[</span><span class="n">airtest_mobileauto</span><span class="o">]</span><span class="n">不存在</span><span class="p">,</span><span class="w"> </span><span class="n">尝试安装</span>
 <span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="k">last</span><span class="p">)</span><span class="err">:</span>
-<span class="k">File</span><span class="w"> </span><span class="ss">&quot;G:\WZRY\wzry.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">2902</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span>
-<span class="n">task_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TaskManager</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span><span class="w"> </span><span class="n">wzry_task</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;RUN&#39;</span><span class="p">)</span>
+<span class="k">File</span><span class="w"> </span><span class="ss">"G:\WZRY\wzry.py"</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">2902</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span>
+<span class="n">task_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TaskManager</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span><span class="w"> </span><span class="n">wzry_task</span><span class="p">,</span><span class="w"> </span><span class="s1">'RUN'</span><span class="p">)</span>
 <span class="o">^^^^^^^^^^^</span>
-<span class="nl">NameError</span><span class="p">:</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="s1">&#39;TaskManager&#39;</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">defined</span>
+<span class="nl">NameError</span><span class="p">:</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="s1">'TaskManager'</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">defined</span>
 </code></pre></div>
 
 <ul>
@@ -2196,7 +2219,7 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 <ul>
 <li>python的问题,不在本脚本讨论范围内,卸载python,使用anaconda安装python</li>
 </ul>
-<h2 id="object-has-no-attribute">object has no attribute<a class="headerlink" href="#object-has-no-attribute" title="Permanent link">&para;</a></h2>
+<h2 id="object-has-no-attribute">object has no attribute<a class="headerlink" href="#object-has-no-attribute" title="Permanent link">¶</a></h2>
 <ul>
 <li><code>AttributeError: 'DQWheel' object has no attribute</code></li>
 <li><code>AttributeError: 'deviceOB' object has no attribute</code></li>
@@ -2206,7 +2229,7 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 <div class="codehilite"><pre><span></span><code>python -m pip install airtest_mobileauto --upgrade
 </code></pre></div>
 
-<h2 id="星耀模式无法组队">星耀模式无法组队<a class="headerlink" href="#星耀模式无法组队" title="Permanent link">&para;</a></h2>
+<h2 id="星耀模式无法组队">星耀模式无法组队<a class="headerlink" href="#%E6%98%9F%E8%80%80%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E7%BB%84%E9%98%9F" title="Permanent link">¶</a></h2>
 <p>星耀局的组队没有意义,因为</p>
 <ul>
 <li>刷人机任务,刷金币,刷熟练度,只用青铜局就够了</li>
@@ -2214,31 +2237,31 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 <li>每个账号每天星耀限制10局,不同的账户剩余局数不同.当一个账户达到上限时,组队失败</li>
 </ul>
 <p>新版本已经开放星耀组队功能.</p>
-<h2 id="加好友指导一下">加好友指导一下<a class="headerlink" href="#加好友指导一下" title="Permanent link">&para;</a></h2>
+<h2 id="加好友指导一下">加好友指导一下<a class="headerlink" href="#%E5%8A%A0%E5%A5%BD%E5%8F%8B%E6%8C%87%E5%AF%BC%E4%B8%80%E4%B8%8B" title="Permanent link">¶</a></h2>
 <ul>
 <li>不加好友</li>
 <li>你如果没有能力阅读本手册,说明这个脚本不适合你.</li>
 </ul>
-<h2 id="控制游戏只打n局打完就退出怎么操作">控制游戏只打N局,打完就退出,怎么操作<a class="headerlink" href="#控制游戏只打n局打完就退出怎么操作" title="Permanent link">&para;</a></h2>
-<p>见<a href="../../guide/file/#控制运行时间示例">高级功能</a></p>
-<h2 id="控制游戏只在每天的12点14点进行对局打完就退出怎么操作">控制游戏只在每天的12点~14点进行对局,打完就退出,怎么操作<a class="headerlink" href="#控制游戏只在每天的12点14点进行对局打完就退出怎么操作" title="Permanent link">&para;</a></h2>
-<p>见<a href="../../guide/file/#控制运行时间示例">高级功能</a></p>
-<h2 id="如何使用模拟战刷信誉分">如何使用模拟战刷信誉分<a class="headerlink" href="#如何使用模拟战刷信誉分" title="Permanent link">&para;</a></h2>
+<h2 id="控制游戏只打n局打完就退出怎么操作">控制游戏只打N局,打完就退出,怎么操作<a class="headerlink" href="#%E6%8E%A7%E5%88%B6%E6%B8%B8%E6%88%8F%E5%8F%AA%E6%89%93n%E5%B1%80%E6%89%93%E5%AE%8C%E5%B0%B1%E9%80%80%E5%87%BA%E6%80%8E%E4%B9%88%E6%93%8D%E4%BD%9C" title="Permanent link">¶</a></h2>
+<p>见<a href="../../guide/file/#%E6%8E%A7%E5%88%B6%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E7%A4%BA%E4%BE%8B">高级功能</a></p>
+<h2 id="控制游戏只在每天的12点14点进行对局打完就退出怎么操作">控制游戏只在每天的12点~14点进行对局,打完就退出,怎么操作<a class="headerlink" href="#%E6%8E%A7%E5%88%B6%E6%B8%B8%E6%88%8F%E5%8F%AA%E5%9C%A8%E6%AF%8F%E5%A4%A9%E7%9A%8412%E7%82%B914%E7%82%B9%E8%BF%9B%E8%A1%8C%E5%AF%B9%E5%B1%80%E6%89%93%E5%AE%8C%E5%B0%B1%E9%80%80%E5%87%BA%E6%80%8E%E4%B9%88%E6%93%8D%E4%BD%9C" title="Permanent link">¶</a></h2>
+<p>见<a href="../../guide/file/#%E6%8E%A7%E5%88%B6%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E7%A4%BA%E4%BE%8B">高级功能</a></p>
+<h2 id="如何使用模拟战刷信誉分">如何使用模拟战刷信誉分<a class="headerlink" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%8B%9F%E6%88%98%E5%88%B7%E4%BF%A1%E8%AA%89%E5%88%86" title="Permanent link">¶</a></h2>
 <p>见: <a href="../../exp/xinyufen/">如何使用模拟战刷信誉分</a></p>
-<h2 id="苹果手机怎么使用">苹果手机怎么使用<a class="headerlink" href="#苹果手机怎么使用" title="Permanent link">&para;</a></h2>
+<h2 id="苹果手机怎么使用">苹果手机怎么使用<a class="headerlink" href="#%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>不回复相关问题</strong></li>
 <li>从<a href="https://github.com/cndaqiang/WZRY/releases/tag/1.2.2">1.2.2</a>版本开始,我的苹果账户已经刷完了,没有精力继续测试维护</li>
 <li>ios部分的代码,太久没有更新,能否使用请自行尝试.</li>
 <li>这是我当初的运行环境: <a href="https://cndaqiang.github.io/2023/11/10/MobileAuto/">Android/IOS移动平台自动化脚本(基于AirTest)</a></li>
 </ul>
-<h2 id="如何刷完任务自动关机如何自动开启模拟器">如何刷完任务自动关机/如何自动开启模拟器<a class="headerlink" href="#如何刷完任务自动关机如何自动开启模拟器" title="Permanent link">&para;</a></h2>
+<h2 id="如何刷完任务自动关机如何自动开启模拟器">如何刷完任务自动关机/如何自动开启模拟器<a class="headerlink" href="#%E5%A6%82%E4%BD%95%E5%88%B7%E5%AE%8C%E4%BB%BB%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%85%B3%E6%9C%BA%E5%A6%82%E4%BD%95%E8%87%AA%E5%8A%A8%E5%BC%80%E5%90%AF%E6%A8%A1%E6%8B%9F%E5%99%A8" title="Permanent link">¶</a></h2>
 <ul>
-<li>阅读<a href="../../guide/config/#模拟器参数">配置文件</a>, 添加模拟器的参数</li>
-<li>注意区分<a href="../../guide/config/#mynode与instance的区别">账户编号与模拟器实例编号的区别</a></li>
-<li>按照<a href="../../guide/file/#控制运行时间示例">控制运行时间示例</a>将你希望的时间填到<code>WZRY.mynode.运行模式.txt</code></li>
+<li>阅读<a href="../../guide/config/#%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%8F%82%E6%95%B0">配置文件</a>, 添加模拟器的参数</li>
+<li>注意区分<a href="../../guide/config/#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB">账户编号与模拟器实例编号的区别</a></li>
+<li>按照<a href="../../guide/file/#%E6%8E%A7%E5%88%B6%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E7%A4%BA%E4%BE%8B">控制运行时间示例</a>将你希望的时间填到<code>WZRY.mynode.运行模式.txt</code></li>
 </ul>
-<h2 id="小号没有进入大号房间">小号没有进入大号房间<a class="headerlink" href="#小号没有进入大号房间" title="Permanent link">&para;</a></h2>
+<h2 id="小号没有进入大号房间">小号没有进入大号房间<a class="headerlink" href="#%E5%B0%8F%E5%8F%B7%E6%B2%A1%E6%9C%89%E8%BF%9B%E5%85%A5%E5%A4%A7%E5%8F%B7%E6%88%BF%E9%97%B4" title="Permanent link">¶</a></h2>
 <p>配置文件写错了,认真阅读<a href="../../guide/zudui/">组队教程</a></p>
 <ul>
 <li>创建友情关系</li>
@@ -2247,7 +2270,7 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 <li><code>multiprocessing: True</code></li>
 <li><code>LINK_dict</code>, 0号账户必须对应房主的ADB地址</li>
 </ul>
-<h2 id="这个脚本是怎么控制模拟器启动关闭的">这个脚本是怎么控制模拟器启动关闭的?<a class="headerlink" href="#这个脚本是怎么控制模拟器启动关闭的" title="Permanent link">&para;</a></h2>
+<h2 id="这个脚本是怎么控制模拟器启动关闭的">这个脚本是怎么控制模拟器启动关闭的?<a class="headerlink" href="#%E8%BF%99%E4%B8%AA%E8%84%9A%E6%9C%AC%E6%98%AF%E6%80%8E%E4%B9%88%E6%8E%A7%E5%88%B6%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%AD%E7%9A%84" title="Permanent link">¶</a></h2>
 <ul>
 <li>利用了各个模拟器多开管理器提供的接口, 例如,MuMu模拟器的接口程序就是<code>D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe</code></li>
 <li>在脚本的运行过程中，你可以看到模拟器启动和关闭的过程, 例如</li>
@@ -2257,11 +2280,11 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 <span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">58</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">Android</span><span class="p">:</span><span class="o">///</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">16384</span><span class="p">:</span><span class="err">链接失败</span>
 <span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">02</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">Android</span><span class="p">:</span><span class="o">///</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">16384</span><span class="p">:</span><span class="err">链接失败</span><span class="p">,</span><span class="err">启动设备再次连接</span>
 <span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">02</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">run_command</span><span class="o">.</span><span class="err">启动设备</span><span class="o">.</span><span class="err">连接设备</span><span class="o">.</span><span class="n">__init__</span><span class="o">.</span><span class="n">__init__</span><span class="o">.&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">02</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="n">sysrun</span><span class="p">:</span><span class="s1">&#39;D:\GreenSoft\platform-tools</span><span class="se">\a</span><span class="s1">db.exe&#39;</span><span class="w"> </span><span class="n">disconnect</span><span class="w"> </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">16384</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">02</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="n">sysrun</span><span class="p">:</span><span class="s1">'D:\GreenSoft\platform-tools</span><span class="se">\a</span><span class="s1">db.exe'</span><span class="w"> </span><span class="n">disconnect</span><span class="w"> </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">16384</span>
 <span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">24</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="err">尝试启动设备中</span><span class="o">...</span>
 <span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">24</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">touchkey_win</span><span class="p">:</span><span class="w">  </span><span class="n">alt</span><span class="w"> </span><span class="n">q</span>
 <span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">34</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">run_command</span><span class="o">.</span><span class="err">启动设备</span><span class="o">.</span><span class="err">连接设备</span><span class="o">.</span><span class="n">__init__</span><span class="o">.</span><span class="n">__init__</span><span class="o">.&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">34</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="n">sysrun</span><span class="p">:</span><span class="s1">&#39;D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe&#39;</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">launch</span>
+<span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">34</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="n">sysrun</span><span class="p">:</span><span class="s1">'D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe'</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">launch</span>
 <span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">09</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">56</span><span class="p">](</span><span class="mi">2</span><span class="p">)</span><span class="n">touchkey_win</span><span class="p">:</span><span class="w">  </span><span class="n">alt</span><span class="w"> </span><span class="n">q</span>
 </code></pre></div>
 
@@ -2272,29 +2295,29 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 [11-05 09:27:01](2)关闭APP[com.tencent.gamehelper.smoba]中
 [11-05 09:27:06](2)尝试关闭设备中...
 [11-05 09:27:06](2)run_command.关闭设备.end.&lt;module&gt;
-[11-05 09:27:06](2)  sysrun:&#39;D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe&#39; control -v 0 shutdown
+[11-05 09:27:06](2)  sysrun:'D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe' control -v 0 shutdown
 [11-05 09:28:08](2)关闭成功
 </code></pre></div>
 
-<h2 id="报错touch--失败">报错<code>touch  失败</code><a class="headerlink" href="#报错touch--失败" title="Permanent link">&para;</a></h2>
-<h3 id="coordinates-must-be-a-tuple-or-list-of-length-2"><code>Coordinates must be a tuple or list of length 2</code><a class="headerlink" href="#coordinates-must-be-a-tuple-or-list-of-length-2" title="Permanent link">&para;</a></h3>
+<h2 id="报错touch--失败">报错<code>touch  失败</code><a class="headerlink" href="#%E6%8A%A5%E9%94%99touch--%E5%A4%B1%E8%B4%A5" title="Permanent link">¶</a></h2>
+<h3 id="coordinates-must-be-a-tuple-or-list-of-length-2"><code>Coordinates must be a tuple or list of length 2</code><a class="headerlink" href="#coordinates-must-be-a-tuple-or-list-of-length-2" title="Permanent link">¶</a></h3>
 <p>检查字典文件<code>android.var_dict_mynode.yaml</code>,里面是否有<strong>非tuple类型</strong>,删除该项,并下载采用最新的代码运行</p>
 <div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">08</span><span class="w"> </span><span class="mi">06</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">35</span><span class="p">](</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="nx">touch</span><span class="w">  </span><span class="nx">失败</span>
 <span class="nx">Traceback</span><span class="w"> </span><span class="p">(</span><span class="nx">most</span><span class="w"> </span><span class="nx">recent</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">last</span><span class="p">):</span>
-<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;/home/cndaqiang/.local/lib/python3.10/site-packages/airtest_mobileauto/control.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">593</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">touch</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest_mobileauto/control.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">593</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">touch</span>
 <span class="w">    </span><span class="nx">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">touch_o</span><span class="p">(</span><span class="o">*</span><span class="nx">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">kwargs</span><span class="p">)</span>
-<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/logwraper.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">131</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">wrapper</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/logwraper.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">131</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">wrapper</span>
 <span class="w">    </span><span class="nx">res</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="o">*</span><span class="nx">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">kwargs</span><span class="p">)</span>
-<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/core/api.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">373</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">touch</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/core/api.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">373</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">touch</span>
 <span class="w">    </span><span class="nx">pos</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">G</span><span class="p">.</span><span class="nx">DEVICE</span><span class="p">.</span><span class="nx">touch</span><span class="p">(</span><span class="nx">pos</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">kwargs</span><span class="p">)</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">pos</span>
-<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/core/android/android.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">601</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">touch</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/core/android/android.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">601</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">touch</span>
 <span class="w">    </span><span class="nx">pos</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">get_absolute_coordinate</span><span class="p">(</span><span class="nx">pos</span><span class="p">,</span><span class="w"> </span><span class="kp">self</span><span class="p">)</span>
-<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/snippet.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">192</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">get_absolute_coordinate</span>
-<span class="w">    </span><span class="nx">assert</span><span class="w"> </span><span class="nx">isinstance</span><span class="p">(</span><span class="nx">coord</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">tuple</span><span class="p">,</span><span class="w"> </span><span class="nx">list</span><span class="p">))</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">len</span><span class="p">(</span><span class="nx">coord</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coordinates must be a tuple or list of length 2&quot;</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/snippet.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">192</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">get_absolute_coordinate</span>
+<span class="w">    </span><span class="nx">assert</span><span class="w"> </span><span class="nx">isinstance</span><span class="p">(</span><span class="nx">coord</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">tuple</span><span class="p">,</span><span class="w"> </span><span class="nx">list</span><span class="p">))</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">len</span><span class="p">(</span><span class="nx">coord</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">"Coordinates must be a tuple or list of length 2"</span>
 <span class="nx">AssertionError</span><span class="p">:</span><span class="w"> </span><span class="nx">Coordinates</span><span class="w"> </span><span class="nx">must</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">tuple</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">list</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">length</span><span class="w"> </span><span class="mi">2</span>
 
 <span class="nx">During</span><span class="w"> </span><span class="nx">handling</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">above</span><span class="w"> </span><span class="nx">exception</span><span class="p">,</span><span class="w"> </span><span class="nx">another</span><span class="w"> </span><span class="nx">exception</span><span class="w"> </span><span class="nx">occurred</span><span class="p">:</span>
-</code></pre></div>
+</code></pre></div></div>
 
 
 

@@ -17,7 +17,7 @@
         <link rel="prev" href="../docker/">
       
       
-        <link rel="next" href="../dingshi/">
+        <link rel="next" href="../termux/">
       
       
       <link rel="icon" href="../../wzry.favicon.png">
@@ -1074,6 +1074,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../termux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    不使用电脑如何运行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://cndaqiang.github.io/2023/11/10/MobileAuto/" class="md-nav__link">
         
   
@@ -1385,15 +1406,15 @@
   
 
 
-<h1 id="docker版安卓模拟器测试">docker版安卓模拟器测试<a class="headerlink" href="#docker版安卓模拟器测试" title="Permanent link">&para;</a></h1>
-<h2 id="aosp">AOSP<a class="headerlink" href="#aosp" title="Permanent link">&para;</a></h2>
-<h3 id="arm-redroid">[arm] redroid<a class="headerlink" href="#arm-redroid" title="Permanent link">&para;</a></h3>
+<div><h1 id="docker版安卓模拟器测试">docker版安卓模拟器测试<a class="headerlink" href="#docker%E7%89%88%E5%AE%89%E5%8D%93%E6%A8%A1%E6%8B%9F%E5%99%A8%E6%B5%8B%E8%AF%95" title="Permanent link">¶</a></h1>
+<h2 id="aosp">AOSP<a class="headerlink" href="#aosp" title="Permanent link">¶</a></h2>
+<h3 id="arm-redroid">[arm] redroid<a class="headerlink" href="#arm-redroid" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="https://github.com/remote-android/redroid-doc">redroid-doc</a></li>
 <li>多个安卓版本, arm架构流畅王者, x86架构暂未成功王者</li>
 <li><a href="../docker/">在甲骨文免费服务器上安装redroid并配置WZRY</a></li>
 </ul>
-<h2 id="avdmanager">avdmanager<a class="headerlink" href="#avdmanager" title="Permanent link">&para;</a></h2>
+<h2 id="avdmanager">avdmanager<a class="headerlink" href="#avdmanager" title="Permanent link">¶</a></h2>
 <p>查看Dockerfile, 发现这些项目的共同点</p>
 <ul>
 <li><code>avdmanager</code>是 Android SDK 工具集的一部分，用于管理 Android 虚拟设备（AVD）</li>
@@ -1403,11 +1424,11 @@
 <li>但是<strong>这种基于android studio emulator的跑大型游戏太卡了, 而且风扇起飞. 别为难自己</strong></li>
 </ul>
 <p>例如</p>
-<div class="codehilite"><pre><span></span><code>avdmanager create avd -n android -k &quot;system-images;android-30;google_apis;x86_64&quot;
+<div class="codehilite"><pre><span></span><code>avdmanager create avd -n android -k "system-images;android-30;google_apis;x86_64"
 emulator -avd android
 </code></pre></div>
 
-<h3 id="amd64-hqarroumdocker-android">[amd64] HQarroum/docker-android<a class="headerlink" href="#amd64-hqarroumdocker-android" title="Permanent link">&para;</a></h3>
+<h3 id="amd64-hqarroumdocker-android">[amd64] HQarroum/docker-android<a class="headerlink" href="#amd64-hqarroumdocker-android" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="https://github.com/HQarroum/docker-android">HQarroum/docker-android</a></li>
 <li>首次开机要等待一段时间</li>
@@ -1418,7 +1439,7 @@ emulator -avd android
 <div class="codehilite"><pre><span></span><code>docker run -d --device /dev/kvm -p 5555:5555 -v data:/data --name docker-android docker-android.mod
 </code></pre></div>
 
-<h3 id="amd64-budtmodocker-android">[amd64] budtmo/docker-android<a class="headerlink" href="#amd64-budtmodocker-android" title="Permanent link">&para;</a></h3>
+<h3 id="amd64-budtmodocker-android">[amd64] budtmo/docker-android<a class="headerlink" href="#amd64-budtmodocker-android" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="https://github.com/budtmo/docker-android">budtmo/docker-android</a></li>
 <li>首次开机要等待一段时间&gt;2min, 画面很好, <strong>自带vnc</strong></li>
@@ -1431,16 +1452,16 @@ emulator -avd android
 <div class="codehilite"><pre><span></span><code><span class="gh">#</span> 自用
 docker stop android-container; docker rm android-container;
 docker volume rm andata anroot
-docker run -d --rm -p 6080:6080 -p 5555:5555 -e EMULATOR_DEVICE=&quot;Samsung Galaxy S7&quot; -e EMULATOR_ADDITIONAL_ARGS=&quot;-memory 6144 -timezone Asia/Shanghai&quot; -v andata:/home/androidusr -v anroot:/root -e WEB_VNC=true  -e EMULATOR_DATA_PARTITION=32g -e EMULATOR_NO_SKIN=true --device /dev/kvm --name android-container dockerhub.anzu.vip/budtmo/docker-android:emulator_14.0
+docker run -d --rm -p 6080:6080 -p 5555:5555 -e EMULATOR_DEVICE="Samsung Galaxy S7" -e EMULATOR_ADDITIONAL_ARGS="-memory 6144 -timezone Asia/Shanghai" -v andata:/home/androidusr -v anroot:/root -e WEB_VNC=true  -e EMULATOR_DATA_PARTITION=32g -e EMULATOR_NO_SKIN=true --device /dev/kvm --name android-container dockerhub.anzu.vip/budtmo/docker-android:emulator_14.0
 <span class="gh">#</span> 分辨率用adb调, 千万别在vnc页面上操作
 <span class="gh">#</span> 若因为各种原因导致模拟器无法启动，则尝试，也许是版本太低，需要升级
 docker exec -it -u0 android-container chmod 777 /dev/kvm
 docker exec -d android-container /usr/bin/emulator -avd samsung_galaxy_s10_11.0
 </code></pre></div>
 
-<p><img alt="docker-android启动vnc截图" src="../../fig/docker-android.png" /></p>
-<h2 id="失败的容器">失败的容器<a class="headerlink" href="#失败的容器" title="Permanent link">&para;</a></h2>
-<h3 id="amrsa1android-emulator-docker">amrsa1/Android-Emulator-Docker<a class="headerlink" href="#amrsa1android-emulator-docker" title="Permanent link">&para;</a></h3>
+<p><img alt="docker-android启动vnc截图" src="../../fig/docker-android.png"></p>
+<h2 id="失败的容器">失败的容器<a class="headerlink" href="#%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%AE%B9%E5%99%A8" title="Permanent link">¶</a></h2>
+<h3 id="amrsa1android-emulator-docker">amrsa1/Android-Emulator-Docker<a class="headerlink" href="#amrsa1android-emulator-docker" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="https://github.com/amrsa1/Android-Emulator-Docker">amrsa1/Android-Emulator-Docker</a></li>
 <li>启动后还要在安装其他的, 安装过程漫长放弃了</li>
@@ -1453,18 +1474,18 @@ docker exec --privileged -it androidImage bash
 bash start_appium.sh
 </code></pre></div>
 
-<h3 id="react-native-communitydocker-android">react-native-community/docker-android<a class="headerlink" href="#react-native-communitydocker-android" title="Permanent link">&para;</a></h3>
+<h3 id="react-native-communitydocker-android">react-native-community/docker-android<a class="headerlink" href="#react-native-communitydocker-android" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="https://github.com/react-native-community/docker-android">docker-android</a></li>
 <li>没找到手册, 创建容器失败</li>
 </ul>
-<h3 id="android-emulator-imageamrsa1">Android-Emulator-image@amrsa1<a class="headerlink" href="#android-emulator-imageamrsa1" title="Permanent link">&para;</a></h3>
+<h3 id="android-emulator-imageamrsa1">Android-Emulator-image@amrsa1<a class="headerlink" href="#android-emulator-imageamrsa1" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="https://github.com/amrsa1/Android-Emulator-image">Android-Emulator-image</a></li>
 <li>需要自己编译, 网络故障编译失败</li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">cndaqiang</span><span class="nv">@vmnode</span><span class="err">:</span><span class="o">~/</span><span class="n">soft</span><span class="o">/</span><span class="n">docker</span><span class="err">$</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">amrsa1</span><span class="o">/</span><span class="n">Android</span><span class="o">-</span><span class="n">Emulator</span><span class="o">-</span><span class="nc">image</span><span class="p">.</span><span class="n">git</span>
-<span class="n">Cloning</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="s1">&#39;Android-Emulator-image&#39;</span><span class="p">...</span>
+<span class="n">Cloning</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="s1">'Android-Emulator-image'</span><span class="p">...</span>
 <span class="nl">remote</span><span class="p">:</span><span class="w"> </span><span class="n">Enumerating</span><span class="w"> </span><span class="nl">objects</span><span class="p">:</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="n">done</span><span class="p">.</span>
 <span class="nl">remote</span><span class="p">:</span><span class="w"> </span><span class="n">Counting</span><span class="w"> </span><span class="nl">objects</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="mi">22</span><span class="o">/</span><span class="mi">22</span><span class="p">),</span><span class="w"> </span><span class="n">done</span><span class="p">.</span>
 <span class="nl">remote</span><span class="p">:</span><span class="w"> </span><span class="n">Compressing</span><span class="w"> </span><span class="nl">objects</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="mi">14</span><span class="o">/</span><span class="mi">14</span><span class="p">),</span><span class="w"> </span><span class="n">done</span><span class="p">.</span>
@@ -1481,8 +1502,8 @@ bash start_appium.sh
 <span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">internal</span><span class="o">]</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="p">.</span><span class="n">dockerignore</span><span class="w">                                                  </span><span class="mf">0.0</span><span class="n">s</span>
 <span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">transferring</span><span class="w"> </span><span class="nl">context</span><span class="p">:</span><span class="w"> </span><span class="mi">178</span><span class="n">B</span><span class="w">                                                  </span><span class="mf">0.0</span><span class="n">s</span>
 <span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">internal</span><span class="o">]</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">docker</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">library</span><span class="o">/</span><span class="nl">openjdk</span><span class="p">:</span><span class="mi">18</span><span class="o">-</span><span class="n">jdk</span><span class="o">-</span><span class="n">slim</span><span class="w">            </span><span class="mf">10.2</span><span class="n">s</span>
-<span class="nl">ERROR</span><span class="p">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="nl">solve</span><span class="p">:</span><span class="w"> </span><span class="nl">DeadlineExceeded</span><span class="p">:</span><span class="w"> </span><span class="nl">DeadlineExceeded</span><span class="p">:</span><span class="w"> </span><span class="nl">DeadlineExceeded</span><span class="p">:</span><span class="w"> </span><span class="nl">openjdk</span><span class="p">:</span><span class="mi">18</span><span class="o">-</span><span class="n">jdk</span><span class="o">-</span><span class="nl">slim</span><span class="p">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="nl">request</span><span class="p">:</span><span class="w"> </span><span class="n">Head</span><span class="w"> </span><span class="ss">&quot;https://registry-1.docker.io/v2/library/openjdk/manifests/18-jdk-slim&quot;</span><span class="err">:</span><span class="w"> </span><span class="n">dial</span><span class="w"> </span><span class="n">tcp</span><span class="w"> </span><span class="o">[</span><span class="n">2a03:2880:f111:83:face:b00c:0:25de</span><span class="o">]</span><span class="err">:</span><span class="mi">443</span><span class="err">:</span><span class="w"> </span><span class="n">i</span><span class="o">/</span><span class="n">o</span><span class="w"> </span><span class="n">timeout</span>
-</code></pre></div>
+<span class="nl">ERROR</span><span class="p">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="nl">solve</span><span class="p">:</span><span class="w"> </span><span class="nl">DeadlineExceeded</span><span class="p">:</span><span class="w"> </span><span class="nl">DeadlineExceeded</span><span class="p">:</span><span class="w"> </span><span class="nl">DeadlineExceeded</span><span class="p">:</span><span class="w"> </span><span class="nl">openjdk</span><span class="p">:</span><span class="mi">18</span><span class="o">-</span><span class="n">jdk</span><span class="o">-</span><span class="nl">slim</span><span class="p">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="nl">request</span><span class="p">:</span><span class="w"> </span><span class="n">Head</span><span class="w"> </span><span class="ss">"https://registry-1.docker.io/v2/library/openjdk/manifests/18-jdk-slim"</span><span class="err">:</span><span class="w"> </span><span class="n">dial</span><span class="w"> </span><span class="n">tcp</span><span class="w"> </span><span class="o">[</span><span class="n">2a03:2880:f111:83:face:b00c:0:25de</span><span class="o">]</span><span class="err">:</span><span class="mi">443</span><span class="err">:</span><span class="w"> </span><span class="n">i</span><span class="o">/</span><span class="n">o</span><span class="w"> </span><span class="n">timeout</span>
+</code></pre></div></div>
 
 
 

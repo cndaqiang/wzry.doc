@@ -1073,6 +1073,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../termux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    不使用电脑如何运行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://cndaqiang.github.io/2023/11/10/MobileAuto/" class="md-nav__link">
         
   
@@ -1387,13 +1408,13 @@
 
   <h1>模拟器推荐</h1>
 
-<h2 id="说明">说明<a class="headerlink" href="#说明" title="Permanent link">&para;</a></h2>
+<div><h2 id="说明">说明<a class="headerlink" href="#%E8%AF%B4%E6%98%8E" title="Permanent link">¶</a></h2>
 <ul>
 <li>该页面是介绍我的使用经验,不是教程</li>
 <li>随着软件更新,这些经验可能不再适用</li>
 <li>谨慎阅读</li>
 </ul>
-<h2 id="总述">总述<a class="headerlink" href="#总述" title="Permanent link">&para;</a></h2>
+<h2 id="总述">总述<a class="headerlink" href="#%E6%80%BB%E8%BF%B0" title="Permanent link">¶</a></h2>
 <p>目前我个人的安排是</p>
 <ul>
 <li>windows计划任务在每天凌晨3点,启动<code>wzyd.py</code>和<code>tiyanfu.py</code>领取MuMu模拟器内的体验服币和营地礼包.</li>
@@ -1431,8 +1452,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="windows">windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
-<h3 id="bluestacks模拟器">Bluestacks模拟器<a class="headerlink" href="#bluestacks模拟器" title="Permanent link">&para;</a></h3>
+<h2 id="windows">windows<a class="headerlink" href="#windows" title="Permanent link">¶</a></h2>
+<h3 id="bluestacks模拟器">Bluestacks模拟器<a class="headerlink" href="#bluestacks%E6%A8%A1%E6%8B%9F%E5%99%A8" title="Permanent link">¶</a></h3>
 <ul>
 <li>👍非常稳定,在垃圾电脑上限制5帧模式都可以流畅组队做农活, <strong>本脚本最初适配的模拟器</strong></li>
 <li>Nougat引擎(32 or 64), <strong>windows平台模拟器中最省电流畅的</strong>,adb的端口固定[5555,5565,5575,...]</li>
@@ -1440,14 +1461,14 @@
 <li>删除模拟器后,新建模拟器的编号不会使用旧的编号,需要修改配置文件为新的模拟器adb端口</li>
 <li><strong>体验服闪退</strong>、<strong>王者营地闪退</strong></li>
 </ul>
-<h3 id="mumu模拟器">MuMu模拟器<a class="headerlink" href="#mumu模拟器" title="Permanent link">&para;</a></h3>
+<h3 id="mumu模拟器">MuMu模拟器<a class="headerlink" href="#mumu%E6%A8%A1%E6%8B%9F%E5%99%A8" title="Permanent link">¶</a></h3>
 <ul>
 <li>👍 <strong>脚本控制更新体验服、领体验币</strong></li>
 <li>👍 <strong>空闲时间手机使用gameviwer控制MuMu模拟器打排位</strong></li>
 <li>王者甚至营地都会无规律<strong>闪退</strong>. 本脚本会检测闪退进行重启</li>
 <li><strong>更新的太频繁, 更新时脚本无法操作, 建议屏蔽更新</strong></li>
 </ul>
-<h3 id="雷电模拟器">雷电模拟器<a class="headerlink" href="#雷电模拟器" title="Permanent link">&para;</a></h3>
+<h3 id="雷电模拟器">雷电模拟器<a class="headerlink" href="#%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8" title="Permanent link">¶</a></h3>
 <ul>
 <li>👍LDPlayer有绿色免安装去广告版.</li>
 <li>删除旧的多开模拟器后,👍<strong>新建的多开模拟器会使用旧虚拟机的端口和编号, 配置文件不用调整</strong></li>
@@ -1456,25 +1477,25 @@
 <li><strong>打开体验服、整个模拟器断网</strong></li>
 <li>偶尔提示显卡驱动有问题</li>
 </ul>
-<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
-<h3 id="docker稳定使用">docker(<strong>稳定使用</strong>)<a class="headerlink" href="#docker稳定使用" title="Permanent link">&para;</a></h3>
+<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">¶</a></h2>
+<h3 id="docker稳定使用">docker(<strong>稳定使用</strong>)<a class="headerlink" href="#docker%E7%A8%B3%E5%AE%9A%E4%BD%BF%E7%94%A8" title="Permanent link">¶</a></h3>
 <ul>
 <li>👍使用<a href="https://github.com/remote-android/">remote-android</a></li>
 <li>已测试<a href="../docker/">debian服务器(arm)流畅王者</a>, 也是<strong>本脚本当前的运行环境</strong></li>
 <li>可能是我的openwrt路由器(arm、x86均测过)配置太低,运行王者总是闪退.</li>
 <li><strong>由于remote-android默认开启了root,不适用于体验服</strong></li>
 </ul>
-<h3 id="其他基于docker的容器">其他基于docker的容器<a class="headerlink" href="#其他基于docker的容器" title="Permanent link">&para;</a></h3>
+<h3 id="其他基于docker的容器">其他基于docker的容器<a class="headerlink" href="#%E5%85%B6%E4%BB%96%E5%9F%BA%E4%BA%8Edocker%E7%9A%84%E5%AE%B9%E5%99%A8" title="Permanent link">¶</a></h3>
 <ul>
 <li>不要尝试安卓SDK安装的模拟器, 基本不可用<a href="../moniqidocker/">docker版安卓模拟器测试</a></li>
 <li>非要尝试, 先试试我的微改版 <a href="https://github.com/cndaqiang/docker-android">cndaqiang/docker-android</a>,</li>
 </ul>
-<h2 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">&para;</a></h2>
+<h2 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">¶</a></h2>
 <ul>
 <li>未发现合适的</li>
 <li>使用虚拟机安装安卓虽然可行，但是过于吃性能</li>
 <li>可以考虑控制windows系统上运行的模拟器(开启桥接网卡模式)以及手机</li>
-</ul>
+</ul></div>
 
 
 

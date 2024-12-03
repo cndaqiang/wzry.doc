@@ -935,6 +935,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../termux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    不使用电脑如何运行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://cndaqiang.github.io/2023/11/10/MobileAuto/" class="md-nav__link">
         
   
@@ -1241,14 +1262,14 @@
   
 
 
-<h1 id="我希望脚本运行目录和代码目录分开-保持代码目录的干净">我希望脚本运行目录和代码目录分开, 保持代码目录的干净<a class="headerlink" href="#我希望脚本运行目录和代码目录分开-保持代码目录的干净" title="Permanent link">&para;</a></h1>
-<h2 id="说明">说明<a class="headerlink" href="#说明" title="Permanent link">&para;</a></h2>
+<div><h1 id="我希望脚本运行目录和代码目录分开-保持代码目录的干净">我希望脚本运行目录和代码目录分开, 保持代码目录的干净<a class="headerlink" href="#%E6%88%91%E5%B8%8C%E6%9C%9B%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C%E7%9B%AE%E5%BD%95%E5%92%8C%E4%BB%A3%E7%A0%81%E7%9B%AE%E5%BD%95%E5%88%86%E5%BC%80-%E4%BF%9D%E6%8C%81%E4%BB%A3%E7%A0%81%E7%9B%AE%E5%BD%95%E7%9A%84%E5%B9%B2%E5%87%80" title="Permanent link">¶</a></h1>
+<h2 id="说明">说明<a class="headerlink" href="#%E8%AF%B4%E6%98%8E" title="Permanent link">¶</a></h2>
 <ul>
 <li>该页面是介绍我的使用经验,不是教程</li>
 <li>随着软件更新,这些经验可能不再适用</li>
 <li>谨慎阅读</li>
 </ul>
-<h2 id="在任意目录创建配置文件">在任意目录创建配置文件<a class="headerlink" href="#在任意目录创建配置文件" title="Permanent link">&para;</a></h2>
+<h2 id="在任意目录创建配置文件">在任意目录创建配置文件<a class="headerlink" href="#%E5%9C%A8%E4%BB%BB%E6%84%8F%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" title="Permanent link">¶</a></h2>
 <p>主要指定静态图片的位置<code>figdir</code>, 例如<code>figdir: C:\Users\cnche\Downloads\WZRY-2.2.3\assets</code></p>
 <p>具体示例,<code>D:\SoftData\tmp\config.win.yaml</code></p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#client</span>
@@ -1265,7 +1286,7 @@
 <span class="n">figdir</span><span class="p">:</span><span class="w"> </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">cnche</span>\<span class="n">Downloads</span>\<span class="n">WZRY</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">3</span>\<span class="n">assets</span>
 </code></pre></div>
 
-<h2 id="运行代码">运行代码<a class="headerlink" href="#运行代码" title="Permanent link">&para;</a></h2>
+<h2 id="运行代码">运行代码<a class="headerlink" href="#%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81" title="Permanent link">¶</a></h2>
 <p>新建临时目录并执行示例</p>
 <div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">PS</span><span class="w"> </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">cnche</span>\<span class="n">Desktop</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mkdir</span><span class="w"> </span><span class="n">runtmp</span>
 
@@ -1280,17 +1301,17 @@
 
 <span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">PS</span><span class="w"> </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">cnche</span>\<span class="n">Desktop</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="o">.</span>\<span class="n">runtmp</span>\
 <span class="c1"># 注意,如果有资源更新的话, 需要将更新资源解压到运行目录, 即这个runtmp目录</span>
-<span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">PS</span><span class="w"> </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">cnche</span>\<span class="n">Desktop</span>\<span class="n">runtmp</span><span class="o">&gt;</span><span class="w"> </span><span class="n">python</span><span class="w"> </span><span class="s2">&quot;C:\Users\cnche\Downloads\WZRY-2.2.3\wzry.py&quot;</span><span class="w"> </span><span class="s2">&quot;D:\SoftData</span><span class="se">\t</span><span class="s2">mp\config.win.yaml&quot;</span>
+<span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">PS</span><span class="w"> </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">cnche</span>\<span class="n">Desktop</span>\<span class="n">runtmp</span><span class="o">&gt;</span><span class="w"> </span><span class="n">python</span><span class="w"> </span><span class="s2">"C:\Users\cnche\Downloads\WZRY-2.2.3\wzry.py"</span><span class="w"> </span><span class="s2">"D:\SoftData</span><span class="se">\t</span><span class="s2">mp\config.win.yaml"</span>
 </code></pre></div>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>注意,如果有资源更新的话, 需要将更新资源解<code>update.zip</code>压到运行目录, 即这个runtmp目录.<br>
 同样的控制文件<code>WZRY.mynode.运行模式.txt</code>也应该放到这个目录. 即如图<br>
-<img alt="WZRY脚本运行目录截图" src="../../fig/runotherdir.conf.png" /></p>
+<img alt="WZRY脚本运行目录截图" src="../../fig/runotherdir.conf.png"></p>
 </div>
 <p>结果展示
-<img alt="WZRY脚本运行示意图" src="../../fig/runotherdir.png" /></p>
+<img alt="WZRY脚本运行示意图" src="../../fig/runotherdir.png"></p></div>
 
 
 

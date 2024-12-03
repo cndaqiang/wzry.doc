@@ -1088,6 +1088,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../exp/termux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    不使用电脑如何运行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://cndaqiang.github.io/2023/11/10/MobileAuto/" class="md-nav__link">
         
   
@@ -1417,15 +1438,15 @@
 
   <h1>配置文件</h1>
 
-<h2 id="配置文件">配置文件<a class="headerlink" href="#配置文件" title="Permanent link">&para;</a></h2>
+<div><h2 id="配置文件">配置文件<a class="headerlink" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" title="Permanent link">¶</a></h2>
 <ul>
 <li>配置文件是<strong>utf8</strong>编码的<strong>yaml</strong>文件.</li>
 <li><strong>可以只配置基础参数,但是不能乱抄别人的配置参数</strong></li>
 <li>建议将配置文件命名为: <code>config.win.yaml</code></li>
 <li>使用配置文件运行: <code>python wzry.py config.win.yaml</code></li>
 </ul>
-<h2 id="参数解释">参数解释<a class="headerlink" href="#参数解释" title="Permanent link">&para;</a></h2>
-<h3 id="基础参数">基础参数<a class="headerlink" href="#基础参数" title="Permanent link">&para;</a></h3>
+<h2 id="参数解释">参数解释<a class="headerlink" href="#%E5%8F%82%E6%95%B0%E8%A7%A3%E9%87%8A" title="Permanent link">¶</a></h2>
+<h3 id="基础参数">基础参数<a class="headerlink" href="#%E5%9F%BA%E7%A1%80%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
 <p><strong>基础参数必须设置</strong></p>
 <table>
 <thead>
@@ -1459,9 +1480,9 @@
 </tbody>
 </table>
 <div class="admonition tip">
-<p class="admonition-title">虽然基础参数不包括<code>logfile</code>, 但是强烈建议设置,具体解释见<a href="#调试参数">调试参数</a></p>
+<p class="admonition-title">虽然基础参数不包括<code>logfile</code>, 但是强烈建议设置,具体解释见<a href="#%E8%B0%83%E8%AF%95%E5%8F%82%E6%95%B0">调试参数</a></p>
 </div>
-<h4 id="单排账户示例">单排账户示例<a class="headerlink" href="#单排账户示例" title="Permanent link">&para;</a></h4>
+<h4 id="单排账户示例">单排账户示例<a class="headerlink" href="#%E5%8D%95%E6%8E%92%E8%B4%A6%E6%88%B7%E7%A4%BA%E4%BE%8B" title="Permanent link">¶</a></h4>
 <div class="codehilite"><pre><span></span><code><span class="n">mynode</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span>
 <span class="n">LINK_dict</span><span class="o">:</span>
 <span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="n">Android</span><span class="o">:///</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">5555</span>
@@ -1469,7 +1490,7 @@
 <span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="na">txt</span>
 </code></pre></div>
 
-<h4 id="双排账户示例">双排账户示例<a class="headerlink" href="#双排账户示例" title="Permanent link">&para;</a></h4>
+<h4 id="双排账户示例">双排账户示例<a class="headerlink" href="#%E5%8F%8C%E6%8E%92%E8%B4%A6%E6%88%B7%E7%A4%BA%E4%BE%8B" title="Permanent link">¶</a></h4>
 <div class="codehilite"><pre><span></span><code><span class="gh">#</span> 多进程时,多进程的数目
 totalnode: 2
 <span class="gh">#</span> 多进程配置
@@ -1483,7 +1504,7 @@ logfile:
   1: result.1.txt
 </code></pre></div>
 
-<h3 id="调试参数">调试参数<a class="headerlink" href="#调试参数" title="Permanent link">&para;</a></h3>
+<h3 id="调试参数">调试参数<a class="headerlink" href="#%E8%B0%83%E8%AF%95%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
 <p><strong>调试参数通常无需设置</strong>, 只有在调试代码或者有特定需求时才需要设置</p>
 <table>
 <thead>
@@ -1532,10 +1553,10 @@ logfile:
 logfile:
   0: result.0.txt
   2: result.2.txt
-prefix: &quot;wzry&quot;
+prefix: "wzry"
 </code></pre></div>
 
-<h3 id="模拟器参数">模拟器参数<a class="headerlink" href="#模拟器参数" title="Permanent link">&para;</a></h3>
+<h3 id="模拟器参数">模拟器参数<a class="headerlink" href="#%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>模拟器参数可以不设置</strong>.</li>
 <li>设置后,脚本支持控制模拟器的开关机,老板键自动隐藏模拟器等功能.</li>
@@ -1568,17 +1589,17 @@ prefix: &quot;wzry&quot;
 <tr>
 <td>LDPlayer_Instance</td>
 <td>{mynode:"instance"}</td>
-<td>每个账户所在的模拟器在雷电多开管理器内部的<strong>模拟器实例(instance)编号</strong>, 用于启动、关闭mynode账户所在的模拟器实例. <a href="#mynode与instance的区别">mynode与instance的区别</a>.</td>
+<td>每个账户所在的模拟器在雷电多开管理器内部的<strong>模拟器实例(instance)编号</strong>, 用于启动、关闭mynode账户所在的模拟器实例. <a href="#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB">mynode与instance的区别</a>.</td>
 </tr>
 <tr>
 <td>MuMu_Instance</td>
 <td>{mynode:"instance"}</td>
-<td>每个账户所在的模拟器在MuMu多开管理器内部的<strong>模拟器实例编号</strong>, 用于启动、关闭mynode账户所在的模拟器实例.<a href="#mynode与instance的区别">mynode与instance的区别</a>.</td>
+<td>每个账户所在的模拟器在MuMu多开管理器内部的<strong>模拟器实例编号</strong>, 用于启动、关闭mynode账户所在的模拟器实例.<a href="#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB">mynode与instance的区别</a>.</td>
 </tr>
 <tr>
 <td>BlueStack_Instance</td>
 <td>{mynode:"Nougat32_instance"}</td>
-<td>每个账户所在的模拟器在BlueStacks多开管理器内部的<strong>模拟器实例编号</strong>, 用于启动mynode账户所在的BlueStacks模拟器实例.<a href="#mynode与instance的区别">mynode与instance的区别</a>.</td>
+<td>每个账户所在的模拟器在BlueStacks多开管理器内部的<strong>模拟器实例编号</strong>, 用于启动mynode账户所在的BlueStacks模拟器实例.<a href="#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB">mynode与instance的区别</a>.</td>
 </tr>
 <tr>
 <td>BlueStack_Windows</td>
@@ -1592,11 +1613,11 @@ prefix: &quot;wzry&quot;
 </tr>
 </tbody>
 </table>
-<h4 id="模拟器配置示例">模拟器配置示例<a class="headerlink" href="#模拟器配置示例" title="Permanent link">&para;</a></h4>
+<h4 id="模拟器配置示例">模拟器配置示例<a class="headerlink" href="#%E6%A8%A1%E6%8B%9F%E5%99%A8%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B" title="Permanent link">¶</a></h4>
 <details class="warning">
 <summary>点击展开:雷电模拟器配置示例</summary>
 <p>图中模拟器的Instance被鼠标选中，其对应的配置文件如下
-<pre><code>
+</p><pre><code>
 mynode: 0
 LINK_dict:
   0: Android:///127.0.0.1:5555
@@ -1604,12 +1625,12 @@ LDPlayerdir: D:\GreenSoft\雷电模拟器.9.0.65.0.x64.去广告绿色版\LDPlay
 LDPlayer_Instance:
     0: "0"
 </code></pre>
-<img alt="雷电模拟器配置示例" src="../../fig/ld_instance.png" /></p>
+<img alt="雷电模拟器配置示例" src="../../fig/ld_instance.png">
 </details>
 <details class="note">
 <summary>点击展开:MuMu模拟器配置示例</summary>
 <p>图中模拟器的Instance被鼠标选中，其对应的配置文件如下
-<pre><code>
+</p><pre><code>
 mynode: 0
 LINK_dict:
   0: Android:///127.0.0.1:16384
@@ -1617,12 +1638,12 @@ MuMudir: D:\Program Files\Netease\MuMu Player 12\shell
 MuMu_Instance:
     0: "0"
 </code></pre>
-<img alt="MuMu模拟器配置示例" src="../../fig/mumu_instance.png" /></p>
+<img alt="MuMu模拟器配置示例" src="../../fig/mumu_instance.png">
 </details>
 <details class="question">
 <summary>点击展开:BlueStacks模拟器配置示例</summary>
 <p>图中模拟器的Instance被鼠标选中，其对应的配置文件如下，<strong>注意BlueStacks模拟器要额外提供模拟器的窗口名字<code>BlueStack_Windows</code></strong>
-<pre><code>
+</p><pre><code>
 mynode: 1
 LINK_dict:
   1: Android:///127.0.0.1:5565
@@ -1632,9 +1653,9 @@ BlueStack_Instance:
 BlueStack_Windows:
     1: BlueStacks1
 </code></pre>
-<img alt="BlueStacks模拟器配置示例" src="../../fig/blue_instance.png" /></p>
+<img alt="BlueStacks模拟器配置示例" src="../../fig/blue_instance.png">
 </details>
-<h4 id="mynode与instance的区别">mynode与Instance的区别<a class="headerlink" href="#mynode与instance的区别" title="Permanent link">&para;</a></h4>
+<h4 id="mynode与instance的区别">mynode与Instance的区别<a class="headerlink" href="#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB" title="Permanent link">¶</a></h4>
 <ul>
 <li>账户编号mynode是游戏账户的编号,默认从0开始.<code>mynode=0,1,2,...,totalnode-1</code>.</li>
 <li>模拟器实例编号Instance是模拟器的多开管理器内部的编号.通常也是<code>0,1,2,...</code></li>
@@ -1656,9 +1677,9 @@ LINK_dict:
     0: Android:///127.0.0.1:5565
     1: Android:///127.0.0.1:5555
     </code></pre>
-    <img alt="mynode与Instance随意组合" src="../../fig/blue_win.png" /></li>
+    <img alt="mynode与Instance随意组合" src="../../fig/blue_win.png"></li>
 </ul>
-<h3 id="docker参数">docker参数<a class="headerlink" href="#docker参数" title="Permanent link">&para;</a></h3>
+<h3 id="docker参数">docker参数<a class="headerlink" href="#docker%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
 <ul>
 <li>本脚本支持控制运行在docker中的安卓模拟器<a href="https://github.com/remote-android/">remote-android</a>.</li>
 <li>支持x86、arm服务器, openwrt路由器等环境运行安卓模拟器.</li>
@@ -1688,20 +1709,20 @@ LINK_dict:
 totalnode: 3
 multiprocessing: True
 LINK_dict:
-    0: &quot;Android:///127.0.0.1:5555&quot;
-    1: &quot;Android:///127.0.0.1:5565&quot;
-    2: &quot;Android:///127.0.0.1:5575&quot;
+    0: "Android:///127.0.0.1:5555"
+    1: "Android:///127.0.0.1:5565"
+    2: "Android:///127.0.0.1:5575"
 dockercontain:
-    0: &quot;androidcontain0&quot;
-    1: &quot;androidcontain1&quot;
-    2: &quot;androidcontain2&quot;
+    0: "androidcontain0"
+    1: "androidcontain1"
+    2: "androidcontain2"
 </code></pre></div>
 
-<h3 id="ios配置参数">IOS配置参数<a class="headerlink" href="#ios配置参数" title="Permanent link">&para;</a></h3>
+<h3 id="ios配置参数">IOS配置参数<a class="headerlink" href="#ios%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
 <ul>
 <li>ios代码的更新和维护永久停留在版本<a href="https://github.com/cndaqiang/WZRY/releases/tag/1.2.2">1.2.2</a>.</li>
 <li>请自行<a href="https://cndaqiang.github.io/2023/11/10/MobileAuto/">搭建开发环境</a>进行调试.</li>
-</ul>
+</ul></div>
 
 
 
