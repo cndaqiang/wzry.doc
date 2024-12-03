@@ -3,3 +3,4 @@ mkdocs-material==9.5.42
 jieba
 sphinx
 recommonmark
+mkdocs-video

@@ -36,7 +36,9 @@ Q:
 
 A:
 
-* 方法1. 从镜像站下载, 详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
+* 方法1. 从镜像站下载, 
+<br>`pip download AutoWZRY -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-deps`
+<br>详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
 * 方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
 ![gitee下载WZRY](../fig/gitee.png)
 * 等你可以访问github时, 欢迎你来为[WZRY](https://github.com/cndaqiang/WZRY)项目点赞.
@@ -209,7 +211,9 @@ if self.jinristep == 1: self.触摸对战 = True
 
 ## 有计划提供apk么
 * 无计划, 该项目初衷是为了脚本、模拟器7*24h在服务器上完成运行的
-* 手机上可以安装python, 然后在后台执行`python wzry.py`
+* 在手机上安装termux+Anlinux,可以运行python, 进而控制脚本, 例如[在模拟器内运行自动化脚本](../exp/termux.md)
+
+
 
 ## 建议大号使用吗
 * 所有账号均可使用

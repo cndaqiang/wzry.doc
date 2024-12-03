@@ -48,6 +48,7 @@ nav:
       - 控制安卓手机或任意模拟器: exp/mobile.md
       - 在🐳docker内干农活: exp/docker.md
       - docker安卓模拟器不推荐: exp/moniqidocker.md
+      - 不使用电脑如何运行脚本: exp/termux.md
       - 控制苹果手机: https://cndaqiang.github.io/2023/11/10/MobileAuto/
       - 定时执行脚本: exp/dingshi.md
       - 在任意目录运行: exp/otherdir.md
@@ -106,7 +107,7 @@ extra:
     # 镜像网站
     - icon: fontawesome/solid/cloud
       link: https://cndaqiang.github.io/wzry.doc/
-      name: cloudflare
+      name: gitpages
     - icon: fontawesome/solid/lock
       link: https://wzrydoc.readthedocs.io
       name: untagged #readthedocs
@@ -163,5 +164,5 @@ plugins:
             - en
             - ja
         separator: '[\s\-\.]+'
-
-
+  - mkdocs-video:
+      is_video: True
