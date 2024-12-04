@@ -211,7 +211,7 @@ if self.jinristep == 1: self.触摸对战 = True
 
 ## 有计划提供apk么
 * 无计划, 该项目初衷是为了脚本、模拟器7*24h在服务器上完成运行的
-* 在手机上安装termux+Anlinux,可以运行python, 进而控制脚本, 例如[在模拟器内运行自动化脚本](../exp/termux.md)
+* 可以在手机上安装termux也可以不依赖电脑运行自动化脚本, 例如[只用一部手机、不依赖电脑运行自动化脚本](../exp/termux.md)
 
 
 
