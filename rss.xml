@@ -1,0 +1,5 @@
+{%- for file in pages -%}
+{% if not file.page.is_link and (file.page.abs_url or file.page.canonical_url) %}
+  {% if file.page.canonical_url %}{{ file.page.canonical_url|e }}{% else %}{{ file.page.abs_url|e }}{% endif %}
+{%- endif -%}
+{% endfor %}
