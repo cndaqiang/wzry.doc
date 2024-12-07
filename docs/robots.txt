@@ -7,4 +7,3 @@ Disallow: /wzry.doc/example
 Disallow: /wzry.doc/javascripts
 Disallow: /wzry.doc/fig
 Disallow: /wzry.doc/file
-Sitemap: https://wzry-doc.pages.dev/sitemap.xml

@@ -15,7 +15,10 @@ for elem in root.iter():
 # 提取所有 <loc> 标签内容
 url_list = [loc.text for loc in root.iter('loc')]
 #添加自定义地址
-url_list.extend(['https://wzry-doc.pages.dev/exp/moniqidocker/'])
+url_list.extend(['https://wzry-doc.pages.dev/feed_rss_updated.xml'])
+url_list.extend(['https://wzry-doc.pages.dev/feed_rss_created.xml'])
+url_list.extend(['https://wzry-doc.pages.dev/sitemap.xml'])
+url_list.extend(['https://wzry-doc.pages.dev/sitemap.txt'])
 #
 
 

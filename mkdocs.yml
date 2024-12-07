@@ -118,7 +118,7 @@ extra:
       link: https://github.com/cndaqiang/WZRY
       name: cndaqiang/WZRY
     - icon: fontawesome/solid/square-rss
-      link: https://cndaqiang.github.io/wzry.doc/sitemap.xml
+      link: https://wzry-doc.pages.dev/feed_rss_updated.xml
       name: rss
     - icon: fontawesome/solid/chart-area
       link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/cndaqiang.github.io
@@ -166,3 +166,5 @@ plugins:
         separator: '[\s\-\.]+'
   - mkdocs-video:
       is_video: True
+  # pip install mkdocs-rss-plugin
+  - rss
