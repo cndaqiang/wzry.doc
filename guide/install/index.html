@@ -1557,14 +1557,12 @@
 <h3 id="方式3-在vscode等软件中">方式3. 在vscode等软件中<a class="headerlink" href="#%E6%96%B9%E5%BC%8F3-%E5%9C%A8vscode%E7%AD%89%E8%BD%AF%E4%BB%B6%E4%B8%AD" title="Permanent link">¶</a></h3>
 <ul>
 <li>创建配置文件<code>config.win.yaml</code>,同上</li>
-<li>修改<code>wzry.py</code>中的<code>config_file = ""</code>为<code>config_file = "config.win.yaml"</code></li>
+<li>修改<code>wzry.py/wzyd.py/tiyanfu.py</code>中的<code>config_file = ""</code>为<code>config_file = "config.win.yaml"</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code>if __name__ == "__main__":
-    # 如果使用vscode/pycharm/AirTestIDE等图形界面程序运行此脚本
+<div class="codehilite"><pre><span></span><code>def main():
+    # 如果使用vscode等IDE运行此脚本
     # 在此处指定config_file=config文件
-    config_file = "" # 修改此处
-    if len(sys.argv) &gt; 1:
-        config_file = str(sys.argv[1])
+    config_file = ""
 </code></pre></div>
 
 <ul>

@@ -1003,6 +1003,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#broken-pipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broken pipe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#coordinates-must-be-a-tuple-or-list-of-length-2" class="md-nav__link">
     <span class="md-ellipsis">
       Coordinates must be a tuple or list of length 2
@@ -1925,6 +1934,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#broken-pipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broken pipe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#coordinates-must-be-a-tuple-or-list-of-length-2" class="md-nav__link">
     <span class="md-ellipsis">
       Coordinates must be a tuple or list of length 2
@@ -2324,8 +2342,26 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 </code></pre></div>
 
 <h2 id="报错touch--失败">报错<code>touch  失败</code><a class="headerlink" href="#%E6%8A%A5%E9%94%99touch--%E5%A4%B1%E8%B4%A5" title="Permanent link">¶</a></h2>
+<h3 id="broken-pipe"><code>Broken pipe</code><a class="headerlink" href="#broken-pipe" title="Permanent link">¶</a></h3>
+<p>adb连接卡死,下面方法都可以处理</p>
+<ul>
+<li>什么都不做, 等待20min后程序自动检测出来处理</li>
+<li>重启启动脚本</li>
+<li>创建异常处理文件<code>NeedRebarrier.mynode.totalnode.txt</code>, 主动触发脚本的异常处理</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">func</span><span class="p">(</span><span class="nx">inst</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nx">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">kwargs</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/core/android/touch_methods/base_touch.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">111</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">safe_send</span>
+<span class="w">    </span><span class="kp">self</span><span class="p">.</span><span class="nx">client</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/safesocket.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">send</span>
+<span class="w">    </span><span class="nx">sent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">sock</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">msg</span><span class="p">[</span><span class="nx">totalsent</span><span class="p">:])</span>
+<span class="nx">BrokenPipeError</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nx">Errno</span><span class="w"> </span><span class="mi">32</span><span class="p">]</span><span class="w"> </span><span class="nx">Broken</span><span class="w"> </span><span class="nx">pipe</span>
+</code></pre></div>
+
 <h3 id="coordinates-must-be-a-tuple-or-list-of-length-2"><code>Coordinates must be a tuple or list of length 2</code><a class="headerlink" href="#coordinates-must-be-a-tuple-or-list-of-length-2" title="Permanent link">¶</a></h3>
-<p>检查字典文件<code>android.var_dict_mynode.yaml</code>,里面是否有<strong>非tuple类型</strong>,删除该项,并下载采用最新的代码运行</p>
+<p>检查字典文件<code>android.var_dict_mynode.yaml</code>,里面是否有<strong>非tuple类型</strong>,删除该项</p>
+<ul>
+<li>新代码已修复该bug, 升级代码和依赖</li>
+</ul>
 <div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="mi">11</span><span class="o">-</span><span class="mi">08</span><span class="w"> </span><span class="mi">06</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">35</span><span class="p">](</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="nx">touch</span><span class="w">  </span><span class="nx">失败</span>
 <span class="nx">Traceback</span><span class="w"> </span><span class="p">(</span><span class="nx">most</span><span class="w"> </span><span class="nx">recent</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">last</span><span class="p">):</span>
 <span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest_mobileauto/control.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">593</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">touch</span>
@@ -2339,8 +2375,6 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 <span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/snippet.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">192</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">get_absolute_coordinate</span>
 <span class="w">    </span><span class="nx">assert</span><span class="w"> </span><span class="nx">isinstance</span><span class="p">(</span><span class="nx">coord</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">tuple</span><span class="p">,</span><span class="w"> </span><span class="nx">list</span><span class="p">))</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">len</span><span class="p">(</span><span class="nx">coord</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">"Coordinates must be a tuple or list of length 2"</span>
 <span class="nx">AssertionError</span><span class="p">:</span><span class="w"> </span><span class="nx">Coordinates</span><span class="w"> </span><span class="nx">must</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">tuple</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">list</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">length</span><span class="w"> </span><span class="mi">2</span>
-
-<span class="nx">During</span><span class="w"> </span><span class="nx">handling</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">above</span><span class="w"> </span><span class="nx">exception</span><span class="p">,</span><span class="w"> </span><span class="nx">another</span><span class="w"> </span><span class="nx">exception</span><span class="w"> </span><span class="nx">occurred</span><span class="p">:</span>
 </code></pre></div></div>
 
 
