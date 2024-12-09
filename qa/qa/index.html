@@ -2293,10 +2293,9 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 <h2 id="苹果手机怎么使用">苹果手机怎么使用<a class="headerlink" href="#%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8" title="Permanent link">¶</a></h2>
 <ul>
 <li>刷苹果手机, <strong>需要在mac上安装Xcode, 然后编译WDA并签名安装到手机</strong>, 具体见: <a href="https://cndaqiang.github.io/2023/11/10/MobileAuto/">Android/IOS移动平台自动化脚本(基于AirTest)</a></li>
-<li>挂机时间久了，手机会发烫，又没有几个人用本脚本刷ios区的账号</li>
-<li>我ios区的账户所有英雄的熟练度又都刷满了</li>
-<li>而且,我的macbook初始化了, 调试还需要重新配置Xcode开发环境</li>
-<li>因此，从<a href="https://github.com/cndaqiang/WZRY/releases/tag/1.2.2">1.2.2</a>版本后, 我没有继续测试ios区的代码是否可以正常运行</li>
+<li>每过7天还要重新编译签名WDA, 真是麻烦. 挂机时间久了，手机还会发烫.</li>
+<li>从<a href="https://github.com/cndaqiang/WZRY/releases/tag/1.2.2">1.2.2</a>版本后, 我没有继续测试ios区的代码是否可以正常运行</li>
+<li>我的macbook重装系统了, 调试还需要重新配置Xcode开发环境, 真是麻烦, 我短期没有精力继续调试.</li>
 <li>你在使用时可能(必定)会遇到一些小bug.</li>
 <li>能在mac上用WDA控制iphone的用户，应该可以轻松解决遇到的小bug. 建议你读读<a href="https://github.com/cndaqiang/WZRY/blob/97a7641b2fd08ef39950e0250c89c95ee6faff38/object.py">旧代码</a>有助于调试</li>
 <li><strong>唯一可能需要改动的地方<a href="https://pypi.org/project/airtest-mobileauto/">airtest-mobileauto</a>中连接苹果手机的代码比较老</strong>, 你需要根据你的mac系统版本和WDA版本进行修改.</li>
