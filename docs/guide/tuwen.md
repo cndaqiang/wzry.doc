@@ -1,6 +1,7 @@
 ## 说明
-* 基础教程只适合小白用户快速上手
+* 新手教程只适合小白用户快速上手
 * 务必每一步都和下面的操作一样
+* **如果新手教程失败, 请尝试默认的[安装指南](../guide/install.md).**
 
 ## 安装Anaconda.
 * Anaconda 安装包可以到[TUNA](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)下载.

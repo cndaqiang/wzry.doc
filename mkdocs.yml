@@ -30,8 +30,8 @@ nav:
         - 礼包功能: guide/libao.md
         - 选择英雄: guide/shuliandu.md
         - 更新资源: guide/upfig.md
-      - 组队教程: guide/zudui.md
       - 新手教程: guide/tuwen.md
+      - 组队教程: guide/zudui.md
       - 进阶教程: guide/autowzry.md
     - 常见问题: qa/qa.md
     - 提出问题: https://github.com/cndaqiang/WZRY/issues
@@ -50,7 +50,7 @@ nav:
       - 在🐳docker内干农活: exp/docker.md
       - docker安卓模拟器不推荐: exp/moniqidocker.md
       - 不使用电脑如何运行脚本: exp/termux.md
-      - 控制苹果手机: https://cndaqiang.github.io/2023/11/10/MobileAuto/
+      - 控制苹果手机: https://wzry-doc.pages.dev/qa/qa/#苹果手机怎么使用
       - 定时执行脚本: exp/dingshi.md
       - 在任意目录运行: exp/otherdir.md
       - 镜像下载autoWZRY脚本: exp/pypi.md

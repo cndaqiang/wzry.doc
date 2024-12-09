@@ -92,13 +92,11 @@ python -u wzry.py config.win.yaml
 
 ### 方式3. 在vscode等软件中
 * 创建配置文件`config.win.yaml`,同上
-* 修改`wzry.py`中的`config_file = ""`为`config_file = "config.win.yaml"`
+* 修改`wzry.py/wzyd.py/tiyanfu.py`中的`config_file = ""`为`config_file = "config.win.yaml"`
 ```
-if __name__ == "__main__":
-    # 如果使用vscode/pycharm/AirTestIDE等图形界面程序运行此脚本
+def main():
+    # 如果使用vscode等IDE运行此脚本
     # 在此处指定config_file=config文件
-    config_file = "" # 修改此处
-    if len(sys.argv) > 1:
-        config_file = str(sys.argv[1])
+    config_file = ""
 ```
 * 运行

@@ -320,10 +320,28 @@ python -m pip install airtest_mobileauto --upgrade
 见: [如何使用模拟战刷信誉分](../exp/xinyufen.md)
 
 ## 苹果手机怎么使用
-* **不回复相关问题**
-* 从[1.2.2](https://github.com/cndaqiang/WZRY/releases/tag/1.2.2)版本开始,我的苹果账户已经刷完了,没有精力继续测试维护
-* ios部分的代码,太久没有更新,能否使用请自行尝试.
-* 这是我当初的运行环境: [Android/IOS移动平台自动化脚本(基于AirTest)](https://cndaqiang.github.io/2023/11/10/MobileAuto/)
+* 刷苹果手机, **需要在mac上安装Xcode, 然后编译WDA并签名安装到手机**, 具体见: [Android/IOS移动平台自动化脚本(基于AirTest)](https://cndaqiang.github.io/2023/11/10/MobileAuto/)
+* 挂机时间久了，手机会发烫，又没有几个人用本脚本刷ios区的账号
+* 我ios区的账户所有英雄的熟练度又都刷满了
+* 而且,我的macbook初始化了, 调试还需要重新配置Xcode开发环境
+* 因此，从[1.2.2](https://github.com/cndaqiang/WZRY/releases/tag/1.2.2)版本后, 我没有继续测试ios区的代码是否可以正常运行
+* 你在使用时可能(必定)会遇到一些小bug.
+* 能在mac上用WDA控制iphone的用户，应该可以轻松解决遇到的小bug. 建议你读读[旧代码](https://github.com/cndaqiang/WZRY/blob/97a7641b2fd08ef39950e0250c89c95ee6faff38/object.py)有助于调试
+* **唯一可能需要改动的地方[airtest-mobileauto](https://pypi.org/project/airtest-mobileauto/)中连接苹果手机的代码比较老**, 你需要根据你的mac系统版本和WDA版本进行修改.
+
+连接苹果手机的流程
+
+* 启动WDA`tidevice wdaproxy -B  com.cndaqiang.WebDriverAgentRunner.xctrunner`
+* 然后你会获得这样的信息`...ServerURLHere->http://169.254.148.222:8100<-ServerURLHere...`
+
+对应脚本的配置文件写法为
+
+```
+mynode: 0
+LINK_dict:
+  0: "ios:///http://169.254.148.222:8100"
+```
+
 
 
 ## 如何刷完任务自动关机/如何自动开启模拟器
@@ -373,8 +391,26 @@ python -m pip install airtest_mobileauto --upgrade
 
 
 ## 报错`touch  失败`
+### `Broken pipe`
+adb连接卡死,下面方法都可以处理
+
+* 什么都不做, 等待20min后程序自动检测出来处理
+* 重启启动脚本
+* 创建异常处理文件`NeedRebarrier.mynode.totalnode.txt`, 主动触发脚本的异常处理
+
+```
+    return func(inst, *args, **kwargs)
+  File "/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/core/android/touch_methods/base_touch.py", line 111, in safe_send
+    self.client.send(data)
+  File "/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/safesocket.py", line 36, in send
+    sent = self.sock.send(msg[totalsent:])
+BrokenPipeError: [Errno 32] Broken pipe
+```
+
 ### `Coordinates must be a tuple or list of length 2`
-检查字典文件`android.var_dict_mynode.yaml`,里面是否有**非tuple类型**,删除该项,并下载采用最新的代码运行
+检查字典文件`android.var_dict_mynode.yaml`,里面是否有**非tuple类型**,删除该项
+
+* 新代码已修复该bug, 升级代码和依赖
 
 ```
 [11-08 06:50:35](0) touch  失败
@@ -390,6 +426,4 @@ Traceback (most recent call last):
   File "/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/snippet.py", line 192, in get_absolute_coordinate
     assert isinstance(coord, (tuple, list)) and len(coord) == 2, "Coordinates must be a tuple or list of length 2"
 AssertionError: Coordinates must be a tuple or list of length 2
-
-During handling of the above exception, another exception occurred:
 ```
