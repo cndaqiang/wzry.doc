@@ -2300,11 +2300,12 @@ root的设备运行体验服,会被封号.关闭模拟器的root选项.<br>
 <li>AirTest官方的教程见 <a href="https://airtest.doc.io.netease.com/en/tutorial/6_IOS_automated_testing/">Airtest Project Docs
 六、如何在iOS手机上进行自动化测试</a></li>
 </ul>
-<p>从<a href="https://github.com/cndaqiang/WZRY/releases/tag/1.2.2">1.2.2</a>版本后, 我没有测试过ios区的代码是否还可以正常运行, 并且短期也没有精力进行调试.</p>
+<p>从<a href="https://github.com/cndaqiang/WZRY/releases/tag/1.2.2">WZRY-1.2.2</a>版本后, 我没有刷过ios区的账户, 并且短期也没有精力进行调试.</p>
 <ul>
-<li>你在使用时可能(必定)会遇到一些小bug.</li>
-<li>能在mac上用WDA控制iphone的用户，应该可以轻松解决遇到的小bug. 建议你读读<a href="https://github.com/cndaqiang/WZRY/blob/97a7641b2fd08ef39950e0250c89c95ee6faff38/object.py">旧代码</a>有助于调试</li>
-<li><strong>唯一可能需要改动的地方<a href="https://pypi.org/project/airtest-mobileauto/">airtest-mobileauto</a>中连接苹果手机的代码比较老</strong>, 你需要根据你的mac系统版本、ios版本和WDA版本进行修改.</li>
+<li>你在使用时可能(必定)会遇到一些报错.</li>
+<li><a href="https://github.com/cndaqiang/WZRY">WZRY</a>的代码并没有刻意区分ios和安卓. 基本不用修改</li>
+<li><strong>可能要修改<a href="https://pypi.org/project/airtest-mobileauto/">airtest-mobileauto</a>中连接苹果手机的代码</strong>, 需要根据你的芯片类型、mac系统版本、ios版本和WDA版本进行适配.</li>
+<li>能在mac上用WDA控制iphone的用户，应该可以轻松解决遇到的小bug. 建议直接修改<a href="https://pypi.org/project/airtest-mobileauto/">airtest-mobileauto</a></li>
 </ul>
 <p>连接苹果手机的流程</p>
 <ul>
