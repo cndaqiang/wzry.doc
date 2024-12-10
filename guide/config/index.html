@@ -1550,6 +1550,11 @@ logfile:
 <td>airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,自动生成, <strong>通常无需设置</strong>.  如果在电脑上同时运行了很多脚本,建议为不同的脚本配置不同的<code>prefix</code>自动生成<code>tmpdir</code>.</td>
 </tr>
 <tr>
+<td>logfile</td>
+<td>None</td>
+<td>将每个账户的脚本执行日志输出到指定文件,例如<code>{mynode:"restul.mynode.txt"}</code>.<strong>推荐设置</strong>.在脚本总是报错时,可以开启此参数,将运行日志上传到<a href="https://github.com/cndaqiang/WZRY/issues">github</a>提问.</td>
+</tr>
+<tr>
 <td>outputnode</td>
 <td>None</td>
 <td>只输出账户编号mynode等于outputnode的日志,<strong>无需设置</strong>.</td>
@@ -1560,14 +1565,9 @@ logfile:
 <td>日志等级,<code>0 DEBUG, 1 INFO, 2 WARNING, 3 ERROR, 4 CRITICAL</code>,<strong>无需设置</strong>.</td>
 </tr>
 <tr>
-<td>logfile</td>
-<td>None</td>
-<td>将每个账户的脚本执行日志输出到指定文件,例如<code>{mynode:"restul.mynode.txt"}</code>.<strong>推荐设置</strong>.在脚本总是报错时,可以开启此参数,将运行日志上传到<a href="https://github.com/cndaqiang/WZRY/issues">github</a>提问.</td>
-</tr>
-<tr>
 <td>figdir</td>
 <td><code>assets</code></td>
-<td>脚本图片资源所在目录,适合<a href="../../exp/otherdir/">在任意目录运行脚本</a>, <strong>通常无需设置</strong>.</td>
+<td>优先从<code>figdir</code>的目录查找图片资源, 找不到则采用默认的图片, <strong>通常无需设置</strong>. 适合于二次开发/调试/游戏更新时, 覆盖掉代码自带的图片资源.</td>
 </tr>
 </tbody>
 </table>
@@ -1744,9 +1744,14 @@ dockercontain:
 
 <h3 id="ios配置参数">IOS配置参数<a class="headerlink" href="#ios%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
 <ul>
-<li>ios代码的更新和维护永久停留在版本<a href="https://github.com/cndaqiang/WZRY/releases/tag/1.2.2">1.2.2</a>.</li>
-<li>请自行<a href="https://cndaqiang.github.io/2023/11/10/MobileAuto/">搭建开发环境</a>进行调试.</li>
-</ul></div>
+<li>IOS的配置及其复杂, 见<a href="../../qa/qa/#%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8">苹果手机怎么使用</a></li>
+<li>配置参数和上述相同, 注意LINK_dict中为<code>ios</code>, Android和IOS组队的配置示例为:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="n">totalnode</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="n">LINK_dict</span><span class="o">:</span>
+<span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="s2">"ios:///http://169.254.148.222:8100"</span>
+<span class="w">  </span><span class="mi">1</span><span class="o">:</span><span class="w"> </span><span class="s2">"Android:///127.0.0.1:5565"</span>
+</code></pre></div></div>
 
 
 
