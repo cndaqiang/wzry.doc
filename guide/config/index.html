@@ -1631,6 +1631,16 @@ prefix: "wzry"
 <td>BlueStacks没有提供关闭模拟器的接口,需要使用windows的命令关闭模拟器实例的窗口名称. <strong>建议在多开管理器里修改为简短的名字</strong>,例如<code>BlueStacks0</code>,<code>BlueStacks1</code>等</td>
 </tr>
 <tr>
+<td>start_device</td>
+<td>None</td>
+<td>自定义启动安卓设备的命令. 本脚本内置了<a href="../../exp/moniqi/">BlueStack/LDPlayer/MuMu模拟器</a>的启动指令, 使用<code>xxx_Instance</code>控制模拟器的启动关闭. 如果你使用其他模拟器或者在虚拟机中安装的安卓, 可以利用<code>start_device</code>自定义启动安卓设备的命令.</td>
+</tr>
+<tr>
+<td>stop_device</td>
+<td>None</td>
+<td>自定义关闭安卓设备的命令.同<code>start_device</code></td>
+</tr>
+<tr>
 <td>BossKey</td>
 <td>内置</td>
 <td><strong>无需设置</strong>,airtest_mobileauto内部已经配置了BlueStack/LDPlayer/MuMu模拟器默认的老板键.本脚本启动模拟器后,会自动隐藏模拟器窗口.若自定义了老板键或有更多需求,自行修改airtest_mobileauto的代码.</td>
@@ -1678,6 +1688,20 @@ BlueStack_Windows:
     1: BlueStacks1
 </code></pre>
 <img alt="BlueStacks模拟器配置示例" src="../../fig/blue_instance.png">
+</details>
+<details class="success">
+<summary>点解展开:自定义安卓启动关闭配置示例</summary>
+<p>注意配置文件中的<strong>单引号</strong>和<strong>双引号</strong>, 将自定义的开启关闭命令填写到<code>start_device</code>和<code>stop_device</code>
+</p><pre><code>
+mynode: 0
+LINK_dict:
+    0: Android:///127.0.0.1:16384
+start_device:
+    0: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 launch'
+stop_device:
+    0: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 shutdown'
+</code></pre>
+<img alt="任意模拟器的通用配置示例" src="../../fig/user_define.png">
 </details>
 <h4 id="mynode与instance的区别">mynode与Instance的区别<a class="headerlink" href="#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB" title="Permanent link">¶</a></h4>
 <ul>
