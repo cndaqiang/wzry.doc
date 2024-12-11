@@ -320,13 +320,21 @@ python -m pip install airtest_mobileauto --upgrade
 见: [如何使用模拟战刷信誉分](../exp/xinyufen.md)
 
 ## 苹果手机怎么使用
-* 刷苹果手机, **需要在mac上安装Xcode, 然后编译WDA并签名安装到手机**, 具体见: [Android/IOS移动平台自动化脚本(基于AirTest)](https://cndaqiang.github.io/2023/11/10/MobileAuto/)
-* 每过7天还要重新编译签名WDA, 真是麻烦. 挂机时间久了，手机还会发烫.
-* 从[1.2.2](https://github.com/cndaqiang/WZRY/releases/tag/1.2.2)版本后, 我没有继续测试ios区的代码是否可以正常运行
-* 我的macbook重装系统了, 调试还需要重新配置Xcode开发环境, 真是麻烦, 我短期没有精力继续调试.
-* 你在使用时可能(必定)会遇到一些小bug.
-* 能在mac上用WDA控制iphone的用户，应该可以轻松解决遇到的小bug. 建议你读读[旧代码](https://github.com/cndaqiang/WZRY/blob/97a7641b2fd08ef39950e0250c89c95ee6faff38/object.py)有助于调试
-* **唯一可能需要改动的地方[airtest-mobileauto](https://pypi.org/project/airtest-mobileauto/)中连接苹果手机的代码比较老**, 你需要根据你的mac系统版本和WDA版本进行修改.
+* 首先注册Apple的个人开发者
+* 然后在macOS上安装Xcode, 编译WDA并使用个人签名安装到手机, 手机上信任个人的签名证书
+* (尝试过用巨魔签名, 然而签名后WDA无法正常工作, 连接连接不上手机,原因未知)
+* 每过7天还要重新编译签名WDA, 挂机时间久了，手机还会发烫.
+* 具体见: [Android/IOS移动平台自动化脚本(基于AirTest)](https://cndaqiang.github.io/2023/11/10/MobileAuto/)
+* AirTest官方的教程见 [Airtest Project Docs
+六、如何在iOS手机上进行自动化测试](https://airtest.doc.io.netease.com/en/tutorial/6_IOS_automated_testing/)
+
+
+从[WZRY-1.2.2](https://github.com/cndaqiang/WZRY/releases/tag/1.2.2)版本后, 我没有刷过ios区的账户, 并且短期也没有精力进行调试.
+
+* 你在使用时可能(必定)会遇到一些报错.
+* [WZRY](https://github.com/cndaqiang/WZRY)的代码并没有刻意区分ios和安卓. 基本不用修改
+* **可能要修改[airtest-mobileauto](https://pypi.org/project/airtest-mobileauto/)中连接苹果手机的代码**, 需要根据你的芯片类型、mac系统版本、ios版本和WDA版本进行适配.
+* 能在mac上用WDA控制iphone的用户，应该可以轻松解决遇到的小bug. 建议直接修改[airtest-mobileauto](https://pypi.org/project/airtest-mobileauto/)
 
 连接苹果手机的流程
 

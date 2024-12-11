@@ -122,7 +122,7 @@ extra:
       link: https://wzry-doc.pages.dev/feed_rss_updated.xml
       name: rss
     - icon: fontawesome/solid/chart-area
-      link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/cndaqiang.github.io
+      link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/wzry-doc.pages.dev
       name: visitormap
   # material带的google统计,https://analytics.google.com/ 不采用主题提供的,自己进行控制
   # analytics:

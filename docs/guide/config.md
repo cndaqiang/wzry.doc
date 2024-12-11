@@ -52,10 +52,10 @@ logfile:
 |-|-|-|
 |prefix|None|程序标志, **推荐设置**为`WZRY`, 不设置也没问题. |
 |tmpdir|`系统临时目录/airtest_mobileauto/prefix`|airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,自动生成, **通常无需设置**.  如果在电脑上同时运行了很多脚本,建议为不同的脚本配置不同的`prefix`自动生成`tmpdir`.|
+|logfile|None|将每个账户的脚本执行日志输出到指定文件,例如`{mynode:"restul.mynode.txt"}`.**推荐设置**.在脚本总是报错时,可以开启此参数,将运行日志上传到[github](https://github.com/cndaqiang/WZRY/issues)提问.|
 |outputnode|None|只输出账户编号mynode等于outputnode的日志,**无需设置**.|
 |logger_level|1|日志等级,`0 DEBUG, 1 INFO, 2 WARNING, 3 ERROR, 4 CRITICAL`,**无需设置**.|
-|logfile|None|将每个账户的脚本执行日志输出到指定文件,例如`{mynode:"restul.mynode.txt"}`.**推荐设置**.在脚本总是报错时,可以开启此参数,将运行日志上传到[github](https://github.com/cndaqiang/WZRY/issues)提问.|
-|figdir|`assets`|脚本图片资源所在目录,适合[在任意目录运行脚本](../exp/otherdir.md), **通常无需设置**.|
+|figdir|`assets`|  优先从`figdir`的目录查找图片资源, 找不到则采用默认的图片, **通常无需设置**. 适合于二次开发/调试/游戏更新时, 覆盖掉代码自带的图片资源.|
 
 示例
 ```
@@ -81,6 +81,8 @@ prefix: "wzry"
 |MuMu_Instance|{mynode:"instance"}|每个账户所在的模拟器在MuMu多开管理器内部的**模拟器实例编号**, 用于启动、关闭mynode账户所在的模拟器实例.[mynode与instance的区别](#mynode与instance的区别).|
 |BlueStack_Instance|{mynode:"Nougat32_instance"}|每个账户所在的模拟器在BlueStacks多开管理器内部的**模拟器实例编号**, 用于启动mynode账户所在的BlueStacks模拟器实例.[mynode与instance的区别](#mynode与instance的区别).|
 |BlueStack_Windows|{mynode:"BlueStacks App Player instance"}|BlueStacks没有提供关闭模拟器的接口,需要使用windows的命令关闭模拟器实例的窗口名称. **建议在多开管理器里修改为简短的名字**,例如`BlueStacks0`,`BlueStacks1`等|
+|start_device|None|自定义启动安卓设备的命令. 本脚本内置了[BlueStack/LDPlayer/MuMu模拟器](../exp/moniqi.md)的启动指令, 使用`xxx_Instance`控制模拟器的启动关闭. 如果你使用其他模拟器或者在虚拟机中安装的安卓, 可以利用`start_device`自定义启动安卓设备的命令.|
+|stop_device |None|自定义关闭安卓设备的命令.同`start_device`|
 |BossKey|内置|**无需设置**,airtest_mobileauto内部已经配置了BlueStack/LDPlayer/MuMu模拟器默认的老板键.本脚本启动模拟器后,会自动隐藏模拟器窗口.若自定义了老板键或有更多需求,自行修改airtest_mobileauto的代码.|
 
 #### 模拟器配置示例
@@ -124,6 +126,18 @@ prefix: "wzry"
     </code></pre>
     ![BlueStacks模拟器配置示例](../fig/blue_instance.png)
 
+??? Success "点解展开:自定义安卓启动关闭配置示例"
+    注意配置文件中的**单引号**和**双引号**, 将自定义的开启关闭命令填写到`start_device`和`stop_device`
+    <pre><code>
+    mynode: 0
+    LINK_dict:
+        0: Android:///127.0.0.1:16384
+    start_device:
+        0: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 launch'
+    stop_device:
+        0: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 shutdown'
+    </code></pre>
+    ![任意模拟器的通用配置示例](../fig/user_define.png)
 
 #### mynode与Instance的区别
 * 账户编号mynode是游戏账户的编号,默认从0开始.`mynode=0,1,2,...,totalnode-1`.
@@ -176,5 +190,14 @@ dockercontain:
 
 
 ### IOS配置参数
-* ios代码的更新和维护永久停留在版本[1.2.2](https://github.com/cndaqiang/WZRY/releases/tag/1.2.2).
-* 请自行[搭建开发环境](https://cndaqiang.github.io/2023/11/10/MobileAuto/)进行调试.
+* IOS的配置及其复杂, 见[苹果手机怎么使用](../qa/qa.md#苹果手机怎么使用)
+* 配置参数和上述相同, 注意LINK_dict中为`ios`, Android和IOS组队的配置示例为:
+
+```
+totalnode: 2
+LINK_dict:
+  0: "ios:///http://169.254.148.222:8100"
+  1: "Android:///127.0.0.1:5565"
+```
+
+
