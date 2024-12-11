@@ -327,6 +327,8 @@ python -m pip install airtest_mobileauto --upgrade
 * 具体见: [Android/IOS移动平台自动化脚本(基于AirTest)](https://cndaqiang.github.io/2023/11/10/MobileAuto/)
 * AirTest官方的教程见 [Airtest Project Docs
 六、如何在iOS手机上进行自动化测试](https://airtest.doc.io.netease.com/en/tutorial/6_IOS_automated_testing/)
+* 是否觉得上面的内容很麻烦, **不妨看看更简单的[使用腾讯手游助手刷ios区的账户](../exp/iosapp.md)**
+
 
 
 从[WZRY-1.2.2](https://github.com/cndaqiang/WZRY/releases/tag/1.2.2)版本后, 我没有刷过ios区的账户, 并且短期也没有精力进行调试.

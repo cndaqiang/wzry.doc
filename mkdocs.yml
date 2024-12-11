@@ -36,6 +36,7 @@ nav:
     - 常见问题: qa/qa.md
     - 提出问题: https://github.com/cndaqiang/WZRY/issues
     - 经验分享: 
+      - 在windows上刷ios区账户: exp/iosapp.md
       - 图片更新: guide/tupiangengxin.md
       - 战令经验最大化✈️: exp/zhanling.md
       - 刷金币: exp/jinbi.md
