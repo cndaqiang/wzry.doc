@@ -319,7 +319,16 @@ python -m pip install airtest_mobileauto --upgrade
 ## 如何使用模拟战刷信誉分
 见: [如何使用模拟战刷信誉分](../exp/xinyufen.md)
 
+## ios区账户怎么用
+* [使用腾讯手游助手刷ios区的账户](../exp/iosapp.md), 就和安卓的用法没有任何差异了.
+
+
 ## 苹果手机怎么使用
+> **建议别用控制苹果手机, 而是[使用腾讯手游助手刷ios区的账户](../exp/iosapp.md)**, 目前测试可以流畅刷ios区的日活,并且没有bug
+
+
+下面的教程是如何使用MacOS控制苹果手机做日活的教程, 非常复杂.
+
 * 首先注册Apple的个人开发者
 * 然后在macOS上安装Xcode, 编译WDA并使用个人签名安装到手机, 手机上信任个人的签名证书
 * (尝试过用巨魔签名, 然而签名后WDA无法正常工作, 连接连接不上手机,原因未知)
@@ -327,11 +336,9 @@ python -m pip install airtest_mobileauto --upgrade
 * 具体见: [Android/IOS移动平台自动化脚本(基于AirTest)](https://cndaqiang.github.io/2023/11/10/MobileAuto/)
 * AirTest官方的教程见 [Airtest Project Docs
 六、如何在iOS手机上进行自动化测试](https://airtest.doc.io.netease.com/en/tutorial/6_IOS_automated_testing/)
-* 是否觉得上面的内容很麻烦, **不妨看看更简单的[使用腾讯手游助手刷ios区的账户](../exp/iosapp.md)**
 
 
-
-从[WZRY-1.2.2](https://github.com/cndaqiang/WZRY/releases/tag/1.2.2)版本后, 我没有刷过ios区的账户, 并且短期也没有精力进行调试.
+从[WZRY-1.2.2](https://github.com/cndaqiang/WZRY/releases/tag/1.2.2)版本后, 我没有实际控制过苹果手机, 并且短期也没有精力进行调试.
 
 * 你在使用时可能(必定)会遇到一些报错.
 * [WZRY](https://github.com/cndaqiang/WZRY)的代码并没有刻意区分ios和安卓. 基本不用修改

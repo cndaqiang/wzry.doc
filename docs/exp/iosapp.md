@@ -42,12 +42,15 @@ logfile:
 ```
 
 ## 进阶
+
+
 ### ios区和安卓区组队
+* **需要提前手动打开各个模拟器**
+
 ```
 totalnode: 2
 # 0 是腾讯手游助手的模拟器,ios区大号
-# 1 是mumu模拟器,安卓区小号
-# 需要提前手动打开模拟器
+# 1 是安卓区小号
 LINK_dict:
     0: Android:///127.0.0.1:5555
     1: Android:///127.0.0.1:16384
@@ -56,3 +59,42 @@ logfile:
     0: result.0.txt
     1: result.1.txt
 ```
+
+
+### 自动启动腾讯手游助手
+* 现在[airtest_mobileauto](https://github.com/cndaqiang/airtest_mobileauto)并未适配腾讯手游助手, 
+* 暂时在定时启动的自动化bat脚本中, 添加启动模拟器的命令
+* 不需要管理员权限
+
+
+```
+"D:\Program Files\TxGameAssistant\ui\AndroidEmulator.exe"  -vm 100
+%USERPROFILE%\AppData\Local\anaconda3\python.exe -u wzry.py config.0.yaml
+```
+
+![bat刷ios区](../fig/runiosbat.png)
+
+### 腾讯手游助手和MuMu模拟器自动化启动和控制
+* **需要管理员权限**才能在python中启动腾讯手游助手
+
+```
+# 多进程配置
+multiprocessing: True
+#
+totalnode: 2
+# 0 是腾讯手游助手的模拟器,ios区大号
+# 1 是mumu模拟器,安卓区小号
+LINK_dict:
+    0: Android:///127.0.0.1:5555
+    1: Android:///127.0.0.1:16384
+# 需要管理员权限执行python脚本,才能启动tx手游助手
+start_device:
+    0: '"D:\Program Files\TxGameAssistant\ui\AndroidEmulator.exe"  -vm 100'
+    1: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 launch'
+prefix: wzry
+logfile:
+    0: result.0.txt
+    1: result.1.txt
+```
+
+![腾讯mumu自动化启动](../fig/txmumuauto.png)

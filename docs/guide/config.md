@@ -81,9 +81,9 @@ prefix: "wzry"
 |MuMu_Instance|{mynode:"instance"}|每个账户所在的模拟器在MuMu多开管理器内部的**模拟器实例编号**, 用于启动、关闭mynode账户所在的模拟器实例.[mynode与instance的区别](#mynode与instance的区别).|
 |BlueStack_Instance|{mynode:"Nougat32_instance"}|每个账户所在的模拟器在BlueStacks多开管理器内部的**模拟器实例编号**, 用于启动mynode账户所在的BlueStacks模拟器实例.[mynode与instance的区别](#mynode与instance的区别).|
 |BlueStack_Windows|{mynode:"BlueStacks App Player instance"}|BlueStacks没有提供关闭模拟器的接口,需要使用windows的命令关闭模拟器实例的窗口名称. **建议在多开管理器里修改为简短的名字**,例如`BlueStacks0`,`BlueStacks1`等|
-|start_device|None|自定义启动安卓设备的命令. 本脚本内置了[BlueStack/LDPlayer/MuMu模拟器](../exp/moniqi.md)的启动指令, 使用`xxx_Instance`控制模拟器的启动关闭. 如果你使用其他模拟器或者在虚拟机中安装的安卓, 可以利用`start_device`自定义启动安卓设备的命令.|
-|stop_device |None|自定义关闭安卓设备的命令.同`start_device`|
-|BossKey|内置|**无需设置**,airtest_mobileauto内部已经配置了BlueStack/LDPlayer/MuMu模拟器默认的老板键.本脚本启动模拟器后,会自动隐藏模拟器窗口.若自定义了老板键或有更多需求,自行修改airtest_mobileauto的代码.|
+|start_device|None|自定义安卓设备的启动命令. 本脚本内置了[BlueStack/LDPlayer/MuMu模拟器](../exp/moniqi.md)的启动指令, 使用`xxx_Instance`控制模拟器的启动关闭. 如果你使用其他模拟器或者多个模拟器混合使用或者在vmware等虚拟机中安装的安卓系统, 可以利用`start_device`自定义每个安卓设备的启动命令. 例如[腾讯手游助手和MuMu的组队配置](../exp/iosapp.md#腾讯手游助手和mumu模拟器自动化启动和控制)|
+|stop_device |None|自定义安卓设备的关闭命令.同`start_device`|
+|BossKey|内置|自定义安卓设备的老板键,**无需设置**,airtest_mobileauto内部已经配置了BlueStack/LDPlayer/MuMu模拟器默认的老板键.本脚本启动模拟器后,会自动隐藏模拟器窗口.若自定义了老板键或有更多需求,自行查看airtest_mobileauto的代码.|
 
 #### 模拟器配置示例
 ??? Warning  "点击展开:雷电模拟器配置示例"
@@ -126,18 +126,25 @@ prefix: "wzry"
     </code></pre>
     ![BlueStacks模拟器配置示例](../fig/blue_instance.png)
 
-??? Success "点解展开:自定义安卓启动关闭配置示例"
-    注意配置文件中的**单引号**和**双引号**, 将自定义的开启关闭命令填写到`start_device`和`stop_device`
+??? Success "点解展开:自定义安卓启动配置(腾讯手游助手和MuMu混用)示例"
+    注意配置文件中的**单引号**和**双引号**, 将自定义的开启关闭命令填写到`start_device`和`stop_device`. <br>
+    mynode = 0 是腾讯手游助手的模拟器,ios区大号<br>
+    mynode = 1 是mumu模拟器,安卓区小号 <br>
+    腾讯手游助手暂未找到关闭命令, 可以不配置<br>
+    **腾讯手游助手的启动需要管理员权限**,所以要用管理员权限执行python
     <pre><code>
-    mynode: 0
+    multiprocessing: True
+    totalnode: 2
     LINK_dict:
-        0: Android:///127.0.0.1:16384
+        0: Android:///127.0.0.1:5555
+        1: Android:///127.0.0.1:16384
     start_device:
-        0: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 launch'
+        0: '"D:\Program Files\TxGameAssistant\ui\AndroidEmulator.exe"  -vm 100'
+        1: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 launch'
     stop_device:
-        0: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 shutdown'
+        1: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 shutdown'
     </code></pre>
-    ![任意模拟器的通用配置示例](../fig/user_define.png)
+    ![腾讯mumu自动化启动](../fig/txmumuauto.png)
 
 #### mynode与Instance的区别
 * 账户编号mynode是游戏账户的编号,默认从0开始.`mynode=0,1,2,...,totalnode-1`.
@@ -189,9 +196,10 @@ dockercontain:
 ```
 
 
-### IOS配置参数
-* IOS的配置及其复杂, 见[苹果手机怎么使用](../qa/qa.md#苹果手机怎么使用)
-* 配置参数和上述相同, 注意LINK_dict中为`ios`, Android和IOS组队的配置示例为:
+### Iphone/Ipad参数
+* 不建议使用Iphone/Ipad, 可以使用[使用32位腾讯手游助手刷ios区的日活](../exp/iosapp.md)
+* Iphone/Ipad的配置及其复杂, 见[苹果手机怎么使用](../qa/qa.md#苹果手机怎么使用)
+* 配置参数和上述相同, 注意LINK_dict中为`ios`, Android和IOS组队的配置示例为
 
 ```
 totalnode: 2

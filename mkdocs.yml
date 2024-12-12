@@ -36,7 +36,7 @@ nav:
     - 常见问题: qa/qa.md
     - 提出问题: https://github.com/cndaqiang/WZRY/issues
     - 经验分享: 
-      - 在windows上刷ios区账户: exp/iosapp.md
+      - 🔥在windows上刷ios区账户: exp/iosapp.md
       - 图片更新: guide/tupiangengxin.md
       - 战令经验最大化✈️: exp/zhanling.md
       - 刷金币: exp/jinbi.md
@@ -51,7 +51,6 @@ nav:
       - 在🐳docker内干农活: exp/docker.md
       - docker安卓模拟器不推荐: exp/moniqidocker.md
       - 不使用电脑如何运行脚本: exp/termux.md
-      - 控制苹果手机: https://wzry-doc.pages.dev/qa/qa/#苹果手机怎么使用
       - 定时执行脚本: exp/dingshi.md
       - 在任意目录运行: exp/otherdir.md
       - 镜像下载autoWZRY脚本: exp/pypi.md
