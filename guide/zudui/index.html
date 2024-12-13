@@ -1403,12 +1403,12 @@ LINK_dict:
 <h2 id="更新房主头像">更新房主头像<a class="headerlink" href="#%E6%9B%B4%E6%96%B0%E6%88%BF%E4%B8%BB%E5%A4%B4%E5%83%8F" title="Permanent link">¶</a></h2>
 <h3 id="方法1-替换代码资源">方法1: 替换代码资源<a class="headerlink" href="#%E6%96%B9%E6%B3%951-%E6%9B%BF%E6%8D%A2%E4%BB%A3%E7%A0%81%E8%B5%84%E6%BA%90" title="Permanent link">¶</a></h3>
 <blockquote>
-<p><strong>把截到的房主头像图片,重命名为<code>tpl1716782981770.png</code>, 替换<code>assets</code>文件夹中的图片</strong>即可.</p>
+<p><strong>把截到的房主头像图片,重命名为<code>tpl1716782981770.png</code>, 替换代码目录的<code>assets</code>文件夹中的图片</strong>即可.</p>
 </blockquote>
 <h3 id="方法2-更新图片接口">方法2: 更新图片接口<a class="headerlink" href="#%E6%96%B9%E6%B3%952-%E6%9B%B4%E6%96%B0%E5%9B%BE%E7%89%87%E6%8E%A5%E5%8F%A3" title="Permanent link">¶</a></h3>
 <ul>
-<li>在运行目录创建<code>WZRY.图片更新.txt</code></li>
-<li>将airtest截到的图片放到运行目录,</li>
+<li>在<strong>运行目录</strong>创建<code>WZRY.图片更新.txt</code></li>
+<li>将airtest截到的图片放到<strong>运行目录</strong>,</li>
 <li>复制AirtestIDE生成的<code>Template(r"tplXXXXX.png",xxxx)</code>的代码,添加到<code>WZRY.图片更新.txt</code></li>
 <li>将<code>, target_pos=9</code>添加到<code>Template(r"tplXXXXX.png",xxxx)</code>中</li>
 <li>即最终你的<code>WZRY.图片更新.txt</code>中的内容应该类似下面的内容</li>

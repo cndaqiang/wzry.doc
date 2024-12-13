@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#我希望脚本运行目录和代码目录分开-保持代码目录的干净" class="md-skip">
+        <a href="#希望脚本运行目录和代码目录分开-保持代码目录的干净" class="md-skip">
           跳转至
         </a>
       
@@ -1286,7 +1286,7 @@
   
 
 
-<div><h1 id="我希望脚本运行目录和代码目录分开-保持代码目录的干净">我希望脚本运行目录和代码目录分开, 保持代码目录的干净<a class="headerlink" href="#%E6%88%91%E5%B8%8C%E6%9C%9B%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C%E7%9B%AE%E5%BD%95%E5%92%8C%E4%BB%A3%E7%A0%81%E7%9B%AE%E5%BD%95%E5%88%86%E5%BC%80-%E4%BF%9D%E6%8C%81%E4%BB%A3%E7%A0%81%E7%9B%AE%E5%BD%95%E7%9A%84%E5%B9%B2%E5%87%80" title="Permanent link">¶</a></h1>
+<div><h1 id="希望脚本运行目录和代码目录分开-保持代码目录的干净">希望脚本运行目录和代码目录分开, 保持代码目录的干净<a class="headerlink" href="#%E5%B8%8C%E6%9C%9B%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C%E7%9B%AE%E5%BD%95%E5%92%8C%E4%BB%A3%E7%A0%81%E7%9B%AE%E5%BD%95%E5%88%86%E5%BC%80-%E4%BF%9D%E6%8C%81%E4%BB%A3%E7%A0%81%E7%9B%AE%E5%BD%95%E7%9A%84%E5%B9%B2%E5%87%80" title="Permanent link">¶</a></h1>
 <h2 id="说明">说明<a class="headerlink" href="#%E8%AF%B4%E6%98%8E" title="Permanent link">¶</a></h2>
 <ul>
 <li>该页面是介绍我的使用经验,不是教程</li>
@@ -1294,20 +1294,16 @@
 <li>谨慎阅读</li>
 </ul>
 <h2 id="在任意目录创建配置文件">在任意目录创建配置文件<a class="headerlink" href="#%E5%9C%A8%E4%BB%BB%E6%84%8F%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" title="Permanent link">¶</a></h2>
-<p>主要指定静态图片的位置<code>figdir</code>, 例如<code>figdir: C:\Users\cnche\Downloads\WZRY-2.2.3\assets</code></p>
 <p>具体示例,<code>D:\SoftData\tmp\config.win.yaml</code></p>
-<div class="codehilite"><pre><span></span><code><span class="c1">#client</span>
-<span class="c1"># 仅在单进程时有效</span>
-<span class="n">mynode</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
-<span class="c1"># 多进程时，多进程的数目</span>
-<span class="n">totalnode</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<span class="c1">#MuMu模拟器</span>
-<span class="n">MuMudir</span><span class="p">:</span><span class="w"> </span><span class="n">D</span><span class="p">:</span>\<span class="n">Program</span><span class="w"> </span><span class="n">Files</span>\<span class="n">Netease</span>\<span class="n">MuMu</span><span class="w"> </span><span class="n">Player</span><span class="w"> </span><span class="mi">12</span>\<span class="n">shell</span>
-<span class="n">LINK_dict</span><span class="p">:</span>
-<span class="w">    </span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="n">Android</span><span class="p">:</span><span class="o">///</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">16384</span>
-
-<span class="c1"># 静态图片目录</span>
-<span class="n">figdir</span><span class="p">:</span><span class="w"> </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">cnche</span>\<span class="n">Downloads</span>\<span class="n">WZRY</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">3</span>\<span class="n">assets</span>
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span>client
+<span class="gh">#</span> 仅在单进程时有效
+mynode: 0
+<span class="gh">#</span> 多进程时，多进程的数目
+totalnode: 1
+<span class="gh">#</span>MuMu模拟器
+MuMudir: D:\Program Files\Netease\MuMu Player 12\shell
+LINK_dict:
+    0: Android:///127.0.0.1:16384
 </code></pre></div>
 
 <h2 id="运行代码">运行代码<a class="headerlink" href="#%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81" title="Permanent link">¶</a></h2>
