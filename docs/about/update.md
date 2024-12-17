@@ -1,3 +1,7 @@
+## 2024-12-13 2.3.0
+* 与[AutoWZRY@pypi](../exp/pypi.md)代码统一
+* ios区日活代码、教程更新
+
 ## 2024-11-22 2.2.9
 * 镜像代码到 [AutoWZRY@pypi](../exp/pypi.md)
 * 修复adb故障: 可以连接但是无法触摸

@@ -1,4 +1,4 @@
-# 我希望脚本运行目录和代码目录分开, 保持代码目录的干净
+# 希望脚本运行目录和代码目录分开, 保持代码目录的干净
 ## 说明
 * 该页面是介绍我的使用经验,不是教程
 * 随着软件更新,这些经验可能不再适用
@@ -6,8 +6,6 @@
 
 
 ## 在任意目录创建配置文件
-主要指定静态图片的位置`figdir`, 例如`figdir: C:\Users\cnche\Downloads\WZRY-2.2.3\assets`
-
 
 具体示例,`D:\SoftData\tmp\config.win.yaml`
 ```
@@ -20,9 +18,6 @@ totalnode: 1
 MuMudir: D:\Program Files\Netease\MuMu Player 12\shell
 LINK_dict:
     0: Android:///127.0.0.1:16384
-
-# 静态图片目录
-figdir: C:\Users\cnche\Downloads\WZRY-2.2.3\assets
 ```
 
 ## 运行代码

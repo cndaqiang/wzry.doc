@@ -40,12 +40,12 @@ LINK_dict:
 ## 更新房主头像
 ### 方法1: 替换代码资源
 
-> **把截到的房主头像图片,重命名为`tpl1716782981770.png`, 替换`assets`文件夹中的图片**即可.
+> **把截到的房主头像图片,重命名为`tpl1716782981770.png`, 替换代码目录的`assets`文件夹中的图片**即可.
 
 
 ### 方法2: 更新图片接口
-* 在运行目录创建`WZRY.图片更新.txt`
-* 将airtest截到的图片放到运行目录,
+* 在**运行目录**创建`WZRY.图片更新.txt`
+* 将airtest截到的图片放到**运行目录**,
 * 复制AirtestIDE生成的`Template(r"tplXXXXX.png",xxxx)`的代码,添加到`WZRY.图片更新.txt`
 * 将`, target_pos=9`添加到`Template(r"tplXXXXX.png",xxxx)`中
 * 即最终你的`WZRY.图片更新.txt`中的内容应该类似下面的内容

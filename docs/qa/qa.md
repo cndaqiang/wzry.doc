@@ -37,7 +37,7 @@ Q:
 A:
 
 * 方法1. 从镜像站下载, 
-<br>`pip download AutoWZRY -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-deps`
+<br>`pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-deps`
 <br>详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
 * 方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
 ![gitee下载WZRY](../fig/gitee.png)
@@ -50,6 +50,7 @@ A:
 *  **新用户,建议先手动进入大厅.**
 * 活动更新了图标,检查我是否提供了[更新资源](../guide/upfig.md),若我无法及时更新,请自行更新图标. 
 * 模拟器的分辨率不是960x540、dpi不是160, 有些图标无法识别,自行调试脚本,不予解决
+* 使用最新的代码
 * 模拟器配置太低,王者卡住了.
 
 * **多等一会** 

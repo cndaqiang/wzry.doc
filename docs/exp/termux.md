@@ -39,9 +39,9 @@ python3 -m pip uninstall opencv-python opencv-contrib-python opencv-python-headl
 ## 配置WZRY
 ### 下载AutoWZRY
 ```
-python3 -m pip download AutoWZRY --no-deps
-tar xzvf AutoWZRY-2.2.9b3.tar.gz
-cd AutoWZRY-2.2.9b3/AutoWZRY/
+python3 -m pip download autowzry --no-deps
+tar xzvf autowzry-2.2.9b3.tar.gz
+cd autowzry-2.2.9b3/autowzry/
 ```
 ![ternux](../fig/termux3.png)
 

@@ -104,3 +104,11 @@ def main():
     config_file = ""
 ```
 * 运行
+
+### 方式4. 使用autoWZRY
+* 更多见[进阶教程](../guide/autowzry.md)
+
+```
+python -m pip install autowzry --upgrade
+autowzry config.win.yaml
+```

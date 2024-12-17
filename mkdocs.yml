@@ -90,7 +90,7 @@ theme:
   # 不再采用拓展的模式(overrides.extra),而是直接复制特定版本的html文件到这里,目录结构和templates目录一样
   custom_dir: overrides
   palette:
-    primary: teal # deep purple white red purple blue teal 默认 indigo
+    primary: indigo # deep purple white red purple blue  默认 indigo. 绿色护眼 teal
   # 配色 red pink purple deep purple indigo blue light blue cyan teal green light green lime 
   # yellow amber orange deep orange brown grey blue grey black white
   # https://mrkeo.github.io/setup/changing-the-colors/
