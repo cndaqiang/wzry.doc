@@ -1350,13 +1350,13 @@
 
 <div><h2 id="说明">说明<a class="headerlink" href="#%E8%AF%B4%E6%98%8E" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://pypi.org/project/AutoWZRY/">AutoWZRY</a>是<a href="https://github.com/cndaqiang/WZRY">WZRY</a>的可执行版本.</li>
-<li><a href="https://pypi.org/project/AutoWZRY/">AutoWZRY</a>通过pip安装, 包含程序<code>autowzry.exe</code>等.</li>
+<li><a href="https://pypi.org/project/autowzry/">autowzry</a>是<a href="https://github.com/cndaqiang/WZRY">WZRY</a>的可执行版本.</li>
+<li><a href="https://pypi.org/project/autowzry/">autowzry</a>通过pip安装, 包含程序<code>autowzry.exe</code>等.</li>
 </ul>
 <h2 id="安装模拟器和登陆游戏">安装模拟器和登陆游戏<a class="headerlink" href="#%E5%AE%89%E8%A3%85%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%E7%99%BB%E9%99%86%E6%B8%B8%E6%88%8F" title="Permanent link">¶</a></h2>
 <p>同<a href="../install/">安装模拟器和登陆游戏</a></p>
 <h2 id="安装autowzry">安装autoWZRY<a class="headerlink" href="#%E5%AE%89%E8%A3%85autowzry" title="Permanent link">¶</a></h2>
-<div class="codehilite"><pre><span></span><code>python -m pip install autoWZRY --upgrade
+<div class="codehilite"><pre><span></span><code>python -m pip install autowzry --upgrade
 # 等价于下载WZRY的release代码
 </code></pre></div>
 
@@ -1385,7 +1385,7 @@ autotiyanfu config.win.yaml
 <p><code>crontab -e</code></p>
 <div class="codehilite"><pre><span></span><code><span class="gh">#</span>crontab支持path
 PATH=/home/cndaqiang/.local/bin:/usr/lib/jvm/java-11-openjdk-arm64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-0 5 <span class="gs">* *</span> * cd /home/cndaqiang/soft/autoWZRY &amp;&amp; autowzry config.lin.yaml &gt; result.txt 2&gt;&amp;1
+0 5 <span class="gs">* *</span> * cd /home/cndaqiang/soft/autowzry &amp;&amp; autowzry config.lin.yaml &gt; result.txt 2&gt;&amp;1
 50 11 <span class="gs">* *</span> *  pkill -f 'autowzry'
 </code></pre></div></div>
 
