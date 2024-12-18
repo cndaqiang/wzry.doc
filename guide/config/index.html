@@ -1547,7 +1547,7 @@ logfile:
 <tr>
 <td>tmpdir</td>
 <td><code>系统临时目录/airtest_mobileauto/prefix</code></td>
-<td>airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,自动生成, <strong>通常无需设置</strong>.  如果在电脑上同时运行了很多脚本,建议为不同的脚本配置不同的<code>prefix</code>自动生成<code>tmpdir</code>.</td>
+<td>airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,自动生成, <strong>通常无需设置</strong>.  如果在电脑上<strong>同时运行了很多脚本</strong>,建议为不同的脚本配置不同的<code>prefix</code>自动生成<code>tmpdir</code>. 万一(不大可能)可以单排,多排总是同步出错,可以清空<code>C:\Users\用户名\AppData\Local\Temp\airtest_mobileauto</code>中的文件再执行脚本.</td>
 </tr>
 <tr>
 <td>logfile</td>
@@ -1712,12 +1712,12 @@ stop_device:
 </details>
 <h4 id="mynode与instance的区别">mynode与Instance的区别<a class="headerlink" href="#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB" title="Permanent link">¶</a></h4>
 <ul>
-<li>账户编号mynode是游戏账户的编号,默认从0开始.<code>mynode=0,1,2,...,totalnode-1</code>.</li>
-<li>模拟器实例编号Instance是模拟器的多开管理器内部的编号.通常也是<code>0,1,2,...</code></li>
-<li>两者之间的映射关系通过<code>xxx_Instance[mynode]=Instance</code>字典指定</li>
-<li><code>xxx_Instance</code>是为了控制模拟器的开机关机等模拟器的操作.</li>
+<li>账户编号<strong>mynode是游戏账户的编号</strong>, 一定是整数, <code>mynode=0,1,2,...,totalnode-1</code>. 脚本根据mynode控制每个游戏账号的行为. 单排时由用户在配置文件中设置. 组队时默认从0开始.</li>
+<li>模拟器实例编号<strong>Instance是模拟器的多开管理器内部的编号</strong>. 不同模拟器的编号规则不同, 可能是整数<code>0,1,2</code>,也可能是字符串<code>Pie64,Pie64_1,Pie64_2</code>等. 需要用户自己打开模拟器的设置/创建快捷方式等操作进行查看.</li>
+<li>mynode和Instance之间的映射关系通过<code>xxx_Instance[mynode]=Instance</code>字典指定</li>
+<li><code>xxx_Instance[mynode]</code>是为了控制账户(mynode)所在模拟器(Instance)的启动、关闭、隐藏等操作.</li>
 <li><strong><code>mynode=0</code>的账户必须是多开组队的大号(开房间的账户).但是<code>mynode=0</code>的账户可以使用任意一台模拟器</strong>
-    <br>例如,下面的配置中,大号(<code>mynode=0</code>)使用第1台模拟器,小号(<code>mynode=1</code>)使用第0台模拟器
+    <br>例如,下面的配置中,大号(<code>mynode=0</code>)使用第1台模拟器(<code>Pie64_1</code>),小号(<code>mynode=1</code>)使用第0台模拟器(<code>Pie64</code>)
     <pre><code>
 totalnode: 2
 multiprocessing: True
@@ -1777,8 +1777,10 @@ dockercontain:
 <ul>
 <li>不建议使用Iphone/Ipad, 可以使用<a href="../../exp/iosapp/">使用32位腾讯手游助手刷ios区的日活</a></li>
 <li>Iphone/Ipad的配置及其复杂, 见<a href="../../qa/qa/#%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8">苹果手机怎么使用</a></li>
-<li>配置参数和上述相同, 注意LINK_dict中为<code>ios</code>, Android和IOS组队的配置示例为</li>
+<li>配置参数基本和安卓模拟器的参数相同, 注意<strong>Iphone/Ipad的底层是ios系统, 所以LINK_dict中为<code>ios</code></strong></li>
+<li><strong>腾讯手游助手底层是安卓模拟器</strong>, 使用腾讯手游助手刷ios区时,<strong>LINK_dict仍然是<code>Android</code></strong>, 使用方法同上面的安卓模拟器.</li>
 </ul>
+<p>Android和Iphone/Ipad的配置示例为</p>
 <div class="codehilite"><pre><span></span><code><span class="n">totalnode</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
 <span class="n">LINK_dict</span><span class="o">:</span>
 <span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="s2">"ios:///http://169.254.148.222:8100"</span>
