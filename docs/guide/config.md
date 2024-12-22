@@ -51,7 +51,7 @@ logfile:
 |参数|默认值|含义|
 |-|-|-|
 |prefix|None|程序标志, **推荐设置**为`WZRY`, 不设置也没问题. |
-|tmpdir|`系统临时目录/airtest_mobileauto/prefix`|airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,自动生成, **通常无需设置**.  如果在电脑上同时运行了很多脚本,建议为不同的脚本配置不同的`prefix`自动生成`tmpdir`.|
+|tmpdir|`系统临时目录/airtest_mobileauto/prefix`|airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,自动生成, **通常无需设置**.  如果在电脑上**同时运行了很多脚本**,建议为不同的脚本配置不同的`prefix`自动生成`tmpdir`. 万一(不大可能)可以单排,多排总是同步出错,可以清空`C:\Users\用户名\AppData\Local\Temp\airtest_mobileauto`中的文件再执行脚本.|
 |logfile|None|将每个账户的脚本执行日志输出到指定文件,例如`{mynode:"restul.mynode.txt"}`.**推荐设置**.在脚本总是报错时,可以开启此参数,将运行日志上传到[github](https://github.com/cndaqiang/WZRY/issues)提问.|
 |outputnode|None|只输出账户编号mynode等于outputnode的日志,**无需设置**.|
 |logger_level|1|日志等级,`0 DEBUG, 1 INFO, 2 WARNING, 3 ERROR, 4 CRITICAL`,**无需设置**.|
@@ -147,12 +147,12 @@ prefix: "wzry"
     ![腾讯mumu自动化启动](../fig/txmumuauto.png)
 
 #### mynode与Instance的区别
-* 账户编号mynode是游戏账户的编号,默认从0开始.`mynode=0,1,2,...,totalnode-1`.
-* 模拟器实例编号Instance是模拟器的多开管理器内部的编号.通常也是`0,1,2,...`
-* 两者之间的映射关系通过`xxx_Instance[mynode]=Instance`字典指定
-* `xxx_Instance`是为了控制模拟器的开机关机等模拟器的操作.
+* 账户编号**mynode是游戏账户的编号**, 一定是整数, `mynode=0,1,2,...,totalnode-1`. 脚本根据mynode控制每个游戏账号的行为. 单排时由用户在配置文件中设置. 组队时默认从0开始.
+* 模拟器实例编号**Instance是模拟器的多开管理器内部的编号**. 不同模拟器的编号规则不同, 可能是整数`0,1,2`,也可能是字符串`Pie64,Pie64_1,Pie64_2`等. 需要用户自己打开模拟器的设置/创建快捷方式等操作进行查看.
+* mynode和Instance之间的映射关系通过`xxx_Instance[mynode]=Instance`字典指定
+* `xxx_Instance[mynode]`是为了控制账户(mynode)所在模拟器(Instance)的启动、关闭、隐藏等操作.
 * **`mynode=0`的账户必须是多开组队的大号(开房间的账户).但是`mynode=0`的账户可以使用任意一台模拟器**
-    <br>例如,下面的配置中,大号(`mynode=0`)使用第1台模拟器,小号(`mynode=1`)使用第0台模拟器
+    <br>例如,下面的配置中,大号(`mynode=0`)使用第1台模拟器(`Pie64_1`),小号(`mynode=1`)使用第0台模拟器(`Pie64`)
     <pre><code>
 totalnode: 2
 multiprocessing: True
@@ -199,7 +199,11 @@ dockercontain:
 ### Iphone/Ipad参数
 * 不建议使用Iphone/Ipad, 可以使用[使用32位腾讯手游助手刷ios区的日活](../exp/iosapp.md)
 * Iphone/Ipad的配置及其复杂, 见[苹果手机怎么使用](../qa/qa.md#苹果手机怎么使用)
-* 配置参数和上述相同, 注意LINK_dict中为`ios`, Android和IOS组队的配置示例为
+* 配置参数基本和安卓模拟器的参数相同, 注意**Iphone/Ipad的底层是ios系统, 所以LINK_dict中为`ios`**
+* **腾讯手游助手底层是安卓模拟器**, 使用腾讯手游助手刷ios区时,**LINK_dict仍然是`Android`**, 使用方法同上面的安卓模拟器.
+
+
+Android和Iphone/Ipad的配置示例为
 
 ```
 totalnode: 2

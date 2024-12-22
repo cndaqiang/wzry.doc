@@ -1,4 +1,5 @@
-Python新手, 不了解ADB, 暂时没时间阅读下面的教程, 点击[新手教程🔗](../guide/tuwen.md).
+* Python新手, 不了解ADB, 暂时没时间阅读下面的教程, 点击[新手教程🔗](../guide/tuwen.md).
+* 教程有看不懂的地方, 可以[提出问题](https://github.com/cndaqiang/WZRY/issues), 然后点个[star⭐](https://github.com/cndaqiang/WZRY)召唤我回答.
 
 
 ## 安装模拟器和登陆游戏 
