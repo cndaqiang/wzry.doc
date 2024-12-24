@@ -977,9 +977,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usb控制手机示例" class="md-nav__link">
+  <a href="#macos下usb控制手机示例" class="md-nav__link">
     <span class="md-ellipsis">
-      USB控制手机示例
+      MacOS下USB控制手机示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows下usb控制vivo手机示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows下USB控制vivo手机示例
     </span>
   </a>
   
@@ -1254,9 +1263,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usb控制手机示例" class="md-nav__link">
+  <a href="#macos下usb控制手机示例" class="md-nav__link">
     <span class="md-ellipsis">
-      USB控制手机示例
+      MacOS下USB控制手机示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows下usb控制vivo手机示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows下USB控制vivo手机示例
     </span>
   </a>
   
@@ -1289,6 +1307,7 @@
 <li>谨慎阅读</li>
 <li>原则上所有<code>16:9</code>屏幕比例的安卓设备都可以使用本脚本(<code>960:540=16:9</code>)</li>
 <li>即使你的手机屏幕比例不是16:9,大多数的功能还是可以使用的.</li>
+<li><strong>为了提高成功率, 手动进入王者的大厅页面</strong></li>
 <li>设置好<code>LINK_dict</code>后, 就可以运行本脚本查看效果了</li>
 <li><strong>注意, 但凡分辨率不是<code>960x540</code>,dpi不是<code>160</code>的模拟器, 遇到任何问题都请独立解决.</strong></li>
 </ul>
@@ -1309,12 +1328,30 @@
 <span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="n">Android</span><span class="o">:///</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">12.109</span><span class="o">:</span><span class="mi">41857</span>
 </code></pre></div>
 
-<h2 id="usb控制手机示例">USB控制手机示例<a class="headerlink" href="#usb%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E7%A4%BA%E4%BE%8B" title="Permanent link">¶</a></h2>
+<h2 id="macos下usb控制手机示例">MacOS下USB控制手机示例<a class="headerlink" href="#macos%E4%B8%8Busb%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E7%A4%BA%E4%BE%8B" title="Permanent link">¶</a></h2>
 <p><img alt="adbdevice" src="../../fig/adbdevice.png"></p>
 <p>配置文件</p>
 <div class="codehilite"><pre><span></span><code><span class="n">mynode</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span>
 <span class="n">LINK_dict</span><span class="o">:</span>
 <span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="n">Android</span><span class="o">:///</span><span class="mi">4</span><span class="n">e86ac13</span>
+</code></pre></div>
+
+<h2 id="windows下usb控制vivo手机示例">Windows下USB控制vivo手机示例<a class="headerlink" href="#windows%E4%B8%8Busb%E6%8E%A7%E5%88%B6vivo%E6%89%8B%E6%9C%BA%E7%A4%BA%E4%BE%8B" title="Permanent link">¶</a></h2>
+<ul>
+<li>开发者模式打开adb</li>
+</ul>
+<p><img alt="vivoadb" src="../../fig/vivoadb.jpg"></p>
+<ul>
+<li>运行脚本</li>
+</ul>
+<p><img alt="adbwzry" src="../../fig/vivo.png"></p>
+<p>配置文件</p>
+<div class="codehilite"><pre><span></span><code><span class="n">mynode</span><span class="o">:</span><span class="w"> </span><span class="mi">10</span>
+<span class="n">LINK_dict</span><span class="o">:</span>
+<span class="w">    </span><span class="mi">10</span><span class="o">:</span><span class="w"> </span><span class="n">Android</span><span class="o">:///</span><span class="mi">10</span><span class="n">AE5X31G8000HH</span>
+<span class="n">prefix</span><span class="o">:</span><span class="w"> </span><span class="n">wzry</span>
+<span class="n">logfile</span><span class="o">:</span>
+<span class="w">    </span><span class="mi">10</span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="o">.</span><span class="mi">10</span><span class="o">.</span><span class="na">txt</span>
 </code></pre></div></div>
 
 
