@@ -17,10 +17,13 @@ python -m pip install  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple  
 ![安装airtest_mobileauto](../fig/anaconda_powershell_prompt2.png)
 
 ## 下载
-* 打开[代码页面](https://github.com/cndaqiang/WZRY), **点击右上角的star,👻立刻获得免费下载资格.**
-* 点击[Releases页面](https://github.com/cndaqiang/WZRY/releases),下载最新的`Source code (zip)`.
-* 如果你无法访问[Releases页面](https://github.com/cndaqiang/WZRY/releases), 请查看[Q&A:没办法下载WZRY代码](../qa/qa.md#没办法下载wzry代码)
-* 解压到`WZRY-x.x.x`(x.x.x为版本号).本次演示版本为`WZRY-2.2.0`
+* 打开[https://github.com/cndaqiang/WZRY](https://github.com/cndaqiang/WZRY),  **点击右上角的star👻.**
+* 如果无法访问[https://github.com/cndaqiang/WZRY](https://github.com/cndaqiang/WZRY), 请查看[Q&A:没办法下载WZRY代码](../qa/qa.md#没办法下载wzry代码)
+* 点击右下角的release, 即[https://github.com/cndaqiang/WZRY/releases](https://github.com/cndaqiang/WZRY/releases)页面,  下载最新的Source code (zip).
+* 解压到`WZRY-x.x.x`(x.x.x为版本号).**请务必使用最新版本`x.x.x>=2.3.0`**. 
+
+
+本次演示版本为`WZRY-2.2.0`(**请务必使用最新版本**, 不要下载2.2.0这个老版本)
 ![WZRY代码解压截图](../fig/wzry.png)
 
 
