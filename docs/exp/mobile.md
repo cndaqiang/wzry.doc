@@ -5,7 +5,8 @@
 * 原则上所有`16:9`屏幕比例的安卓设备都可以使用本脚本(`960:540=16:9`)
 * 即使你的手机屏幕比例不是16:9,大多数的功能还是可以使用的.
 * 设置好`LINK_dict`后, 就可以运行本脚本查看效果了
-* **注意, 但凡分辨率不是`960x540`,dpi不是`160`的模拟器, 遇到任何问题都请独立解决.**
+* **为了提高成功率, 手动进入王者的大厅页面**
+* **注意, 手机运行会发烫, 把屏幕亮度设到最低，画质、帧率也拉低**
 
 ## WIFI控制手机示例
 
@@ -29,7 +30,7 @@ LINK_dict:
 ```
 
 
-## USB控制手机示例
+## MacOS下USB控制手机示例
 ![adbdevice](../fig/adbdevice.png)
 
 
@@ -39,3 +40,24 @@ mynode: 0
 LINK_dict:
   0: Android:///4e86ac13
 ```
+
+## Windows下USB控制vivo手机示例
+* 开发者模式打开adb
+
+![vivoadb](../fig/vivoadb.jpg)
+
+
+* 运行脚本
+
+![adbwzry](../fig/vivo.png)
+
+配置文件
+```
+mynode: 10
+LINK_dict:
+    10: Android:///10AE5X31G8000HH
+prefix: wzry
+logfile:
+    10: result.10.txt
+```
+

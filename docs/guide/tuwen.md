@@ -18,9 +18,10 @@ python -m pip install  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple  
 
 ## 下载
 * 打开[https://github.com/cndaqiang/WZRY](https://github.com/cndaqiang/WZRY),  **点击右上角的star👻.**
+* 点击右下角的release, 即[https://github.com/cndaqiang/WZRY/releases](https://github.com/cndaqiang/WZRY/releases)页面,  下载**最新**的Source code (zip).
 * 如果无法访问[https://github.com/cndaqiang/WZRY](https://github.com/cndaqiang/WZRY), 请查看[Q&A:没办法下载WZRY代码](../qa/qa.md#没办法下载wzry代码)
-* 点击右下角的release, 即[https://github.com/cndaqiang/WZRY/releases](https://github.com/cndaqiang/WZRY/releases)页面,  下载最新的Source code (zip).
-* 解压到`WZRY-x.x.x`(x.x.x为版本号).**请务必使用最新版本`x.x.x>=2.3.0`**. 
+* 下载后解压得到`WZRY-x.x.x`或`autowzry-x.x.x`(x.x.x为版本号).
+* 虽然本教程在撰写的时候是用的旧版本, 但是你在照着教程做时, **请务必从releases下载最新版本的代码**, 每个赛季的对战、结算、战令界面都有更新, 老版本代码无法适配.
 
 
 本次演示版本为`WZRY-2.2.0`(**请务必使用最新版本**, 不要下载2.2.0这个老版本)
