@@ -1524,10 +1524,11 @@
 <h3 id="bluestacks模拟器">Bluestacks模拟器<a class="headerlink" href="#bluestacks%E6%A8%A1%E6%8B%9F%E5%99%A8" title="Permanent link">¶</a></h3>
 <ul>
 <li>👍非常稳定,在垃圾电脑上限制5帧模式都可以流畅组队做农活, <strong>本脚本最初适配的模拟器</strong></li>
-<li>Nougat引擎(32 or 64), <strong>windows平台模拟器中最省电流畅的</strong>,adb的端口固定[5555,5565,5575,...]</li>
+<li>Nougat引擎(32 or 64), <strong>windows平台模拟器中最省电流畅的</strong></li>
 <li>👍<strong>可以和Hyper-v/WSL兼容</strong>,但兼容模式下adb端口会变, 开机之前不知道端口号, 自动化的体验差</li>
 <li>删除模拟器后,新建模拟器的编号不会使用旧的编号,需要修改配置文件为新的模拟器adb端口</li>
 <li><strong>体验服闪退</strong>、<strong>王者营地闪退</strong></li>
+<li>🌱<strong>adb的端口通常为<code>5555,5565,5575,5555+i*10</code></strong></li>
 </ul>
 <h3 id="mumu模拟器">MuMu模拟器<a class="headerlink" href="#mumu%E6%A8%A1%E6%8B%9F%E5%99%A8" title="Permanent link">¶</a></h3>
 <ul>
@@ -1535,6 +1536,7 @@
 <li>👍 <strong>空闲时间手机使用gameviwer控制MuMu模拟器打排位</strong></li>
 <li>王者甚至营地都会无规律<strong>闪退</strong>. 本脚本会检测闪退进行重启</li>
 <li><strong>更新的太频繁, 更新时脚本无法操作, 建议屏蔽更新</strong></li>
+<li>🌱<strong>adb的端口通常为<code>16384,16416,16448,16384+i*32</code></strong></li>
 </ul>
 <h3 id="雷电模拟器">雷电模拟器<a class="headerlink" href="#%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8" title="Permanent link">¶</a></h3>
 <ul>
@@ -1544,6 +1546,7 @@
 <li>多开时,省电模式对主模拟器无效, 综合功耗较高</li>
 <li><strong>打开体验服、整个模拟器断网</strong></li>
 <li>偶尔提示显卡驱动有问题</li>
+<li>🌱<strong>adb的端口通常为<code>5555,5557,5559, 5555+i*2</code></strong></li>
 </ul>
 <h3 id="腾讯手游助手32位">腾讯手游助手32位<a class="headerlink" href="#%E8%85%BE%E8%AE%AF%E6%89%8B%E6%B8%B8%E5%8A%A9%E6%89%8B32%E4%BD%8D" title="Permanent link">¶</a></h3>
 <ul>
@@ -1551,6 +1554,7 @@
 <li>注意不是腾讯手游助手64位, 也不是应用宝桌面版</li>
 <li>是<strong>腾讯手游助手32位兼容版</strong></li>
 <li><strong>除非要刷ios区, 否则不要用</strong>, 每次打开模拟器,都有可能需要重新登录,原因未知.</li>
+<li>🌱<strong>adb的端口通常为<code>5555</code></strong></li>
 </ul>
 <h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">¶</a></h2>
 <h3 id="docker稳定使用">docker(<strong>稳定使用</strong>)<a class="headerlink" href="#docker%E7%A8%B3%E5%AE%9A%E4%BD%BF%E7%94%A8" title="Permanent link">¶</a></h3>
