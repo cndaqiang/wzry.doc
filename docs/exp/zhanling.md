@@ -27,6 +27,7 @@
 * * 我在周一到周三运行`wzry.py`脚本时, 设置人机组队**青铜5v5TOUCH模式**(`self.触摸对战 = True`)完成了日活
 * * 并且关闭礼包功能(`self.每日任务礼包 = False`)
 * * 周四才开始用挂机模式速刷
+* **80级之后领的宝箱就别开了, 开出来战令经验就浪费了,下个战令再打开**
 
 
 `WZRY.mynode.运行模式.txt`内容为
@@ -39,7 +40,7 @@ self.外置礼包_王者营地 = False
 ```
 `WZRY.mynode.运行模式.txt`内容为
 ```
-if self.组队模式 and self.Tool.time_getweek() < 6: self.触摸对战 = True
+if self.组队模式 and self.Tool.time_getweek() < 3: self.触摸对战 = True
 ```
 
 
