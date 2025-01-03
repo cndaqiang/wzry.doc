@@ -1520,7 +1520,7 @@
 <tr>
 <td>LINK_dict</td>
 <td>None</td>
-<td>每个账户所在的模拟器ADB地址, <strong>所有账户的ADB地址都要配置</strong>. <br> 通常为<code>mynode: "Android:///ip:端口"</code>. <br> 如果是USB连接的手机或者adb查看到模拟器的主板编号为<code>emulator-5554</code>, 则配置信息为<code>mynode: "Android:///emulator-5554</code>.</td>
+<td>每个账户所在的模拟器ADB地址, <strong>所有账户的ADB地址都要配置</strong>. <br> 通常为<code>mynode: "Android:///ip:端口"</code>. <br> 如果是USB连接的手机或者adb查看到模拟器的主板编号为<code>emulator-5554</code>, 则配置信息为<code>mynode: "Android:///emulator-5554"</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -1796,8 +1796,8 @@ dockercontain:
 
 <h3 id="iphoneipad参数">Iphone/Ipad参数<a class="headerlink" href="#iphoneipad%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
 <ul>
-<li>不建议使用Iphone/Ipad, 可以使用<a href="../../exp/iosapp/">使用32位腾讯手游助手刷ios区的日活</a></li>
-<li>Iphone/Ipad的配置及其复杂, 见<a href="../../qa/qa/#%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8">苹果手机怎么使用</a></li>
+<li>不建议使用Iphone/Ipad, 可以<a href="../../exp/iosapp/">使用32位腾讯手游助手刷ios区的日活</a></li>
+<li>Iphone/Ipad的配置极其复杂, 见<a href="../../qa/qa/#%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8">苹果手机怎么使用</a></li>
 <li>配置参数基本和安卓模拟器的参数相同, 注意<strong>Iphone/Ipad的底层是ios系统, 所以LINK_dict中为<code>ios</code></strong></li>
 <li><strong>腾讯手游助手底层是安卓模拟器</strong>, 使用腾讯手游助手刷ios区时,<strong>LINK_dict仍然是<code>Android</code></strong>, 使用方法同上面的安卓模拟器.</li>
 </ul>
