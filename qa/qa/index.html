@@ -678,6 +678,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#模块-airtest_mobileauto-导入失败" class="md-nav__link">
+    <span class="md-ellipsis">
+      模块 [airtest_mobileauto] 导入失败
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#无法访问手册网站" class="md-nav__link">
     <span class="md-ellipsis">
       无法访问手册网站
@@ -1666,6 +1675,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#模块-airtest_mobileauto-导入失败" class="md-nav__link">
+    <span class="md-ellipsis">
+      模块 [airtest_mobileauto] 导入失败
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#无法访问手册网站" class="md-nav__link">
     <span class="md-ellipsis">
       无法访问手册网站
@@ -2115,6 +2133,23 @@
 <img alt="gitee下载WZRY" src="../../fig/gitee.png"></li>
 <li>等你可以访问github时, 欢迎你来为<a href="https://github.com/cndaqiang/WZRY">WZRY</a>项目点赞.</li>
 </ul>
+<h2 id="模块-airtest_mobileauto-导入失败"><code>模块 [airtest_mobileauto] 导入失败</code><a class="headerlink" href="#%E6%A8%A1%E5%9D%97-airtest_mobileauto-%E5%AF%BC%E5%85%A5%E5%A4%B1%E8%B4%A5" title="Permanent link">¶</a></h2>
+<p>Q:</p>
+<ul>
+<li>新版本的Python（我用的是比较新的3.13）可能会遇到没有“distutils”的情况</li>
+<li>然后如果没有“distutils”模块，你脚本里的提示仍然是让他安装airtest_mobileauto</li>
+<li>安装 airtest_mobileauto 失败, 有一些依赖安装失败</li>
+</ul>
+<p>A:</p>
+<ul>
+<li>应该是你安装airtest_mobileauto过程中网络或者强制停止等操作出现了问题, 没能安装distutils等依赖</li>
+<li>下面是我使用python3.13时的安装过程, 没有遇到任何问题</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>conda create -n myenv python=3.13
+conda activate myenv
+pip install autowzry
+</code></pre></div>
+
 <h2 id="无法访问手册网站">无法访问手册网站<a class="headerlink" href="#%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E6%89%8B%E5%86%8C%E7%BD%91%E7%AB%99" title="Permanent link">¶</a></h2>
 <p>Q: </p>
 <ul>
