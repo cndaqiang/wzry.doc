@@ -15,14 +15,17 @@
 ## 没法安装airtest_mobileauto
 Q:
 
-* 无法pip安装airtest_mobileauto
 * 安装哪个版本？
+* 无法pip安装airtest_mobileauto
+* conda python3.13.1装不上airtest_mobileauto。python3.12装了airtest_mobileauto，但是装不了Minicap和Javacap
 
 A:
 
 * 安装最新的版本
-* 如果你网络有问题，可以使用镜像源进行安装
-* 如果依然无法安装，建议重新安装python，最好使用anaconda安装python
+* 数十位用户反馈都可以正常安装, 使用python 3.10/3.11/3.13全部可以运行通过, 应该**与python版本没有关系**
+* 安装不成功大概率是安装的python有问题, **使用anaconda重新安装python**
+* 如果因为网络无法安装, 可以使用镜像源[mirrors.cernet.edu.cn等](https://mirrors.cernet.edu.cn/pypi/web/simple)进行安装
+
 
 ```
 python -m pip install  -i https://mirrors.cernet.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade
@@ -140,6 +143,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 原因
 
+* **请下载最新的release版本**
 * 本脚本通过对战按钮、移动按钮等元素识别对战状态, 元流之子的对战按钮或者购买了皮肤的对战移动按钮等可能会导致识别失败.
 * 不要使用特殊的对战按钮
 * 使用了限定的峡谷地图(例如冰雪峡谷),在房间的**峡谷地图**选项中选择**经典峡谷**
