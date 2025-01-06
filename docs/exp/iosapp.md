@@ -31,7 +31,7 @@ python wzry.py config.0.yaml
 ![ioswzry](../fig/ioswzry.png)
 
 
-默认的adb端口是127.0.0.1
+默认的adb地址是`127.0.0.1:5555`
 ```
 mynode: 0
 LINK_dict:

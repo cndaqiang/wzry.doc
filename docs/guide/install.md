@@ -1,6 +1,8 @@
 * Python新手, 不了解ADB, 暂时没时间阅读下面的教程, 点击[新手教程🔗](../guide/tuwen.md).
 * 教程有看不懂的地方, 可以[提出问题](https://github.com/cndaqiang/WZRY/issues), 然后点个[star⭐](https://github.com/cndaqiang/WZRY)召唤我回答.
 
+> [代码会随着新赛季更新, 教程里面可能是用老代码演示的, **请务必从releases下载最新版本的代码**](https://github.com/cndaqiang/WZRY)
+
 
 ## 安装模拟器和登陆游戏 
 * **推荐将游戏安装到[BlueStack/LDPlayer/MuMu模拟器/腾讯手游助手](../exp/moniqi.md)中**.
@@ -47,6 +49,8 @@ python -m pip install airtest_mobileauto --upgrade
 * 点击右下角的release, 即[https://github.com/cndaqiang/WZRY/releases](https://github.com/cndaqiang/WZRY/releases)页面,  下载**最新**的Source code (zip).
 * 如果无法访问[https://github.com/cndaqiang/WZRY](https://github.com/cndaqiang/WZRY), 请查看[Q&A:没办法下载WZRY代码](../qa/qa.md#没办法下载wzry代码)
 * 下载后解压得到`WZRY-x.x.x`或`autowzry-x.x.x`(x.x.x为版本号).
+* **请务必从releases下载最新版本的代码**
+* **请务必从releases下载最新版本的代码**
 * 虽然本教程在撰写的时候是用的旧版本, 但是你在照着教程做时, **请务必从releases下载最新版本的代码**, 每个赛季的对战、结算、战令界面都有更新, 老版本代码无法适配.
 
 

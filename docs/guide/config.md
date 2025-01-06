@@ -14,7 +14,7 @@
 |totalnode|1|本脚本一共控制`totalnode`个账户. **组队多排时需要设置**, 如双排时设置`totalnode: 2`|
 |mynode|0|本脚本控制的**账户编号**.**多排组队时不用设置**,由程序自动生成,`0,1,2,...,totalnode-1`.**单排时可以手动设置为任意值**,如`mynode: 0`. |
 |multiprocessing|False|自动化多进程组队.**多排组队时一定要设置为`True`**.|
-|LINK_dict|None|每个账户所在的模拟器ADB地址, **所有账户的ADB地址都要配置**. <br> 通常为`mynode: "Android:///ip:端口"`. <br> 如果是USB连接的手机或者adb查看到模拟器的主板编号为`emulator-5554`, 则配置信息为`mynode: "Android:///emulator-5554`.|
+|LINK_dict|None|每个账户所在的模拟器ADB地址, **所有账户的ADB地址都要配置**. <br> 通常为`mynode: "Android:///ip:端口"`. <br> 如果是USB连接的手机或者adb查看到模拟器的主板编号为`emulator-5554`, 则配置信息为`mynode: "Android:///emulator-5554"`.|
 
 !!! tip "虽然基础参数不包括`logfile`, 但是强烈建议设置,具体解释见[调试参数](#调试参数)"
 
@@ -147,7 +147,7 @@ prefix: "wzry"
     ![腾讯mumu自动化启动](../fig/txmumuauto.png)
 
 #### mynode与Instance的区别
-* 账户编号**mynode是游戏账户的编号**, 一定是整数, `mynode=0,1,2,...,totalnode-1`. 脚本根据mynode控制每个游戏账号的行为. 单排时由用户在配置文件中设置. 组队时默认从0开始.
+* 账户编号**mynode是游戏账户的编号**, 一定是整数, `mynode=0,1,2,...,totalnode-1`. 脚本根据mynode控制每个游戏账号的行为. 例如`LINK_dict[mynode]`是模拟器的ADB地址,`logfile[mynode]`是日志文件,``xxx_Instance[mynode]`是模拟器的实例编号,`WZRY.mynode.运行模式.txt`控制mynode账户的对战礼包等模式. 单排时由用户在配置文件中设置`mynode: N`. 组队时默认从0开始.
 * 模拟器实例编号**Instance是模拟器的多开管理器内部的编号**. 不同模拟器的编号规则不同, 可能是整数`0,1,2`,也可能是字符串`Pie64,Pie64_1,Pie64_2`等. 需要用户自己打开模拟器的设置/创建快捷方式等操作进行查看.
 * mynode和Instance之间的映射关系通过`xxx_Instance[mynode]=Instance`字典指定
 * `xxx_Instance[mynode]`是为了控制账户(mynode)所在模拟器(Instance)的启动、关闭、隐藏等操作.
@@ -197,8 +197,8 @@ dockercontain:
 
 
 ### Iphone/Ipad参数
-* 不建议使用Iphone/Ipad, 可以使用[使用32位腾讯手游助手刷ios区的日活](../exp/iosapp.md)
-* Iphone/Ipad的配置及其复杂, 见[苹果手机怎么使用](../qa/qa.md#苹果手机怎么使用)
+* 不建议使用Iphone/Ipad, 可以[使用32位腾讯手游助手刷ios区的日活](../exp/iosapp.md)
+* Iphone/Ipad的配置极其复杂, 见[苹果手机怎么使用](../qa/qa.md#苹果手机怎么使用)
 * 配置参数基本和安卓模拟器的参数相同, 注意**Iphone/Ipad的底层是ios系统, 所以LINK_dict中为`ios`**
 * **腾讯手游助手底层是安卓模拟器**, 使用腾讯手游助手刷ios区时,**LINK_dict仍然是`Android`**, 使用方法同上面的安卓模拟器.
 

@@ -43,6 +43,34 @@ A:
 ![gitee下载WZRY](../fig/gitee.png)
 * 等你可以访问github时, 欢迎你来为[WZRY](https://github.com/cndaqiang/WZRY)项目点赞.
 
+## `模块 [airtest_mobileauto] 导入失败`
+Q:
+
+* 新版本的Python（我用的是比较新的3.13）可能会遇到没有“distutils”的情况
+* 然后如果没有“distutils”模块，你脚本里的提示仍然是让他安装airtest_mobileauto
+* 安装 airtest_mobileauto 失败, 有一些依赖安装失败
+
+A:
+
+* 应该是你安装airtest_mobileauto过程中网络或者强制停止等操作出现了问题, 没能安装distutils等依赖
+* 下面是我使用python3.13时的安装过程, 没有遇到任何问题
+
+```
+conda create -n myenv python=3.13
+conda activate myenv
+pip install autowzry
+```
+
+
+## 无法访问手册网站
+Q: 
+
+* 无法访问手册网站: [https://wzry-doc.pages.dev/](https://wzry-doc.pages.dev/)
+
+A:
+
+* 镜像站点1: [https://cndaqiang.github.io/wzry.doc/](https://cndaqiang.github.io/wzry.doc/)
+* 镜像站点2: [https://wzrydoc.readthedocs.io/](https://wzrydoc.readthedocs.io/)
 
 
 ## 进入不了大厅
@@ -397,6 +425,11 @@ LINK_dict:
 * `multiprocessing: True`
 * `LINK_dict`, 0号账户必须对应房主的ADB地址
 
+
+## 出现长时间未操作，疑似挂机的行为
+* 对局过程中, 如果不操作就会有此提示
+* 人机对局，该提示没有影响，不会扣分
+* 如果希望关闭提示, 开始触摸模式即可`self.触摸对战 = True`, 见[对战模式](../guide/duizhanmoshi.md)
 
 
 ## 这个脚本是怎么控制模拟器启动关闭的?

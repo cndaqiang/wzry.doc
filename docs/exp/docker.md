@@ -61,6 +61,7 @@ cndaqiang@oracle:~$ N=1;port=5565
 ## 配置WZRY
 下载
 ```
+# 注意这里下面的老代码2.2.3.zip是写教程时候的最新版, 可能不适应新赛季的更新, 去github上下载最新的代码
 cndaqiang@oracle:~/soft$ wget https://github.com/cndaqiang/WZRY/archive/refs/tags/2.2.3.zip
 cndaqiang@oracle:~/soft$ unzip -x 2.2.3.zip 
 cndaqiang@oracle:~/soft$ cd WZRY-2.2.3
@@ -94,6 +95,7 @@ ln -s  WZRY.0.运行模式.txt WZRY.1.运行模式.txt
 ### 今日仍在周年庆需要更新
 从[更新资源](../guide/upfig.md)获得更新资源
 ```
+# 周年庆早就结束了, 这个更新资源已经过期了, 去更新资源网址查看是否需要更新
 cndaqiang@oracle:~/soft/WZRY-2.2.3$ wget https://wzry-doc.pages.dev/file/2024-11-04-update/update.zip
 cndaqiang@oracle:~/soft/WZRY-2.2.3$ unzip -x update.zip
 ```
