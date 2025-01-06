@@ -2124,14 +2124,16 @@
 <h2 id="没法安装airtest_mobileauto">没法安装airtest_mobileauto<a class="headerlink" href="#%E6%B2%A1%E6%B3%95%E5%AE%89%E8%A3%85airtest_mobileauto" title="Permanent link">¶</a></h2>
 <p>Q:</p>
 <ul>
-<li>无法pip安装airtest_mobileauto</li>
 <li>安装哪个版本？</li>
+<li>无法pip安装airtest_mobileauto</li>
+<li>conda python3.13.1装不上airtest_mobileauto。python3.12装了airtest_mobileauto，但是装不了Minicap和Javacap</li>
 </ul>
 <p>A:</p>
 <ul>
 <li>安装最新的版本</li>
-<li>如果你网络有问题，可以使用镜像源进行安装</li>
-<li>如果依然无法安装，建议重新安装python，最好使用anaconda安装python</li>
+<li>数十位用户反馈都可以正常安装, 使用python 3.10/3.11/3.13全部可以运行通过, 应该<strong>与python版本没有关系</strong></li>
+<li>安装不成功大概率是安装的python有问题, <strong>使用anaconda重新安装python</strong></li>
+<li>如果因为网络无法安装, 可以使用镜像源<a href="https://mirrors.cernet.edu.cn/pypi/web/simple">mirrors.cernet.edu.cn等</a>进行安装</li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="nx">python</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w">  </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//mirrors.cernet.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade</span>
 </code></pre></div>
