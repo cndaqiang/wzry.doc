@@ -10,7 +10,7 @@
 ## 2025-01-09 冰雪峡谷更新
 * 活动: 冰雪峡谷更新
 * 更新资源: [20250109_bingxue](../file/20250109_bingxue.zip)
-* 视频教程[农活自动化助手: 适配王者荣耀冰雪奇缘联动界面更新](https://www.bilibili.com/video/BV1REr6Y7E1h/?share_source=copy_web&vd_source=755a225414cc2c54e7b7709c74f35395)
+* 视频教程[农活自动化助手: 适配王者荣耀冰雪奇缘联动界面更新](https://www.bilibili.com/video/BV13NrzYMEqW)
 
 
 
