@@ -72,8 +72,11 @@ Q:
 
 A:
 
-* 镜像站点1: [https://cndaqiang.github.io/wzry.doc/](https://cndaqiang.github.io/wzry.doc/)
-* 镜像站点2: [https://wzrydoc.readthedocs.io/](https://wzrydoc.readthedocs.io/)
+如果无法访问手册网站, 请打开科学网络环境, 或者尝试下列镜像站点
+
+* [https://cndaqiang.github.io/wzry.doc/](https://cndaqiang.github.io/wzry.doc/)
+* [https://wzrydoc.readthedocs.io/](https://wzrydoc.readthedocs.io/)
+* [https://wzry-doc.serv00.net/](https://wzry-doc.serv00.net/)
 
 
 ## 进入不了大厅
