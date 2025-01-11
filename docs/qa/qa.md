@@ -31,6 +31,9 @@ A:
 python -m pip install  -i https://mirrors.cernet.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade
 ```
 
+
+
+
 ## 没办法下载WZRY代码
 Q:
 
@@ -64,6 +67,18 @@ conda activate myenv
 pip install autowzry
 ```
 
+## airtest_mobileauto和airtest是什么关系
+
+* [airtest_mobileauto](https://pypi.org/project/airtest-mobileauto/) 就是在 airtest 上面套了层壳, 最底层还是airtest
+* [airtest_mobileauto](https://pypi.org/project/airtest-mobileauto/) 相比 airtest 增加了一些功能, 比如设备管理、多账户并行、异常情况处理等.
+
+
+## 对程序进行二次开发有参考资料吗
+Airtest教程
+
+* [Airtest酱](https://space.bilibili.com/1403312953)
+* [AirtestProject](https://airtest.netease.com/)
+
 
 ## 无法访问手册网站
 Q: 
@@ -77,6 +92,11 @@ A:
 * [https://cndaqiang.github.io/wzry.doc/](https://cndaqiang.github.io/wzry.doc/)
 * [https://wzrydoc.readthedocs.io/](https://wzrydoc.readthedocs.io/)
 * [https://wzry-doc.serv00.net/](https://wzry-doc.serv00.net/)
+
+
+## 有视频教程吗
+* 手册网站目前写的挺细节的, 暂时没有完整的视频教学
+* B站零星放了一些运行展示和不方便写文档的教程 [https://space.bilibili.com/643558671](https://space.bilibili.com/643558671)
 
 
 ## 进入不了大厅
@@ -149,9 +169,37 @@ Type "help", "copyright", "credits" or "license" for more information.
 * **请下载最新的release版本**
 * 本脚本通过对战按钮、移动按钮等元素识别对战状态, 元流之子的对战按钮或者购买了皮肤的对战移动按钮等可能会导致识别失败.
 * 不要使用特殊的对战按钮
-* 使用了限定的峡谷地图(例如冰雪峡谷),在房间的**峡谷地图**选项中选择**经典峡谷**
+* 使用了限定的峡谷地图(例如冰雪峡谷),在房间的**峡谷地图**选项中选择**经典峡谷**, 视频演示[王者荣耀: 切换默认的地图为经典峡谷](https://www.bilibili.com/video/BV1KBcEe9ETz/)
 * 大厅>设置>MVP结算为精简版
 * 新赛季更新了结算画面. 等待脚本更新
+
+
+## 卡在房间无法组队
+* 见[组队教程](../guide/zudui.md)
+
+## 脚本为啥运行这么慢, 能不能快点
+
+* 王者针对新手、老手、氪金、回归、QQ区、微信区等玩家的界面都有差异, 会随机弹出各种提示窗口
+* 脚本为了能够处理这些异常，需要加很多判断进行检查，这些检查会导致整体程序运行速度看起来很慢
+* 有的模拟器会闪退、卡顿，脚本也要进行检查处理
+* 真的快不起来啊, 而且已经开发快两年了, 代码很长了, 改不过来啊......
+* 空闲的时候，已经很努力的在改了,在改了,在改了,在改了, 已经在很努力的加速了
+
+
+## 请问战斗逻辑是什么，我发现有时见到人就送
+Q:
+
+* 脚本怎么对战的？
+* 是AI吗?
+
+A:
+
+* **脚本不是ai, 没有对战逻辑**。
+* ai需要很多算力、显卡。因此, 本脚本暂未接入ai对战功能。(github上已有大佬开发了ai对战的项目)
+
+目前对战模式分为
+* 挂机, 让腾讯ai接管。 适合刷熟练度、金币、战令任务.
+* 移动平A, 这种模式可以突破特定活动的非挂机检测, 也能获得更多的金币.
 
 
 
