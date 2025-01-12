@@ -1093,6 +1093,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#adb连接配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      adb连接配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#写配置文件" class="md-nav__link">
     <span class="md-ellipsis">
       写配置文件
@@ -1351,6 +1360,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#adb连接配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      adb连接配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#写配置文件" class="md-nav__link">
     <span class="md-ellipsis">
       写配置文件
@@ -1397,12 +1415,21 @@
 <li>该页面是介绍我的使用经验,不是教程</li>
 <li>随着软件更新,这些经验可能不再适用</li>
 <li>谨慎阅读</li>
+<li><strong>本教程难度较高,需要一定的linux、adb基础</strong></li>
+<li><strong>本教程的核心就是在手机上安装一个debian系统, 来替换电脑</strong></li>
+<li><strong>所以没有linux基础的用户不要轻易尝试.</strong></li>
+<li>和电脑版的教程区别仅是先安装一个debian系统</li>
+<li>本网站中的adb连接和电脑控制手机的命令、流程等教程都是适用的.</li>
 <li>使用termux控制脚本做农活仅用作测试, <strong>并不推荐使用</strong>.</li>
-<li>没有linux基础的用户不要尝试.</li>
 <li>或许唯一的用途是在常用的手机/平板上刷日活.</li>
 </ul>
 <h2 id="安装debian">安装Debian<a class="headerlink" href="#%E5%AE%89%E8%A3%85debian" title="Permanent link">¶</a></h2>
-<p>安装软件</p>
+<p>为什么要在termux中安装debian而不是直接使用termux?</p>
+<ul>
+<li>termux虽然也可以adb连接手机, 但是python的很多依赖都无法安装, 脚本不能正常工作</li>
+<li>termux中安装debian后就是完整的linux环境了, python无法安装的依赖可以apt等方式解决, 脚本可以正常运行.</li>
+</ul>
+<p>安装流程</p>
 <ul>
 <li><a href="https://github.com/termux/termux-app">termux</a></li>
 <li><a href="https://github.com/EXALAB/AnLinux-App">AnLinux-App</a></li>
@@ -1429,17 +1456,31 @@
 <h2 id="配置wzry">配置WZRY<a class="headerlink" href="#%E9%85%8D%E7%BD%AEwzry" title="Permanent link">¶</a></h2>
 <h3 id="下载autowzry">下载AutoWZRY<a class="headerlink" href="#%E4%B8%8B%E8%BD%BDautowzry" title="Permanent link">¶</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="n">python3</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">autowzry</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">deps</span>
-<span class="n">tar</span><span class="w"> </span><span class="n">xzvf</span><span class="w"> </span><span class="n">autowzry</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">9</span><span class="n">b3</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">tar</span><span class="w"> </span><span class="n">xzvf</span><span class="w"> </span><span class="n">autowzry</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">9</span><span class="n">b3</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="c1">#这个最新版的名字可能会变, 适当调整为你下载到的文件名</span>
 <span class="n">cd</span><span class="w"> </span><span class="n">autowzry</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">9</span><span class="n">b3</span><span class="o">/</span><span class="n">autowzry</span><span class="o">/</span>
 </code></pre></div>
 
 <p><img alt="ternux" src="../../fig/termux3.png"></p>
+<h3 id="adb连接配置">adb连接配置<a class="headerlink" href="#adb%E8%BF%9E%E6%8E%A5%E9%85%8D%E7%BD%AE" title="Permanent link">¶</a></h3>
+<ul>
+<li>此处不同手机、模拟器连接adb的方式是不一样的</li>
+<li>
+<p>adb的连接不区分手机版教程和电脑版教程, 运行的adb命令都是一样的</p>
+</li>
+<li>
+<p>通常在模拟器中<code>adb devices</code>就可以直接看到<code>emulator-xxxx</code>,代表adb连接成功了</p>
+</li>
+<li>
+<p>对于安卓手机, 通常要先开启adb调试, 然后<code>adb pair</code>开始配对,具体可以查看<a href="../mobile/">控制安卓手机或任意模拟器</a>. 这个不同品牌手机，不同安卓版本的差异很大. 没有统一的教程. 懂得不用教, 不懂的只能多搜教程了.</p>
+</li>
+<li>
+<p><strong>连接成功的标志,是<code>adb devices</code>后能查看到设备</strong>, 类似下图</p>
+</li>
+</ul>
+<p><img alt="adbdevices" src="../../fig/adbdevice.png"></p>
 <h3 id="写配置文件">写配置文件<a class="headerlink" href="#%E5%86%99%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" title="Permanent link">¶</a></h3>
-<p>查看adb地址</p>
-<div class="codehilite"><pre><span></span><code>adb devices
-</code></pre></div>
-
-<p>写配置文件</p>
+<p>在上一步adb连接成功后,执行<code>adb devices</code></p>
+<p>查看到的地址是<code>emulator-5554</code>, 所以下面的配置文件为</p>
 <div class="codehilite"><pre><span></span><code>cat &gt; config.lin.yaml &lt;&lt; EOF
 mynode: 0
 prefix: wzry
@@ -1454,6 +1495,7 @@ EOF
 <h2 id="运行">运行<a class="headerlink" href="#%E8%BF%90%E8%A1%8C" title="Permanent link">¶</a></h2>
 <p>此处以体验服脚本为例</p>
 <div class="codehilite"><pre><span></span><code>python3 tiyanfu.py config.lin.yaml
+# wzry 则运行 python3 wzry.py config.lin.yaml
 </code></pre></div>
 
 <p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" controls alt="type:video"><source src="../../fig/termuxRun.mp4" type="video/mp4"></source></video></div></p></div>
