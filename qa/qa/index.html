@@ -849,6 +849,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#error-no-such-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      error: no such device
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5037端口占用" class="md-nav__link">
+    <span class="md-ellipsis">
+      5037端口占用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daemon-not-running-starting-it-now-on-port-5037" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daemon not running. Starting it now on port 5037
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#python语法注入文件没有生效" class="md-nav__link">
     <span class="md-ellipsis">
       python语法注入文件没有生效
@@ -1909,6 +1936,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#error-no-such-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      error: no such device
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5037端口占用" class="md-nav__link">
+    <span class="md-ellipsis">
+      5037端口占用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daemon-not-running-starting-it-now-on-port-5037" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daemon not running. Starting it now on port 5037
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#python语法注入文件没有生效" class="md-nav__link">
     <span class="md-ellipsis">
       python语法注入文件没有生效
@@ -2446,6 +2500,28 @@ self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", r
 </ul>
 <h2 id="连接失败没有找到xxx设备">连接失败,没有找到XXX设备<a class="headerlink" href="#%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E6%B2%A1%E6%9C%89%E6%89%BE%E5%88%B0xxx%E8%AE%BE%E5%A4%87" title="Permanent link">¶</a></h2>
 <p>同上 <em><a href="#%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E6%A8%A1%E6%8B%9F%E5%99%A8">连接不上模拟器</a></em></p>
+<h2 id="error-no-such-device">error: no such device<a class="headerlink" href="#error-no-such-device" title="Permanent link">¶</a></h2>
+<p>同上 <em><a href="#%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E6%A8%A1%E6%8B%9F%E5%99%A8">连接不上模拟器</a></em></p>
+<h2 id="5037端口占用">5037端口占用<a class="headerlink" href="#5037%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8" title="Permanent link">¶</a></h2>
+<ul>
+<li>你的问题应该是<code>adb devices</code>时,返回结果<code>Daemon not running. Starting it now on port 5037</code></li>
+<li>这不是5037端口被占用的意思,而是adb第一次启动时的提示</li>
+<li>只要最后<code>List of devices attached</code>后面有设备就行</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="n">cndaqiang</span><span class="nv">@oracle</span><span class="err">:</span><span class="o">~</span><span class="err">$</span><span class="w"> </span><span class="n">adb</span><span class="w"> </span><span class="n">devices</span>
+<span class="o">*</span><span class="w"> </span><span class="n">daemon</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">running</span><span class="p">;</span><span class="w"> </span><span class="n">starting</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="nl">tcp</span><span class="p">:</span><span class="mi">5037</span>
+<span class="o">*</span><span class="w"> </span><span class="n">daemon</span><span class="w"> </span><span class="n">started</span><span class="w"> </span><span class="n">successfully</span>
+<span class="n">List</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">devices</span><span class="w"> </span><span class="n">attached</span>
+<span class="n">emulator</span><span class="o">-</span><span class="mi">5554</span><span class="w">   </span><span class="n">device</span>
+</code></pre></div>
+
+<p>如果<code>List of devices attached</code>后面为空, 就是由问题了</p>
+<ul>
+<li>原因有很多, 比如前面的<a href="#%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E6%A8%A1%E6%8B%9F%E5%99%A8">连接不上模拟器</a></li>
+<li>还有就是, 手机没有开启adb调试, 或者开启了没有配对, 查看<a href="../../exp/mobile/">控制安卓手机或任意模拟器</a></li>
+</ul>
+<h2 id="daemon-not-running-starting-it-now-on-port-5037">Daemon not running. Starting it now on port 5037<a class="headerlink" href="#daemon-not-running-starting-it-now-on-port-5037" title="Permanent link">¶</a></h2>
+<p>同上<a href="#5037%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8">5037端口占用</a></p>
 <h2 id="python语法注入文件没有生效">python语法注入文件没有生效<a class="headerlink" href="#python%E8%AF%AD%E6%B3%95%E6%B3%A8%E5%85%A5%E6%96%87%E4%BB%B6%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88" title="Permanent link">¶</a></h2>
 <p>例如</p>
 <ul>

@@ -1496,16 +1496,22 @@
 <p>对于安卓手机, 通常要先开启adb调试, 然后<code>adb pair</code>开始配对,具体可以查看<a href="../mobile/">控制安卓手机或任意模拟器</a>. 这个不同品牌手机，不同安卓版本的差异很大. 没有统一的教程. 懂得不用教, 不懂的只能多搜教程了.</p>
 </li>
 <li>
-<p><strong>连接成功的标志,是<code>adb devices</code>后能查看到设备</strong>, 类似下图</p>
+<p><strong>连接成功的标志,是<code>adb devices</code>后能查看到设备</strong>, 例如下面的<code>emulator-5554</code></p>
 </li>
 </ul>
-<p><img alt="adbdevices" src="../../fig/adbdevice.png"></p>
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span> adb devices
+<span class="k">*</span> daemon not running; starting now at tcp:5037
+<span class="k">*</span> daemon started successfully
+List of devices attached
+emulator-5554   device
+</code></pre></div>
+
 <div class="admonition danger">
 <p class="admonition-title"><strong>如果<code>adb devices</code>后, List of device的结果为空,就不用执行下面的命令了,开始学习怎么开启adb吧</strong></p>
 </div>
 <h3 id="写配置文件">写配置文件<a class="headerlink" href="#%E5%86%99%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" title="Permanent link">¶</a></h3>
-<p>在上一步adb连接成功后,执行<code>adb devices</code></p>
-<p>查看到的地址是<code>emulator-5554</code>, 所以下面的配置文件为</p>
+<p>在上一步adb连接成功后,执行<code>adb devices</code>, 查看到的地址是<code>emulator-5554</code></p>
+<p>所以创建配置文件的命令为</p>
 <div class="codehilite"><pre><span></span><code>cat &gt; config.lin.yaml &lt;&lt; EOF
 mynode: 0
 prefix: wzry
