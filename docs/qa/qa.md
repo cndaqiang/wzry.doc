@@ -241,6 +241,40 @@ self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", r
 ## 连接失败,没有找到XXX设备
 同上 *[连接不上模拟器](#连接不上模拟器)*
 
+## error: no such device
+同上 *[连接不上模拟器](#连接不上模拟器)*
+
+
+## 5037端口占用
+* 你的问题应该是`adb devices`时,返回结果`Daemon not running. Starting it now on port 5037`
+* 这不是5037端口被占用的意思,而是adb第一次启动时的提示
+* 只要最后`List of devices attached`后面有设备就行
+
+```
+cndaqiang@oracle:~$ adb devices
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+List of devices attached
+emulator-5554   device
+```
+
+
+如果`List of devices attached`后面为空, 就是由问题了
+
+* 原因有很多, 比如前面的[连接不上模拟器](#连接不上模拟器)
+* 还有就是, 手机没有开启adb调试, 或者开启了没有配对, 查看[控制安卓手机或任意模拟器](../exp/mobile.md)
+
+## Daemon not running. Starting it now on port 5037
+同上[5037端口占用](#5037端口占用)
+
+
+## 华为的设备怎么连接
+* 不知道, 看华为对安卓的兼容性了
+* 各个版本的安卓都支持usb有线调试, 都可以使用电脑控制
+* 无线调试是安卓11之后开始的，可以[不依赖电脑运行脚本](../exp/termux.md)
+* 老版本的安卓没办法脱离电脑, 只能先用电脑(或者另一台手机)用usb有线调试连接手机, 再用命令开启无线调试. 之后, 无线网不断开的情况下可以不依赖电脑运行脚本.
+
+
 ## python语法注入文件没有生效
 例如
 
