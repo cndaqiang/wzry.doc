@@ -1,6 +1,6 @@
 <div align="center">
   <h1 align="center">
-    <img alt="wzrylogo" src="http://wzry-doc.pages.dev/wzry.favicon.png" width="140">
+    <img alt="wzrylogo" src="wzry.favicon.png" width="140">
     <br/>
     WZRY · 农活自动化助手
   </h1>

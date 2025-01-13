@@ -1,5 +1,8 @@
 version: 2
 # 当使用master分支时, 此文件为构建脚本
+mkdocs:
+  # Path to your MkDocs configuration file.
+  configuration: mkdocs.yml
 # 设置操作系统、Python 版本和工具
 build:
   os: ubuntu-22.04

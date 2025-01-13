@@ -1,0 +1,172 @@
+# 只要当前的.git仓库是github的, push page就能自动推到github
+#
+#site_url: 
+site_url: https://wzry-doc.pages.dev/
+# 这个url决定了sitemap.xml中的地址，如果不设置, git page上显示的sitemap.xml里面就是空的，设置了就被强制替换为了这个
+# 无论是生成的sitemap.xml, 还是手动写的sitemap.txt, 还是在线工具生成的sitemap.tool56.com.xml, google都说无法读取,bing都能收录
+# 此外，如果site_url不是单独的域名, 如domain/wzry.doc, 则设置后本地预览的网址总是带一个/wzry.doc/
+#利用bing的扫描功能, 触发其他家的统计?
+#WZRY.doc
+site_name: "WZRY · 农活自动化助手"
+site_author: cndaqiang
+copyright: Copyright &copy; 2024 cndaqiang
+dev_addr: '0.0.0.0:8000'
+# 设置descriptionMeta, bing搜索会进行警告, 此处进行补全
+site_description: "王者荣耀自动化脚本手册"
+#
+# 主题右上角显示的repo地址，可以设置为开源项目地址
+repo_url: https://github.com/cndaqiang/WZRY
+repo_name: 'cndaqiang/WZRY' # 只是右上角显示的文字内容
+
+# 文件名全部采用小写字母,大写搜索引擎检索会出问题
+nav:
+    - 项目介绍: index.md
+    - 使用手册:
+      - 安装指南: guide/install.md
+      - 配置文件: guide/config.md
+      - 控制文件: 
+        - 功能说明: guide/file.md
+        - 对战模式: guide/duizhanmoshi.md
+        - 礼包功能: guide/libao.md
+        - 选择英雄: guide/shuliandu.md
+        - 更新资源: guide/upfig.md
+      - 新手教程: guide/tuwen.md
+      - 组队教程: guide/zudui.md
+      - 进阶教程: guide/autowzry.md
+    - 常见问题: qa/qa.md
+    - 提出问题: https://github.com/cndaqiang/WZRY/issues
+    - 经验分享: 
+      - 🔥在windows上刷ios区账户: exp/iosapp.md
+      - 图片更新: guide/tupiangengxin.md
+      - 战令经验最大化✈️: exp/zhanling.md
+      - 刷金币: exp/jinbi.md
+      - 刷英雄熟练度: exp/shuliandu.md
+      - 刷赛季皮肤赛季任务: exp/saijirenwu.md
+      - 自动刷信誉分: exp/xinyufen.md
+      - 零氪不肝的王者新手必坑指南: exp/xinshou.md
+      - 什么时间执行脚本: exp/time.md
+      - 多账户使用同一个控制文件: exp/link.md
+      - 我在用的控制文件: exp/duizhanmoshi.md
+      - 模拟器推荐: exp/moniqi.md
+      - 控制安卓手机或任意模拟器: exp/mobile.md
+      - 在🐳docker内干农活: exp/docker.md
+      - docker安卓模拟器不推荐: exp/moniqidocker.md
+      - 不使用电脑如何运行脚本: exp/termux.md
+      - 定时执行脚本: exp/dingshi.md
+      - 在任意目录运行: exp/otherdir.md
+      - 镜像下载autoWZRY脚本: exp/pypi.md
+    - 关于:
+      - 更新日志: about/update.md
+      - 许可: about/license.md
+
+
+# markdown拓展语法
+markdown_extensions:
+  - admonition #MkDocs 警告框，!!!note 语法https://lifeinzucc.github.io/help/markdown/admonition/
+  - pymdownx.details # 警告框可以使用 ???note, 然后可以展开
+  - footnotes #脚注
+  - codehilite # 代码高亮？
+  - meta #自定义文章元数据
+  - pymdownx.caret #下划线
+  - pymdownx.mark #文本高亮
+  - pymdownx.tilde #删除线
+  # 开启这个拓展，才能使用中文的标题生成各个标题的链接（锚点），进行跳转引用
+  - toc: # 大纲
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+
+
+theme:
+#  name: gitbook
+  name: material
+  # 使用js虽然能更改用户端显示的favicon链接, 搜索引擎检索时，不会加载js, 还是 cndaqiang.github.io/favicon.png
+  # 所以, 改favicon.png为wzry.favicon.png, 然后复制到cndaqiang.github.io/一份
+  favicon: wzry.favicon.png
+  # 主题页面的log
+  logo: wzry.favicon.png
+  icon:
+    repo: fontawesome/brands/github
+  # 引入自定义的js, 例如统计等信息、搜索引擎的站点认证
+  # more see C:\Users\cnche\AppData\Local\anaconda3\Lib\site-packages\material\templates
+  # 不再采用拓展的模式(overrides.extra),而是直接复制特定版本的html文件到这里,目录结构和templates目录一样
+  custom_dir: overrides
+  palette:
+    primary: indigo # deep purple white red purple blue  默认 indigo. 绿色护眼 teal
+  # 配色 red pink purple deep purple indigo blue light blue cyan teal green light green lime 
+  # yellow amber orange deep orange brown grey blue grey black white
+  # https://mrkeo.github.io/setup/changing-the-colors/
+  language: zh
+  #font:
+  #  text: Roboto
+  #  code: Space Mono
+extra:
+  generator: false
+  # 去除 Made with Material for MkDocs 
+  # https://mkdoc-material.llango.com/setup/setting-up-the-footer/
+  #
+  # https://fontawesome.com/search?q=blog&o=r&f=classic
+  social:
+    # 镜像网站
+    - icon: fontawesome/solid/cloud
+      link: https://cndaqiang.github.io/wzry.doc/
+      name: gitpages
+    - icon: fontawesome/solid/lock
+      link: https://wzrydoc.readthedocs.io
+      name: untagged #readthedocs
+    - icon: fontawesome/brands/github
+      link: https://github.com/cndaqiang
+      name: author
+    - icon: fontawesome/brands/python
+      link: https://github.com/cndaqiang/WZRY
+      name: cndaqiang/WZRY
+    - icon: fontawesome/solid/square-rss
+      link: https://wzry-doc.pages.dev/feed_rss_updated.xml
+      name: rss
+    - icon: fontawesome/solid/chart-area
+      link: https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/wzrydoc.readthedocs.io
+      name: visitormap
+  # material带的google统计,https://analytics.google.com/ 不采用主题提供的,自己进行控制
+  # analytics:
+  #   provider: google
+  #   property: GT-NM8H2HCW
+# 自定义的脚本,可以通过extra_javascript引入, 也可以通过theme.custom_dir.overrides引入
+# 下面是我适配的一些功能
+  # google 统计的ID, 创建新账户、新媒体资源, 不然会和旧网站合并
+  googleanalysisID: "G-FLH4L3Q02F"
+  # 百度统计的ID
+  baidutongjiID: "76d0fc6b8ffd3901ec51e8bece995b22"
+  # umami统计
+  umaniID: "1d2518ba-011c-47f7-bf3d-c2454778ef02"
+  # 若设置了，则在这些域名禁止访客统计
+  blocked_domains:
+    - "127.0.0.1"
+    - "wzry-doc.serv00.net" # 不追踪统计的域名
+    - "wzrydoc.readthedocs.io" # 不追踪统计的域名
+  # 若设置了, 仅在这些域名允许访客统计
+  allow_domains:
+    - "wzry-doc.pages.dev"
+    - "cndaqiang.github.io"
+  # 由于搜索引擎不会执行js, 所以通过js禁止搜索引擎和修改图标的脚本无效, 2024-11-15开始删除
+  # readthedocs.yaml中包含生成robots.txt的内容
+  # 当设置 .site_name时, 会让所有名字都变为site_name
+  # 长的site_name对搜索引擎和浏览器显示的标题有作用
+  # 但是页面上显示就太长了. 通过extra.site_name 设置为短的
+  site_name: "WZRY.doc"
+  
+# 此外bing 搜索建议写明图注 ![图注](), 这是最后html图片中的alt属性
+
+#extra_javascript:
+  # 这些内容已移植overrides
+#
+# 中文搜索
+# https://cloud-atlas.readthedocs.io/zh-cn/latest/devops/docs/mkdocs/mkdocs_chinese_search.html
+plugins:
+  - search:
+        lang:
+            - en
+            - ja
+        separator: '[\s\-\.]+'
+  - mkdocs-video:
+      is_video: True
+  # pip install mkdocs-rss-plugin
+  - rss
