@@ -1,6 +1,11 @@
 version: 2
 # 当使用 gh-pages 分支时, 此文件为构建脚本
 
+# 不设置配置文件，现在不让构建了
+mkdocs:
+  # Path to your MkDocs configuration file.
+  configuration: mkdocs.yml
+
 build:
   os: ubuntu-lts-latest
   tools:
