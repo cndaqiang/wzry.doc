@@ -58,7 +58,7 @@ python3 -m pip uninstall opencv-python opencv-contrib-python opencv-python-headl
 ## 配置WZRY
 ### 下载AutoWZRY
 ```
-python3 -m pip download autowzry --no-deps
+python3 -m pip download autowzry  --no-binary :all: --no-deps
 tar xzvf autowzry-2.2.9b3.tar.gz #这个最新版的名字可能会变, 适当调整为你下载到的文件名
 cd autowzry-2.2.9b3/autowzry/
 ```

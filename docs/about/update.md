@@ -1,3 +1,6 @@
+## 2025-01-12 2.3.1a9
+* 删除autowzry仓库, 使用github的action自动构建[autowzry@pypi](../exp/pypi.md)
+
 ## 2024-12-25 2.3.1
 * 适配S38赛季
 

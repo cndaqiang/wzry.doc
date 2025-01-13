@@ -43,7 +43,7 @@ Q:
 A:
 
 * 方法1. 从镜像站下载, 
-<br>`pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-deps`
+<br>`pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-binary :all: --no-deps`
 <br>详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
 * 方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
 ![gitee下载WZRY](../fig/gitee.png)
@@ -349,6 +349,13 @@ if self.jinristep == 1: self.触摸对战 = True
 * 目前已是最具性价比的日活方案
 * 除非新的玩法比人机、王者模拟战更省时间能获得更多的奖励,以及不会影响信誉分, 否则不会加入
 
+## 支持国际服吗?
+不支持
+
+* 国际服在人机对战模式也会检测挂机并进行处罚, 因此没有适配计划.
+* 仅支持正式服、体验服.
+
+
 ## 有计划提供apk么
 * 无计划, 该项目初衷是为了脚本、模拟器7*24h在服务器上完成运行的
 * 可以在手机上安装termux也可以不依赖电脑运行自动化脚本, 例如[只用一部手机、不依赖电脑运行自动化脚本](../exp/termux.md)
@@ -430,23 +437,24 @@ python -m pip install airtest_mobileauto --upgrade
 python -m pip install airtest_mobileauto --upgrade
 ```
 
+## 加好友指导一下
+* 不加好友
+* 你如果没有能力阅读本手册,说明这个脚本不适合你.
 
 
 ## 星耀模式无法组队
+新版本已经开放星耀组队功能.
 
-星耀局的组队没有意义,因为
+**星耀局的组队没有意义**,因为
 
 * 刷人机任务,刷金币,刷熟练度,只用青铜局就够了
 * 蓝色熟练度提升到红色熟练度才需要星耀局人机,星耀局单人模式比组队模式的胜率更高,经验更多（毕竟除了你还有一个真人在打游戏）
 * 每个账号每天星耀限制10局,不同的账户剩余局数不同.当一个账户达到上限时,组队失败
 
-新版本已经开放星耀组队功能.
 
-
-
-## 加好友指导一下
-* 不加好友
-* 你如果没有能力阅读本手册,说明这个脚本不适合你.
+## 为什么默认对战是星耀
+* 本脚本会优先进行星耀快速对战, 在星耀达到上限后自动转为青铜模式, 并持续对战到凌晨.
+* 需要默认设置, 见[对战模式](../guide/duizhanmoshi.md)
 
 
 ## 控制游戏只打N局,打完就退出,怎么操作
@@ -513,6 +521,11 @@ LINK_dict:
 * `totalnode: 总账户数`
 * `multiprocessing: True`
 * `LINK_dict`, 0号账户必须对应房主的ADB地址
+
+
+## 怎么组队.无法组队
+见[小号没有进入大号房间](#小号没有进入大号房间)
+
 
 
 ## 疑似异常待机，长时间不活跃会面临惩罚

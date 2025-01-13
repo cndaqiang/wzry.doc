@@ -8,7 +8,7 @@
 
 ## 从pypi下载AutoWZRY
 ```
-pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-deps
+pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-binary :all: --no-deps
 ```
 ![pypi下载WZRY](../fig/pypidown.png)
 
