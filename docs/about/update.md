@@ -1,3 +1,6 @@
+## 2025-01-18
+* 破防停更.
+
 ## 2025-01-12 2.3.1a9
 * 删除autowzry仓库, 使用github的action自动构建[autowzry@pypi](../exp/pypi.md)
 

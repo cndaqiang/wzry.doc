@@ -1,4 +1,4 @@
-* Python新手, 不了解ADB, 暂时没时间阅读下面的教程, 点击[新手教程🔗](../guide/tuwen.md).
+* Python新手, 不了解ADB, 暂时没时间阅读下面的教程, 查看[视频教程⭐](https://www.bilibili.com/video/BV1JmcteBEUS)或[图文教程🔗](../guide/tuwen.md).
 * 教程有看不懂的地方, 可以[提出问题](https://github.com/cndaqiang/WZRY/issues), 然后点个[star⭐](https://github.com/cndaqiang/WZRY)召唤我回答.
 
 > [代码会随着新赛季更新, 教程里面可能是用老代码演示的, **请务必从releases下载最新版本的代码**](https://github.com/cndaqiang/WZRY)
@@ -17,7 +17,7 @@
     * 本脚本虽然能够处理这些弹窗, 但是极其的浪费时间.
     * 更新完游戏资源,并手动进入过上述界面关闭弹窗后, 可以大大加速脚本的执行速度.
     * 如果不想使用模拟器, 请阅读[控制安卓手机或任意模拟器](../exp/mobile.md).
-    * 如果不想使用电脑, 请阅读[只用一部手机、不依赖电脑运行自动化脚本](../exp/termux.md)
+    * 如果不想使用电脑**并且你是一个非常有耐心和技术的人**, 请阅读[只用一部手机、不依赖电脑运行自动化脚本](../exp/termux.md)
     * 不要修改王者APP或者第三方模拟器, 试图在安卓设备上登录ios区的账户, 有封号风险.
     * 🔥ios区的账户请使用[**腾讯官方的手游助手刷ios区的账户**](../exp/iosapp.md)
     * 不建议控制苹果手机, 非常复杂, 头铁用户见[苹果手机怎么使用](../qa/qa.md#苹果手机怎么使用)

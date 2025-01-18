@@ -31,6 +31,13 @@ A:
 python -m pip install  -i https://mirrors.cernet.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade
 ```
 
+* 如果安装过程中强制停止等原因导致再次安装时报错`These packages do not match the hashes from the requirements file`等
+* 这是python相关的问题, 向搜索引擎提问吧, 没有统一的解决办法, 可以试试下面的命令
+
+```
+python -m pip install  --no-cache-dir  airtest_mobileauto --upgrade
+```
+
 
 
 
@@ -93,8 +100,7 @@ A:
 
 
 ## 有视频教程吗
-* 手册网站目前写的挺细节的, 暂时没有完整的视频教学
-* B站零星放了一些运行展示和不方便写文档的教程 [https://space.bilibili.com/643558671](https://space.bilibili.com/643558671)
+* [https://space.bilibili.com/643558671](https://space.bilibili.com/643558671)
 
 
 ## 进入不了大厅
@@ -114,6 +120,10 @@ A:
 
 * 活动更新了图标,检查我是否提供了[更新资源](../guide/upfig.md),若我无法及时更新,请自行更新图标. 
 * 模拟器的分辨率不是960x540、dpi不是160, 有些图标无法识别,自行调试脚本,不予解决
+
+## 脚本长时间卡在游戏大厅
+* 同上 *[进入不了人机房间](#进入不了人机房间)*
+
 
 ## 战令、活跃礼包无法领取
 
@@ -177,6 +187,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## 脚本为啥运行这么慢, 能不能快点
 
+* **使用最新[release的代码](https://github.com/cndaqiang/WZRY/releases), 检查是否应该[更新资源](../guide/upfig.md)**
 * 王者针对新手、老手、氪金、回归、QQ区、微信区等玩家的界面都有差异, 会随机弹出各种提示窗口
 * 脚本为了能够处理这些异常，需要加很多判断进行检查，这些检查会导致整体程序运行速度看起来很慢
 * 有的模拟器会闪退、卡顿，脚本也要进行检查处理
@@ -219,7 +230,7 @@ self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", r
 * 配置文件写错了,认真阅读[配置文件](../guide/config.md)
 * 同时运行的模拟器太多,互相冲突.
 * 模拟器没有开启ADB端口
-* 手机没有通过电脑的ADB信任
+* **手机没有通过电脑的ADB信任**
 * ADB服务被其他软件弄坏了,建议手动执行`adb kill-server`
 * 在脚本运行过程中使用了escrcpy、airtestIDE、各种安卓玩机助手、ADB操作了模拟器
 * 这些程序会阻断脚本的ADB连接,并且这些程序在退出的时候,会强制断开本脚本的ADB连接
@@ -245,7 +256,7 @@ self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", r
 
 ## 5037端口占用
 * 你的问题应该是`adb devices`时,返回结果`Daemon not running. Starting it now on port 5037`
-* 这不是5037端口被占用的意思,而是adb第一次启动时的提示
+* **这不是5037端口被占用的意思,而是adb第一次启动时的正常提示**
 * 只要最后`List of devices attached`后面有设备就行
 
 ```
@@ -352,6 +363,12 @@ if self.jinristep == 1: self.触摸对战 = True
 
 * 国际服在人机对战模式也会检测挂机并进行处罚, 因此没有适配计划.
 * 仅支持正式服、体验服.
+
+
+## 作者有时间适配lol手游吗?
+无计划
+
+* lol手游在机对战模式也会检测挂机并进行处罚, 因此没有适配计划.
 
 
 ## 有计划提供apk么

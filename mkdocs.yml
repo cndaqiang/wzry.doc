@@ -30,10 +30,12 @@ nav:
         - 礼包功能: guide/libao.md
         - 选择英雄: guide/shuliandu.md
         - 更新资源: guide/upfig.md
-      - 新手教程: guide/tuwen.md
+      - 视频教程: https://www.bilibili.com/video/BV1JmcteBEUS
+      - 图文教程: guide/tuwen.md
       - 组队教程: guide/zudui.md
       - 进阶教程: guide/autowzry.md
     - 常见问题: qa/qa.md
+    - 视频教程: https://www.bilibili.com/video/BV1JmcteBEUS
     - 提出问题: https://github.com/cndaqiang/WZRY/issues
     - 经验分享: 
       - 🔥在windows上刷ios区账户: exp/iosapp.md
@@ -151,7 +153,7 @@ extra:
   # 当设置 .site_name时, 会让所有名字都变为site_name
   # 长的site_name对搜索引擎和浏览器显示的标题有作用
   # 但是页面上显示就太长了. 通过extra.site_name 设置为短的
-  site_name: "WZRY.doc"
+  site_name: "停更"
   
 # 此外bing 搜索建议写明图注 ![图注](), 这是最后html图片中的alt属性
 
