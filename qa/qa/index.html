@@ -2437,6 +2437,7 @@
 <ul>
 <li>安装哪个版本？</li>
 <li>无法pip安装airtest_mobileauto</li>
+<li>下载速度缓慢?</li>
 <li>conda python3.13.1装不上airtest_mobileauto。python3.12装了airtest_mobileauto，但是装不了Minicap和Javacap</li>
 </ul>
 <p>A:</p>
@@ -2444,9 +2445,11 @@
 <li>安装最新的版本</li>
 <li>数十位用户反馈都可以正常安装, 使用python 3.10/3.11/3.13全部可以运行通过, 应该<strong>与python版本没有关系</strong></li>
 <li>安装不成功大概率是安装的python有问题, <strong>使用anaconda重新安装python</strong></li>
-<li>如果因为网络无法安装, 可以使用镜像源<a href="https://mirrors.cernet.edu.cn/pypi/web/simple">mirrors.cernet.edu.cn等</a>进行安装</li>
+<li>如果因为网络无法安装, 打开科学上网或者使用镜像源<a href="https://mirrors.cernet.edu.cn/pypi/web/simple">mirrors.cernet.edu.cn等</a>进行安装</li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="nx">python</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w">  </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//mirrors.cernet.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade</span>
+<span class="err">#</span><span class="nx">如果上面的依然很慢</span><span class="p">,</span><span class="w"> </span><span class="nx">就用下面的命令</span><span class="p">(</span><span class="nx">去掉</span><span class="err">#</span><span class="p">)</span>
+<span class="err">#</span><span class="nx">python</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w">  </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//mirrors.aliyun.com/pypi/simple/  airtest_mobileauto --upgrade</span>
 </code></pre></div>
 
 <ul>
@@ -2461,11 +2464,13 @@
 <ul>
 <li>不会魔法上网, 也无法访问github? 无法下载脚本?</li>
 <li>打不开下载页面/进不去github网页</li>
+<li>下载速度缓慢?</li>
 </ul>
 <p>A:</p>
 <ul>
 <li>方法1. 从镜像站下载, 
 <br><code>pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-binary :all: --no-deps</code>
+或者<code>pip download autowzry -i https://mirrors.aliyun.com/pypi/simple/  --no-binary :all: --no-deps</code>
 <br>详见<a href="../../exp/pypi/">从pypi镜像站下载WZRY代码</a></li>
 <li>方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: <code>https://github.com/cndaqiang/WZRY.git</code>
 <img alt="gitee下载WZRY" src="../../fig/gitee.png"></li>
