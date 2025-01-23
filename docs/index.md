@@ -4,7 +4,7 @@
     <br/>
     WZRY · 农活自动化助手
   </h1>
-<b>被系统安排的破防了, 垃圾游戏, 一点都不想玩了, 助手停更.</b>
+<b>被系统安排的破防了, 垃圾游戏, 一点都不想玩了, <del>助手停更</del>.</b>
 </div>
 <div align="center">
   <img alt="WZRY Release" src="https://img.shields.io/github/v/release/cndaqiang/WZRY?style=flat-square&color=ff7fbf&label=WZRY" />

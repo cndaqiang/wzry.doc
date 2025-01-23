@@ -153,7 +153,7 @@ extra:
   # 当设置 .site_name时, 会让所有名字都变为site_name
   # 长的site_name对搜索引擎和浏览器显示的标题有作用
   # 但是页面上显示就太长了. 通过extra.site_name 设置为短的
-  site_name: "停更"
+  site_name: "AutoWZRY"
   
 # 此外bing 搜索建议写明图注 ![图注](), 这是最后html图片中的alt属性
 
