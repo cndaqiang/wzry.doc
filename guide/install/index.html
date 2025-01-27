@@ -1590,20 +1590,20 @@
 <h2 id="运行方式">运行方式<a class="headerlink" href="#%E8%BF%90%E8%A1%8C%E6%96%B9%E5%BC%8F" title="Permanent link">¶</a></h2>
 <h3 id="方式1-直接运行">方式1. 直接运行<a class="headerlink" href="#%E6%96%B9%E5%BC%8F1-%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8C" title="Permanent link">¶</a></h3>
 <ul>
-<li>当模拟器的ADB地址是<code>127.0.0.1:5555</code>时, 可以直接运行脚本<code>python -u wzry.py</code></li>
-<li><strong>直接运行报错或者遇到各种问题,请<a href="#%E6%96%B9%E5%BC%8F2-%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%BF%90%E8%A1%8C">使用配置文件运行</a></strong></li>
+<li>当模拟器的ADB地址是<code>127.0.0.1:5555</code>时(比如雷电模拟器), 可以直接运行脚本<code>python -u wzry.py</code></li>
+<li><strong>若运行脚本后无法连接模拟器，或有组队需求，请<a href="#%E6%96%B9%E5%BC%8F2-%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%BF%90%E8%A1%8C">使用配置文件运行</a></strong></li>
 <li>打开支持python的终端(安装Anaconda后,打开<code>Anaconda Powershell Prompt</code>), 执行:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 进入代码目录</span>
-<span class="n">cd</span><span class="w"> </span><span class="n">D</span><span class="p">:</span>\<span class="n">Download</span>\<span class="n">WZRY</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mf">9.3</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 进入wzry.py所在的目录</span>
+<span class="n">cd</span><span class="w"> </span><span class="n">D</span><span class="p">:</span>\<span class="n">Download</span>\<span class="n">WZRY</span><span class="o">-</span><span class="mf">2.3</span><span class="o">.</span><span class="mf">2.2</span>
 <span class="c1"># 执行脚本</span>
 <span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">wzry</span><span class="o">.</span><span class="n">py</span>
 </code></pre></div>
 
 <h3 id="方式2-使用配置文件运行">方式2. 使用配置文件运行<a class="headerlink" href="#%E6%96%B9%E5%BC%8F2-%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%BF%90%E8%A1%8C" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>当需要多排组队、直接运行报错、或者遇到无法连接模拟器等各种异常问题时, 需要在<a href="../config/">配置文件</a>中配置模拟器的参数.
-详见<a href="../config/">配置文件的写法</a>.</p>
+<p><a href="../config/">配置文件</a>中包含模拟器的adb地址信息、组队信息等诸多信息.<br>
+若adb地址是<code>emulator-5554</code>不是端口为<code>5554</code>的含义, 更详见<a href="../config/">配置文件的写法</a>.</p>
 </blockquote>
 <p>MuMu模拟器使用配置文件示例</p>
 <ul>
@@ -1618,8 +1618,8 @@
 <ul>
 <li>打开支持python的终端(安装Anaconda后,打开<code>Anaconda Powershell Prompt</code>), 执行:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 进入代码目录</span>
-<span class="n">cd</span><span class="w"> </span><span class="n">D</span><span class="p">:</span>\<span class="n">Download</span>\<span class="n">WZRY</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mf">9.3</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 进入wzry.py代码目录</span>
+<span class="n">cd</span><span class="w"> </span><span class="n">D</span><span class="p">:</span>\<span class="n">Download</span>\<span class="n">WZRY</span><span class="o">-</span><span class="mf">2.3</span><span class="o">.</span><span class="mf">2.2</span>
 <span class="c1"># 执行脚本</span>
 <span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">wzry</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">yaml</span>
 </code></pre></div>
