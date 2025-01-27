@@ -38,7 +38,7 @@
 python -m pip install airtest_mobileauto --upgrade
 ```
 
-* 如果无法更新`airtest_mobileauto`, 请查看[Q&A:没法安装airtest_mobileauto](../qa/qa.md#没法安装airtest_mobileauto)
+* 如果无法更新`airtest_mobileauto`(或者下载网速过慢), 请查看[Q&A:没法安装airtest_mobileauto](../qa/qa.md#没法安装airtest_mobileauto)
 
 ![Anaconda_Powershell_Prompt|200](../fig/anaconda_powershell_prompt.png)
 ![安装airtest_mobileauto](../fig/anaconda_powershell_prompt2.png)
@@ -64,21 +64,20 @@ python -m pip install airtest_mobileauto --upgrade
 ## 运行方式
 
 ### 方式1. 直接运行
-* 当模拟器的ADB地址是`127.0.0.1:5555`时, 可以直接运行脚本`python -u wzry.py`
-* **直接运行报错或者遇到各种问题,请[使用配置文件运行](#方式2-使用配置文件运行)**
+* 当模拟器的ADB地址是`127.0.0.1:5555`时(比如雷电模拟器), 可以直接运行脚本`python -u wzry.py`
+* **若运行脚本后无法连接模拟器，或有组队需求，请[使用配置文件运行](#方式2-使用配置文件运行)**
 * 打开支持python的终端(安装Anaconda后,打开`Anaconda Powershell Prompt`), 执行:
 ```
-# 进入代码目录
-cd D:\Download\WZRY-2.2.9.3
+# 进入wzry.py所在的目录
+cd D:\Download\WZRY-2.3.2.2
 # 执行脚本
 python -u wzry.py
 ```
 
 
 ### 方式2. 使用配置文件运行
-> 当需要多排组队、直接运行报错、或者遇到无法连接模拟器等各种异常问题时, 需要在[配置文件](config.md)中配置模拟器的参数.
-详见[配置文件的写法](config.md).
-
+> [配置文件](config.md)中包含模拟器的adb地址信息、组队信息等诸多信息.<br>
+> 若adb地址是`emulator-5554`不是端口为`5554`的含义, 更详见[配置文件的写法](config.md).
 
 MuMu模拟器使用配置文件示例
 
@@ -91,8 +90,8 @@ LINK_dict:
 ```
 * 打开支持python的终端(安装Anaconda后,打开`Anaconda Powershell Prompt`), 执行:
 ```
-# 进入代码目录
-cd D:\Download\WZRY-2.2.9.3
+# 进入wzry.py代码目录
+cd D:\Download\WZRY-2.3.2.2
 # 执行脚本
 python -u wzry.py config.win.yaml
 ```

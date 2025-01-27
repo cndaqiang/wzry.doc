@@ -17,6 +17,7 @@ Q:
 
 * 安装哪个版本？
 * 无法pip安装airtest_mobileauto
+* 下载速度缓慢?
 * conda python3.13.1装不上airtest_mobileauto。python3.12装了airtest_mobileauto，但是装不了Minicap和Javacap
 
 A:
@@ -24,11 +25,13 @@ A:
 * 安装最新的版本
 * 数十位用户反馈都可以正常安装, 使用python 3.10/3.11/3.13全部可以运行通过, 应该**与python版本没有关系**
 * 安装不成功大概率是安装的python有问题, **使用anaconda重新安装python**
-* 如果因为网络无法安装, 可以使用镜像源[mirrors.cernet.edu.cn等](https://mirrors.cernet.edu.cn/pypi/web/simple)进行安装
+* 如果因为网络无法安装, 打开科学上网或者使用镜像源[mirrors.cernet.edu.cn等](https://mirrors.cernet.edu.cn/pypi/web/simple)进行安装
 
 
 ```
 python -m pip install  -i https://mirrors.cernet.edu.cn/pypi/web/simple  airtest_mobileauto --upgrade
+#如果上面的依然很慢, 就用下面的命令(去掉#)
+#python -m pip install  -i https://mirrors.aliyun.com/pypi/simple/  airtest_mobileauto --upgrade
 ```
 
 * 如果安装过程中强制停止等原因导致再次安装时报错`These packages do not match the hashes from the requirements file`等
@@ -46,11 +49,13 @@ Q:
 
 * 不会魔法上网, 也无法访问github? 无法下载脚本?
 * 打不开下载页面/进不去github网页
+* 下载速度缓慢?
 
 A:
 
 * 方法1. 从镜像站下载, 
 <br>`pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-binary :all: --no-deps`
+或者`pip download autowzry -i https://mirrors.aliyun.com/pypi/simple/  --no-binary :all: --no-deps`
 <br>详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
 * 方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
 ![gitee下载WZRY](../fig/gitee.png)
@@ -228,6 +233,7 @@ self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", r
 ## 连接不上模拟器
 * 认真阅读[安装指南](../guide/install.md)
 * 配置文件写错了,认真阅读[配置文件](../guide/config.md)
+* 配置文件名写错了, 例如windows默认不显示`.txt`拓展名, 结果配置文件的名字写成了`conig.win.yaml.txt`, 
 * 同时运行的模拟器太多,互相冲突.
 * 模拟器没有开启ADB端口
 * **手机没有通过电脑的ADB信任**
@@ -282,6 +288,11 @@ emulator-5554   device
 * 各个版本的安卓都支持usb有线调试, 都可以使用电脑控制
 * 无线调试是安卓11之后开始的，可以[不依赖电脑运行脚本](../exp/termux.md)
 * 老版本的安卓没办法脱离电脑, 只能先用电脑(或者另一台手机)用usb有线调试连接手机, 再用命令开启无线调试. 之后, 无线网不断开的情况下可以不依赖电脑运行脚本.
+
+
+## 分辨率不符合 (宽, 高) 格式，正在修正..
+* 若不影响运行, 可以忽略此警告
+* MuMu等模拟器返回的分辨率与实际不符, 代码会进行修正
 
 
 ## python语法注入文件没有生效
@@ -375,7 +386,8 @@ if self.jinristep == 1: self.触摸对战 = True
 * 无计划, 该项目初衷是为了脚本、模拟器7*24h在服务器上完成运行的
 * 可以在手机上安装termux也可以不依赖电脑运行自动化脚本, 例如[只用一部手机、不依赖电脑运行自动化脚本](../exp/termux.md)
 
-
+## 必须使用windows吗？
+* linux、mac都可以使用.
 
 ## 建议大号使用吗
 * 所有账号均可使用
