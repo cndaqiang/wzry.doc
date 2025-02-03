@@ -99,13 +99,29 @@ Q:
 
 A:
 
-访问镜像站点[https://cndaqiang.github.io/wzry.doc/](https://cndaqiang.github.io/wzry.doc/), 或者打开科学网络环境.
+* 访问镜像站点[https://cndaqiang.github.io/wzry.doc/](https://cndaqiang.github.io/wzry.doc/), 或者打开科学网络环境.
 
-* 
+
 
 
 ## 有视频教程吗
 * [https://space.bilibili.com/643558671](https://space.bilibili.com/643558671)
+
+
+## 王者闪退
+Q:
+
+* 点击登录游戏后闪退
+* 开始人机对战后闪退
+* 打开王者闪退
+
+A:
+
+* 这是模拟器本身的问题，和本脚本无关
+* 在[配置文件](../guide/config.md)中添加模拟器参数, 脚本会尝试通过重启模拟器来解决闪退问题.
+* 自行搜索相关模拟器+王者荣耀闪退进行解决, 比如:[deepseek给出的解决方案](https://www.bilibili.com/video/BV1mHFBeGEYZ/)
+* 一般是MuMu模拟器多发，解决不了则换其他的[模拟器](../exp/moniqi.md), 比如BlueStack
+
 
 
 ## 进入不了大厅
@@ -545,6 +561,7 @@ LINK_dict:
 
 * 创建友情关系
 * 更新房主图片
+* 房主图片截图区域太大了
 * `totalnode: 总账户数`
 * `multiprocessing: True`
 * `LINK_dict`, 0号账户必须对应房主的ADB地址

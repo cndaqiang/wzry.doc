@@ -4,7 +4,6 @@
     <br/>
     WZRY · 农活自动化助手
   </h1>
-<b>被系统安排的破防了, 垃圾游戏, 一点都不想玩了, <del>助手停更</del>.</b>
 </div>
 <div align="center">
   <img alt="WZRY Release" src="https://img.shields.io/github/v/release/cndaqiang/WZRY?style=flat-square&color=ff7fbf&label=WZRY" />
@@ -14,11 +13,10 @@
 
 ## WZRY
 
-[WZRY](https://github.com/cndaqiang/WZRY)是基于[airtest-mobileauto](https://github.com/cndaqiang/airtest_mobileauto)开发的王者荣耀农活自动化免费开源脚本. 
+[WZRY](https://github.com/cndaqiang/WZRY) 是基于 [airtest-mobileauto](https://github.com/cndaqiang/airtest_mobileauto) 开发的王者荣耀农活自动化免费开源脚本。**7*24h 完全无人值守运行**，支持自动启动模拟器、更新游戏、错误自修复、全自动对战及礼包领取，解放双手专注生活。
 
 
 ## 自动化
-真正的无人值守：自动对战、领取礼包、更新游戏、错误纠正
 
 * 开启关闭模拟器、容器、手机
 * 自动检测处理游戏闪退、模拟器关闭等各种错误
@@ -65,4 +63,5 @@
   - [Airtest Project](https://github.com/AirtestProject)
 
 - 感谢所有提问 issue 和为本项目打星的用户！
+- 感谢b站的老哥们点赞推广!
 
