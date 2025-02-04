@@ -1392,9 +1392,15 @@
 <li>KPL赛事战令免费版在80级以上就没有礼包了, 就没必要设置<code>礼包功能_KPL礼包</code>了</li>
 <li>如果没有友情币, 就没有必要设置<code>礼包功能_友情礼包</code></li>
 <li>友情币少的就只开最有性价比的<code>友情礼包_积分夺宝</code>和<code>友情礼包_皮肤碎片</code></li>
-<li>关于<code>每日任务礼包</code>是否要领取, 可以看<a href="../../exp/zhanling/">战令经验最大化</a></li>
+<li>
+<p>关于<code>每日任务礼包</code>是否要领取, 可以看<a href="../../exp/zhanling/">战令经验最大化</a></p>
+</li>
+<li>
+<p>在<code>WZRY.mynode.运行模式.txt</code>中<strong>填入下面的内容来开启指定礼包</strong></p>
+</li>
+<li>礼包是三小时领取一次，或者当天的对战时间结束后才领取。<strong>不是你开了功能就能立刻领取的</strong>。</li>
+<li>如果是调试代码，测试能否领取，额外填写一个<code>self.每日礼包(强制领取=True)</code>到<code>WZRY.mynode.运行模式.txt</code>的最后一行</li>
 </ul>
-<p>目前支持的礼包包括(在<code>WZRY.mynode.运行模式.txt</code>中填入下面的内容)</p>
 <div class="codehilite"><pre><span></span><code><span class="gh">#</span> 礼包功能默认关闭,设置为True,开启礼包功能
 self.启动礼包功能 = True
 <span class="gh">#</span> 下面的礼包需要领取,则设置为True
