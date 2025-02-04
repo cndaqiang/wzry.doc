@@ -1381,24 +1381,32 @@
 <ul>
 <li>则在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件</li>
 <li><strong>把<code>mynode</code>替换为你的<a href="../config/#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB">账户编号</a></strong></li>
-<li>
-<p>文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.</p>
-</li>
-<li>
-<p>在<code>WZRY.mynode.运行模式.txt</code>中<strong>填入下面的内容来开启指定礼包</strong></p>
-</li>
+<li>文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.</li>
+</ul>
+<p><strong>礼包功能</strong></p>
+<ul>
+<li>在<code>WZRY.mynode.运行模式.txt</code>中<strong>填入下面的内容来开启指定礼包</strong></li>
 <li>礼包是三小时领取一次，或者当天的对战时间结束后才领取。<strong>不是你开了功能就能立刻领取的</strong>。</li>
 <li>如果是调试代码，测试能否领取，额外填写一个<code>self.每日礼包(强制领取=True)</code>到<code>WZRY.mynode.运行模式.txt</code>的最后一行</li>
+<li><strong>个人开发者, 精力有限, 礼包功能不会随着游戏更新立刻进行升级维护, 也可能放弃维护.</strong></li>
+<li><strong>领取礼包遇到问题时, 欢迎<a href="https://github.com/cndaqiang/WZRY/issues">提出问题</a>, 但不保证给你解决</strong></li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="gh">#</span> 礼包功能默认关闭,设置为True,开启礼包功能
 self.启动礼包功能 = True
 <span class="gh">#</span> 下面的礼包需要领取,则设置为True
-self.活动礼包 = False
-self.祈愿礼包 = False
-self.玉镖夺魁签到 = False
 self.每日任务礼包 = False
 self.礼包功能_邮件礼包 = False
 self.礼包功能_妲己礼物 = False
+<span class="gh">#</span>
+# 外置礼包,暂无手册,遇到问题,请自行调试
+<span class="gh">#</span> 支持自动领取相同模拟器内部的王者营地礼包
+self.外置礼包_王者营地 = False
+<span class="gh">#</span> 支持自动领取相同模拟器内部的王者体验服的体验币
+self.外置礼包_体验服 = False
+<span class="gh">#</span> 精力有限, 以下礼包不会实时维护, 遇到问题,请自行调试
+self.活动礼包 = False
+self.祈愿礼包 = False
+self.玉镖夺魁签到 = False
 self.礼包功能_友情礼包 = False
 self.友情礼包_积分夺宝 = False
 self.友情礼包_皮肤碎片 = False
@@ -1410,12 +1418,6 @@ self.友情礼包_击败宝箱 = False
 self.友情礼包_排位保护 = False
 self.礼包功能_回忆礼册 = False
 self.礼包功能_灵宝互动 = False
-<span class="gh">#</span> 外置礼包,暂无手册,遇到问题,请自行调试
-<span class="gh">#</span> 支持自动领取相同模拟器内部的王者营地礼包
-self.外置礼包_王者营地 = False
-<span class="gh">#</span> 支持自动领取相同模拟器内部的王者体验服的体验币
-self.外置礼包_体验服 = False
-<span class="gh">#</span> 精力有限, 以下礼包不会随着游戏更新立刻进行升级维护,如果遇到问题,请先自行调试
 self.礼包功能_战队礼包 = False
 self.礼包功能_商城礼包 = False
 self.礼包功能_KPL礼包 = False
