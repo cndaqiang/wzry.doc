@@ -30,8 +30,8 @@
 
 ```
 self.启动礼包功能 = True
-self.每日任务礼包 = False
-self.礼包功能_邮件礼包 = False
-self.礼包功能_妲己礼物 = False
+self.每日任务礼包 = True
+self.礼包功能_邮件礼包 = True
+self.礼包功能_妲己礼物 = True
 self.礼包功能_商城礼包 = True
 ```

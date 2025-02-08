@@ -5,8 +5,39 @@
 * **把`mynode`替换为你的[账户编号](config.md#mynode与instance的区别)**
 * 文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.
 
+
 ## 循环选熟练度最低的英雄
 * 提前在选英雄界面设置为*熟练度*排序,而不是*赛季常用*等选项
+
+### 方法0. 小白看这里
+* 视频教程:[王者荣耀农活自动化助手: 礼包、熟练度功能控制](https://www.bilibili.com/video/BV1rYNAe1EKi)
+* 图片展示,在运行目录,创建`WZRY.mynode.运行模式.txt`文件, 并填入下面内容
+![小白熟练度](../fig/shulianduauto.png)
+
+```
+# 选择对战线路和英雄
+分路名称=["对抗", "打野","中路","发育","游走"]
+线路坐标=[(-0.314, -0.26),  (-0.194, -0.26), (-0.069, -0.26), (0.037, -0.26),  (0.18, -0.26)]
+# 对应分路的第(列,行)的英雄, 氪金/活动/版本更新时, 会增加/减少英雄, 把坐标设为你的账户的最后一个英雄的(列号,行号)
+位置坐标=[(6,5),(9,5),(4,4),(9,2),(2,4)]
+index=(self.runstep+self.mynode)%len(分路名称)
+TimeECHO(f"本次{self.runstep}对战分路: {分路名称[index]}")
+#
+#主战英雄
+pos=位置坐标[index]
+参战英雄头像坐标=(-0.54+pos[0]*0.09,-0.31+pos[1]*0.11)
+self.Tool.cal_record_pos(参战英雄头像坐标, self.移动端.resolution, "参战英雄头像", savepos=True)
+self.Tool.cal_record_pos(线路坐标[index], self.移动端.resolution, "参战英雄线路", savepos=True)
+#备战英雄, 因为对抗、打野、游走之间的英雄会互相冲突, 所以这些位置冲突的时候换成其他路(发育3,中路2)
+index=[3,2,3,2,3][index]
+pos=位置坐标[index]
+参战英雄头像坐标=(-0.54+pos[0]*0.09,-0.31+pos[1]*0.11)
+self.Tool.cal_record_pos(参战英雄头像坐标, self.移动端.resolution, "备战英雄头像", savepos=True)
+self.Tool.cal_record_pos(线路坐标[index], self.移动端.resolution, "备战英雄线路", savepos=True)
+```
+
+
+
 
 ### 方法1. 读入英雄绝对坐标
 在`WZRY.mynode.运行模式.txt`文件内填入

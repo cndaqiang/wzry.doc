@@ -57,7 +57,8 @@ A:
 <br>`pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-binary :all: --no-deps`
 或者`pip download autowzry -i https://mirrors.aliyun.com/pypi/simple/  --no-binary :all: --no-deps`
 <br>详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
-* 方法2. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
+* 方法2. 使用github加速站下载, 例如 `https://github.moeyy.xyz/https://github.com/cndaqiang/WZRY/archive/dev.zip`
+* 方法3. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
 ![gitee下载WZRY](../fig/gitee.png)
 * 等你可以访问github时, 欢迎你来为[WZRY](https://github.com/cndaqiang/WZRY)项目点赞.
 
@@ -323,10 +324,20 @@ emulator-5554   device
 * 控制文件名写错了: 要把`WZRY.mynode.运行模式.txt`中的`mynode`替换为本脚本控制的 **[账户编号](../guide/file.md)**
 * 如`WZRY.1.运行模式.txt`,`WZRY.0.运行模式.txt`分别调整第1和第0个王者账号.
 * 理解错了[mynode和模拟器内部编号Instance的含义](../guide/config.md#mynode与instance的区别),把模拟器内部的编号当成了mynode.
+* 不懂python,注入的命令不符合python的语法规范.
+* **如果想自己写`WZRY.mynode.运行模式.txt`文件,先把python学了、读完wzry.py再改.<br>要么就老老实实抄手册的内容,别乱写!!!没人愿意给小白解释为什么语法不对**
 
+## 选择英雄失败
+* 控制文件写错了,同上[python语法注入文件没有生效](#python语法注入文件没有生效)
+
+## 礼包功能开启失败
+* 控制文件写错了,同上[python语法注入文件没有生效](#python语法注入文件没有生效)
+
+## WZRY.mynode.运行模式.txt没起效
+* 控制文件写错了,同上[python语法注入文件没有生效](#python语法注入文件没有生效)
 
 ## 触摸对战不生效
-* 配置文件写错了,同上[python语法注入文件没有生效](#python语法注入文件没有生效)
+* 控制文件写错了,同上[python语法注入文件没有生效](#python语法注入文件没有生效)
 
 开启触摸对战的几种方法
 
@@ -498,6 +509,14 @@ python -m pip install airtest_mobileauto --upgrade
 ## 为什么默认对战是星耀
 * 本脚本会优先进行星耀快速对战, 在星耀达到上限后自动转为青铜模式, 并持续对战到凌晨.
 * 需要默认设置, 见[对战模式](../guide/duizhanmoshi.md)
+
+
+## 什么时候会领礼包
+* 怎么没有领礼包?
+
+* 礼包功能默认关闭, 需要手动开启, 见[礼包功能](../guide/libao.md)
+* 礼包是三小时领取一次，或者当天的对战时间结束后才领取。**不是你开了功能就能立刻领取的**。
+
 
 
 ## 控制游戏只打N局,打完就退出,怎么操作
