@@ -554,6 +554,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#方法0-小白看这里" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法0. 小白看这里
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#方法1-读入英雄绝对坐标" class="md-nav__link">
     <span class="md-ellipsis">
       方法1. 读入英雄绝对坐标
@@ -1358,6 +1367,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#方法0-小白看这里" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法0. 小白看这里
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#方法1-读入英雄绝对坐标" class="md-nav__link">
     <span class="md-ellipsis">
       方法1. 读入英雄绝对坐标
@@ -1435,6 +1453,33 @@
 <ul>
 <li>提前在选英雄界面设置为<em>熟练度</em>排序,而不是<em>赛季常用</em>等选项</li>
 </ul>
+<h3 id="方法0-小白看这里">方法0. 小白看这里<a class="headerlink" href="#%E6%96%B9%E6%B3%950-%E5%B0%8F%E7%99%BD%E7%9C%8B%E8%BF%99%E9%87%8C" title="Permanent link">¶</a></h3>
+<ul>
+<li>视频教程:<a href="https://www.bilibili.com/video/BV1rYNAe1EKi">王者荣耀农活自动化助手: 礼包、熟练度功能控制</a></li>
+<li>图片展示,在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 并填入下面内容
+<img alt="小白熟练度" src="../../fig/shulianduauto.png"></li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">选择对战线路和英雄</span>
+<span class="n">分路名称</span><span class="o">=[</span><span class="n">"对抗", "打野","中路","发育","游走"</span><span class="o">]</span>
+<span class="n">线路坐标</span><span class="o">=[</span><span class="n">(-0.314, -0.26),  (-0.194, -0.26), (-0.069, -0.26), (0.037, -0.26),  (0.18, -0.26)</span><span class="o">]</span>
+<span class="err">#</span><span class="w"> </span><span class="n">对应分路的第</span><span class="p">(</span><span class="n">列</span><span class="p">,</span><span class="n">行</span><span class="p">)</span><span class="n">的英雄</span><span class="p">,</span><span class="w"> </span><span class="n">氪金</span><span class="o">/</span><span class="n">活动</span><span class="o">/</span><span class="n">版本更新时</span><span class="p">,</span><span class="w"> </span><span class="n">会增加</span><span class="o">/</span><span class="n">减少英雄</span><span class="p">,</span><span class="w"> </span><span class="n">把坐标设为你的账户的最后一个英雄的</span><span class="p">(</span><span class="n">列号</span><span class="p">,</span><span class="n">行号</span><span class="p">)</span>
+<span class="n">位置坐标</span><span class="o">=[</span><span class="n">(6,5),(9,5),(4,4),(9,2),(2,4)</span><span class="o">]</span>
+<span class="k">index</span><span class="o">=</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">runstep</span><span class="o">+</span><span class="n">self</span><span class="p">.</span><span class="n">mynode</span><span class="p">)</span><span class="o">%</span><span class="nf">len</span><span class="p">(</span><span class="n">分路名称</span><span class="p">)</span>
+<span class="n">TimeECHO</span><span class="p">(</span><span class="n">f</span><span class="ss">"本次{self.runstep}对战分路: {分路名称[index]}"</span><span class="p">)</span>
+<span class="err">#</span>
+<span class="n">#主战英雄</span>
+<span class="n">pos</span><span class="o">=</span><span class="n">位置坐标</span><span class="o">[</span><span class="n">index</span><span class="o">]</span>
+<span class="n">参战英雄头像坐标</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.54</span><span class="o">+</span><span class="n">pos</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="mf">0.09</span><span class="p">,</span><span class="o">-</span><span class="mf">0.31</span><span class="o">+</span><span class="n">pos</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="mf">0.11</span><span class="p">)</span>
+<span class="n">self</span><span class="p">.</span><span class="n">Tool</span><span class="p">.</span><span class="n">cal_record_pos</span><span class="p">(</span><span class="n">参战英雄头像坐标</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">移动端</span><span class="p">.</span><span class="n">resolution</span><span class="p">,</span><span class="w"> </span><span class="ss">"参战英雄头像"</span><span class="p">,</span><span class="w"> </span><span class="n">savepos</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+<span class="n">self</span><span class="p">.</span><span class="n">Tool</span><span class="p">.</span><span class="n">cal_record_pos</span><span class="p">(</span><span class="n">线路坐标</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">移动端</span><span class="p">.</span><span class="n">resolution</span><span class="p">,</span><span class="w"> </span><span class="ss">"参战英雄线路"</span><span class="p">,</span><span class="w"> </span><span class="n">savepos</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+<span class="n">#备战英雄</span><span class="p">,</span><span class="w"> </span><span class="n">因为对抗</span><span class="err">、</span><span class="n">打野</span><span class="err">、</span><span class="n">游走之间的英雄会互相冲突</span><span class="p">,</span><span class="w"> </span><span class="n">所以这些位置冲突的时候换成其他路</span><span class="p">(</span><span class="n">发育3</span><span class="p">,</span><span class="n">中路2</span><span class="p">)</span>
+<span class="k">index</span><span class="o">=[</span><span class="n">3,2,3,2,3</span><span class="o">][</span><span class="n">index</span><span class="o">]</span>
+<span class="n">pos</span><span class="o">=</span><span class="n">位置坐标</span><span class="o">[</span><span class="n">index</span><span class="o">]</span>
+<span class="n">参战英雄头像坐标</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.54</span><span class="o">+</span><span class="n">pos</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="mf">0.09</span><span class="p">,</span><span class="o">-</span><span class="mf">0.31</span><span class="o">+</span><span class="n">pos</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="mf">0.11</span><span class="p">)</span>
+<span class="n">self</span><span class="p">.</span><span class="n">Tool</span><span class="p">.</span><span class="n">cal_record_pos</span><span class="p">(</span><span class="n">参战英雄头像坐标</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">移动端</span><span class="p">.</span><span class="n">resolution</span><span class="p">,</span><span class="w"> </span><span class="ss">"备战英雄头像"</span><span class="p">,</span><span class="w"> </span><span class="n">savepos</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+<span class="n">self</span><span class="p">.</span><span class="n">Tool</span><span class="p">.</span><span class="n">cal_record_pos</span><span class="p">(</span><span class="n">线路坐标</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">移动端</span><span class="p">.</span><span class="n">resolution</span><span class="p">,</span><span class="w"> </span><span class="ss">"备战英雄线路"</span><span class="p">,</span><span class="w"> </span><span class="n">savepos</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+</code></pre></div>
+
 <h3 id="方法1-读入英雄绝对坐标">方法1. 读入英雄绝对坐标<a class="headerlink" href="#%E6%96%B9%E6%B3%951-%E8%AF%BB%E5%85%A5%E8%8B%B1%E9%9B%84%E7%BB%9D%E5%AF%B9%E5%9D%90%E6%A0%87" title="Permanent link">¶</a></h3>
 <p>在<code>WZRY.mynode.运行模式.txt</code>文件内填入</p>
 <div class="codehilite"><pre><span></span><code><span class="n">字典位置文件</span><span class="o">=</span><span class="err">[]</span>
