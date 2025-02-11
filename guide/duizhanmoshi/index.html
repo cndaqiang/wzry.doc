@@ -510,6 +510,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#关于人机闯关模式的一些想法" class="md-nav__link">
+    <span class="md-ellipsis">
+      关于人机闯关模式的一些想法
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1308,6 +1317,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#关于人机闯关模式的一些想法" class="md-nav__link">
+    <span class="md-ellipsis">
+      关于人机闯关模式的一些想法
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1358,7 +1376,30 @@ self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 <p>示例前2局标准对战并移动, 在<code>WZRY.mynode.运行模式.txt</code> 中填写</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">self</span>.标准模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span>.触摸对战<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">False</span>
 <span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span>:<span class="w"> </span><span class="nv">self</span>.标准模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span>.触摸对战<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">True</span>
-</code></pre></div></div>
+</code></pre></div>
+
+<h2 id="关于人机闯关模式的一些想法">关于人机闯关模式的一些想法<a class="headerlink" href="#%E5%85%B3%E4%BA%8E%E4%BA%BA%E6%9C%BA%E9%97%AF%E5%85%B3%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>如果不想使用助手, 每天如何最快的完成日活要求呢？人机闯关是最合适的模式</strong></li>
+<li>一般是5个真人从中路直接推水晶, 2分钟以内结束一把</li>
+<li>两局就可以完成日活的对战要求</li>
+<li>对战结束后务必选择返回大厅，重新进入第一关，后面的关卡难度高而且没人，本助手已默认对局结束返回大厅</li>
+<li>进行人机闯关的基本都是做任务的，所以对局结束后经常有人邀请你组队闯关，你也可以邀请别人组队（完成组队任务）</li>
+<li>这点对于本助手不太妙，因为邀请的界面总要脚本去关闭，重新进入房间</li>
+<li><strong>因为4个队友都是真人, 所以半夜或者其他阴间时间可能匹配不到人!!!</strong></li>
+<li><strong>因此在使用本助手的人机闯关模式时请选择正常玩家在线比较多的时间</strong></li>
+<li>人机闯关打的多了，可以看到很多在泉水平A回城的脚本号.</li>
+<li>系统不会主动处罚挂机账户，但是4个队友都是真人,所以他们可能会举报.</li>
+<li>我举报过别的挂机用户, 系统都没有扣分</li>
+<li><strong>以后是否会扣信誉分,请自行验证并为自己的账户负责</strong></li>
+</ul>
+<p><img alt="人机闯关" src="../../fig/renjichaungguan.png"></p>
+<p>开启人机闯关模式的方法: </p>
+<ul>
+<li><strong>请务必手动点击，进入一次人机闯关的房间, 会有非常多的提示让你去确定</strong></li>
+<li>在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 填入<code>self.对战模式 = "人机闯关"</code>, 如下图</li>
+</ul>
+<p><img alt="人机闯关" src="../../fig/autorenjichaungguan.png"></p></div>
 
 
 
