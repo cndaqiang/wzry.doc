@@ -210,6 +210,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ## 脚本为啥运行这么慢, 能不能快点
 
 * **使用最新[release的代码](https://github.com/cndaqiang/WZRY/releases), 检查是否应该[更新资源](../guide/upfig.md)**
+* 默认先进行**星耀局的人机**,本身对战时间就慢, 切换为[青铜快速人机或者人机闯关模式可以加速对局过程](../guide/duizhanmoshi.md)
 * 王者针对新手、老手、氪金、回归、QQ区、微信区等玩家的界面都有差异, 会随机弹出各种提示窗口
 * 脚本为了能够处理这些异常，需要加很多判断进行检查，这些检查会导致整体程序运行速度看起来很慢
 * 有的模拟器会闪退、卡顿，脚本也要进行检查处理
