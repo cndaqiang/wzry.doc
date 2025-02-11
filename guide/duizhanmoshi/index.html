@@ -1379,14 +1379,22 @@ self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 <span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span>:<span class="w"> </span><span class="nv">self</span>.标准模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">self</span>.触摸对战<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">True</span>
 </code></pre></div>
 
+<p>第5到第10局进行模拟战、第10局以上用人机闯关示例</p>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span>:<span class="w">  </span><span class="nv">self</span>.对战模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"模拟战"</span>
+<span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span>:<span class="w">  </span><span class="nv">self</span>.对战模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"人机闯关"</span>
+</code></pre></div>
+
 <h2 id="关于人机闯关模式的一些想法">关于人机闯关模式的一些想法<a class="headerlink" href="#%E5%85%B3%E4%BA%8E%E4%BA%BA%E6%9C%BA%E9%97%AF%E5%85%B3%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95" title="Permanent link">¶</a></h2>
+<p>如果不想使用助手, 每天<strong>用手打游戏</strong>如何最快的完成日活要求呢？人机闯关是最合适的模式.</p>
 <ul>
-<li><strong>如果不想使用助手, 每天如何最快的完成日活要求呢？人机闯关是最合适的模式</strong></li>
-<li>一般是5个真人从中路直接推水晶, 2分钟以内结束一把</li>
+<li>5个真人从中路直接推水晶, 手打2分钟以内结束一把</li>
 <li>两局就可以完成日活的对战要求</li>
-<li>对战结束后务必选择返回大厅，重新进入第一关，后面的关卡难度高而且没人，本助手已默认对局结束返回大厅</li>
 <li>进行人机闯关的基本都是做任务的，所以对局结束后经常有人邀请你组队闯关，你也可以邀请别人组队（完成组队任务）</li>
-<li>这点对于本助手不太妙，因为邀请的界面总要脚本去关闭，重新进入房间</li>
+<li>对战结束后务必选择返回大厅，重新进入第一关，后面的关卡难度高而且没人，</li>
+</ul>
+<p>在使用本助手运行时，也可以开启人机闯关模式<code>self.对战模式 = "人机闯关"</code></p>
+<ul>
+<li>本助手的人机闯关模式支持自己的大号和小号组队, 默认对局结束返回大厅重新进入第一关.</li>
 <li><strong>因为4个队友都是真人, 所以半夜或者其他阴间时间可能匹配不到人!!!</strong></li>
 <li><strong>因此在使用本助手的人机闯关模式时请选择正常玩家在线比较多的时间</strong></li>
 <li>人机闯关打的多了，可以看到很多在泉水平A回城的脚本号.</li>
