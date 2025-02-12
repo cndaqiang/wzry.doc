@@ -1413,24 +1413,29 @@ self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 </thead>
 <tbody>
 <tr>
-<td><code>self.对战模式 = "5v5匹配"</code><br><code>self.触摸对战 = False</code><br><code>self.青铜段位 = False</code></td>
+<td><code>self.对战模式 = "5v5匹配"</code><br><code>self.触摸对战 = False</code><br><code>self.青铜段位 = True</code><br><code>self.标准模式 = False</code></td>
+<td>挂机托管,击杀人头多,<br>可以获得金牌<br><strong>不满足某些活动的非挂机要求</strong></td>
+<td><strong>万金油模式</strong><br><strong>每日任务专用</strong>,<br><strong>击杀N名英雄任务专用</strong>,<br>新号刷熟练度、友情币</td>
+</tr>
+<tr>
+<td><code>self.对战模式 = "5v5匹配"</code><br><code>self.触摸对战 = True</code><br><code>self.青铜段位 = True</code><br><code>self.标准模式 = True</code><br><code>self.组队模式 = True</code></td>
+<td><strong>必过挂机检测</strong>,<br><strong>对局非常慢</strong>,<br>满足<code>99.99999%</code>的任务需求</td>
+<td><strong>补全上一万金油模式的漏网任务</strong>,<br>每天组队打一场就行</td>
+</tr>
+<tr>
+<td><code>self.对战模式 = "5v5匹配"</code><br><code>self.触摸对战 = True</code><br><code>self.青铜段位 = True</code><br><code>self.标准模式 = False</code></td>
+<td>对局慢、<strong>胜率最低</strong><br><strong>每局可以获得最多的金币</strong><br>对局越慢金币越多</td>
+<td><strong>快速获得本周的金币上限</strong><br><strong>需要立刻获得3k+金币专用</strong></td>
+</tr>
+<tr>
+<td><code>self.对战模式 = "5v5匹配"</code><br><code>self.触摸对战 = False</code><br><code>self.青铜段位 = False</code><br><code>self.标准模式 = False</code></td>
 <td>对局慢、星耀对局上限10次</td>
 <td><strong>老号专用</strong>,<br>蓝色熟练度提升到红色熟练度</td>
 </tr>
 <tr>
-<td><code>self.对战模式 = "5v5匹配"</code><br><code>self.触摸对战 = False</code><br><code>self.青铜段位 = True</code></td>
-<td>挂机托管,击杀人头多,<br>可以获得金牌</td>
-<td><strong>每日任务专用</strong>,<br>击杀任务,新号刷熟练度、友情币</td>
-</tr>
-<tr>
-<td><code>self.对战模式 = "5v5匹配"</code><br><code>self.触摸对战 = True</code><br><code>self.青铜段位 = True</code><br><code>self.标准模式 = False</code><br><code>self.组队模式 = True</code></td>
-<td><strong>对局非常慢</strong>,<br>满足<code>99.99999%</code>的任务需求</td>
-<td><strong>通过挂机检测</strong>,<br>每天组队打一场就行</td>
-</tr>
-<tr>
 <td><code>self.对战模式 = "人机闯关"</code></td>
 <td>速度快、胜率高、0人头</td>
-<td><strong>适合刷对战次数</strong>,<strong>最适合刷熟练度</strong>、<br>友情币、亲密关系、赛季对局次数任务</td>
+<td>适合刷对战次数任务,<br><strong>最适合新号刷熟练度</strong>、<br>赛季对局次数任务<br>组队刷友情币、亲密关系</td>
 </tr>
 <tr>
 <td><code>self.对战模式 = "模拟战"</code></td>
