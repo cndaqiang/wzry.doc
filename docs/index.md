@@ -58,9 +58,6 @@
 * 商城每日免费钻石碎片随机礼包
 
 ## 致谢
-- *[Cloudiiink](https://github.com/Cloudiiink) 正在设计制作全新的项目图标，版权归其所有。*  
-  特别感谢 Cloudiiink 的精心创作！  
-
 
 - 灵感和支持来自以下项目：  
   - [airtest_mobileauto](https://github.com/cndaqiang/airtest_mobileauto)  
@@ -70,3 +67,7 @@
 - 感谢所有提问 issue 和为本项目打星的用户！
 - 感谢b站的老哥们点赞推广!
 
+## 重要声明
+
+- 本脚本不会修改游戏数据，虽然理论上没有封号风险，但使用本脚本的后果需由用户自行承担。
+- 本脚本由个人开发，且不用于商业目的。开发者保留随时停止更新或删除项目的权利。

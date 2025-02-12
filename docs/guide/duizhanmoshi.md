@@ -39,8 +39,35 @@ if self.jinristep > 5:  self.对战模式 = "模拟战"
 if self.jinristep > 10:  self.对战模式 = "人机闯关"
 ```
 
+## 如何设计符合自己账户的对战模式
+
+|对战模式|特点|作用|
+|-|-|-|
+|`self.对战模式 = "5v5匹配"`<br>`self.触摸对战 = False`<br>`self.青铜段位 = False`|对局慢、星耀对局上限10次|**老号专用**,<br>蓝色熟练度提升到红色熟练度|
+|`self.对战模式 = "5v5匹配"`<br>`self.触摸对战 = False`<br>`self.青铜段位 = True`|挂机托管,击杀人头多,<br>可以获得金牌|**每日任务专用**,<br>击杀任务,新号刷熟练度、友情币|
+|`self.对战模式 = "5v5匹配"`<br>`self.触摸对战 = True`<br>`self.青铜段位 = True`<br>`self.标准模式 = False`<br>`self.组队模式 = True`|**对局非常慢**,<br>满足`99.99999%`的任务需求|**通过挂机检测**,<br>每天组队打一场就行|
+|`self.对战模式 = "人机闯关"`|速度快、胜率高、0人头|**适合刷对战次数**,**最适合刷熟练度**、<br>友情币、亲密关系、赛季对局次数任务|
+|`self.对战模式 = "模拟战"`|信誉分|**唯一支持提升信誉分的模式,<br>每期战令的20局娱乐任务**|
 
 
+针对上面的特点，我的个人对战模式设计
+```
+wzydday = 3 # 周一到周四(wzydday)，以营地任务为主, 王者对局不要赢
+#每天组队打0,1,2,...,nstep-1共nstep场，组队5v5匹配&触摸, 日活检测
+#每天单人打0,1,2,...,ostep-1共ostep场，模拟战|单人5v5匹配&星耀人机|人机闯关
+nstep=2
+ostep=1 if self.Tool.time_getweek() < wzydday  else 10 #10局是星耀人机的最大次数
+#对战模式: 
+if self.jinristep <= nstep: self.对战模式 = "5v5匹配"
+if self.jinristep <= nstep: self.标准模式 = self.触摸对战 = self.青铜段位 = True
+#前wzydday天不可以赢, 所以用模拟战刷信誉分. 超过wzydday,就可以为老号刷熟练度(5v5星耀人机)或者新号刷熟练度(人机闯关)
+if self.Tool.time_getweek() < wzydday and self.jinristep > nstep: self.对战模式="模拟战"
+if self.Tool.time_getweek() >= wzydday and self.jinristep > nstep: self.对战模式="5v5匹配"
+if self.Tool.time_getweek() >= wzydday and self.jinristep > nstep and self.mynode == 1 : self.对战模式="人机闯关"
+if self.jinristep  > nstep: self.标准模式 = self.触摸对战 = self.组队模式 = False
+if not self.组队模式 and self.totalnode_bak > 1: self.Tool.touchfile(self.无法进行组队FILE,"非组队模式 or nstep对战结束")
+#
+```
 
 
 ## 关于人机闯关模式的一些想法
@@ -60,6 +87,10 @@ if self.jinristep > 10:  self.对战模式 = "人机闯关"
 * 系统不会主动处罚挂机账户，但是4个队友都是真人,所以他们可能会举报.
 * 我举报过别的挂机用户, 系统都没有扣分
 * **以后是否会扣信誉分,请自行验证并为自己的账户负责**
+
+> * **人机闯关模式,对战速度快,胜率高,简直是最适合刷熟练度的模式, 但其用处也仅限于刷熟练度了**
+> * **人机闯关必须采用触摸模式,所以无法获得金牌,无法替换挂机模式的每日任务， 也不能为两局标准触摸组队模式节省多少时间.**
+> * 如果是为了刷日活还是要用默认的`self.对战模式 = "5v5匹配"`
 
 
 ![人机闯关](../fig/renjichaungguan.png)
