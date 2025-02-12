@@ -2594,14 +2594,16 @@
 </ul>
 <p>A:</p>
 <ul>
-<li>方法1. 从镜像站下载, 
-<br><code>pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-binary :all: --no-deps</code>
-或者<code>pip download autowzry -i https://mirrors.aliyun.com/pypi/simple/  --no-binary :all: --no-deps</code>
-<br>详见<a href="../../exp/pypi/">从pypi镜像站下载WZRY代码</a></li>
-<li>方法2. 使用github加速站下载, 例如 <code>https://github.moeyy.xyz/https://github.com/cndaqiang/WZRY/archive/dev.zip</code></li>
-<li>方法3. 使用国内的gitee等git服务商, 导入WZRY的仓库: <code>https://github.com/cndaqiang/WZRY.git</code>
+<li>b站搜索如何访问github</li>
+<li>万能方法. 使用<a href="https://gitee.com/">gitee</a>导入WZRY的仓库:<br> <code>https://github.com/cndaqiang/WZRY.git</code>
 <img alt="gitee下载WZRY" src="../../fig/gitee.png"></li>
-<li>等你可以访问github时, 欢迎你来为<a href="https://github.com/cndaqiang/WZRY">WZRY</a>项目点赞.</li>
+<li>镜像站方法, 使用公益的镜像站进行下载, 例如<br> <code>https://github.moeyy.xyz/https://github.com/cndaqiang/WZRY/archive/dev.zip</code></li>
+<li>Python终端下载方法., 
+<br><code>pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-binary :all: --no-deps</code>
+<br>或者<code>pip download autowzry -i https://mirrors.aliyun.com/pypi/simple/  --no-binary :all: --no-deps</code>
+<br>详见<a href="../../exp/pypi/">从pypi镜像站下载WZRY代码</a>
+<img alt="pip下载WZRY" src="../../fig/pipdown.png"></li>
+<li><strong>等你可以访问github时, 欢迎你来为<a href="https://github.com/cndaqiang/WZRY">WZRY</a>项目点赞.</strong></li>
 </ul>
 <h2 id="模块-airtest_mobileauto-导入失败"><code>模块 [airtest_mobileauto] 导入失败</code><a class="headerlink" href="#%E6%A8%A1%E5%9D%97-airtest_mobileauto-%E5%AF%BC%E5%85%A5%E5%A4%B1%E8%B4%A5" title="Permanent link">¶</a></h2>
 <p>Q:</p>
@@ -2728,10 +2730,11 @@ pip install autowzry
 <ul>
 <li>已经进入对战状态, 但是脚本判断对战失败</li>
 <li>程序无法识别结算画面, 卡住死循环</li>
+<li>卡在水晶爆炸的胜利、失败页面</li>
 </ul>
 <p>原因</p>
 <ul>
-<li><strong>请下载最新的release版本</strong></li>
+<li><strong>请下载<a href="https://github.com/cndaqiang/WZRY/releases">最新release的代码</a></strong>并<a href="../../guide/upfig/">检测是否要额外下载更新资源</a></li>
 <li>本脚本通过对战按钮、移动按钮等元素识别对战状态, 元流之子的对战按钮或者购买了皮肤的对战移动按钮等可能会导致识别失败.</li>
 <li>不要使用特殊的对战按钮</li>
 <li>使用了限定的峡谷地图(例如冰雪峡谷),在房间的<strong>峡谷地图</strong>选项中选择<strong>经典峡谷</strong>, 视频演示<a href="https://www.bilibili.com/video/BV1KBcEe9ETz/">王者荣耀: 切换默认的地图为经典峡谷</a></li>
