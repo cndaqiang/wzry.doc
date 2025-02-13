@@ -8,7 +8,7 @@
 * 可以在[issues](https://github.com/cndaqiang/WZRY/issues)界面友善的提示, 或者按照[图片更新](../guide/tupiangengxin.md)先行更新.
 
 
-## 2025-01-23 新春活动
+## ~~2025-01-23 新春活动~~ 已结束
 * 活动: 新春活动界面更新
 * 更新资源: [20250123_xinchun](../file/20250123_xinchun.zip)
 * **视频版更新资源方法:[农活自动化助手: 适配王者荣耀冰雪奇缘联动界面更新](https://www.bilibili.com/video/BV13NrzYMEqW)**

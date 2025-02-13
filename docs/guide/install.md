@@ -5,7 +5,7 @@
 
 
 ## 安装模拟器和登陆游戏 
-* **推荐将游戏安装到[BlueStack/LDPlayer/MuMu模拟器/腾讯手游助手](../exp/moniqi.md)中**.
+* **推荐将游戏安装到[BlueStack/LDPlayer/MuMu模拟器/腾讯手游助手](../exp/moniqi.md)/[docker](../exp/docker.md)中**.
 * 模拟器的分辨率设置为`960x540`,dpi为`160`.
 * **开启模拟器的ADB调试**
 * **安装王者、扫码登录账号, 下载所有游戏资源, 并手动进入游戏大厅**.

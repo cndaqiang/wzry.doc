@@ -143,10 +143,12 @@ extra:
   blocked_domains:
     - "127.0.0.1"
     - "wzry-doc.serv00.net" # 不追踪统计的域名
-    - "wzrydoc.readthedocs.io" # 不追踪统计的域名
+  #  - "wzrydoc.readthedocs.io" # 不追踪统计的域名
   # 若设置了, 仅在这些域名允许访客统计
   allow_domains:
     - "wzry-doc.pages.dev"
+    - "autowzry.cndaqiang.ac.cn"
+    - "wzrydoc.readthedocs.io"
     - "cndaqiang.github.io"
   # 由于搜索引擎不会执行js, 所以通过js禁止搜索引擎和修改图标的脚本无效, 2024-11-15开始删除
   # readthedocs.yaml中包含生成robots.txt的内容

@@ -53,14 +53,16 @@ Q:
 
 A:
 
-* 方法1. 从镜像站下载, 
-<br>`pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-binary :all: --no-deps`
-或者`pip download autowzry -i https://mirrors.aliyun.com/pypi/simple/  --no-binary :all: --no-deps`
-<br>详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
-* 方法2. 使用github加速站下载, 例如 `https://github.moeyy.xyz/https://github.com/cndaqiang/WZRY/archive/dev.zip`
-* 方法3. 使用国内的gitee等git服务商, 导入WZRY的仓库: `https://github.com/cndaqiang/WZRY.git`
+* b站搜索如何访问github
+* 万能方法. 使用[gitee](https://gitee.com/)导入WZRY的仓库:<br> `https://github.com/cndaqiang/WZRY.git`
 ![gitee下载WZRY](../fig/gitee.png)
-* 等你可以访问github时, 欢迎你来为[WZRY](https://github.com/cndaqiang/WZRY)项目点赞.
+* 镜像站方法, 使用公益的镜像站进行下载, 例如<br> `https://github.moeyy.xyz/https://github.com/cndaqiang/WZRY/archive/dev.zip`
+* Python终端下载方法., 
+<br>`pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-binary :all: --no-deps`
+<br>或者`pip download autowzry -i https://mirrors.aliyun.com/pypi/simple/  --no-binary :all: --no-deps`
+<br>详见[从pypi镜像站下载WZRY代码](../exp/pypi.md)
+![pip下载WZRY](../fig/pipdown.png)
+* **等你可以访问github时, 欢迎你来为[WZRY](https://github.com/cndaqiang/WZRY)项目点赞.**
 
 ## `模块 [airtest_mobileauto] 导入失败`
 Q:
@@ -100,10 +102,10 @@ Q:
 
 A:
 
-* 访问镜像站点[https://cndaqiang.github.io/wzry.doc/](https://cndaqiang.github.io/wzry.doc/), 或者打开科学网络环境.
-
-
-
+* 打开科学网络环境
+* 访问镜像站点[https://cndaqiang.github.io/wzry.doc/](https://cndaqiang.github.io/wzry.doc/).
+* 访问镜像站点[https://wzrydoc.readthedocs.io/](https://wzrydoc.readthedocs.io/)
+* 下载文件离线版[https://codeload.github.com/cndaqiang/wzry.doc/zip/refs/heads/gh-pages](https://codeload.github.com/cndaqiang/wzry.doc/zip/refs/heads/gh-pages)
 
 ## 有视频教程吗
 * [https://space.bilibili.com/643558671](https://space.bilibili.com/643558671)
@@ -193,10 +195,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 ## 对战状态识别失败/卡在结算窗口
 * 已经进入对战状态, 但是脚本判断对战失败
 * 程序无法识别结算画面, 卡住死循环
+* 卡在水晶爆炸的胜利、失败页面
 
 原因
 
-* **请下载最新的release版本**
+* **请下载[最新release的代码](https://github.com/cndaqiang/WZRY/releases)**并[检测是否要额外下载更新资源](../guide/upfig.md)
 * 本脚本通过对战按钮、移动按钮等元素识别对战状态, 元流之子的对战按钮或者购买了皮肤的对战移动按钮等可能会导致识别失败.
 * 不要使用特殊的对战按钮
 * 使用了限定的峡谷地图(例如冰雪峡谷),在房间的**峡谷地图**选项中选择**经典峡谷**, 视频演示[王者荣耀: 切换默认的地图为经典峡谷](https://www.bilibili.com/video/BV1KBcEe9ETz/)
@@ -331,6 +334,12 @@ emulator-5554   device
 ## 选择英雄失败
 * 控制文件写错了,同上[python语法注入文件没有生效](#python语法注入文件没有生效)
 * 偶尔模拟器太卡，刚点开分路，没来得及点英雄头像，游戏就已经开始了。
+
+## 没有选择熟练度最低的英雄
+* 按照教程开启[选择熟练度最低的英雄](../guide/duizhanmoshi.md)
+* **默认点击的是英雄界面的最后一个英雄，你在英雄界面手动设置按照熟练度排序**
+* 有些对局还没来得及点击坐标游戏就开始了
+* 有可能是新号的英雄不够多, 修改位置坐标, 例如`位置坐标=[(1,5),(1,5),(1,4),(1,2),(1,4)]`
 
 
 ## 礼包功能开启失败
