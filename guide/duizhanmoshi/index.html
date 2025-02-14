@@ -520,9 +520,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#关于人机闯关模式的一些想法" class="md-nav__link">
+  <a href="#人机闯关" class="md-nav__link">
     <span class="md-ellipsis">
-      关于人机闯关模式的一些想法
+      人机闯关
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#模拟战" class="md-nav__link">
+    <span class="md-ellipsis">
+      模拟战
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#其他模式" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他模式
     </span>
   </a>
   
@@ -1336,9 +1354,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#关于人机闯关模式的一些想法" class="md-nav__link">
+  <a href="#人机闯关" class="md-nav__link">
     <span class="md-ellipsis">
-      关于人机闯关模式的一些想法
+      人机闯关
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#模拟战" class="md-nav__link">
+    <span class="md-ellipsis">
+      模拟战
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#其他模式" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他模式
     </span>
   </a>
   
@@ -1462,7 +1498,7 @@ if not self.组队模式 and self.totalnode_bak &gt; 1: self.Tool.touchfile(self
 #
 </code></pre></div>
 
-<h2 id="关于人机闯关模式的一些想法">关于人机闯关模式的一些想法<a class="headerlink" href="#%E5%85%B3%E4%BA%8E%E4%BA%BA%E6%9C%BA%E9%97%AF%E5%85%B3%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95" title="Permanent link">¶</a></h2>
+<h2 id="人机闯关">人机闯关<a class="headerlink" href="#%E4%BA%BA%E6%9C%BA%E9%97%AF%E5%85%B3" title="Permanent link">¶</a></h2>
 <p>如果不想使用助手, 每天<strong>用手打游戏</strong>如何最快的完成日活要求呢？人机闯关是最合适的模式.</p>
 <ul>
 <li>5个真人从中路直接推水晶, 手打2分钟以内结束一把</li>
@@ -1494,7 +1530,18 @@ if not self.组队模式 and self.totalnode_bak &gt; 1: self.Tool.touchfile(self
 <li><strong>请务必手动点击，进入一次人机闯关的房间, 会有非常多的提示让你去确定</strong></li>
 <li>在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 填入<code>self.对战模式 = "人机闯关"</code>, 如下图</li>
 </ul>
-<p><img alt="人机闯关" src="../../fig/autorenjichaungguan.png"></p></div>
+<p><img alt="人机闯关" src="../../fig/autorenjichaungguan.png"></p>
+<h2 id="模拟战">模拟战<a class="headerlink" href="#%E6%A8%A1%E6%8B%9F%E6%88%98" title="Permanent link">¶</a></h2>
+<ul>
+<li><code>self.对战模式 = "模拟战"</code></li>
+<li>细节见<a href="../../exp/xinyufen/">自动刷信誉分</a></li>
+</ul>
+<h2 id="其他模式">其他模式<a class="headerlink" href="#%E5%85%B6%E4%BB%96%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h2>
+<ul>
+<li>在wzry.py中搜索<code>self.对战模式</code>,自行探索隐藏的对战模式</li>
+<li>这些没有公开的模式，都是有风险的.</li>
+<li>比如 <code>self.对战模式 = "火焰山"</code>. <strong>就很容易扣信誉分</strong>. </li>
+</ul></div>
 
 
 
