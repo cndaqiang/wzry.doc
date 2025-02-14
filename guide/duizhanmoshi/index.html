@@ -544,6 +544,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="其他模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#火焰山模式" class="md-nav__link">
+    <span class="md-ellipsis">
+      火焰山模式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1378,6 +1393,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="其他模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#火焰山模式" class="md-nav__link">
+    <span class="md-ellipsis">
+      火焰山模式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1480,7 +1510,7 @@ self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 </tr>
 <tr>
 <td><code>self.对战模式 = "火焰山"</code></td>
-<td><strong>扣信誉分专用</strong></td>
+<td><strong>对战速度快</strong><br><strong>补全标准人机不满足的任务需求</strong></td>
 <td><strong>要么扣一点信誉分,<br>要么加一点信誉分</strong><br>增加随机英雄的熟练度<br><strong>满足真人对局的活动要求</strong></td>
 </tr>
 </tbody>
@@ -1509,38 +1539,22 @@ if self.jinristep &gt;  s3: self.对战时间[1]=self.对战时间[0]+0.1
 </code></pre></div>
 
 <h2 id="人机闯关">人机闯关<a class="headerlink" href="#%E4%BA%BA%E6%9C%BA%E9%97%AF%E5%85%B3" title="Permanent link">¶</a></h2>
-<p>如果不想使用助手, 每天<strong>用手打游戏</strong>如何最快的完成日活要求呢？人机闯关是最合适的模式.</p>
 <ul>
-<li>5个真人从中路直接推水晶, 手打2分钟以内结束一把</li>
-<li>两局就可以完成日活的对战要求</li>
-<li>进行人机闯关的基本都是做任务的，所以对局结束后经常有人邀请你组队闯关，你也可以邀请别人组队（完成组队任务）</li>
-<li>对战结束后务必选择返回大厅，重新进入第一关，后面的关卡难度高而且没人，</li>
-</ul>
-<p>在使用本助手运行时，也可以开启人机闯关模式<code>self.对战模式 = "人机闯关"</code></p>
-<ul>
-<li>本助手的人机闯关模式支持自己的大号和小号组队, 默认对局结束返回大厅重新进入第一关.</li>
-<li><strong>因为4个队友都是真人, 所以半夜或者其他阴间时间可能匹配不到人!!!</strong></li>
-<li><strong>因此在使用本助手的人机闯关模式时请选择正常玩家在线比较多的时间</strong></li>
-<li>人机闯关打的多了，可以看到很多在泉水平A回城的脚本号.</li>
-<li>系统不会主动处罚挂机账户，但是4个队友都是真人,所以他们可能会举报.</li>
-<li>我举报过别的挂机用户, 系统都没有扣分</li>
-<li><strong>以后是否会扣信誉分,请自行验证并为自己的账户负责</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><strong>人机闯关模式,对战速度快,胜率高,简直是最适合刷熟练度的模式, 但其用处也仅限于刷熟练度了</strong></li>
-<li><strong>人机闯关必须采用触摸模式,所以无法获得金牌,无法替换挂机模式的每日任务， 也不能为两局标准触摸组队模式节省多少时间.</strong></li>
-<li>如果是为了刷日活还是要用默认的<code>self.对战模式 = "5v5匹配"</code></li>
-<li><strong>但是人机闯关只能刷自己金币已经购买的英雄, 而"5v5匹配"可以刷所有的英雄, 对于新号好像还是"5v5匹配"更全能一些</strong></li>
-</ul>
-</blockquote>
-<p><img alt="人机闯关" src="../../fig/renjichaungguan.png"></p>
-<p>开启人机闯关模式的方法: </p>
-<ul>
+<li><strong>人机闯关模式,对战速度快,胜率高,简直是最适合刷熟练度、亲密度、友情币的模式, 但其用处也仅限于刷熟练度了</strong></li>
+<li><strong>人机闯关只能刷自己金币已经购买的英雄, 而"5v5匹配"可以刷所有的英雄</strong></li>
 <li><strong>请务必手动点击，进入一次人机闯关的房间, 会有非常多的提示让你去确定</strong></li>
-<li>在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 填入<code>self.对战模式 = "人机闯关"</code>, 如下图</li>
+<li>在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 填入<code>self.对战模式 = "人机闯关"</code>开启此模式</li>
 </ul>
 <p><img alt="人机闯关" src="../../fig/autorenjichaungguan.png"></p>
+<p>风险与缺点</p>
+<ul>
+<li><strong>因为4个队友都是真人, 所以半夜或者其他阴间时间可能匹配不到人!!!</strong></li>
+<li><strong>在使用本助手的人机闯关模式时请选择正常玩家在线比较多的时间</strong></li>
+<li>系统不会主动处罚挂机账户，但是4个队友都是真人,所以他们可能会举报.</li>
+<li>人机闯关打的多了，可以看到很多在泉水平A回城的脚本号.</li>
+<li>我举报过这些脚本用户, 系统都没有扣分。那我们也加入脚本大军。</li>
+<li><strong>以后是否会扣信誉分,请自行验证并为自己的账户负责</strong></li>
+</ul>
 <h2 id="模拟战">模拟战<a class="headerlink" href="#%E6%A8%A1%E6%8B%9F%E6%88%98" title="Permanent link">¶</a></h2>
 <ul>
 <li><code>self.对战模式 = "模拟战"</code></li>
@@ -1551,6 +1565,12 @@ if self.jinristep &gt;  s3: self.对战时间[1]=self.对战时间[0]+0.1
 <li>在wzry.py中搜索<code>self.对战模式</code>,自行探索隐藏的对战模式</li>
 <li>这些没有公开的模式，都是有风险的.</li>
 <li>比如 <code>self.对战模式 = "火焰山"</code>. 没被举报就加信誉分,被举报就<strong>扣信誉分</strong>. </li>
+</ul>
+<h3 id="火焰山模式">火焰山模式<a class="headerlink" href="#%E7%81%AB%E7%84%B0%E5%B1%B1%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>对战速度快，可以无限制提升蓝色英雄熟练度</strong>(而星耀人机每天只能提升10局)</li>
+<li><strong>虽然我账户连续15局火焰山没被扣信誉分</strong>,但是因为脚本使用不当、模拟器卡顿等原因，模拟战是有可能被举报扣分的, <strong>请为自己的行为负责</strong></li>
+<li>只要没被扣分，火焰山还可以增加信誉分、也能完成赛季娱乐模式的任务，最近明世隐皮肤要求必须真人之间5v5, 仅有火焰山模式可以完成此需求。(以前的活动都用标准人机触摸模式完成)</li>
 </ul></div>
 
 
