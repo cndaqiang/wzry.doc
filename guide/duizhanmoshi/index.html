@@ -1485,22 +1485,27 @@ self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 </tr>
 </tbody>
 </table>
-<p>针对上面的特点，我的个人对战模式设计</p>
-<div class="codehilite"><pre><span></span><code>wzydday = 3 # 周一到周四(wzydday)，以营地任务为主, 王者对局不要赢
-<span class="gh">#</span>每天组队打0,1,2,...,nstep-1共nstep场，组队5v5匹配&amp;触摸, 日活检测
-<span class="gh">#</span>每天单人打0,1,2,...,ostep-1共ostep场，模拟战|单人5v5匹配&amp;星耀人机|人机闯关
-nstep=2
-ostep=1 if self.Tool.time_getweek() &lt; wzydday  else 10 #10局是星耀人机的最大次数
-<span class="gh">#</span>对战模式: 
-if self.jinristep &lt;= nstep: self.对战模式 = "5v5匹配"
-if self.jinristep &lt;= nstep: self.标准模式 = self.触摸对战 = self.青铜段位 = True
-<span class="gh">#</span>前wzydday天不可以赢, 所以用模拟战刷信誉分. 超过wzydday,就可以为老号刷熟练度(5v5星耀人机)或者新号刷熟练度(人机闯关)
-if self.Tool.time_getweek() &lt; wzydday and self.jinristep &gt; nstep: self.对战模式="模拟战"
-if self.Tool.time_getweek() &gt;= wzydday and self.jinristep &gt; nstep: self.对战模式="5v5匹配"
-if self.Tool.time_getweek() &gt;= wzydday and self.jinristep &gt; nstep and self.mynode == 1 : self.对战模式="人机闯关"
-if self.jinristep  &gt; nstep: self.标准模式 = self.触摸对战 = self.组队模式 = False
+<p>针对上面的特点，我大号的对战模式设计</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span> s1(组队日活任务), s2(信誉分任务),s3(熟练度任务、战令任务)
+s1 = 2
+s2 = 3 + s1
+if self.jinristep &lt;= s1: self.对战模式 = "火焰山" # "5v5匹配"
+if self.jinristep &lt;= s1: self.触摸对战 = self.标准模式 = self.青铜段位 = True
+if s1 &lt; self.jinristep: self.组队模式 = False
+if s1 &lt; self.jinristep &lt;= s2: self.对战模式 = "模拟战"
 if not self.组队模式 and self.totalnode_bak &gt; 1: self.Tool.touchfile(self.无法进行组队FILE,"非组队模式 or nstep对战结束")
-#
+<span class="gh">#</span>周四(3)凌晨, 营地的战令任务就领完了，可以全力做熟练度和王者战令任务了
+wzydday = 3 #
+s3 = 10 + s2 if self.Tool.time_getweek() &gt;= wzydday else 0
+if s2&lt; self.jinristep &lt;= s3: self.对战模式 = "5v5匹配" # "人机闯关"
+if s2&lt; self.jinristep &lt;= s3: self.标准模式 = self.触摸对战 = False
+self.jinristep &gt;  s3: self.对战时间[1]=self.对战时间[0]+0.1
+<span class="gh">#</span>................................................................................
+<span class="gh">#</span>对战时间
+uptime=23.5
+self.对战时间=[1.0,uptime]
+self.限时组队时间=uptime
+if self.jinristep &gt;  s3: self.对战时间[1]=self.对战时间[0]+0.1
 </code></pre></div>
 
 <h2 id="人机闯关">人机闯关<a class="headerlink" href="#%E4%BA%BA%E6%9C%BA%E9%97%AF%E5%85%B3" title="Permanent link">¶</a></h2>
