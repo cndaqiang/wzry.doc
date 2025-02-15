@@ -502,6 +502,25 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="注意事项">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#切换不同对战模式的方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      切换不同对战模式的方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#根据对局次数选择对战模式" class="md-nav__link">
     <span class="md-ellipsis">
       根据对局次数选择对战模式
@@ -509,20 +528,16 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#如何设计符合自己账户的对战模式" class="md-nav__link">
-    <span class="md-ellipsis">
-      如何设计符合自己账户的对战模式
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#模拟战" class="md-nav__link">
+  <a href="#不同对战模式的比较" class="md-nav__link">
     <span class="md-ellipsis">
-      模拟战
+      不同对战模式的比较
     </span>
   </a>
   
@@ -1360,6 +1375,25 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="注意事项">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#切换不同对战模式的方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      切换不同对战模式的方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#根据对局次数选择对战模式" class="md-nav__link">
     <span class="md-ellipsis">
       根据对局次数选择对战模式
@@ -1367,20 +1401,16 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#如何设计符合自己账户的对战模式" class="md-nav__link">
-    <span class="md-ellipsis">
-      如何设计符合自己账户的对战模式
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#模拟战" class="md-nav__link">
+  <a href="#不同对战模式的比较" class="md-nav__link">
     <span class="md-ellipsis">
-      模拟战
+      不同对战模式的比较
     </span>
   </a>
   
@@ -1455,23 +1485,27 @@
 <li><strong>把<code>mynode</code>替换为你的<a href="../config/#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB">账户编号</a></strong></li>
 <li>文件为UTF8格式编码, 内容为标准的python语法,不支持超过一行的python语句.</li>
 </ul>
-<p>使用<strong>模拟战、人机闯关</strong>等模式时请注意:</p>
+<h2 id="注意事项">注意事项<a class="headerlink" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>请务必手动点击，进入一次对战界面，比如第一次时都会有非常多的提示让你去确定</strong></li>
 <li>脚本没必要处理这些一次性的内容，请手动点一遍</li>
+<li>模拟战使用方法见<a href="../../exp/xinyufen/">自动刷信誉分</a></li>
 <li><strong>建议打开游戏开关:设置&gt;操作&gt;快捷技能加点|快捷装备购买</strong></li>
 </ul>
+<h3 id="切换不同对战模式的方法">切换不同对战模式的方法<a class="headerlink" href="#%E5%88%87%E6%8D%A2%E4%B8%8D%E5%90%8C%E5%AF%B9%E6%88%98%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95" title="Permanent link">¶</a></h3>
+<p>在<code>WZRY.mynode.运行模式.txt</code>文件中填入对战参数,如
+<img alt="人机闯关" src="../../fig/autorenjichaungguan.png"></p>
 <div class="admonition info">
 <p class="admonition-title">目前支持的对战模式包括</p>
 <p></p><pre><code>
 self.青铜段位 = False # True 则进行青铜人机,False进行星耀人机
 self.标准模式 = False # True 则进行标准人机,False进行快速人机
 self.触摸对战 = False # True 则在对战过程自动平移、平A、买装备等真人的操作.
-self.对战模式 = "5v5匹配" # 目前支持 "5v5匹配"(人机5v5), "模拟战"(王者模拟战), "人机闯关"(人机闯关、鸡肋且存在被举报风险请慎重使用)
+self.对战模式 = "5v5匹配" # 目前支持 "5v5匹配"(人机5v5), "模拟战"(王者模拟战)
 self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 </code></pre>
 </div>
-<h2 id="根据对局次数选择对战模式">根据对局次数选择对战模式<a class="headerlink" href="#%E6%A0%B9%E6%8D%AE%E5%AF%B9%E5%B1%80%E6%AC%A1%E6%95%B0%E9%80%89%E6%8B%A9%E5%AF%B9%E6%88%98%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h2>
+<h3 id="根据对局次数选择对战模式">根据对局次数选择对战模式<a class="headerlink" href="#%E6%A0%B9%E6%8D%AE%E5%AF%B9%E5%B1%80%E6%AC%A1%E6%95%B0%E9%80%89%E6%8B%A9%E5%AF%B9%E6%88%98%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h3>
 <ul>
 <li><code>self.runstep</code>,本脚累计运行了多少次对战</li>
 <li><code>self.jinristep</code>,本脚本次运行了多少次对战</li>
@@ -1486,7 +1520,7 @@ self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 <span class="k">if</span><span class="w"> </span><span class="nv">self</span>.<span class="nv">jinristep</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span>:<span class="w">  </span><span class="nv">self</span>.对战模式<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"人机闯关"</span>
 </code></pre></div>
 
-<h2 id="如何设计符合自己账户的对战模式">如何设计符合自己账户的对战模式<a class="headerlink" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%AC%A6%E5%90%88%E8%87%AA%E5%B7%B1%E8%B4%A6%E6%88%B7%E7%9A%84%E5%AF%B9%E6%88%98%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h2>
+<h2 id="不同对战模式的比较">不同对战模式的比较<a class="headerlink" href="#%E4%B8%8D%E5%90%8C%E5%AF%B9%E6%88%98%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%AF%94%E8%BE%83" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -1523,23 +1557,22 @@ self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 </tr>
 <tr>
 <td><code>self.对战模式 = "人机闯关"</code></td>
-<td>速度快、胜率高、0人头</td>
+<td><strong>谨慎使用、后果自负</strong><br>速度快、胜率高、0人头</td>
 <td>适合刷对战次数任务,<br><strong>最快刷熟练度</strong><br>(但是<strong>只能刷自己有的英雄</strong>)、<br>赛季对局次数任务<br>组队刷友情币、亲密关系<br><strong>鸡肋</strong></td>
 </tr>
 <tr>
 <td><code>self.对战模式 = "火焰山"</code></td>
-<td>速度快,<br><strong>补全标准人机不满足的任务需求</strong></td>
+<td><strong>谨慎使用、后果自负</strong><br>速度快,<br><strong>补全标准人机不满足的任务需求</strong></td>
 <td><strong>要么扣一点信誉分,<br>要么加一点信誉分</strong><br>增加随机英雄的熟练度<br><strong>满足真人对局的活动要求</strong></td>
 </tr>
 <tr>
 <td><code>self.对战模式 = "1v1人人"</code></td>
-<td>速度快,<br><strong>补全标准人机不满足的任务需求</strong></td>
+<td><strong>谨慎使用、后果自负</strong><br>速度快,<br><strong>补全标准人机不满足的任务需求</strong></td>
 <td><strong>要么扣一点信誉分,<br>要么加一点信誉分</strong><br><strong>胜率低,加不了几点熟练度</strong><br><strong>只能刷自己有的英雄</strong><br><strong>连鸡肋都不如</strong></td>
 </tr>
 </tbody>
 </table>
-<p>self.对战模式 = "1v1人人"
-针对上面的特点，我大号的对战模式设计</p>
+<p>针对上面的特点，我大号的对战模式设计</p>
 <div class="codehilite"><pre><span></span><code><span class="gh">#</span> s1(组队日活任务), s2(信誉分任务),s3(熟练度任务、战令任务)
 s1 = 2
 s2 = 3 + s1
@@ -1562,50 +1595,31 @@ self.限时组队时间=uptime
 if self.jinristep &gt;  s3: self.对战时间[1]=self.对战时间[0]+0.1
 </code></pre></div>
 
-<h2 id="模拟战">模拟战<a class="headerlink" href="#%E6%A8%A1%E6%8B%9F%E6%88%98" title="Permanent link">¶</a></h2>
-<ul>
-<li><code>self.对战模式 = "模拟战"</code></li>
-<li>细节见<a href="../../exp/xinyufen/">自动刷信誉分</a></li>
-</ul>
 <h2 id="隐藏模式">隐藏模式<a class="headerlink" href="#%E9%9A%90%E8%97%8F%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h2>
 <ul>
 <li>在wzry.py中搜索<code>self.对战模式</code>,自行探索隐藏的对战模式</li>
-<li>这些没有公开的模式，都是有风险的.</li>
-<li>比如 <code>self.对战模式 = "火焰山"</code>. 没被举报就加信誉分,被举报就<strong>扣信誉分</strong>. </li>
+<li>这些没有公开的模式，<strong>使用不当会扣信誉分</strong>, <strong>请后果自负,后果自负,后果自负!!!</strong></li>
 </ul>
 <h3 id="人机闯关">人机闯关<a class="headerlink" href="#%E4%BA%BA%E6%9C%BA%E9%97%AF%E5%85%B3" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>人机闯关模式,对战速度快,胜率高,简直是最适合刷熟练度、亲密度、友情币的模式, 但其用处也仅限于刷熟练度了</strong></li>
-<li><strong>人机闯关只能刷自己金币已经购买的英雄, 而"5v5匹配"可以刷所有的英雄</strong></li>
-<li><strong>请务必手动点击，进入一次人机闯关的房间, 会有非常多的提示让你去确定</strong></li>
+<li><strong>对战速度快,胜率高,简直是最适合刷熟练度、亲密度、友情币的模式</strong></li>
+<li><strong>只能刷自己金币已经购买的英雄</strong>, 有些鸡肋.</li>
+<li><strong>因为4个队友都是真人, 所以请选择正常玩家在线比较多的时间运行此模式</strong></li>
 <li>在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 填入<code>self.对战模式 = "人机闯关"</code>开启此模式</li>
-</ul>
-<p><img alt="人机闯关" src="../../fig/autorenjichaungguan.png"></p>
-<p>风险与缺点</p>
-<ul>
-<li><strong>因为4个队友都是真人, 所以半夜或者其他阴间时间可能匹配不到人!!!</strong></li>
-<li><strong>在使用本助手的人机闯关模式时请选择正常玩家在线比较多的时间</strong></li>
-<li>系统不会主动处罚挂机账户，但是4个队友都是真人,所以他们可能会举报.</li>
-<li>人机闯关打的多了，可以看到很多在泉水平A回城的脚本号.</li>
-<li>我举报过这些脚本用户, 系统都没有扣分。那我们也加入脚本大军。</li>
-<li><strong>以后是否会扣信誉分,请自行验证并为自己的账户负责</strong></li>
 </ul>
 <h3 id="火焰山模式">火焰山模式<a class="headerlink" href="#%E7%81%AB%E7%84%B0%E5%B1%B1%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>对战速度快，可以无限制提升蓝色英雄熟练度</strong>(而星耀人机每天只能提升10局)</li>
-<li><strong>虽然我账户连续15局火焰山没被扣信誉分</strong>,但是因为脚本使用不当、模拟器卡顿等原因，火焰山是有可能被举报扣分的, <strong>请为自己的行为负责</strong></li>
-<li>如果没被扣分，火焰山还可以增加信誉分、也能完成赛季娱乐模式的任务，最近明世隐皮肤要求必须真人之间5v5, 仅有火焰山模式可以完成此需求。(以前的活动都用标准人机触摸模式完成)</li>
+<li><strong>对战速度快，可以无限制提升蓝色英雄熟练度</strong></li>
+<li>如果没被扣分，还可以增加信誉分、也能完成赛季娱乐模式的任务。</li>
+<li>有些活动要求必须真人之间5v5, 火焰山可以满足此需求。</li>
+<li>在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 填入<code>self.对战模式 = "火焰山"</code>开启此模式</li>
 </ul>
 <h3 id="1v1模式">1v1模式<a class="headerlink" href="#1v1%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>和火焰山类似, 比火焰山还快, 同样有扣信誉分的风险</strong></li>
-<li><strong>虽然1v1能增加蓝色英雄的熟练度,但凡对面是人都赢不了,加不了几点熟练度</strong>,连鸡肋都不如.</li>
-<li>我举报对面挂机脚本失效，我也没被扣信誉分, 但是因为脚本使用不当、模拟器卡顿等原因，1v1人人是有可能被举报扣分的, <strong>请为自己的行为负责</strong></li>
+<li><strong>对战速度快，胜率低, 能提升的熟练度有限</strong>,连鸡肋都不如.</li>
+<li>如果没被扣分，还可以增加信誉分。</li>
+<li>在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 填入<code>self.对战模式 = "1v1人人"</code>开启此模式</li>
 </ul>
-<p>开始方式</p>
-<div class="codehilite"><pre><span></span><code>self.对战模式 = "1v1人人"
-</code></pre></div>
-
 <p>刷预设的英雄, 添加下面内容</p>
 <div class="codehilite"><pre><span></span><code>self.选择英雄 = False
 </code></pre></div>
