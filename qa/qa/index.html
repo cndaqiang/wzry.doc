@@ -2622,24 +2622,19 @@
 </code></pre></div>
 
 <h2 id="没办法下载wzry代码">没办法下载WZRY代码<a class="headerlink" href="#%E6%B2%A1%E5%8A%9E%E6%B3%95%E4%B8%8B%E8%BD%BDwzry%E4%BB%A3%E7%A0%81" title="Permanent link">¶</a></h2>
-<p>Q:</p>
-<ul>
-<li>不会魔法上网, 也无法访问github? 无法下载脚本?</li>
-<li>打不开下载页面/进不去github网页</li>
-<li>下载速度缓慢?</li>
-</ul>
-<p>A:</p>
+<p>GitHub是<a href="https://github.com/cndaqiang/WZRY">WZRY · 农活自动化助手</a>项目唯一发布地址和问题反馈平台. 项目的发展, <strong>需要你为<a href="https://github.com/cndaqiang/WZRY">WZRY</a>项目点赞.</strong>. 若你无法访问项目主页<a href="https://github.com/cndaqiang/WZRY">WZRY</a>, 可以尝试下面的第三方加速下载途径:</p>
 <ul>
 <li>b站搜索如何访问github</li>
-<li>万能方法. 使用<a href="https://gitee.com/">gitee</a>导入WZRY的仓库:<br> <code>https://github.com/cndaqiang/WZRY.git</code>
+<li><strong>万能方法</strong>. 使用<a href="https://gitee.com/">gitee</a>导入WZRY的仓库:<br> <code>https://github.com/cndaqiang/WZRY.git</code><br><strong>然后切换master分支为dev</strong>,<br>点击克隆/下载,点击下载ZIP
 <img alt="gitee下载WZRY" src="../../fig/gitee.png"></li>
-<li>镜像站方法, 使用公益的镜像站进行下载, 例如<br> <code>https://github.moeyy.xyz/https://github.com/cndaqiang/WZRY/archive/dev.zip</code></li>
-<li>Python终端下载方法., 
+<li>文件加速方法, 需要找加速站, 例如<br> <code>https://github.moeyy.xyz/https://github.com/cndaqiang/WZRY/archive/dev.zip</code><br><code>https://gh-proxy.ygxz.in/https://github.com/cndaqiang/WZRY/archive/dev.zip</code></li>
+<li>镜像站方法, 需要找镜像站, 例如<br><code>https://bgithub.xyz/cndaqiang/WZRY</code></li>
+<li>某些网络加速器可以加速访问GitHub</li>
+<li>Python终端下载方法, 
 <br><code>pip download autowzry -i https://mirrors.cernet.edu.cn/pypi/web/simple --no-binary :all: --no-deps</code>
 <br>或者<code>pip download autowzry -i https://mirrors.aliyun.com/pypi/simple/  --no-binary :all: --no-deps</code>
 <br>详见<a href="../../exp/pypi/">从pypi镜像站下载WZRY代码</a>
 <img alt="pip下载WZRY" src="../../fig/pipdown.png"></li>
-<li><strong>等你可以访问github时, 欢迎你来为<a href="https://github.com/cndaqiang/WZRY">WZRY</a>项目点赞.</strong></li>
 </ul>
 <h2 id="模块-airtest_mobileauto-导入失败"><code>模块 [airtest_mobileauto] 导入失败</code><a class="headerlink" href="#%E6%A8%A1%E5%9D%97-airtest_mobileauto-%E5%AF%BC%E5%85%A5%E5%A4%B1%E8%B4%A5" title="Permanent link">¶</a></h2>
 <p>Q:</p>
@@ -2826,14 +2821,15 @@ self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", r
 <li>认真阅读<a href="../../guide/install/">安装指南</a></li>
 <li>配置文件写错了,认真阅读<a href="../../guide/config/">配置文件</a></li>
 <li>配置文件名写错了, 例如windows默认不显示<code>.txt</code>拓展名, 结果配置文件的名字写成了<code>conig.win.yaml.txt</code>, </li>
+<li><strong>模拟器开了网络桥接,此时ip不是<code>127.0.0.1</code>,改为正确的ip</strong></li>
+<li>模拟器没有开启ADB端口, ADB端口填错了</li>
 <li>同时运行的模拟器太多,互相冲突.</li>
-<li>模拟器没有开启ADB端口</li>
 <li><strong>手机没有通过电脑的ADB信任</strong></li>
 <li>ADB服务被其他软件弄坏了,建议手动执行<code>adb kill-server</code></li>
 <li>在脚本运行过程中使用了escrcpy、airtestIDE、各种安卓玩机助手、ADB操作了模拟器</li>
 <li>这些程序会阻断脚本的ADB连接,并且这些程序在退出的时候,会强制断开本脚本的ADB连接</li>
 <li>adb查看到设备<code>emulator-5554</code>不是说端口是<code>5554</code>,而是模拟器/手机的主板编号是<code>emulator-5554</code>,此时LINK_dict应该为<code>Android:///emulator-5554</code>,而不是<code>Android:///127.0.0.1:5554</code></li>
-<li>模拟器的端口(即<code>127.0.0.1:端口</code>)是要在模拟器的设置和诊断里去查看的, 如果找不到就只能搜索. <a href="../../exp/moniqi/">BlueStack/LDPlayer/MuMu模拟器/腾讯手游助手默认的adb可以查看这个连接</a>.</li>
+<li>模拟器的<code>ip:端口</code>(即<code>127.0.0.1:端口</code>)是要在模拟器的设置和诊断里去查看的, 如果找不到就只能搜索. <a href="../../exp/moniqi/">BlueStack/LDPlayer/MuMu模拟器/腾讯手游助手默认的adb可以查看这个连接</a>.</li>
 </ul>
 <h2 id="关闭不了模拟器">关闭不了模拟器<a class="headerlink" href="#%E5%85%B3%E9%97%AD%E4%B8%8D%E4%BA%86%E6%A8%A1%E6%8B%9F%E5%99%A8" title="Permanent link">¶</a></h2>
 <ul>
