@@ -870,6 +870,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#无法点击" class="md-nav__link">
+    <span class="md-ellipsis">
+      无法点击
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#脚本正在运行突然提示连接不上模拟器各种报错但是模拟器正常" class="md-nav__link">
     <span class="md-ellipsis">
       脚本正在运行、突然提示连接不上模拟器,各种报错,但是模拟器正常
@@ -2112,6 +2121,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#无法点击" class="md-nav__link">
+    <span class="md-ellipsis">
+      无法点击
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#脚本正在运行突然提示连接不上模拟器各种报错但是模拟器正常" class="md-nav__link">
     <span class="md-ellipsis">
       脚本正在运行、突然提示连接不上模拟器,各种报错,但是模拟器正常
@@ -2836,6 +2854,32 @@ self.大厅对战图标=Template(r"tpl1730865263724.png", dirname = ".pngtmp", r
 <li>模拟器路径、名字、instance等写错了</li>
 <li>查看手册<a href="../../guide/config/#%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%8F%82%E6%95%B0">配置文件</a>, 检查你的模拟器参数填对了吗, 有没有多填空格,打错字母</li>
 </ul>
+<h2 id="无法点击">无法点击<a class="headerlink" href="#%E6%97%A0%E6%B3%95%E7%82%B9%E5%87%BB" title="Permanent link">¶</a></h2>
+<ul>
+<li>可以连接模拟器、可以识别游戏处在大厅中</li>
+<li>执行点击操作是程序报错</li>
+<li><strong>强制结束脚本或者其他软件在调用adb</strong></li>
+<li>终端执行<code>adb kill-server</code></li>
+<li>其他上 <em><a href="#%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E6%A8%A1%E6%8B%9F%E5%99%A8">连接不上模拟器</a></em></li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nx">Traceback</span><span class="w"> </span><span class="p">(</span><span class="nx">most</span><span class="w"> </span><span class="nx">recent</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">last</span><span class="p">):</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest_mobileauto/control.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">624</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">touch</span>
+<span class="w">    </span><span class="nx">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">touch_o</span><span class="p">(</span><span class="o">*</span><span class="nx">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">kwargs</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/utils/logwraper.py"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">131</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">wrapper</span>
+<span class="w">    </span><span class="nx">res</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="o">*</span><span class="nx">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">kwargs</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">"/home/cndaqiang/.local/lib/python3.10/site</span>
+<span class="s">  ...</span>
+<span class="s">  File "</span><span class="o">/</span><span class="nx">home</span><span class="o">/</span><span class="nx">cndaqiang</span><span class="o">/</span><span class="p">.</span><span class="nx">local</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.10</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">airtest</span><span class="o">/</span><span class="nx">core</span><span class="o">/</span><span class="nx">android</span><span class="o">/</span><span class="nx">touch_methods</span><span class="o">/</span><span class="nx">base_touch</span><span class="p">.</span><span class="nx">py</span><span class="s">", line 201, in perform</span>
+<span class="s">    self.handle(cmd)</span>
+<span class="s">  File "</span><span class="o">/</span><span class="nx">home</span><span class="o">/</span><span class="nx">cndaqiang</span><span class="o">/</span><span class="p">.</span><span class="nx">local</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.10</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">airtest</span><span class="o">/</span><span class="nx">core</span><span class="o">/</span><span class="nx">android</span><span class="o">/</span><span class="nx">touch_methods</span><span class="o">/</span><span class="nx">base_touch</span><span class="p">.</span><span class="nx">py</span><span class="s">", line 18, in wrapper</span>
+<span class="s">    return func(inst, *args, **kwargs)</span>
+<span class="s">  File "</span><span class="o">/</span><span class="nx">home</span><span class="o">/</span><span class="nx">cndaqiang</span><span class="o">/</span><span class="p">.</span><span class="nx">local</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.10</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">airtest</span><span class="o">/</span><span class="nx">core</span><span class="o">/</span><span class="nx">android</span><span class="o">/</span><span class="nx">touch_methods</span><span class="o">/</span><span class="nx">base_touch</span><span class="p">.</span><span class="nx">py</span><span class="s">", line 111, in safe_send</span>
+<span class="s">    self.client.send(data)</span>
+<span class="s">  File "</span><span class="o">/</span><span class="nx">home</span><span class="o">/</span><span class="nx">cndaqiang</span><span class="o">/</span><span class="p">.</span><span class="nx">local</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.10</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">airtest</span><span class="o">/</span><span class="nx">utils</span><span class="o">/</span><span class="nx">safesocket</span><span class="p">.</span><span class="nx">py</span><span class="err">"</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">send</span>
+<span class="w">    </span><span class="nx">sent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">sock</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">msg</span><span class="p">[</span><span class="nx">totalsent</span><span class="p">:])</span>
+<span class="nx">BrokenPipeError</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nx">Errno</span><span class="w"> </span><span class="mi">32</span><span class="p">]</span><span class="w"> </span><span class="nx">Broken</span><span class="w"> </span><span class="nx">pipe</span>
+</code></pre></div>
+
 <h2 id="脚本正在运行突然提示连接不上模拟器各种报错但是模拟器正常">脚本正在运行、突然提示连接不上模拟器,各种报错,但是模拟器正常<a class="headerlink" href="#%E8%84%9A%E6%9C%AC%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%AA%81%E7%84%B6%E6%8F%90%E7%A4%BA%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%90%84%E7%A7%8D%E6%8A%A5%E9%94%99%E4%BD%86%E6%98%AF%E6%A8%A1%E6%8B%9F%E5%99%A8%E6%AD%A3%E5%B8%B8" title="Permanent link">¶</a></h2>
 <ul>
 <li>本脚本在各种报错后,会主动尝试修复,耐心等待即可.</li>
