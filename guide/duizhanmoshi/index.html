@@ -1561,7 +1561,7 @@ self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 </tbody>
 </table>
 <p>针对上面的特点，我大号的对战模式设计</p>
-<div class="codehilite"><pre><span></span><code><span class="gh">#</span> s1(组队日活任务), s2(信誉分任务),s3(熟练度任务、战令任务)
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span> s1(组队日活任务), s2(信誉分任务),s3(熟练度任务、战令任务),s4(1v1人人熟练度)
 s1 = 2
 s2 = 3 + s1
 if self.jinristep &lt;= s1: self.对战模式 = "火焰山" # "5v5匹配"
@@ -1571,10 +1571,13 @@ if s1 &lt; self.jinristep &lt;= s2: self.对战模式 = "模拟战"
 if not self.组队模式 and self.totalnode_bak &gt; 1: self.Tool.touchfile(self.无法进行组队FILE,"非组队模式 or nstep对战结束")
 <span class="gh">#</span>周四(3)凌晨, 营地的战令任务就领完了，可以全力做熟练度和王者战令任务了
 wzydday = 3 #
-s3 = 10 + s2 if self.Tool.time_getweek() &gt;= wzydday else 0
-if s2&lt; self.jinristep &lt;= s3: self.对战模式 = "5v5匹配" # "人机闯关"
+s3 = 10 + s2 if self.Tool.time_getweek() &gt;= wzydday else 0 + s2
+if s2&lt; self.jinristep &lt;= s3: self.对战模式 = "5v5匹配"  # 大号去刷红色熟练度和奖励
+if s2&lt; self.jinristep &lt;= s3 and self.mynode &gt; 0: self.对战模式 = "人机闯关" # 新号随便玩
 if s2&lt; self.jinristep &lt;= s3: self.标准模式 = self.触摸对战 = False
-self.jinristep &gt;  s3: self.对战时间[1]=self.对战时间[0]+0.1
+<span class="gh">#</span>剩下的时间用1v1刷熟练度, 1v1应该不会增加很多战令经验? 所以这里多打场
+s4 = 10 + s3  if self.Tool.time_getweek() &gt;= wzydday else 30 + s3
+if s3&lt; self.jinristep &lt;= s4 and self.mynode == 0: self.对战模式 = "1v1人人" #大号刷人人继续加熟练度
 <span class="gh">#</span>................................................................................
 <span class="gh">#</span>对战时间
 uptime=23.5
