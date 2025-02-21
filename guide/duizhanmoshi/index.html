@@ -1479,6 +1479,7 @@
 <li>脚本没必要处理这些一次性的内容，请手动点一遍</li>
 <li>模拟战使用方法见<a href="../../exp/xinyufen/">自动刷信誉分</a></li>
 <li><strong>建议打开游戏开关:设置&gt;操作&gt;快捷技能加点|快捷装备购买</strong></li>
+<li><strong>建议打开游戏开关:设置&gt;操作&gt;自动追击距离-标准|移动时追击</strong></li>
 </ul>
 <h2 id="切换不同对战模式的方法">切换不同对战模式的方法<a class="headerlink" href="#%E5%88%87%E6%8D%A2%E4%B8%8D%E5%90%8C%E5%AF%B9%E6%88%98%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95" title="Permanent link">¶</a></h2>
 <p>在<code>WZRY.mynode.运行模式.txt</code>文件中填入对战参数,如
@@ -1488,7 +1489,7 @@
 <p></p><pre><code>
 self.青铜段位 = False # True 则进行青铜人机,False进行星耀人机
 self.标准模式 = False # True 则进行标准人机,False进行快速人机
-self.触摸对战 = False # True 则在对战过程自动平移、平A、买装备等真人的操作.
+self.触摸对战 = False # True 则在对战过程自动平移、平A、买装备等假装真人的操作,
 self.对战模式 = "5v5匹配" # 目前支持 "5v5匹配"(人机5v5), "模拟战"(王者模拟战)
 self.组队模式 = True # 是否进行组队, totalnode &gt; 1时默认组队.
 </code></pre>
