@@ -544,48 +544,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="隐藏模式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#人机闯关" class="md-nav__link">
-    <span class="md-ellipsis">
-      人机闯关
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3v3人机" class="md-nav__link">
-    <span class="md-ellipsis">
-      3v3人机
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#火焰山模式" class="md-nav__link">
-    <span class="md-ellipsis">
-      火焰山模式
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1v1模式" class="md-nav__link">
-    <span class="md-ellipsis">
-      1v1模式
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1420,48 +1378,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="隐藏模式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#人机闯关" class="md-nav__link">
-    <span class="md-ellipsis">
-      人机闯关
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3v3人机" class="md-nav__link">
-    <span class="md-ellipsis">
-      3v3人机
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#火焰山模式" class="md-nav__link">
-    <span class="md-ellipsis">
-      火焰山模式
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1v1模式" class="md-nav__link">
-    <span class="md-ellipsis">
-      1v1模式
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1613,40 +1529,57 @@ if self.jinristep &gt;  s4: self.对战时间[1]=self.对战时间[0]+0.1
 <h2 id="隐藏模式">隐藏模式<a class="headerlink" href="#%E9%9A%90%E8%97%8F%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h2>
 <ul>
 <li>在wzry.py中搜索<code>self.对战模式</code>,自行探索隐藏的对战模式</li>
-<li>这些没有公开的模式，<strong>使用不当会扣信誉分</strong>, <strong>请后果自负,后果自负,后果自负!!!</strong></li>
+<li>这些没有公开的模式，<strong>使用不当会扣信誉分</strong>, <strong>请后果自负,后果自负,后果自负!!!</strong><blockquote>
+<p><strong>隐藏模式不会实时更新,可能不适合最新赛季,如果有问题欢迎到issues提问,但不保证立刻适配!!!</strong></p>
+</blockquote>
+</li>
 </ul>
-<h3 id="人机闯关">人机闯关<a class="headerlink" href="#%E4%BA%BA%E6%9C%BA%E9%97%AF%E5%85%B3" title="Permanent link">¶</a></h3>
+<details class="warning">
+<summary>隐藏模式1</summary>
 <ul>
 <li><strong>对战速度快,胜率高,简直是最适合刷熟练度、亲密度、友情币的模式</strong></li>
 <li><strong>只能刷自己金币已经购买的英雄</strong>, 有些鸡肋.</li>
 <li><strong>因为4个队友都是真人, 所以请选择正常玩家在线比较多的时间运行此模式</strong></li>
 <li>在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 填入<code>self.对战模式 = "人机闯关"</code>开启此模式</li>
 </ul>
-<h3 id="3v3人机">3v3人机<a class="headerlink" href="#3v3%E4%BA%BA%E6%9C%BA" title="Permanent link">¶</a></h3>
+</details>
+<details class="warning">
+<summary>隐藏模式2</summary>
 <ul>
+<li>3v3人机</li>
 <li><code>self.对战模式 = "3v3匹配"</code></li>
 <li>只能刷到蓝色熟练度, 胜率还低, 不适合刷熟练度.</li>
 <li>只能刷师徒任务吗?</li>
 <li>组队教程同<a href="../zudui/">组队教程</a></li>
 </ul>
-<h3 id="火焰山模式">火焰山模式<a class="headerlink" href="#%E7%81%AB%E7%84%B0%E5%B1%B1%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h3>
+</details>
+<details class="warning">
+<summary>隐藏模式3</summary>
 <ul>
+<li>火焰山模式</li>
 <li><strong>对战速度快，可以无限制提升蓝色英雄熟练度</strong></li>
 <li>如果没被扣分，还可以增加信誉分、也能完成赛季娱乐模式的任务。</li>
 <li>有些活动要求必须真人之间5v5, 火焰山可以满足此需求。</li>
 <li>在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 填入<code>self.对战模式 = "火焰山"</code>开启此模式</li>
 </ul>
-<h3 id="1v1模式">1v1模式<a class="headerlink" href="#1v1%E6%A8%A1%E5%BC%8F" title="Permanent link">¶</a></h3>
+</details>
+<details class="warning">
+<summary>隐藏模式4</summary>
 <ul>
+<li>1v1模式</li>
 <li><strong>对战速度快，胜率低, 能提升的熟练度有限</strong>,连鸡肋都不如.</li>
 <li>如果没被扣分，还可以增加信誉分。</li>
 <li>在运行目录,创建<code>WZRY.mynode.运行模式.txt</code>文件, 填入<code>self.对战模式 = "1v1人人"</code>开启此模式</li>
+<li>刷预设的英雄, 添加下面内容<code>self.选择英雄 = False</code></li>
+<li>自动切换分路英雄, 同<a href="../shuliandu/">选择英雄</a></li>
 </ul>
-<p>刷预设的英雄, 添加下面内容</p>
-<div class="codehilite"><pre><span></span><code>self.选择英雄 = False
-</code></pre></div>
-
-<p>自动切换分路英雄, 同<a href="../shuliandu/">选择英雄</a></p></div>
+</details>
+<details class="warning">
+<summary>隐藏模式5</summary>
+<ul>
+<li>不可明说</li>
+</ul>
+</details></div>
 
 
 
