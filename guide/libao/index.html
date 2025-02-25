@@ -523,13 +523,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#王者营地礼包" class="md-nav__link">
+  <a href="#营地礼包" class="md-nav__link">
     <span class="md-ellipsis">
-      王者营地礼包
+      营地礼包
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="王者营地礼包">
+    <nav class="md-nav" aria-label="营地礼包">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1303,13 +1303,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#王者营地礼包" class="md-nav__link">
+  <a href="#营地礼包" class="md-nav__link">
     <span class="md-ellipsis">
-      王者营地礼包
+      营地礼包
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="王者营地礼包">
+    <nav class="md-nav" aria-label="营地礼包">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1378,8 +1378,8 @@ self.礼包功能_邮件礼包 = False
 self.礼包功能_妲己礼物 = False
 <span class="gh">#</span>
 # 外置礼包,暂无手册,遇到问题,请自行调试
-<span class="gh">#</span> 支持自动领取相同模拟器内部的王者营地礼包
-self.外置礼包_王者营地 = False
+<span class="gh">#</span> 支持自动领取相同模拟器内部的营地礼包
+self.外置礼包_WZYD = False
 <span class="gh">#</span> 支持自动领取相同模拟器内部的王者体验服的体验币
 self.外置礼包_体验服 = False
 <span class="gh">#</span> 精力有限, 以下礼包不会实时维护, 遇到问题,请自行调试
@@ -1413,11 +1413,10 @@ self.礼包功能_KPL礼包 = False
 <li>友情币少的就只开最有性价比的<code>友情礼包_积分夺宝</code>和<code>友情礼包_皮肤碎片</code></li>
 <li>关于<code>每日任务礼包</code>是否要领取, 可以看<a href="../../exp/zhanling/">战令经验最大化</a></li>
 </ul>
-<h2 id="王者营地礼包">王者营地礼包<a class="headerlink" href="#%E7%8E%8B%E8%80%85%E8%90%A5%E5%9C%B0%E7%A4%BC%E5%8C%85" title="Permanent link">¶</a></h2>
+<h2 id="营地礼包">营地礼包<a class="headerlink" href="#%E8%90%A5%E5%9C%B0%E7%A4%BC%E5%8C%85" title="Permanent link">¶</a></h2>
 <ul>
 <li>体验币换皮肤碎片、营地币换英雄碎片、战令经验包、签到、观赛等. </li>
-<li>领取过程展示:<a href="https://www.bilibili.com/video/BV11WcgecEXF/">王者营地日常任务合集和农活自动化助手拾取演示</a></li>
-<li>可以独立启动、不依赖于<code>wzry.py</code>, 王者营地所在模拟器的ADB信息填到<code>config.ce.yaml</code></li>
+<li>可以独立启动、不依赖于<code>wzry.py</code>, 营地所在模拟器的ADB信息填到<code>config.ce.yaml</code></li>
 <li><code>config.ce.yaml</code>的配置规则同<a href="../config/">配置文件</a></li>
 </ul>
 <div class="codehilite"><pre><span></span><code>python -u wzyd.py config.ce.yaml
@@ -1426,7 +1425,7 @@ self.礼包功能_KPL礼包 = False
 <h3 id="控制文件">控制文件<a class="headerlink" href="#%E6%8E%A7%E5%88%B6%E6%96%87%E4%BB%B6" title="Permanent link">¶</a></h3>
 <ul>
 <li>
-<p>控制文件 <code>王者营地.mynode.初始化.txt</code></p>
+<p>控制文件 <code>WZYD.mynode.初始化.txt</code></p>
 </li>
 <li>
 <p>老账户无需领取英雄碎片了, 可以关闭<code>营地币换碎片</code></p>
