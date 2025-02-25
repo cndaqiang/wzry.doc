@@ -9,7 +9,7 @@ find . -type f -name "*.md" | while read file; do
     if [[ "$OSTYPE" == "darwin"* ]]; then
         sed -i '' 's/王者荣耀/WZRY/g' "$file"
     else
-        sed -i 's/王者荣耀/WZRY/g' "$file"
+        sed -i 's/王者营地/WZYD/g' "$file"
     fi
 done
 

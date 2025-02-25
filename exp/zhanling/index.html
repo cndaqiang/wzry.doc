@@ -1351,15 +1351,15 @@
 <ul>
 <li>WZRY本日、本周任务、有上限20000/周,使用本脚本挂机模式,一上午就能达到20000/周的目标</li>
 <li>WZRY本期战令任务,没有上限,特别活动有时间限制.</li>
-<li>王者营地专属战令经验礼包, 获取后可以在任意赛季使用.</li>
+<li>WZYD专属战令经验礼包, 获取后可以在任意赛季使用.</li>
 <li>当WZRY本日、本周任务获得的经验达到上限后,营地也无法继续领取经验礼包.
 <img alt="WZRY战令经验来源" src="../../fig/zhanling.png"></li>
 </ul>
 <h2 id="最大化经验获取">最大化经验获取<a class="headerlink" href="#%E6%9C%80%E5%A4%A7%E5%8C%96%E7%BB%8F%E9%AA%8C%E8%8E%B7%E5%8F%96" title="Permanent link">¶</a></h2>
 <ul>
 <li>WZRY日活战令经验上限20000/周</li>
-<li>达到该上限后,王者营地也无法领取</li>
-<li>因此,应该优先做王者营地的专属战令任务,领2000经验. 大约600/天,周四凌晨可以领完.</li>
+<li>达到该上限后,WZYD也无法领取</li>
+<li>因此,应该优先做WZYD的专属战令任务,领2000经验. 大约600/天,周四凌晨可以领完.</li>
 <li>下面这些事件会让WZRY日活战令快速刷满, 周一到周三不要做这些事情</li>
 <li>
 <ul>
@@ -1392,9 +1392,9 @@
 <p><code>WZRY.mynode.运行模式.txt</code>内容为</p>
 <div class="codehilite"><pre><span></span><code>self.启动礼包功能 = True
 self.每日任务礼包=self.Tool.time_getweek() &gt; 2 # 周一~周三, 不领取战令经验, 避免达到上限
-<span class="gh">#</span> 我是在Bluestack中运行的WZRY, Bluestack运行王者营地会闪退,因此我没有开启`wzry.py`的营地功能
-self.外置礼包_王者营地 = False
-<span class="gh">#</span> 而是在MuMu里面安装的王者营地,单独使用`wzyd.py`领取MuMu里面的营地礼包
+<span class="gh">#</span> 我是在Bluestack中运行的WZRY, Bluestack运行WZYD会闪退,因此我没有开启`wzry.py`的营地功能
+self.外置礼包_WZYD = False
+<span class="gh">#</span> 而是在MuMu里面安装的WZYD,单独使用`wzyd.py`领取MuMu里面的营地礼包
 </code></pre></div>
 
 <p><code>WZRY.mynode.运行模式.txt</code>内容为</p>
