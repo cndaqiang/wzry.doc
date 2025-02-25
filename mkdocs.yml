@@ -15,8 +15,8 @@ dev_addr: '0.0.0.0:8000'
 site_description: "王者荣耀自动化脚本手册"
 #
 # 主题右上角显示的repo地址，可以设置为开源项目地址
-repo_url: https://github.com/cndaqiang/WZRY
-repo_name: 'cndaqiang/WZRY' # 只是右上角显示的文字内容
+repo_url: https://github.com/cndaqiang/autowzry
+repo_name: 'cndaqiang/autowzry' # 只是右上角显示的文字内容
 
 # 文件名全部采用小写字母,大写搜索引擎检索会出问题
 nav:
@@ -34,7 +34,7 @@ nav:
       - 组队教程: guide/zudui.md
       - 进阶教程: guide/autowzry.md
     - 常见问题: qa/qa.md
-    - 提出问题: https://github.com/cndaqiang/WZRY/issues
+    - 提出问题: https://github.com/cndaqiang/autowzry/issues
     - 经验分享: 
       - 🔥在windows上刷ios区账户: exp/iosapp.md
       - 图片更新: guide/tupiangengxin.md
@@ -117,8 +117,8 @@ extra:
       link: https://github.com/cndaqiang
       name: author
     - icon: fontawesome/brands/python
-      link: https://github.com/cndaqiang/WZRY
-      name: cndaqiang/WZRY
+      link: https://github.com/cndaqiang/autowzry
+      name: cndaqiang/autowzry
     - icon: fontawesome/solid/square-rss
       link: https://wzry-doc.pages.dev/feed_rss_updated.xml
       name: rss
