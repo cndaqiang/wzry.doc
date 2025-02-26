@@ -1,0 +1,19 @@
+version: 2
+# 当使用 gh-pages 分支时, 此文件为构建脚本
+
+# 不设置配置文件，现在不让构建了。
+# 目前填上就能正常发布，因为这里发布的是静态页面
+# 不知道以后rtd会不会又改规则
+mkdocs:
+  # Path to your MkDocs configuration file.
+  configuration: mkdocs.yml
+
+build:
+  os: ubuntu-lts-latest
+  tools:
+    python: "3.12"
+  commands:
+    # 需要在 Read the Docs 网页端把默认分支改为 gh-pages
+    - "mv -f robots.ban.txt robots.txt" 
+    - "mkdir -p $READTHEDOCS_OUTPUT/html"
+    - "mv ./* $READTHEDOCS_OUTPUT/html ||  echo No files to move"
