@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta name="description" content="docker安卓模拟器不推荐 - 农活自动化助手">
+      <meta name="description" content="[加密]docker安卓模拟器不推荐 - 农活自动化助手">
         
       
         <meta name="author" content="cndaqiang">
@@ -28,7 +28,7 @@
     
     
       
-        <title>docker安卓模拟器不推荐 - autowzry · 农活自动化助手</title>
+        <title>[加密]docker安卓模拟器不推荐 - autowzry · 农活自动化助手</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              docker安卓模拟器不推荐
+              [加密]docker安卓模拟器不推荐
             
           </span>
         </div>
@@ -255,6 +255,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -710,7 +712,7 @@
         
   
   <span class="md-ellipsis">
-    🔥在windows上刷ios区账户
+    [加密]🔥在windows上刷ios区账户
   </span>
   
 
@@ -773,7 +775,7 @@
         
   
   <span class="md-ellipsis">
-    刷金币
+    [加密]刷金币
   </span>
   
 
@@ -899,7 +901,7 @@
         
   
   <span class="md-ellipsis">
-    多账户使用同一个控制文件
+    [加密]多账户使用同一个控制文件
   </span>
   
 
@@ -920,7 +922,7 @@
         
   
   <span class="md-ellipsis">
-    我在用的控制文件
+    [加密]我在用的控制文件
   </span>
   
 
@@ -941,7 +943,7 @@
         
   
   <span class="md-ellipsis">
-    模拟器推荐
+    [加密]模拟器推荐
   </span>
   
 
@@ -962,7 +964,7 @@
         
   
   <span class="md-ellipsis">
-    控制安卓手机或任意模拟器
+    [加密]控制安卓手机或任意模拟器
   </span>
   
 
@@ -983,7 +985,7 @@
         
   
   <span class="md-ellipsis">
-    在🐳docker内干农活
+    [加密]在🐳docker内干农活
   </span>
   
 
@@ -1013,7 +1015,7 @@
           
   
   <span class="md-ellipsis">
-    docker安卓模拟器不推荐
+    [加密]docker安卓模拟器不推荐
   </span>
   
 
@@ -1024,7 +1026,7 @@
         
   
   <span class="md-ellipsis">
-    docker安卓模拟器不推荐
+    [加密]docker安卓模拟器不推荐
   </span>
   
 
@@ -1185,7 +1187,7 @@
         
   
   <span class="md-ellipsis">
-    定时执行脚本
+    [加密]定时执行脚本
   </span>
   
 
@@ -1290,7 +1292,7 @@
         
   
   <span class="md-ellipsis">
-    更新日志
+    [加密]更新日志
   </span>
   
 
@@ -1336,7 +1338,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1471,104 +1475,33 @@
   
 
 
-<div><h1 id="docker版安卓模拟器测试">docker版安卓模拟器测试<a class="headerlink" href="#docker%E7%89%88%E5%AE%89%E5%8D%93%E6%A8%A1%E6%8B%9F%E5%99%A8%E6%B5%8B%E8%AF%95" title="Permanent link">¶</a></h1>
-<h2 id="aosp">AOSP<a class="headerlink" href="#aosp" title="Permanent link">¶</a></h2>
-<h3 id="arm-redroid">[arm] redroid<a class="headerlink" href="#arm-redroid" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/remote-android/redroid-doc">redroid-doc</a></li>
-<li>多个安卓版本, arm架构流畅王者, x86架构暂未成功王者</li>
-<li><a href="../docker/">在甲骨文免费服务器上安装redroid并配置autowzry</a></li>
-</ul>
-<h2 id="avdmanager">avdmanager<a class="headerlink" href="#avdmanager" title="Permanent link">¶</a></h2>
-<p>查看Dockerfile, 发现这些项目的共同点</p>
-<ul>
-<li><code>avdmanager</code>是 Android SDK 工具集的一部分，用于管理 Android 虚拟设备（AVD）</li>
-<li><code>emulator</code>是 Android SDK 中用于启动和运行虚拟设备的命令行工具。它会启动指定的 AVD</li>
-<li>当你使用 <code>emulator</code> 启动一个 AVD 时，实际上是通过 QEMU 来实现硬件模拟的, 所以在x86平台能否模拟arm的安卓还需要qemu支持.</li>
-<li>通常用于本地模拟 Android 设备，进行开发和测试</li>
-<li>但是<strong>这种基于android studio emulator的跑大型游戏太卡了, 而且风扇起飞. 别为难自己</strong></li>
-</ul>
-<p>例如</p>
-<div class="codehilite"><pre><span></span><code>avdmanager create avd -n android -k "system-images;android-30;google_apis;x86_64"
-emulator -avd android
-</code></pre></div>
+<div id="mkdocs-encrypted-content" style="display:none">jNV56iZ+6NIvntONiSAl0g==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>[请在同意不影响其他玩家游戏体验的条件下解密本文档内容]</h1>
+        <p>本项目仅用于自动化交流测试,从https://github.com/cndaqiang/autowzry/releases获取密码</p>
+        <input class="input-form" type="password" id="mkdocs-content-password" placeholder="在这里输入密码后回车">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
 
-<h3 id="amd64-hqarroumdocker-android">[amd64] HQarroum/docker-android<a class="headerlink" href="#amd64-hqarroumdocker-android" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/HQarroum/docker-android">HQarroum/docker-android</a></li>
-<li>首次开机要等待一段时间</li>
-<li><strong>纯净</strong>的安卓模拟器, 支持gpu加速</li>
-<li>原版打开WZRY打开后黑屏,估计存储太小</li>
-<li><strong>推荐使用我修改的大内存大存储版本</strong><a href="https://github.com/cndaqiang/docker-android">cndaqiang/docker-android</a></li>
-</ul>
-<div class="codehilite"><pre><span></span><code>docker run -d --device /dev/kvm -p 5555:5555 -v data:/data --name docker-android docker-android.mod
-</code></pre></div>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "exp/moniqidocker/";
+var decryption_failure_message = "\u5bc6\u7801\u9519\u8bef";
+var encryptcontent_keystore = ["/02YRua6WWtTtBXTYdorAQ==;VUNao8it7VaA9XjyRYnUru2pXXGGTPLlyTnU3TRUiN7YcoDK0BuVMnelRGLqjAw3GKVVwMxkcrq+Fea0fHjMwEdzoG5OkBMgZgMu7IoNq+n5gRPiEijp9m8PFy1Y55Tk;gCO5IBtqnDpnOBCHp9zZIQ=="];
+var encryptcontent_obfuscate = 0;
 
-<h3 id="amd64-budtmodocker-android">[amd64] budtmo/docker-android<a class="headerlink" href="#amd64-budtmodocker-android" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/budtmo/docker-android">budtmo/docker-android</a></li>
-<li>首次开机要等待一段时间&gt;2min, 画面很好, <strong>自带vnc</strong></li>
-<li>可以安装运行王者体验服(无法关闭root,喜提封号一天), 正式服会提示"内存过小"</li>
-<li>可以在vnc界面启动linux终端和python3.8, 完全可以在里面运行脚本</li>
-<li>缺点, 很卡, 重启有概率无法启动vnc</li>
-<li>进vnc但无法启动模拟器,重启也无法解决. </li>
-<li><strong>不要碰vnc页面的模拟器设置里面的任何内容和按键</strong></li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="gh">#</span> 自用
-docker stop android-container; docker rm android-container;
-docker volume rm andata anroot
-docker run -d --rm -p 6080:6080 -p 5555:5555 -e EMULATOR_DEVICE="Samsung Galaxy S7" -e EMULATOR_ADDITIONAL_ARGS="-memory 6144 -timezone Asia/Shanghai" -v andata:/home/androidusr -v anroot:/root -e WEB_VNC=true  -e EMULATOR_DATA_PARTITION=32g -e EMULATOR_NO_SKIN=true --device /dev/kvm --name android-container dockerhub.anzu.vip/budtmo/docker-android:emulator_14.0
-<span class="gh">#</span> 分辨率用adb调, 千万别在vnc页面上操作
-<span class="gh">#</span> 若因为各种原因导致模拟器无法启动，则尝试，也许是版本太低，需要升级
-docker exec -it -u0 android-container chmod 777 /dev/kvm
-docker exec -d android-container /usr/bin/emulator -avd samsung_galaxy_s10_11.0
-</code></pre></div>
-
-<p><img alt="docker-android启动vnc截图" src="../../fig/docker-android.png"></p>
-<h2 id="失败的容器">失败的容器<a class="headerlink" href="#%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%AE%B9%E5%99%A8" title="Permanent link">¶</a></h2>
-<h3 id="amrsa1android-emulator-docker">amrsa1/Android-Emulator-Docker<a class="headerlink" href="#amrsa1android-emulator-docker" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/amrsa1/Android-Emulator-Docker">amrsa1/Android-Emulator-Docker</a></li>
-<li>启动后还要在安装其他的, 安装过程漫长放弃了</li>
-</ul>
-<div class="codehilite"><pre><span></span><code>dockerhub.anzu.vip/amrka/ultimate-android   
-docker run -it -d -p 8900:5900 --name androidImage --privileged dockerhub.anzu.vip/amrka/ultimate-android    
-<span class="gh">#</span> 进入系统
-docker exec --privileged -it androidImage bash
-<span class="gh">#</span> 卡的不行
-bash start_appium.sh
-</code></pre></div>
-
-<h3 id="react-native-communitydocker-android">react-native-community/docker-android<a class="headerlink" href="#react-native-communitydocker-android" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/react-native-community/docker-android">docker-android</a></li>
-<li>没找到手册, 创建容器失败</li>
-</ul>
-<h3 id="android-emulator-imageamrsa1">Android-Emulator-image@amrsa1<a class="headerlink" href="#android-emulator-imageamrsa1" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://github.com/amrsa1/Android-Emulator-image">Android-Emulator-image</a></li>
-<li>需要自己编译, 网络故障编译失败</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">cndaqiang</span><span class="nv">@vmnode</span><span class="err">:</span><span class="o">~/</span><span class="n">soft</span><span class="o">/</span><span class="n">docker</span><span class="err">$</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">amrsa1</span><span class="o">/</span><span class="n">Android</span><span class="o">-</span><span class="n">Emulator</span><span class="o">-</span><span class="nc">image</span><span class="p">.</span><span class="n">git</span>
-<span class="n">Cloning</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="s1">'Android-Emulator-image'</span><span class="p">...</span>
-<span class="nl">remote</span><span class="p">:</span><span class="w"> </span><span class="n">Enumerating</span><span class="w"> </span><span class="nl">objects</span><span class="p">:</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="n">done</span><span class="p">.</span>
-<span class="nl">remote</span><span class="p">:</span><span class="w"> </span><span class="n">Counting</span><span class="w"> </span><span class="nl">objects</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="mi">22</span><span class="o">/</span><span class="mi">22</span><span class="p">),</span><span class="w"> </span><span class="n">done</span><span class="p">.</span>
-<span class="nl">remote</span><span class="p">:</span><span class="w"> </span><span class="n">Compressing</span><span class="w"> </span><span class="nl">objects</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="mi">14</span><span class="o">/</span><span class="mi">14</span><span class="p">),</span><span class="w"> </span><span class="n">done</span><span class="p">.</span>
-<span class="nl">remote</span><span class="p">:</span><span class="w"> </span><span class="n">Total</span><span class="w"> </span><span class="mi">220</span><span class="w"> </span><span class="p">(</span><span class="n">delta</span><span class="w"> </span><span class="mi">11</span><span class="p">),</span><span class="w"> </span><span class="n">reused</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">(</span><span class="n">delta</span><span class="w"> </span><span class="mi">8</span><span class="p">),</span><span class="w"> </span><span class="n">pack</span><span class="o">-</span><span class="n">reused</span><span class="w"> </span><span class="mi">198</span><span class="w"> </span><span class="p">(</span><span class="k">from</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-<span class="n">Receiving</span><span class="w"> </span><span class="nl">objects</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="mi">220</span><span class="o">/</span><span class="mi">220</span><span class="p">),</span><span class="w"> </span><span class="mf">44.15</span><span class="w"> </span><span class="n">KiB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">332.00</span><span class="w"> </span><span class="n">KiB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">done</span><span class="p">.</span>
-<span class="n">Resolving</span><span class="w"> </span><span class="nl">deltas</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="mi">101</span><span class="o">/</span><span class="mi">101</span><span class="p">),</span><span class="w"> </span><span class="n">done</span><span class="p">.</span>
-<span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">cndaqiang</span><span class="nv">@vmnode</span><span class="err">:</span><span class="o">~/</span><span class="n">soft</span><span class="o">/</span><span class="n">docker</span><span class="err">$</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="n">Android</span><span class="o">-</span><span class="n">Emulator</span><span class="o">-</span><span class="nc">image</span><span class="o">/</span>
-<span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">cndaqiang</span><span class="nv">@vmnode</span><span class="err">:</span><span class="o">~/</span><span class="n">soft</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">Android</span><span class="o">-</span><span class="n">Emulator</span><span class="o">-</span><span class="nc">image</span><span class="err">$</span><span class="w"> </span><span class="n">s</span>
-<span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">found</span>
-<span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">cndaqiang</span><span class="nv">@vmnode</span><span class="err">:</span><span class="o">~/</span><span class="n">soft</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">Android</span><span class="o">-</span><span class="n">Emulator</span><span class="o">-</span><span class="nc">image</span><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">android</span><span class="o">-</span><span class="n">emulator</span><span class="w"> </span><span class="p">.</span>
-<span class="o">[</span><span class="n">+</span><span class="o">]</span><span class="w"> </span><span class="n">Building</span><span class="w"> </span><span class="mf">10.2</span><span class="n">s</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="w">                                                 </span><span class="nl">docker</span><span class="p">:</span><span class="k">default</span>
-<span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">internal</span><span class="o">]</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">definition</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Dockerfile</span><span class="w">                               </span><span class="mf">0.0</span><span class="n">s</span>
-<span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">transferring</span><span class="w"> </span><span class="nl">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="mf">3.71</span><span class="n">kB</span><span class="w">                                             </span><span class="mf">0.0</span><span class="n">s</span>
-<span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">internal</span><span class="o">]</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="p">.</span><span class="n">dockerignore</span><span class="w">                                                  </span><span class="mf">0.0</span><span class="n">s</span>
-<span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">transferring</span><span class="w"> </span><span class="nl">context</span><span class="p">:</span><span class="w"> </span><span class="mi">178</span><span class="n">B</span><span class="w">                                                  </span><span class="mf">0.0</span><span class="n">s</span>
-<span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">internal</span><span class="o">]</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">docker</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">library</span><span class="o">/</span><span class="nl">openjdk</span><span class="p">:</span><span class="mi">18</span><span class="o">-</span><span class="n">jdk</span><span class="o">-</span><span class="n">slim</span><span class="w">            </span><span class="mf">10.2</span><span class="n">s</span>
-<span class="nl">ERROR</span><span class="p">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="nl">solve</span><span class="p">:</span><span class="w"> </span><span class="nl">DeadlineExceeded</span><span class="p">:</span><span class="w"> </span><span class="nl">DeadlineExceeded</span><span class="p">:</span><span class="w"> </span><span class="nl">DeadlineExceeded</span><span class="p">:</span><span class="w"> </span><span class="nl">openjdk</span><span class="p">:</span><span class="mi">18</span><span class="o">-</span><span class="n">jdk</span><span class="o">-</span><span class="nl">slim</span><span class="p">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="nl">request</span><span class="p">:</span><span class="w"> </span><span class="n">Head</span><span class="w"> </span><span class="ss">"https://registry-1.docker.io/v2/library/openjdk/manifests/18-jdk-slim"</span><span class="err">:</span><span class="w"> </span><span class="n">dial</span><span class="w"> </span><span class="n">tcp</span><span class="w"> </span><span class="o">[</span><span class="n">2a03:2880:f111:83:face:b00c:0:25de</span><span class="o">]</span><span class="err">:</span><span class="mi">443</span><span class="err">:</span><span class="w"> </span><span class="n">i</span><span class="o">/</span><span class="n">o</span><span class="w"> </span><span class="n">timeout</span>
-</code></pre></div></div>
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 
@@ -1576,8 +1509,13 @@ bash start_appium.sh
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
