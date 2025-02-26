@@ -1,0 +1,21 @@
+version: 2
+# 当使用master分支时, 此文件为构建脚本
+mkdocs:
+  # Path to your MkDocs configuration file.
+  configuration: mkdocs.yml
+# 设置操作系统、Python 版本和工具
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.12"
+  
+  # 配置构建命令
+  commands:
+    - pip install -r requirements.txt  # 安装所有依赖
+    - python generate_robots.py  # 执行脚本生成 robots.txt
+    - mkdocs build --site-dir "$READTHEDOCS_OUTPUT/html"  # 设置输出目录为 $READTHEDOCS_OUTPUT/html
+
+# 配置 Python 环境
+python:
+  install:
+    - requirements: requirements.txt  # 安装 mkdocs 和其他依赖
