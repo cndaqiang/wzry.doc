@@ -1,0 +1,5 @@
+mynode: 0
+LINK_dict:
+  0: Android:///127.0.0.1:16384
+logfile:
+  0: result.0.txt

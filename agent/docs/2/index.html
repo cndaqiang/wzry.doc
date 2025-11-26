@@ -1,0 +1,2478 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="description" content="autowzry-agent 模块功能规格说明 - autowzry基于airtest-mobileauto开发，为免费项目，仅供研究与学习用途。">
+        
+      
+        <meta name="author" content="cndaqiang">
+      
+      
+        <link rel="canonical" href="https://autowzry.pages.dev/agent/docs/2/">
+      
+      
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../wzry.favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>autowzry-agent 模块功能规格说明 - 王者荣耀自动化</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#autowzry-agent-模块功能规格说明" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="王者荣耀自动化" class="md-header__button md-logo" aria-label="王者荣耀自动化" data-md-component="logo">
+      
+  <img src="../../../wzry.favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">AUTOWZRY
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              autowzry-agent 模块功能规格说明
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cndaqiang/autowzry" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AUTOWZRY
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  <script>
+  
+  // 如果您介意被统计, 请访问: blockedDomains
+  
+  // 检查 blockedDomains 和 allowDomains 是否定义
+  const blockedDomains = ["127.0.0.1", "wzry-doc.serv00.net"];
+  const allowDomains = ["autowzry.pages.dev", "wzrydoc.readthedocs.io", "cndaqiang.github.io", "wzry-doc.pages.dev"];
+
+
+  // 将当前域名加入到 allowDomains
+  if (allowDomains.length === 0) {
+    allowDomains.push(window.location.hostname);
+  }
+
+  // 定义检查黑名单和白名单的函数
+  function isDomainAllowed() {
+    return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
+  }
+
+
+  // Google Analytics 统计
+  
+  function loadGoogleAnalytics() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-FLH4L3Q02F";
+    document.head.appendChild(script);
+
+    // Google Analytics 配置
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FLH4L3Q02F');
+  }
+  
+
+  // Baidu Tongji 统计
+  
+  function loadBaiduTongji() {
+    var _hmt = _hmt || [];
+    (function () {
+      const script = document.createElement("script");
+      script.src = "//hm.baidu.com/hm.js?76d0fc6b8ffd3901ec51e8bece995b22";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(script, s);
+    })();
+  }
+  
+
+  // Umami 统计
+  
+  function loadUmami() {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '//cloud.umami.is/script.js';
+    script.setAttribute('data-website-id', '1d2518ba-011c-47f7-bf3d-c2454778ef02');
+    document.head.appendChild(script);
+  }
+  
+
+  // 如果当前域名允许加载统计脚本，按需调用各个统计函数
+  if (isDomainAllowed()) {
+     loadGoogleAnalytics(); 
+     loadBaiduTongji(); 
+     loadUmami(); 
+  }
+</script>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="王者荣耀自动化" class="md-nav__button md-logo" aria-label="王者荣耀自动化" data-md-component="logo">
+      
+  <img src="../../../wzry.favicon.png" alt="logo">
+
+    </a>
+    王者荣耀自动化
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cndaqiang/autowzry" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AUTOWZRY
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安装运行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    配置文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    功能文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../qa/qa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒更新日志
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://cndaqiang.github.io/autowzry-agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    强化学习
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    杂七杂八
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            杂七杂八
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/pyinstall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    源码运行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/compile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    便携开发环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://youtu.be/Uj2NE6XjYSc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    视频教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/cndaqiang/autowzry/issues" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    issues列表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/duizhanmoshi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    切换对战模式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/libao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    开启礼包功能
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/shuliandu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    循环选择分路英雄
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/zudui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    组队教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/tupiangengxin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    替换图片资源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/upfig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    更新资源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/iosapp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔥在windows上刷ios区账户
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/zhanling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    战令经验最大化✈️
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/jinbi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    刷金币
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/shuliandu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    刷英雄熟练度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/saijirenwu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    刷赛季皮肤赛季任务
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/xinshou/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    零氪不肝的王者新手必坑指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    什么时间执行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    多账户使用同一个控制文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/duizhanmoshi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    我在用的控制文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/moniqi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    模拟器推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/mobile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    控制安卓手机或任意模拟器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    在🐳docker内干农活
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/moniqidocker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    docker安卓模拟器不推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/termux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    不使用电脑如何运行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/dingshi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    定时执行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/otherdir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    在任意目录运行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exp/pypi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    镜像下载autowzry源码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-模块" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config 模块
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Config 模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模块路径" class="md-nav__link">
+    <span class="md-ellipsis">
+      模块路径
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#职责" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hyperparameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      HyperParameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      PathConfig
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environmentconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      EnvironmentConfig
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-模块" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core 模块
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core 模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agentpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      agent.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="agent.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类: Agent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      model.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="model.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basemodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseModel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simpleconvnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      SimpleConvNet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trainerpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      trainer.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="trainer.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类-dqntrainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类: DQNTrainer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policypy" class="md-nav__link">
+    <span class="md-ellipsis">
+      policy.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="policy.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greedypolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      GreedyPolicy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epsilongreedypolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      EpsilonGreedyPolicy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#softmaxpolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      SoftmaxPolicy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelwithpolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      ModelWithPolicy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-模块" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment 模块
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment 模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compatibilitypy" class="md-nav__link">
+    <span class="md-ellipsis">
+      compatibility.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="compatibility.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类-compatibilitymodule" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类: CompatibilityModule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action_spacepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      action_space.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="action_space.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类-actionspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类: ActionSpace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reward_evaluatorpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      reward_evaluator.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="reward_evaluator.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类-rewardevaluator" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类: RewardEvaluator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-模块" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data 模块
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data 模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experience_collectorpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      experience_collector.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="experience_collector.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类-experiencecollector" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类: ExperienceCollector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replay_bufferpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      replay_buffer.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="replay_buffer.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类-replaybuffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类: ReplayBuffer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasetpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      dataset.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dataset.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心类-experiencedataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心类: ExperienceDataset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utils-模块" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utils 模块
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utils 模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image_processingpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      image_processing.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="image_processing.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action_inferencepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      action_inference.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="action_inference.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggerpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      logger.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="logger.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts-模块" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scripts 模块
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts 模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collectpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      collect.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="collect.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trainpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      train.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="train.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluatepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      evaluate.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="evaluate.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate_configpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      generate_config.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="generate_config.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#职责_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div><h1 id="autowzry-agent-模块功能规格说明">autowzry-agent 模块功能规格说明<a class="headerlink" href="#autowzry-agent-%E6%A8%A1%E5%9D%97%E5%8A%9F%E8%83%BD%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E" title="Permanent link">¶</a></h1>
+<p><strong>版本</strong>: v1.0
+<strong>日期</strong>: 2025-01-12</p>
+<hr>
+<h2 id="目录">目录<a class="headerlink" href="#%E7%9B%AE%E5%BD%95" title="Permanent link">¶</a></h2>
+<ol>
+<li><a href="#config-%E6%A8%A1%E5%9D%97">Config 模块</a></li>
+<li><a href="#core-%E6%A8%A1%E5%9D%97">Core 模块</a></li>
+<li><a href="#environment-%E6%A8%A1%E5%9D%97">Environment 模块</a></li>
+<li><a href="#data-%E6%A8%A1%E5%9D%97">Data 模块</a></li>
+<li><a href="#utils-%E6%A8%A1%E5%9D%97">Utils 模块</a></li>
+<li><a href="#scripts-%E6%A8%A1%E5%9D%97">Scripts 模块</a></li>
+</ol>
+<hr>
+<h2 id="config-模块">Config 模块<a class="headerlink" href="#config-%E6%A8%A1%E5%9D%97" title="Permanent link">¶</a></h2>
+<h3 id="模块路径">模块路径<a class="headerlink" href="#%E6%A8%A1%E5%9D%97%E8%B7%AF%E5%BE%84" title="Permanent link">¶</a></h3>
+<p><code>config/config.py</code></p>
+<h3 id="职责">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3" title="Permanent link">¶</a></h3>
+<p>统一管理项目配置，支持 YAML 文件、命令行参数、默认配置生成</p>
+<h3 id="核心类">核心类<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB" title="Permanent link">¶</a></h3>
+<h4 id="hyperparameters">HyperParameters<a class="headerlink" href="#hyperparameters" title="Permanent link">¶</a></h4>
+<p>超参数定义</p>
+<p><strong>属性</strong>:
+- <code>input_channels</code>: int - 输入图像通道数 (默认 4，堆叠帧)
+- <code>learning_rate</code>: float - 学习率 (默认 1e-4)
+- <code>gamma</code>: float - 折扣因子 (默认 0.99)
+- <code>batch_size</code>: int - 批次大小 (默认 32)
+- <code>buffer_size</code>: int - replay buffer 容量 (默认 100000)
+- <code>target_update_freq</code>: int - target 网络更新频率 (默认 1000 步)
+- <code>num_epochs</code>: int - 训练轮数 (默认 100)
+- <code>epsilon_start</code>: float - 初始探索率 (默认 1.0)
+- <code>epsilon_end</code>: float - 最终探索率 (默认 0.1)
+- <code>epsilon_decay</code>: int - 探索率衰减步数 (默认 10000)
+- <code>max_episode_steps</code>: int - 单局最大步数 (默认 10000)
+- <code>num_episodes</code>: int - 收集的局数 (默认 10)
+- <code>reward_kill</code>: float - 击杀奖励 (默认 5.0)
+- <code>reward_death</code>: float - 死亡惩罚 (默认 -2.0)
+- <code>reward_assist</code>: float - 助攻奖励 (默认 1.0)
+- <code>reward_default</code>: float - 每帧存活奖励 (默认 0.01)</p>
+<h4 id="pathconfig">PathConfig<a class="headerlink" href="#pathconfig" title="Permanent link">¶</a></h4>
+<p>路径配置</p>
+<p><strong>属性</strong>:
+- <code>data_dir</code>: str - 数据根目录
+- <code>episodes_dir</code>: str - episode 存储目录
+- <code>models_dir</code>: str - 模型存储目录
+- <code>logs_dir</code>: str - 日志目录</p>
+<h4 id="environmentconfig">EnvironmentConfig<a class="headerlink" href="#environmentconfig" title="Permanent link">¶</a></h4>
+<p>环境配置</p>
+<p><strong>属性</strong>:
+- <code>mode</code>: str - 运行模式 (spectate/battle/offline)
+- <code>device_backend</code>: str - 设备后端 (autowzry/autowzry-lite)
+- <code>image_width</code>: int - 预处理图像宽度 (默认 84)
+- <code>image_height</code>: int - 预处理图像高度 (默认 84)
+- <code>frame_stack</code>: int - 堆叠帧数 (默认 4)
+- <code>enabled_detections</code>: list - 启用的检测项 (默认 ['kill', 'death', 'assist'])
+- <code>enabled_rewards</code>: list - 启用的奖励项 (默认 ['kill', 'death', 'assist'])</p>
+<h4 id="config">Config<a class="headerlink" href="#config" title="Permanent link">¶</a></h4>
+<p>配置管理器</p>
+<p><strong>方法</strong>:
+- <code>from_yaml(yaml_path)</code>: 从 YAML 文件加载配置
+- <code>from_args(args)</code>: 从命令行参数构建配置
+- <code>save_yaml(yaml_path)</code>: 保存配置到 YAML 文件
+- <code>create_argument_parser()</code>: 创建命令行参数解析器
+- <code>generate_default_config(output_path)</code>: 生成默认配置文件</p>
+<p><strong>使用示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 从 YAML 加载</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="n">from_yaml</span><span class="p">(</span><span class="s1">'config/my_config.yaml'</span><span class="p">)</span>
+
+<span class="c1"># 从命令行加载</span>
+<span class="n">config</span><span class="p">,</span> <span class="n">args</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="n">from_args</span><span class="p">()</span>
+
+<span class="c1"># 生成默认配置</span>
+<span class="n">Config</span><span class="o">.</span><span class="n">generate_default_config</span><span class="p">(</span><span class="s1">'config/default_config.yaml'</span><span class="p">)</span>
+</code></pre></div>
+
+<hr>
+<h2 id="core-模块">Core 模块<a class="headerlink" href="#core-%E6%A8%A1%E5%9D%97" title="Permanent link">¶</a></h2>
+<h3 id="agentpy">agent.py<a class="headerlink" href="#agentpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_1">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_1" title="Permanent link">¶</a></h4>
+<p>Agent 主控制器，协调各模块完成不同模式的任务</p>
+<h4 id="核心类-agent">核心类: Agent<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB-agent" title="Permanent link">¶</a></h4>
+<p><strong>初始化参数</strong>:
+- <code>config</code>: Config - 配置对象
+- <code>model</code>: BaseModel - 神经网络模型
+- <code>trainer</code>: DQNTrainer - 训练器
+- <code>collector</code>: ExperienceCollector - 经验收集器
+- <code>replay_buffer</code>: ReplayBuffer - 经验缓冲区</p>
+<p><strong>方法</strong>:
+- <code>run_collect_mode()</code>: 运行数据收集模式
+- <code>run_train_mode()</code>: 运行训练模式
+- <code>run_battle_mode()</code>: 运行对战模式（在线学习）
+- <code>run_evaluate_mode()</code>: 运行评估模式
+- <code>save_checkpoint(path)</code>: 保存模型检查点
+- <code>load_checkpoint(path)</code>: 加载模型检查点</p>
+<p><strong>工作流程</strong>:
+1. 根据配置初始化所有依赖模块
+2. 根据模式调用对应的运行方法
+3. 管理模型的保存和加载</p>
+<hr>
+<h3 id="modelpy">model.py<a class="headerlink" href="#modelpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_2">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_2" title="Permanent link">¶</a></h4>
+<p>定义神经网络模型</p>
+<h4 id="核心类_1">核心类<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB_1" title="Permanent link">¶</a></h4>
+<h5 id="basemodel">BaseModel<a class="headerlink" href="#basemodel" title="Permanent link">¶</a></h5>
+<p>模型基类</p>
+<p><strong>方法</strong>:
+- <code>forward(x)</code>: 前向传播（抽象方法）
+- <code>save(path)</code>: 保存模型权重
+- <code>load(path)</code>: 加载模型权重
+- <code>predict(state, epsilon)</code>: 推理并选择动作（含探索）</p>
+<h5 id="simpleconvnet">SimpleConvNet<a class="headerlink" href="#simpleconvnet" title="Permanent link">¶</a></h5>
+<p>简单的卷积神经网络</p>
+<p><strong>初始化参数</strong>:
+- <code>input_channels</code>: int - 输入通道数（帧堆叠数）
+- <code>action_dim</code>: int - 动作空间维度</p>
+<p><strong>网络结构</strong>:
+- Conv2d(input_channels, 32, kernel=8, stride=4) + ReLU
+- Conv2d(32, 64, kernel=4, stride=2) + ReLU
+- Conv2d(64, 64, kernel=3, stride=1) + ReLU
+- Flatten
+- Linear(conv_out_size, 512) + ReLU
+- Linear(512, action_dim)</p>
+<p><strong>输入输出</strong>:
+- 输入: (batch, input_channels, 84, 84)
+- 输出: (batch, action_dim) - Q值向量</p>
+<hr>
+<h3 id="trainerpy">trainer.py<a class="headerlink" href="#trainerpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_3">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_3" title="Permanent link">¶</a></h4>
+<p>DQN 训练逻辑</p>
+<h4 id="核心类-dqntrainer">核心类: DQNTrainer<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB-dqntrainer" title="Permanent link">¶</a></h4>
+<p><strong>初始化参数</strong>:
+- <code>model</code>: BaseModel - 主网络
+- <code>target_model</code>: BaseModel - 目标网络
+- <code>learning_rate</code>: float - 学习率
+- <code>gamma</code>: float - 折扣因子</p>
+<p><strong>方法</strong>:
+- <code>train_step(batch)</code>: 单步训练
+  - 输入: batch = (states, actions, rewards, next_states, dones)
+  - 输出: loss 值
+  - 流程:
+    1. 计算当前 Q 值: Q(s, a)
+    2. 计算目标 Q 值: r + γ * max Q'(s', a')
+    3. 计算 MSE loss
+    4. 反向传播并优化
+- <code>update_target_network()</code>: 同步 target 网络权重
+- <code>compute_loss(batch)</code>: 计算 DQN loss</p>
+<p><strong>DQN Loss 公式</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Loss = MSE(Q(s,a), r + γ <span class="gs">* max Q_target(s', a') *</span> (1 - done))
+</code></pre></div>
+
+<hr>
+<h3 id="policypy">policy.py<a class="headerlink" href="#policypy" title="Permanent link">¶</a></h3>
+<h4 id="职责_4">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_4" title="Permanent link">¶</a></h4>
+<p>策略选择器，控制探索/利用行为</p>
+<h4 id="核心类_2">核心类<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB_2" title="Permanent link">¶</a></h4>
+<h5 id="policy">Policy<a class="headerlink" href="#policy" title="Permanent link">¶</a></h5>
+<p>策略基类</p>
+<p><strong>方法</strong>:
+- <code>select_action(q_values)</code>: 根据 Q 值选择动作（抽象方法）</p>
+<h5 id="greedypolicy">GreedyPolicy<a class="headerlink" href="#greedypolicy" title="Permanent link">¶</a></h5>
+<p>贪心策略</p>
+<p><strong>方法</strong>:
+- <code>select_action(q_values)</code>: 返回 Q 值最大的动作</p>
+<h5 id="epsilongreedypolicy">EpsilonGreedyPolicy<a class="headerlink" href="#epsilongreedypolicy" title="Permanent link">¶</a></h5>
+<p>ε-贪心策略</p>
+<p><strong>初始化参数</strong>:
+- <code>epsilon_start</code>: float - 初始探索率
+- <code>epsilon_end</code>: float - 最终探索率
+- <code>epsilon_decay</code>: int - 衰减步数</p>
+<p><strong>方法</strong>:
+- <code>get_epsilon()</code>: 计算当前探索率（指数衰减）
+- <code>select_action(q_values)</code>: 以 ε 概率随机探索，(1-ε) 概率贪心选择</p>
+<p><strong>探索率衰减公式</strong>:</p>
+<div class="codehilite"><pre><span></span><code>epsilon = epsilon_end + (epsilon_start - epsilon_end) * exp(-step / decay)
+</code></pre></div>
+
+<h5 id="softmaxpolicy">SoftmaxPolicy<a class="headerlink" href="#softmaxpolicy" title="Permanent link">¶</a></h5>
+<p>Softmax 策略（Boltzmann 探索）</p>
+<p><strong>初始化参数</strong>:
+- <code>temperature</code>: float - 温度参数</p>
+<p><strong>方法</strong>:
+- <code>select_action(q_values)</code>: 按 softmax 概率采样</p>
+<h5 id="modelwithpolicy">ModelWithPolicy<a class="headerlink" href="#modelwithpolicy" title="Permanent link">¶</a></h5>
+<p>模型与策略的组合</p>
+<p><strong>初始化参数</strong>:
+- <code>model</code>: BaseModel - 神经网络模型
+- <code>policy</code>: Policy - 策略选择器</p>
+<p><strong>方法</strong>:
+- <code>predict(state)</code>: 结合模型推理和策略选择</p>
+<hr>
+<h2 id="environment-模块">Environment 模块<a class="headerlink" href="#environment-%E6%A8%A1%E5%9D%97" title="Permanent link">¶</a></h2>
+<h3 id="compatibilitypy">compatibility.py<a class="headerlink" href="#compatibilitypy" title="Permanent link">¶</a></h3>
+<h4 id="职责_5">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_5" title="Permanent link">¶</a></h4>
+<p>封装游戏设备接口，支持 autowzry 和 autowzry-lite</p>
+<h4 id="核心类-compatibilitymodule">核心类: CompatibilityModule<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB-compatibilitymodule" title="Permanent link">¶</a></h4>
+<p><strong>初始化参数</strong>:
+- <code>backend</code>: str - 后端类型 (autowzry/autowzry-lite)
+- <code>image_width</code>: int - 预处理后的图像宽度
+- <code>image_height</code>: int - 预处理后的图像高度</p>
+<p><strong>方法</strong>:
+- <code>init_device()</code>: 初始化设备连接
+  - 尝试导入 autowzry
+  - 失败则使用 autowzry-lite
+- <code>capture_screen()</code>: 截图并预处理
+  - 返回: numpy array, shape (H, W, C) 或 (C, H, W)
+  - 流程: 截图 → resize → 归一化
+- <code>execute_action(action)</code>: 执行游戏动作
+  - 输入: action (int 或 dict)
+  - 调用对应的游戏接口（移动、攻击、技能等）
+- <code>is_battle_running()</code>: 判断对战是否进行中
+  - 返回: bool
+- <code>enter_battle()</code>: 进入对战（仅 autowzry 支持）
+  - 自动启动游戏、进入对局</p>
+<p><strong>设计要点</strong>:
+- 统一的接口，隐藏底层差异
+- 异常处理（设备断开、游戏崩溃）
+- 支持扩展到其他设备（如模拟器、PC端）</p>
+<hr>
+<h3 id="action_spacepy">action_space.py<a class="headerlink" href="#action_spacepy" title="Permanent link">¶</a></h3>
+<h4 id="职责_6">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_6" title="Permanent link">¶</a></h4>
+<p>定义动作空间，提供动作编码/解码</p>
+<h4 id="核心类-actionspace">核心类: ActionSpace<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB-actionspace" title="Permanent link">¶</a></h4>
+<p><strong>初始化参数</strong>:
+- <code>enabled_actions</code>: list - 启用的动作类型 (默认 ['move', 'attack'])</p>
+<p><strong>方法</strong>:
+- <code>define_action_space()</code>: 定义动作空间
+  - 返回动作字典
+- <code>encode_action(command)</code>: 动作命令 → 索引
+  - 输入: dict, 例如 {'type': 'move', 'direction': 0}
+  - 输出: int (action index)
+- <code>decode_action(index)</code>: 索引 → 动作命令
+  - 输入: int
+  - 输出: dict
+- <code>get_dim()</code>: 返回动作空间维度</p>
+<p><strong>动作定义示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">actions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="p">:</span> <span class="p">{</span><span class="s1">'type'</span><span class="p">:</span> <span class="s1">'move'</span><span class="p">,</span> <span class="s1">'direction'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>   <span class="c1"># 向上移动</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="p">{</span><span class="s1">'type'</span><span class="p">:</span> <span class="s1">'move'</span><span class="p">,</span> <span class="s1">'direction'</span><span class="p">:</span> <span class="mi">45</span><span class="p">},</span>  <span class="c1"># 东北移动</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="p">{</span><span class="s1">'type'</span><span class="p">:</span> <span class="s1">'move'</span><span class="p">,</span> <span class="s1">'direction'</span><span class="p">:</span> <span class="mi">90</span><span class="p">},</span>  <span class="c1"># 向右移动</span>
+    <span class="o">...</span>
+    <span class="mi">8</span><span class="p">:</span> <span class="p">{</span><span class="s1">'type'</span><span class="p">:</span> <span class="s1">'attack'</span><span class="p">,</span> <span class="s1">'target'</span><span class="p">:</span> <span class="s1">'auto'</span><span class="p">},</span>  <span class="c1"># 攻击</span>
+    <span class="mi">9</span><span class="p">:</span> <span class="p">{</span><span class="s1">'type'</span><span class="p">:</span> <span class="s1">'skill'</span><span class="p">,</span> <span class="s1">'slot'</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>          <span class="c1"># 释放技能1</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>设计要点</strong>:
+- 动作空间可配置
+- 支持连续动作的离散化
+- 便于扩展新动作类型</p>
+<hr>
+<h3 id="reward_evaluatorpy">reward_evaluator.py<a class="headerlink" href="#reward_evaluatorpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_7">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_7" title="Permanent link">¶</a></h4>
+<p>状态识别 + 奖励计算的统一模块</p>
+<h4 id="核心类-rewardevaluator">核心类: RewardEvaluator<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB-rewardevaluator" title="Permanent link">¶</a></h4>
+<p><strong>初始化参数</strong>:
+- <code>enabled_detections</code>: list - 启用的检测项
+- <code>enabled_rewards</code>: list - 启用的奖励项
+- <code>reward_dict</code>: dict - 奖励值字典
+- <code>template_dir</code>: str - 模板图像目录</p>
+<p><strong>方法</strong>:
+- <code>detect_events(frame)</code>: 检测游戏事件
+  - 输入: frame (numpy array)
+  - 输出: dict, 例如:
+    <code>python
+    {
+        'kill_count': 3,
+        'death_count': 1,
+        'assist_count': 2,
+        'is_dead': False,
+        'hp': 80,  # 后期扩展
+        'position': (120, 340)  # 后期扩展
+    }</code>
+- <code>compute_reward(prev_state, curr_state)</code>: 计算奖励
+  - 输入: 前一帧和当前帧
+  - 输出: float (奖励值)
+  - 流程:
+    1. 检测两帧的事件
+    2. 比较差异（击杀+1、死亡等）
+    3. 根据奖励字典计算总奖励
+- <code>_detect_death(frame)</code>: 检测死亡状态
+  - 使用灰度画面特征或死亡图标匹配
+- <code>_detect_kill_count(frame)</code>: 检测击杀数
+  - 使用 OCR 或模板匹配
+- <code>_detect_assist_count(frame)</code>: 检测助攻数</p>
+<p><strong>奖励字典示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">reward_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'default'</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>      <span class="c1"># 每帧存活</span>
+    <span class="s1">'kill'</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">,</span>          <span class="c1"># 击杀</span>
+    <span class="s1">'death'</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span>        <span class="c1"># 死亡</span>
+    <span class="s1">'assist'</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>        <span class="c1"># 助攻</span>
+    <span class="s1">'hp_loss'</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span>     <span class="c1"># 掉血 (后期)</span>
+    <span class="s1">'gold_gain'</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>    <span class="c1"># 获得金币 (后期)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>设计要点</strong>:
+- 感知和奖励统一管理，便于同步修改
+- 可配置的启用项，支持渐进式开发
+- 使用 OpenCV 和模板匹配，避免依赖复杂模型</p>
+<hr>
+<h2 id="data-模块">Data 模块<a class="headerlink" href="#data-%E6%A8%A1%E5%9D%97" title="Permanent link">¶</a></h2>
+<h3 id="experience_collectorpy">experience_collector.py<a class="headerlink" href="#experience_collectorpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_8">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_8" title="Permanent link">¶</a></h4>
+<p>收集游戏经验并保存为 episode 文件</p>
+<h4 id="核心类-experiencecollector">核心类: ExperienceCollector<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB-experiencecollector" title="Permanent link">¶</a></h4>
+<p><strong>初始化参数</strong>:
+- <code>compatibility_module</code>: CompatibilityModule
+- <code>action_space</code>: ActionSpace
+- <code>reward_evaluator</code>: RewardEvaluator
+- <code>mode</code>: str - 运行模式 (spectate/battle/offline)
+- <code>save_dir</code>: str - episode 保存目录</p>
+<p><strong>方法</strong>:
+- <code>collect_one_step()</code>: 收集单步经验
+  - 返回: (state, action, reward, next_state, done)
+  - 流程:
+    1. 获取当前状态（截图）
+    2. 根据模式决定动作
+       - 观战/离线: 从图像差分推断
+       - 对战: 模型推理
+    3. 执行动作（对战模式）
+    4. 获取下一状态
+    5. 计算奖励
+    6. 判断是否结束
+- <code>collect_episode(max_steps)</code>: 收集完整一局
+  - 返回: episode 列表
+  - 循环调用 collect_one_step 直到游戏结束
+- <code>save_episode(episode, filename)</code>: 保存为 HDF5 文件
+  - 分离 (s, a, r, s', done)
+  - 使用 gzip 压缩
+  - 保存元数据（模式、步数、总奖励）
+- <code>collect_and_save_multiple_episodes(num_episodes)</code>: 批量收集
+  - 返回: 保存的文件路径列表</p>
+<p><strong>HDF5 文件结构</strong>:</p>
+<div class="codehilite"><pre><span></span><code>episode_xxx.h5
+├── states: (N, C, H, W) - 状态图像
+├── actions: (N,) - 动作索引
+├── rewards: (N,) - 奖励值
+├── next_states: (N, C, H, W) - 下一状态
+├── dones: (N,) - 结束标志
+└── attrs:
+    ├── mode: 'spectate'
+    ├── num_steps: 1234
+    └── total_reward: 15.6
+</code></pre></div>
+
+<hr>
+<h3 id="replay_bufferpy">replay_buffer.py<a class="headerlink" href="#replay_bufferpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_9">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_9" title="Permanent link">¶</a></h4>
+<p>经验回放缓冲区，支持多文件加载和随机采样</p>
+<h4 id="核心类-replaybuffer">核心类: ReplayBuffer<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB-replaybuffer" title="Permanent link">¶</a></h4>
+<p><strong>初始化参数</strong>:
+- <code>max_size</code>: int - 最大容量（超出则覆盖旧数据）</p>
+<p><strong>属性</strong>:
+- <code>buffer</code>: deque - 存储经验的双端队列</p>
+<p><strong>方法</strong>:
+- <code>push(experience)</code>: 添加单条经验
+  - 输入: (state, action, reward, next_state, done)
+- <code>load_episode_file(filepath)</code>: 加载单个 HDF5 文件
+  - 读取文件中的所有经验
+  - 逐条 push 到 buffer
+- <code>load_from_directory(directory, pattern, max_files)</code>: 批量加载
+  - 扫描目录匹配文件
+  - 加载多个 episode
+  - 支持限制最大文件数
+- <code>sample(batch_size)</code>: 随机采样
+  - 返回: (states, actions, rewards, next_states, dones)
+  - numpy array 格式
+- <code>save_consolidated(filepath)</code>: 保存整合后的 buffer
+  - 用于分发数据集
+- <code>get_statistics()</code>: 获取统计信息
+  - 返回: size、平均奖励、最大/最小奖励
+- <code>__len__()</code>: 返回当前 buffer 大小</p>
+<p><strong>设计要点</strong>:
+- 使用 deque 自动管理容量
+- 支持增量加载和随机采样
+- 提供统计信息便于调试</p>
+<hr>
+<h3 id="datasetpy">dataset.py<a class="headerlink" href="#datasetpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_10">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_10" title="Permanent link">¶</a></h4>
+<p>PyTorch Dataset 封装，配合 DataLoader 使用</p>
+<h4 id="核心类-experiencedataset">核心类: ExperienceDataset<a class="headerlink" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB-experiencedataset" title="Permanent link">¶</a></h4>
+<p><strong>继承</strong>: torch.utils.data.Dataset</p>
+<p><strong>初始化参数</strong>:
+- <code>replay_buffer</code>: ReplayBuffer - 数据来源</p>
+<p><strong>方法</strong>:
+- <code>__len__()</code>: 返回数据集大小
+- <code>__getitem__(idx)</code>: 获取单条经验
+  - 返回: dict
+    <code>python
+    {
+        'state': torch.FloatTensor,      # (C, H, W)
+        'action': torch.LongTensor,      # (1,)
+        'reward': torch.FloatTensor,     # (1,)
+        'next_state': torch.FloatTensor, # (C, H, W)
+        'done': torch.FloatTensor        # (1,)
+    }</code></p>
+<p><strong>使用示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">dataset</span> <span class="o">=</span> <span class="n">ExperienceDataset</span><span class="p">(</span><span class="n">replay_buffer</span><span class="p">)</span>
+<span class="n">dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">dataloader</span><span class="p">:</span>
+    <span class="n">states</span> <span class="o">=</span> <span class="n">batch</span><span class="p">[</span><span class="s1">'state'</span><span class="p">]</span>      <span class="c1"># (32, C, H, W)</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="n">batch</span><span class="p">[</span><span class="s1">'action'</span><span class="p">]</span>    <span class="c1"># (32, 1)</span>
+    <span class="c1"># 训练...</span>
+</code></pre></div>
+
+<p><strong>设计要点</strong>:
+- 固定数据快照（不动态更新）
+- 返回 tensor 格式，直接用于训练
+- 支持多进程加载</p>
+<hr>
+<h2 id="utils-模块">Utils 模块<a class="headerlink" href="#utils-%E6%A8%A1%E5%9D%97" title="Permanent link">¶</a></h2>
+<h3 id="image_processingpy">image_processing.py<a class="headerlink" href="#image_processingpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_11">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_11" title="Permanent link">¶</a></h4>
+<p>图像预处理工具函数</p>
+<p><strong>函数列表</strong>:</p>
+<ul>
+<li><code>resize_frame(frame, width, height)</code>: 调整图像大小</li>
+<li>输入: numpy array</li>
+<li>
+<p>输出: numpy array, shape (height, width, channels)</p>
+</li>
+<li>
+<p><code>to_grayscale(frame)</code>: 转换为灰度图</p>
+</li>
+<li>输入: RGB 图像</li>
+<li>
+<p>输出: 灰度图像, shape (H, W)</p>
+</li>
+<li>
+<p><code>normalize(frame)</code>: 归一化到 [0, 1]</p>
+</li>
+<li>输入: numpy array, dtype uint8</li>
+<li>
+<p>输出: numpy array, dtype float32</p>
+</li>
+<li>
+<p><code>stack_frames(frames)</code>: 堆叠多帧</p>
+</li>
+<li>输入: list of frames, 例如 [frame1, frame2, frame3, frame4]</li>
+<li>
+<p>输出: numpy array, shape (num_frames, H, W)</p>
+</li>
+<li>
+<p><code>preprocess_frame(frame, width, height, grayscale)</code>: 完整预处理流程</p>
+</li>
+<li>流程: resize → (可选) 灰度化 → 归一化</li>
+</ul>
+<hr>
+<h3 id="action_inferencepy">action_inference.py<a class="headerlink" href="#action_inferencepy" title="Permanent link">¶</a></h3>
+<h4 id="职责_12">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_12" title="Permanent link">¶</a></h4>
+<p>从图像差分推断执行的动作</p>
+<p><strong>函数列表</strong>:</p>
+<ul>
+<li><code>infer_action(prev_frame, curr_frame)</code>: 推断动作</li>
+<li>输入: 前一帧和当前帧</li>
+<li>输出: action index</li>
+<li>
+<p>流程:</p>
+<ol>
+<li>检测位置变化 → 推断移动方向</li>
+<li>检测特效（攻击/技能） → 推断操作</li>
+<li>默认返回"无操作"</li>
+</ol>
+</li>
+<li>
+<p><code>detect_position_change(prev_frame, curr_frame)</code>: 检测位置变化</p>
+</li>
+<li>使用光流法或特征点匹配</li>
+<li>
+<p>返回: 移动方向角度</p>
+</li>
+<li>
+<p><code>detect_attack_effect(frame)</code>: 检测攻击特效</p>
+</li>
+<li>返回: bool</li>
+</ul>
+<p><strong>设计要点</strong>:
+- 仅用于观战/离线模式
+- 不需要 100% 准确，提供初始训练数据即可
+- 后期可以用模型替代</p>
+<hr>
+<h3 id="loggerpy">logger.py<a class="headerlink" href="#loggerpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_13">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_13" title="Permanent link">¶</a></h4>
+<p>日志记录和输出</p>
+<p><strong>核心类: Logger</strong></p>
+<p><strong>初始化参数</strong>:
+- <code>log_dir</code>: str - 日志目录
+- <code>use_tensorboard</code>: bool - 是否使用 TensorBoard</p>
+<p><strong>方法</strong>:
+- <code>log_scalar(tag, value, step)</code>: 记录标量
+  - 例如: loss、reward
+- <code>log_text(message)</code>: 记录文本日志
+- <code>log_histogram(tag, values, step)</code>: 记录直方图
+  - 例如: Q 值分布
+- <code>close()</code>: 关闭日志</p>
+<p><strong>设计要点</strong>:
+- 同时输出到文件和控制台
+- 可选 TensorBoard 集成
+- 支持多种数据类型</p>
+<hr>
+<h2 id="scripts-模块">Scripts 模块<a class="headerlink" href="#scripts-%E6%A8%A1%E5%9D%97" title="Permanent link">¶</a></h2>
+<h3 id="collectpy">collect.py<a class="headerlink" href="#collectpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_14">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_14" title="Permanent link">¶</a></h4>
+<p>数据收集脚本</p>
+<p><strong>功能</strong>:
+- 解析命令行参数
+- 初始化模块
+- 根据模式收集数据
+- 保存 episode 文件</p>
+<p><strong>命令行参数</strong>:
+- <code>--config</code>: 配置文件路径
+- <code>--mode</code>: 运行模式 (spectate/battle/offline)
+- <code>--num-episodes</code>: 收集局数
+- <code>--model-path</code>: 模型路径（对战模式需要）</p>
+<p><strong>输出</strong>:
+- episode 文件列表
+- 收集统计信息</p>
+<hr>
+<h3 id="trainpy">train.py<a class="headerlink" href="#trainpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_15">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_15" title="Permanent link">¶</a></h4>
+<p>训练脚本</p>
+<p><strong>功能</strong>:
+- 加载配置
+- 加载 replay buffer
+- 初始化模型和训练器
+- 训练循环
+- 保存模型</p>
+<p><strong>命令行参数</strong>:
+- <code>--config</code>: 配置文件路径
+- <code>--episodes-dir</code>: episode 目录
+- <code>--epochs</code>: 训练轮数
+- <code>--batch-size</code>: 批次大小
+- <code>--device</code>: 训练设备 (cpu/cuda)</p>
+<p><strong>输出</strong>:
+- 训练日志
+- 模型检查点</p>
+<hr>
+<h3 id="evaluatepy">evaluate.py<a class="headerlink" href="#evaluatepy" title="Permanent link">¶</a></h3>
+<h4 id="职责_16">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_16" title="Permanent link">¶</a></h4>
+<p>评估脚本</p>
+<p><strong>功能</strong>:
+- 加载训练好的模型
+- 运行多局游戏
+- 统计性能指标</p>
+<p><strong>命令行参数</strong>:
+- <code>--model-path</code>: 模型路径
+- <code>--num-episodes</code>: 评估局数
+- <code>--mode</code>: 评估模式（通常是 battle）</p>
+<p><strong>输出</strong>:
+- 平均奖励
+- 胜率（如果能识别）
+- 平均局长</p>
+<hr>
+<h3 id="generate_configpy">generate_config.py<a class="headerlink" href="#generate_configpy" title="Permanent link">¶</a></h3>
+<h4 id="职责_17">职责<a class="headerlink" href="#%E8%81%8C%E8%B4%A3_17" title="Permanent link">¶</a></h4>
+<p>生成默认配置文件</p>
+<p><strong>功能</strong>:
+- 调用 Config.generate_default_config()
+- 输出到指定路径</p>
+<p><strong>命令行参数</strong>:
+- <code>--output</code>: 输出路径</p>
+<hr>
+<p><strong>文档结束</strong></p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 AUTOWZRY
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://cndaqiang.github.io/wzry.doc/" target="_blank" rel="noopener" title="gitpages" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4 4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://autowzry.pages.dev/" target="_blank" rel="noopener" title="untagged" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M144 144v48h160v-48c0-44.2-35.8-80-80-80s-80 35.8-80 80m-64 48v-48C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64v192c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/cndaqiang" target="_blank" rel="noopener" title="author" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/cndaqiang/autowzry" target="_blank" rel="noopener" title="cndaqiang/autowzry" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://cndaqiang.github.io/wzry.doc/feed_rss_updated.xml" target="_blank" rel="noopener" title="rss" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm32 104c0-13.3 10.7-24 24-24 137 0 248 111 248 248 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200-13.3 0-24-10.7-24-24m0 96c0-13.3 10.7-24 24-24 83.9 0 152 68.1 152 152 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104-13.3 0-24-10.7-24-24m0 120a32 32 0 1 1 64 0 32 32 0 1 1-64 0"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/wzrydoc.readthedocs.io" target="_blank" rel="noopener" title="visitormap" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64v336c0 44.2 35.8 80 80 80h400c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16zm96 288h288c17.7 0 32-14.3 32-32v-68.2c0-7.6-2.7-15-7.7-20.8l-65.8-76.8c-12.1-14.2-33.7-15-46.9-1.8l-21 21c-10 10-26.4 9.2-35.4-1.6l-39.2-47c-12.6-15.1-35.7-15.4-48.7-.6L135.9 215c-5.1 5.8-7.9 13.3-7.9 21.1v84c0 17.7 14.3 32 32 32z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "content.code.copy", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

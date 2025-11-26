@@ -1,0 +1,1 @@
+pngquant --quality=10-20 --speed 1 --force --ext .png *.png

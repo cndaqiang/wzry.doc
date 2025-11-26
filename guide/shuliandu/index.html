@@ -1,0 +1,1403 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="description" content="🔒循环选择分路英雄 - autowzry基于airtest-mobileauto开发，为免费项目，仅供研究与学习用途。">
+        
+      
+        <meta name="author" content="cndaqiang">
+      
+      
+        <link rel="canonical" href="https://autowzry.pages.dev/guide/shuliandu/">
+      
+      
+        <link rel="prev" href="../libao/">
+      
+      
+        <link rel="next" href="../zudui/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../wzry.favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>🔒循环选择分路英雄 - 王者荣耀自动化</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#说明" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="王者荣耀自动化" class="md-header__button md-logo" aria-label="王者荣耀自动化" data-md-component="logo">
+      
+  <img src="../../wzry.favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">AUTOWZRY
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🔒循环选择分路英雄
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cndaqiang/autowzry" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AUTOWZRY
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  <script>
+  
+  // 如果您介意被统计, 请访问: blockedDomains
+  
+  // 检查 blockedDomains 和 allowDomains 是否定义
+  const blockedDomains = ["127.0.0.1", "wzry-doc.serv00.net"];
+  const allowDomains = ["autowzry.pages.dev", "wzrydoc.readthedocs.io", "cndaqiang.github.io", "wzry-doc.pages.dev"];
+
+
+  // 将当前域名加入到 allowDomains
+  if (allowDomains.length === 0) {
+    allowDomains.push(window.location.hostname);
+  }
+
+  // 定义检查黑名单和白名单的函数
+  function isDomainAllowed() {
+    return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
+  }
+
+
+  // Google Analytics 统计
+  
+  function loadGoogleAnalytics() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-FLH4L3Q02F";
+    document.head.appendChild(script);
+
+    // Google Analytics 配置
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FLH4L3Q02F');
+  }
+  
+
+  // Baidu Tongji 统计
+  
+  function loadBaiduTongji() {
+    var _hmt = _hmt || [];
+    (function () {
+      const script = document.createElement("script");
+      script.src = "//hm.baidu.com/hm.js?76d0fc6b8ffd3901ec51e8bece995b22";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(script, s);
+    })();
+  }
+  
+
+  // Umami 统计
+  
+  function loadUmami() {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '//cloud.umami.is/script.js';
+    script.setAttribute('data-website-id', '1d2518ba-011c-47f7-bf3d-c2454778ef02');
+    document.head.appendChild(script);
+  }
+  
+
+  // 如果当前域名允许加载统计脚本，按需调用各个统计函数
+  if (isDomainAllowed()) {
+     loadGoogleAnalytics(); 
+     loadBaiduTongji(); 
+     loadUmami(); 
+  }
+</script>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="王者荣耀自动化" class="md-nav__button md-logo" aria-label="王者荣耀自动化" data-md-component="logo">
+      
+  <img src="../../wzry.favicon.png" alt="logo">
+
+    </a>
+    王者荣耀自动化
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cndaqiang/autowzry" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AUTOWZRY
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安装运行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    配置文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    功能文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qa/qa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒更新日志
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://cndaqiang.github.io/autowzry-agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    强化学习
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    杂七杂八
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            杂七杂八
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pyinstall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    源码运行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    便携开发环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://youtu.be/Uj2NE6XjYSc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    视频教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/cndaqiang/autowzry/issues" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    issues列表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duizhanmoshi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒切换对战模式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../libao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒开启礼包功能
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    🔒循环选择分路英雄
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    🔒循环选择分路英雄
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#循环选熟练度最低的英雄" class="md-nav__link">
+    <span class="md-ellipsis">
+      循环选熟练度最低的英雄
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="循环选熟练度最低的英雄">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#小白看这里" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐小白看这里
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#自定义选择英雄" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义选择英雄
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#选择熟练度最低的原理" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择熟练度最低的原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#计算绝对坐标的步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算绝对坐标的步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#计算英雄相对坐标" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算英雄相对坐标
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#选择特定分路和英雄" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择特定分路和英雄
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zudui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    组队教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tupiangengxin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    替换图片资源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upfig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    更新资源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/iosapp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒🔥在windows上刷ios区账户
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/zhanling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒战令经验最大化✈️
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/jinbi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒刷金币
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/shuliandu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒刷英雄熟练度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/saijirenwu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒刷赛季皮肤赛季任务
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/xinshou/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    零氪不肝的王者新手必坑指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒什么时间执行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒多账户使用同一个控制文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/duizhanmoshi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒我在用的控制文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/moniqi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒模拟器推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/mobile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒控制安卓手机或任意模拟器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒在🐳docker内干农活
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/moniqidocker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    docker安卓模拟器不推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/termux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒不使用电脑如何运行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/dingshi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒定时执行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/otherdir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒在任意目录运行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/pypi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒镜像下载autowzry源码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#循环选熟练度最低的英雄" class="md-nav__link">
+    <span class="md-ellipsis">
+      循环选熟练度最低的英雄
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="循环选熟练度最低的英雄">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#小白看这里" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐小白看这里
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#自定义选择英雄" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义选择英雄
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#选择熟练度最低的原理" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择熟练度最低的原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#计算绝对坐标的步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算绝对坐标的步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#计算英雄相对坐标" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算英雄相对坐标
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#选择特定分路和英雄" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择特定分路和英雄
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div id="mkdocs-encrypted-content" style="display:none">G/6cAdj7VXF7ZBikiRUikg==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>加密与免责声明</h1>
+        <p><a href="https://game.qq.com/contract.shtml">若您未获得腾讯授权，请勿将本项目用于腾讯游戏，以免违反协议。<br><a href="https://github.com/cndaqiang/autowzry">本项目唯一分布地址https://github.com/cndaqiang/autowzry</a><br>为防止网络爬虫抓取，本手册已进行加密保护。<br> 输入<b>autowzry</b>回车解密</p>
+        <input class="input-form" type="password" id="mkdocs-content-password" placeholder="输入autowzry回车解密">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "guide/shuliandu/";
+var decryption_failure_message = "\u5bc6\u7801\u9519\u8bef,\u8bf7\u8f93\u5165autowzry\u56de\u8f66\u89e3\u5bc6";
+var encryptcontent_keystore = ["PPFSBWqJ1ky3SKxBzbwOKg==;318ZaZyow8IfJOLRxmM0SjfCIs+QgHSHAwtn6A2g0xkNkq+JJnhhj5pJ04esHxkVEng39ilgTjkFttpgWcg4LkXV22vUN/laZyn12CAnSLPLBvQlO8km2hClq6/vYddC;gCO5IBtqnDpnOBCHp9zZIQ=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 AUTOWZRY
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://cndaqiang.github.io/wzry.doc/" target="_blank" rel="noopener" title="gitpages" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4 4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://autowzry.pages.dev/" target="_blank" rel="noopener" title="untagged" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M144 144v48h160v-48c0-44.2-35.8-80-80-80s-80 35.8-80 80m-64 48v-48C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64v192c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/cndaqiang" target="_blank" rel="noopener" title="author" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/cndaqiang/autowzry" target="_blank" rel="noopener" title="cndaqiang/autowzry" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://cndaqiang.github.io/wzry.doc/feed_rss_updated.xml" target="_blank" rel="noopener" title="rss" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm32 104c0-13.3 10.7-24 24-24 137 0 248 111 248 248 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200-13.3 0-24-10.7-24-24m0 96c0-13.3 10.7-24 24-24 83.9 0 152 68.1 152 152 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104-13.3 0-24-10.7-24-24m0 120a32 32 0 1 1 64 0 32 32 0 1 1-64 0"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/wzrydoc.readthedocs.io" target="_blank" rel="noopener" title="visitormap" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64v336c0 44.2 35.8 80 80 80h400c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16zm96 288h288c17.7 0 32-14.3 32-32v-68.2c0-7.6-2.7-15-7.7-20.8l-65.8-76.8c-12.1-14.2-33.7-15-46.9-1.8l-21 21c-10 10-26.4 9.2-35.4-1.6l-39.2-47c-12.6-15.1-35.7-15.4-48.7-.6L135.9 215c-5.1 5.8-7.9 13.3-7.9 21.1v84c0 17.7 14.3 32 32 32z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.copy", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

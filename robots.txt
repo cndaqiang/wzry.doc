@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /example
+Disallow: /javascripts
+Disallow: /fig
+Disallow: /file
+Disallow: /wzry.doc/example
+Disallow: /wzry.doc/javascripts
+Disallow: /wzry.doc/fig
+Disallow: /wzry.doc/file
+Disallow: /guide/download
+Disallow: /wzry.doc/guide/download

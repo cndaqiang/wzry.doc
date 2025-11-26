@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh">
+<!--
+  This page was created by cndaqiang with the assistance of Claude (Anthropic AI)
+  Created: 2025
+-->
+<head>
+<meta charset="UTF-8">
+<title>下载 autowzry-cli 最新版本</title>
+<style>
+body {
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background: #f0f2f5;
+  padding: 0 20px; /* 桌面端左右边距 */
+}
+h2 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* 按钮样式 */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #28a745; /* 下载按钮绿色 */
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 90%;         /* 响应式宽度 */
+  max-width: 400px;   /* 大屏限制 */
+  min-width: 200px;   /* 小屏限制 */
+  text-align: left;
+  gap: 10px;
+  transition: all 0.2s;
+  white-space: nowrap; /* 防止文本换行 */
+}
+.button:hover {
+  opacity: 0.9;
+}
+
+/* 不同用途的按钮颜色 */
+.button-src { background-color: #fd7e14; }   /* 橙色 */
+.button-tutorial { background-color: #007bff; } /* 蓝色 */
+
+/* 下载进度条 */
+#progressContainer {
+  width: 90%;
+  max-width: 400px;
+  min-width: 200px;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  margin: 10px auto 20px auto;
+  overflow: hidden;
+}
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #0078d7;
+  border-radius: 10px;
+  transition: width 0.2s;
+}
+#status {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+#releaseTime {
+  font-size: 0.85em;
+  opacity: 0.9;
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+/* 底部版权信息 */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* 小屏优化字体 */
+@media (max-width: 400px) {
+  .button {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+  #status {
+    font-size: 12px;
+  }
+  #releaseTime {
+    display: none; /* 小屏隐藏日期 */
+  }
+}
+</style>
+</head>
+<body>
+<header>
+    <script>
+
+  // 如果您介意被统计, 请访问: blockedDomains
+
+  // 检查 blockedDomains 和 allowDomains 是否定义
+  const blockedDomains = ["127.0.0.1", "wzry-doc.serv00.net"];
+  const allowDomains = ["autowzry.pages.dev", "wzrydoc.readthedocs.io", "cndaqiang.github.io", "wzry-doc.pages.dev"];
+
+
+  // 将当前域名加入到 allowDomains
+  if (allowDomains.length === 0) {
+    allowDomains.push(window.location.hostname);
+  }
+
+  // 定义检查黑名单和白名单的函数
+  function isDomainAllowed() {
+    return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
+  }
+
+
+  // Google Analytics 统计
+
+  function loadGoogleAnalytics() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-FLH4L3Q02F";
+    document.head.appendChild(script);
+
+    // Google Analytics 配置
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FLH4L3Q02F');
+  }
+
+
+  // Baidu Tongji 统计
+
+  function loadBaiduTongji() {
+    var _hmt = _hmt || [];
+    (function () {
+      const script = document.createElement("script");
+      script.src = "//hm.baidu.com/hm.js?76d0fc6b8ffd3901ec51e8bece995b22";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(script, s);
+    })();
+  }
+
+
+  // Umami 统计
+
+  function loadUmami() {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '//cloud.umami.is/script.js';
+    script.setAttribute('data-website-id', '1d2518ba-011c-47f7-bf3d-c2454778ef02');
+    document.head.appendChild(script);
+  }
+
+
+  // 如果当前域名允许加载统计脚本，按需调用各个统计函数
+  if (isDomainAllowed()) {
+     loadGoogleAnalytics();
+     loadBaiduTongji();
+     loadUmami();
+  }
+</script>
+</header>
+
+<h2>下载 autowzry-cli 最新版本</h2>
+
+<!-- Windows 下载 -->
+<button id="downloadWin" class="button">🖥️ 下载可执行包 Windows <span id="releaseTime"></span></button>
+<div id="progressContainer"><div id="progressBar"></div></div>
+<div id="status">正在获取版本信息...</div>
+
+<!-- Linux/macOS 源码 -->
+<button id="downloadSrc" class="button button-src">🐧 下载源码 Linux/macOS  </button>
+
+<!-- 教程按钮 -->
+<button id="tutorial1" class="button button-tutorial">📘 Windows系统教程</button>
+<button id="tutorial2" class="button button-tutorial">📗 源代码运行教程</button>
+
+<!-- 引入必要的库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+
+<script>
+/*
+ * NPM 下载说明
+ * NPM registry API: https://registry.npmjs.org/autowzry-cli
+ * 返回包含所有版本信息的 JSON
+ *
+ * 流程：下载 .tgz → 解压 gzip → 解析 tar → 转为 zip
+ */
+
+// ✅ 缓存 NPM 数据，避免重复请求
+let cachedData = null;
+let currentRegistry = null; // 当前可用的 registry
+
+// ✅ 镜像站列表（按优先级排序）
+const registries = [
+  { name: 'NPM 官方', url: 'https://registry.npmjs.org' },
+  { name: '阿里云镜像', url: 'https://registry.npmmirror.com' },
+  { name: '腾讯云镜像', url: 'https://mirrors.cloud.tencent.com/npm' }
+];
+
+// ✅ 从 NPM 获取数据
+async function fetchFromSource(url, timeout = 5000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeout);
+
+  try {
+    const resp = await fetch(url, {
+      cache: 'no-store',
+      signal: controller.signal
+    });
+    clearTimeout(timer);
+    return await resp.json();
+  } catch (err) {
+    clearTimeout(timer);
+    throw err;
+  }
+}
+
+// ✅ 获取并显示版本发布时间
+async function fetchVersionInfo() {
+  const status = document.getElementById('status');
+  const downloadBtn = document.getElementById('downloadWin');
+
+  status.textContent = '正在获取版本信息...';
+
+  // 依次尝试各个 registry
+  for (const registry of registries) {
+    try {
+      console.log(`正在尝试 ${registry.name}: ${registry.url}`);
+
+      const data = await fetchFromSource(`${registry.url}/autowzry-cli?ts=${Date.now()}`, 3000);
+
+      // 成功获取数据
+      cachedData = data;
+      currentRegistry = registry;
+      console.log(`✓ 成功从 ${registry.name} 获取数据`);
+
+      // 获取 latest 版本
+      const latestVersion = data['dist-tags']?.latest || Object.keys(data.versions).pop();
+      const versionData = data.versions[latestVersion];
+      console.log('版本号:', latestVersion);
+
+      // 显示发布时间
+      const time = data.time?.[latestVersion];
+      if (time) {
+        const uploadDate = new Date(time);
+        const formattedDate = uploadDate.toLocaleDateString('zh-CN', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit'
+        }).replace(/\//g, '/');
+        document.getElementById('releaseTime').textContent = `(${formattedDate})`;
+      } else {
+        document.getElementById('releaseTime').textContent = '';
+      }
+
+      // 更新下载按钮文本和状态提示
+      if (registry.name === 'NPM 官方') {
+        downloadBtn.innerHTML = `🖥️ 下载可执行包 Windows <span id="releaseTime">${document.getElementById('releaseTime').textContent}</span>`;
+        status.textContent = '准备下载...';
+      } else {
+        downloadBtn.innerHTML = `🖥️ 下载可执行包 Windows (${registry.name}) <span id="releaseTime">${document.getElementById('releaseTime').textContent}</span>`;
+        status.textContent = `准备从${registry.name}下载...`;
+      }
+
+      return; // 成功后直接返回
+
+    } catch (err) {
+      console.log(`✗ ${registry.name} 失败:`, err.message);
+      // 继续尝试下一个
+    }
+  }
+
+  // 所有镜像都失败
+  console.error('所有镜像站都无法访问');
+  status.textContent = '⚠️ 无法获取版本信息，请切换网络环境';
+  document.getElementById('releaseTime').textContent = '';
+  cachedData = null;
+  currentRegistry = null;
+}
+
+// ✅ 简单的 tar 解析器
+function parseTar(buffer) {
+  const files = [];
+  let offset = 0;
+
+  while (offset < buffer.length) {
+    const header = buffer.slice(offset, offset + 512);
+
+    // 检查是否到达文件末尾（全零块）
+    if (header.every(b => b === 0)) break;
+
+    // 读取文件名
+    const nameBytes = header.slice(0, 100);
+    const nameEnd = nameBytes.indexOf(0);
+    const name = new TextDecoder().decode(nameBytes.slice(0, nameEnd > 0 ? nameEnd : 100));
+
+    // 读取文件大小（八进制）
+    const sizeBytes = header.slice(124, 136);
+    const sizeStr = new TextDecoder().decode(sizeBytes).trim().replace(/\0/g, '');
+    const size = parseInt(sizeStr, 8) || 0;
+
+    // 读取文件类型
+    const type = String.fromCharCode(header[156]);
+
+    offset += 512;
+
+    // 如果是普通文件（type '0' 或 '\0'）
+    if ((type === '0' || type === '\0') && size > 0) {
+      const content = buffer.slice(offset, offset + size);
+      files.push({ name, content });
+    }
+
+    // 跳过文件内容（按 512 字节对齐）
+    offset += Math.ceil(size / 512) * 512;
+  }
+
+  return files;
+}
+
+// ✅ 下载并转换为 zip
+async function downloadWithProgress(url, filename) {
+  const status = document.getElementById('status');
+  const progressBar = document.getElementById('progressBar');
+  status.textContent = '开始下载...';
+  progressBar.style.width = '0%';
+
+  // 1. 下载 tgz 文件
+  const resp = await fetch(url);
+  if (!resp.ok) throw new Error('下载失败');
+
+  const contentLength = resp.headers.get('Content-Length');
+  const total = contentLength ? parseInt(contentLength, 10) : 0;
+
+  const reader = resp.body.getReader();
+  const chunks = [];
+  let received = 0;
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    chunks.push(value);
+    received += value.length;
+    if (total) {
+      const percent = ((received / total) * 100).toFixed(1);
+      status.textContent = `下载中(请勿关闭当前页面)：${percent}%`;
+      progressBar.style.width = `${percent}%`;
+    } else {
+      status.textContent = `下载中(请勿关闭当前页面)：${(received / 1024).toFixed(1)} KB`;
+    }
+  }
+
+  // 2. 解压 gzip
+  status.textContent = '正在解压 gzip...';
+  const tgzData = new Uint8Array(await new Blob(chunks).arrayBuffer());
+  const tarData = pako.inflate(tgzData);
+
+  // 3. 解析 tar
+  status.textContent = '正在解析 tar...';
+  const files = parseTar(tarData);
+
+  // 4. 创建 zip
+  status.textContent = '正在创建 zip...';
+  const zip = new JSZip();
+
+  for (const file of files) {
+    // 移除 package/ 前缀
+    const cleanName = file.name.replace(/^package\//, '');
+    if (cleanName) {
+      zip.file(cleanName, file.content);
+    }
+  }
+
+  // 5. 生成 zip 并下载
+  status.textContent = '正在生成文件...';
+  const zipBlob = await zip.generateAsync({ type: 'blob' });
+
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(zipBlob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+
+  status.textContent = '下载完成！';
+  progressBar.style.width = '100%';
+}
+
+// ✅ Windows 下载按钮
+async function downloadWinLatest() {
+  // 检查是否有缓存数据和可用的 registry
+  if (!cachedData || !currentRegistry) {
+    alert('无法获取版本信息，请确保网络可以访问 NPM registry');
+    return;
+  }
+
+  try {
+    // 获取 latest 版本的 tarball URL
+    const latestVersion = cachedData['dist-tags']?.latest || Object.keys(cachedData.versions).pop();
+    const versionData = cachedData.versions[latestVersion];
+    let tarballUrl = versionData.dist.tarball;
+
+    // 如果使用镜像站，需要替换 tarball URL 的域名
+    if (currentRegistry.name !== 'NPM 官方') {
+      // 将官方 URL 替换为镜像站 URL
+      tarballUrl = tarballUrl.replace('https://registry.npmjs.org', currentRegistry.url);
+    }
+
+    if (!tarballUrl) {
+      alert('未找到 NPM 包文件');
+      return;
+    }
+
+    const filename = `autowzry-cli-${latestVersion}.zip`;
+
+    console.log(`开始从 ${currentRegistry.name} 下载:`, tarballUrl);
+    await downloadWithProgress(tarballUrl, filename);
+  } catch (err) {
+    console.error('下载失败:', err);
+    alert('下载出错，请检查网络连接');
+  }
+}
+
+// ✅ Linux/macOS 源码下载（固定 URL）
+function downloadSrc() {
+  window.open("https://github.com/cndaqiang/autowzry/tree/dev", "_blank");
+}
+
+// ✅ 教程跳转
+function openTutorial1() {
+  window.open("https://cndaqiang.github.io/wzry.doc/guide/install/", "_blank");
+}
+function openTutorial2() {
+  window.open("https://cndaqiang.github.io/wzry.doc/guide/pyinstall/", "_blank");
+}
+
+// 绑定按钮
+document.getElementById('downloadWin').addEventListener('click', downloadWinLatest);
+document.getElementById('downloadSrc').addEventListener('click', downloadSrc);
+document.getElementById('tutorial1').addEventListener('click', openTutorial1);
+document.getElementById('tutorial2').addEventListener('click', openTutorial2);
+
+// 页面加载时获取版本信息
+fetchVersionInfo();
+</script>
+
+<footer>
+  <p>Copyright © 2025 AUTOWZRY</p>
+</footer>
+
+</body>
+</html>

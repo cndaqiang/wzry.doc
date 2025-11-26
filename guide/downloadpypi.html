@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh">
+<!--
+  This page was created by cndaqiang with the assistance of Claude (Anthropic AI)
+  Created: 2025
+-->
+<head>
+<meta charset="UTF-8">
+<title>下载 autowzry-cli 最新版本</title>
+<style>
+body {
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background: #f0f2f5;
+  padding: 0 20px; /* 桌面端左右边距 */
+}
+h2 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* 按钮样式 */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #28a745; /* 下载按钮绿色 */
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 90%;         /* 响应式宽度 */
+  max-width: 400px;   /* 大屏限制 */
+  min-width: 200px;   /* 小屏限制 */
+  text-align: left;
+  gap: 10px;
+  transition: all 0.2s;
+  white-space: nowrap; /* 防止文本换行 */
+}
+.button:hover {
+  opacity: 0.9;
+}
+
+/* 不同用途的按钮颜色 */
+.button-src { background-color: #fd7e14; }   /* 橙色 */
+.button-tutorial { background-color: #007bff; } /* 蓝色 */
+
+/* 下载进度条 */
+#progressContainer {
+  width: 90%;
+  max-width: 400px;
+  min-width: 200px;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  margin: 10px auto 20px auto;
+  overflow: hidden;
+}
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #0078d7;
+  border-radius: 10px;
+  transition: width 0.2s;
+}
+#status {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+#releaseTime {
+  font-size: 0.85em;
+  opacity: 0.9;
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+/* 底部版权信息 */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* 小屏优化字体 */
+@media (max-width: 400px) {
+  .button {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+  #status {
+    font-size: 12px;
+  }
+  #releaseTime {
+    display: none; /* 小屏隐藏日期 */
+  }
+}
+</style>
+</head>
+<body>
+<header>
+    <script>
+  
+  // 如果您介意被统计, 请访问: blockedDomains
+  
+  // 检查 blockedDomains 和 allowDomains 是否定义
+  const blockedDomains = ["127.0.0.1", "wzry-doc.serv00.net"];
+  const allowDomains = ["autowzry.pages.dev", "wzrydoc.readthedocs.io", "cndaqiang.github.io", "wzry-doc.pages.dev"];
+
+
+  // 将当前域名加入到 allowDomains
+  if (allowDomains.length === 0) {
+    allowDomains.push(window.location.hostname);
+  }
+
+  // 定义检查黑名单和白名单的函数
+  function isDomainAllowed() {
+    return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
+  }
+
+
+  // Google Analytics 统计
+  
+  function loadGoogleAnalytics() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-FLH4L3Q02F";
+    document.head.appendChild(script);
+
+    // Google Analytics 配置
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FLH4L3Q02F');
+  }
+  
+
+  // Baidu Tongji 统计
+  
+  function loadBaiduTongji() {
+    var _hmt = _hmt || [];
+    (function () {
+      const script = document.createElement("script");
+      script.src = "//hm.baidu.com/hm.js?76d0fc6b8ffd3901ec51e8bece995b22";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(script, s);
+    })();
+  }
+  
+
+  // Umami 统计
+  
+  function loadUmami() {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '//cloud.umami.is/script.js';
+    script.setAttribute('data-website-id', '1d2518ba-011c-47f7-bf3d-c2454778ef02');
+    document.head.appendChild(script);
+  }
+  
+
+  // 如果当前域名允许加载统计脚本，按需调用各个统计函数
+  if (isDomainAllowed()) {
+     loadGoogleAnalytics(); 
+     loadBaiduTongji(); 
+     loadUmami(); 
+  }
+</script>
+</header>
+
+<h2>下载 autowzry-cli 最新版本</h2>
+
+<!-- Windows 下载 -->
+<button id="downloadWin" class="button">🖥️ 下载可执行包 Windows <span id="releaseTime"></span></button>
+<div id="progressContainer"><div id="progressBar"></div></div>
+<div id="status">正在获取版本信息...</div>
+
+<!-- Linux/macOS 源码 -->
+<button id="downloadSrc" class="button button-src">🐧 下载源码 Linux/macOS  </button>
+
+<!-- 教程按钮 -->
+<button id="tutorial1" class="button button-tutorial">📘 Windows系统教程</button>
+<button id="tutorial2" class="button button-tutorial">📗 源代码运行教程</button>
+
+<script>
+/*
+ * 重要说明：镜像站下载方案不可行
+ *
+ * 原因：
+ * 1. 镜像站的 JSON API 有 CORS（跨域）限制，浏览器 JavaScript 无法访问
+ * 2. 镜像站的 Simple Index 虽然可以解析，但下载文件时同样受 CORS 限制
+ * 3. 使用 <a> 标签直接下载可以绕过 CORS，但无法获取下载进度
+ * 4. 镜像站主要服务于 pip 命令行工具，不是为浏览器环境设计的
+ *
+ * 结论：只能从 PyPI 官方获取版本信息和下载文件
+ * 以后不要再尝试开发镜像站自动下载功能
+ */
+
+// ✅ 缓存 PyPI 数据，避免重复请求
+let cachedData = null;
+
+// ✅ 从 PyPI 获取数据
+async function fetchFromSource(url, timeout = 5000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeout);
+
+  try {
+    const resp = await fetch(url, {
+      cache: 'no-store',
+      signal: controller.signal
+    });
+    clearTimeout(timer);
+    return await resp.json();
+  } catch (err) {
+    clearTimeout(timer);
+    throw err;
+  }
+}
+
+// ✅ 获取并显示版本发布时间
+async function fetchVersionInfo() {
+  try {
+    document.getElementById('status').textContent = '正在获取版本信息...';
+    const data = await fetchFromSource(`https://pypi.org/pypi/autowzry-cli/json?ts=${Date.now()}`);
+    cachedData = data;
+    console.log('✓ 成功从 PyPI 获取数据');
+
+    // 显示版本信息
+    const version = cachedData.info.version;
+    console.log('版本号:', version);
+
+    const file = cachedData.urls.find(f => f.url.includes('win_amd64') && f.url.endsWith('.whl'));
+    console.log('找到的文件:', file ? file.filename : '未找到');
+
+    if (file && file.upload_time_iso_8601) {
+      const uploadDate = new Date(file.upload_time_iso_8601);
+      const formattedDate = uploadDate.toLocaleDateString('zh-CN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).replace(/\//g, '/');
+      document.getElementById('releaseTime').textContent = `(${formattedDate})`;
+    } else {
+      document.getElementById('releaseTime').textContent = '';
+    }
+
+    document.getElementById('status').textContent = '准备下载...';
+  } catch (err) {
+    console.error('获取版本信息失败:', err);
+    document.getElementById('status').textContent = '⚠️ 无法获取版本信息，请切换网络环境';
+    document.getElementById('releaseTime').textContent = '';
+    cachedData = null;
+  }
+}
+
+// ✅ 下载带进度条
+async function downloadWithProgress(url, filename) {
+  const status = document.getElementById('status');
+  const progressBar = document.getElementById('progressBar');
+  status.textContent = '开始下载...';
+  progressBar.style.width = '0%';
+
+  const resp = await fetch(url);
+  if (!resp.ok) throw new Error('下载失败');
+
+  const contentLength = resp.headers.get('Content-Length');
+  const total = contentLength ? parseInt(contentLength, 10) : 0;
+
+  const reader = resp.body.getReader();
+  const chunks = [];
+  let received = 0;
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    chunks.push(value);
+    received += value.length;
+    if (total) {
+      const percent = ((received / total) * 100).toFixed(1);
+      status.textContent = `下载中：${percent}%`;
+      progressBar.style.width = `${percent}%`;
+    } else {
+      status.textContent = `下载中：${(received / 1024).toFixed(1)} KB`;
+    }
+  }
+
+  const blob = new Blob(chunks);
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+
+  status.textContent = '下载完成！';
+  progressBar.style.width = '100%';
+}
+
+// ✅ Windows 下载按钮
+async function downloadWinLatest() {
+  // 检查是否有缓存数据
+  if (!cachedData) {
+    alert('无法获取版本信息，请确保网络可以访问 PyPI (pypi.org)');
+    return;
+  }
+
+  try {
+    // 找 Windows amd64 wheel
+    const file = cachedData.urls.find(f => f.url.includes('win_amd64') && f.url.endsWith('.whl'));
+    if (!file) {
+      alert('未找到 Windows wheel 文件');
+      return;
+    }
+
+    const version = cachedData.info.version;
+    const filename = `autowzry-cli-${version}.zip`;
+    const downloadUrl = file.url;
+
+    console.log('开始下载:', downloadUrl);
+    await downloadWithProgress(downloadUrl, filename);
+  } catch (err) {
+    console.error('下载失败:', err);
+    alert('下载出错，请检查网络连接');
+  }
+}
+
+// ✅ Linux/macOS 源码下载（固定 URL）
+function downloadSrc() {
+  window.open("https://github.com/cndaqiang/autowzry/tree/dev", "_blank");
+}
+
+// ✅ 教程跳转
+function openTutorial1() {
+  window.open("https://cndaqiang.github.io/wzry.doc/guide/install/", "_blank");
+}
+function openTutorial2() {
+  window.open("https://cndaqiang.github.io/wzry.doc/guide/pyinstall/", "_blank");
+}
+
+// 绑定按钮
+document.getElementById('downloadWin').addEventListener('click', downloadWinLatest);
+document.getElementById('downloadSrc').addEventListener('click', downloadSrc);
+document.getElementById('tutorial1').addEventListener('click', openTutorial1);
+document.getElementById('tutorial2').addEventListener('click', openTutorial2);
+
+// 页面加载时获取版本信息
+fetchVersionInfo();
+</script>
+
+<footer>
+  <p>Copyright © 2025 AUTOWZRY</p>
+</footer>
+
+</body>
+</html>

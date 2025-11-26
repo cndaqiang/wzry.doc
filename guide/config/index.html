@@ -1,0 +1,1816 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="description" content="配置文件 - autowzry基于airtest-mobileauto开发，为免费项目，仅供研究与学习用途。">
+        
+      
+        <meta name="author" content="cndaqiang">
+      
+      
+        <link rel="canonical" href="https://autowzry.pages.dev/guide/config/">
+      
+      
+        <link rel="prev" href="../install/">
+      
+      
+        <link rel="next" href="../file/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../wzry.favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>配置文件 - 王者荣耀自动化</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#配置文件" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="王者荣耀自动化" class="md-header__button md-logo" aria-label="王者荣耀自动化" data-md-component="logo">
+      
+  <img src="../../wzry.favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">AUTOWZRY
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              配置文件
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cndaqiang/autowzry" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AUTOWZRY
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  <script>
+  
+  // 如果您介意被统计, 请访问: blockedDomains
+  
+  // 检查 blockedDomains 和 allowDomains 是否定义
+  const blockedDomains = ["127.0.0.1", "wzry-doc.serv00.net"];
+  const allowDomains = ["autowzry.pages.dev", "wzrydoc.readthedocs.io", "cndaqiang.github.io", "wzry-doc.pages.dev"];
+
+
+  // 将当前域名加入到 allowDomains
+  if (allowDomains.length === 0) {
+    allowDomains.push(window.location.hostname);
+  }
+
+  // 定义检查黑名单和白名单的函数
+  function isDomainAllowed() {
+    return !blockedDomains.includes(window.location.hostname) && allowDomains.includes(window.location.hostname);
+  }
+
+
+  // Google Analytics 统计
+  
+  function loadGoogleAnalytics() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-FLH4L3Q02F";
+    document.head.appendChild(script);
+
+    // Google Analytics 配置
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FLH4L3Q02F');
+  }
+  
+
+  // Baidu Tongji 统计
+  
+  function loadBaiduTongji() {
+    var _hmt = _hmt || [];
+    (function () {
+      const script = document.createElement("script");
+      script.src = "//hm.baidu.com/hm.js?76d0fc6b8ffd3901ec51e8bece995b22";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(script, s);
+    })();
+  }
+  
+
+  // Umami 统计
+  
+  function loadUmami() {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '//cloud.umami.is/script.js';
+    script.setAttribute('data-website-id', '1d2518ba-011c-47f7-bf3d-c2454778ef02');
+    document.head.appendChild(script);
+  }
+  
+
+  // 如果当前域名允许加载统计脚本，按需调用各个统计函数
+  if (isDomainAllowed()) {
+     loadGoogleAnalytics(); 
+     loadBaiduTongji(); 
+     loadUmami(); 
+  }
+</script>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="王者荣耀自动化" class="md-nav__button md-logo" aria-label="王者荣耀自动化" data-md-component="logo">
+      
+  <img src="../../wzry.favicon.png" alt="logo">
+
+    </a>
+    王者荣耀自动化
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cndaqiang/autowzry" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AUTOWZRY
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安装运行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    配置文件
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    配置文件
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#配置文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#参数解释" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数解释
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参数解释">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基础参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础参数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#单排账户示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      单排账户示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#双排账户示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      双排账户示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#多账户不组队" class="md-nav__link">
+    <span class="md-ellipsis">
+      多账户不组队
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#调试参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#模拟器参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      模拟器参数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模拟器参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模拟器配置示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      模拟器配置示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mynode与instance的区别" class="md-nav__link">
+    <span class="md-ellipsis">
+      mynode与Instance的区别
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      docker参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iphoneipad参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iphone/Ipad参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    功能文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qa/qa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒更新日志
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://cndaqiang.github.io/autowzry-agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    强化学习
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    杂七杂八
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            杂七杂八
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pyinstall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    源码运行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    便携开发环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://youtu.be/Uj2NE6XjYSc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    视频教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/cndaqiang/autowzry/issues" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    issues列表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duizhanmoshi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    切换对战模式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../libao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    开启礼包功能
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shuliandu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    循环选择分路英雄
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zudui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    组队教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tupiangengxin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    替换图片资源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upfig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    更新资源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/iosapp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒🔥在windows上刷ios区账户
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/zhanling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒战令经验最大化✈️
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/jinbi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒刷金币
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/shuliandu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒刷英雄熟练度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/saijirenwu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒刷赛季皮肤赛季任务
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/xinshou/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    零氪不肝的王者新手必坑指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒什么时间执行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒多账户使用同一个控制文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/duizhanmoshi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒我在用的控制文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/moniqi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒模拟器推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/mobile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒控制安卓手机或任意模拟器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒在🐳docker内干农活
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/moniqidocker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    docker安卓模拟器不推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/termux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒不使用电脑如何运行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/dingshi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒定时执行脚本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/otherdir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒在任意目录运行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exp/pypi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔒镜像下载autowzry源码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#配置文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#参数解释" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数解释
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参数解释">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基础参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础参数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#单排账户示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      单排账户示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#双排账户示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      双排账户示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#多账户不组队" class="md-nav__link">
+    <span class="md-ellipsis">
+      多账户不组队
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#调试参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#模拟器参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      模拟器参数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模拟器参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模拟器配置示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      模拟器配置示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mynode与instance的区别" class="md-nav__link">
+    <span class="md-ellipsis">
+      mynode与Instance的区别
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      docker参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iphoneipad参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iphone/Ipad参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>配置文件</h1>
+
+<div><h2 id="配置文件">配置文件<a class="headerlink" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>最新版程序在未指定配置文件运行时, 会自动生成<code>config.example.yaml</code>, 你可以直接修改此文件.</strong></li>
+<li><strong>使用配置文件运行程序的命令为: <code>autowzry config.example.yaml</code></strong></li>
+<li>只要是UTF8编码的yaml文件都可, 如<code>xxx.yaml</code>, 则<code>autowzry xxx.yaml</code></li>
+</ul>
+<h2 id="参数解释">参数解释<a class="headerlink" href="#%E5%8F%82%E6%95%B0%E8%A7%A3%E9%87%8A" title="Permanent link">¶</a></h2>
+<h3 id="基础参数">基础参数<a class="headerlink" href="#%E5%9F%BA%E7%A1%80%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>默认值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>totalnode</td>
+<td>1</td>
+<td>本脚本一共控制<code>totalnode</code>个账户. <strong>组队多排时需要设置</strong>, 如双排时设置<code>totalnode: 2</code></td>
+</tr>
+<tr>
+<td>mynode</td>
+<td>0</td>
+<td>本脚本控制的<strong>账户编号</strong>.<strong>多排组队时不用设置</strong>,由程序自动生成,<code>0,1,2,...,totalnode-1</code>.<br><strong>单排时可以手动设置为任意值</strong>,如<code>mynode: 0</code>. <br>当需要刷很多账户时, 并且这些账户不用组队, 每个账户的配置文件中<code>mynode</code>设置为不同的值.</td>
+</tr>
+<tr>
+<td>multiprocessing</td>
+<td>False</td>
+<td>自动化多进程组队.<strong>多排组队时一定要设置为<code>True</code></strong>.</td>
+</tr>
+<tr>
+<td>LINK_dict</td>
+<td>None</td>
+<td>每个账户所在的模拟器ADB地址, <strong>所有账户的ADB地址都要配置</strong>. <br> 通常为<code>mynode: "Android:///ip:端口"</code>. <br> 如果是USB连接的手机或者adb查看到模拟器的主板编号为<code>emulator-5554</code>, 则配置信息为<code>mynode: "Android:///emulator-5554"</code>. <br> 具体的<code>ip:端口</code>可以通过诊断模拟器或者联网搜索等途径获取,如<a href="../../exp/moniqi/">MuMu模拟器/BlueStack/LDPlayer/腾讯手游助手</a><br>可以使用<a href="https://github.com/viarotel-org/escrcpy">Escrcpy</a>/<a href="https://airtest.netease.com/">AirtestIDE</a>/搞机工具箱等安卓控制程序测试<code>ip:端口</code>是否可以连接.<br>若始终无法连接,见<a href="../../qa/qa/#%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E6%A8%A1%E6%8B%9F%E5%99%A8">常见问题</a></td>
+</tr>
+<tr>
+<td>logfile</td>
+<td>None</td>
+<td>将每个账户的脚本执行日志输出到指定文件,例如<code>mynode:"restul.mynode.txt"</code>.<strong>推荐设置</strong>.在脚本总是报错时,可以开启此参数,将日志文件上传到<a href="https://github.com/cndaqiang/autowzry/issues">github</a>提问.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="单排账户示例">单排账户示例<a class="headerlink" href="#%E5%8D%95%E6%8E%92%E8%B4%A6%E6%88%B7%E7%A4%BA%E4%BE%8B" title="Permanent link">¶</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">mynode</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">LINK_dict</span><span class="o">:</span>
+<span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="n">Android</span><span class="o">:///</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">5555</span>
+<span class="n">logfile</span><span class="o">:</span>
+<span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="na">txt</span>
+</code></pre></div>
+
+<h4 id="双排账户示例">双排账户示例<a class="headerlink" href="#%E5%8F%8C%E6%8E%92%E8%B4%A6%E6%88%B7%E7%A4%BA%E4%BE%8B" title="Permanent link">¶</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span> 多进程时,多进程的数目
+totalnode: 2
+<span class="gh">#</span> 多进程配置
+multiprocessing: True
+<span class="gh">#</span> 所有账户的ADB地址
+LINK_dict:
+  0: Android:///127.0.0.1:5555
+  1: Android:///127.0.0.1:5557
+logfile:
+  0: result.0.txt
+  1: result.1.txt
+</code></pre></div>
+
+<p>只用打开一个<code>cmd/Powershell</code>, 进入软件目录, 使用配置文件启动</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Microsoft</span><span class="w"> </span><span class="n">Windows</span><span class="w"> </span><span class="p">[</span><span class="err">版本</span><span class="w"> </span><span class="mf">10.0</span><span class="o">.</span><span class="mf">26100.3194</span><span class="p">]</span>
+<span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="n">Microsoft</span><span class="w"> </span><span class="n">Corporation</span><span class="err">。保留所有权利。</span>
+
+<span class="n">D</span><span class="p">:</span>\<span class="n">Desktop</span><span class="o">&gt;</span><span class="n">cd</span><span class="w"> </span><span class="n">D</span><span class="p">:</span>\<span class="n">Download</span>\<span class="n">autowzry251009b2</span>
+
+<span class="n">D</span><span class="p">:</span>\<span class="n">Download</span>\<span class="n">autowzry251009b2</span><span class="o">&gt;</span><span class="n">autowzry</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">yaml</span>
+</code></pre></div>
+
+<h4 id="多账户不组队">多账户不组队<a class="headerlink" href="#%E5%A4%9A%E8%B4%A6%E6%88%B7%E4%B8%8D%E7%BB%84%E9%98%9F" title="Permanent link">¶</a></h4>
+<p>每个账户一个配置文件,如账户0</p>
+<div class="codehilite"><pre><span></span><code><span class="n">mynode</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">LINK_dict</span><span class="o">:</span>
+<span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="n">Android</span><span class="o">:///</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">5555</span>
+<span class="n">logfile</span><span class="o">:</span>
+<span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="na">txt</span>
+</code></pre></div>
+
+<p>账户1</p>
+<div class="codehilite"><pre><span></span><code><span class="n">mynode</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">LINK_dict</span><span class="o">:</span>
+<span class="w">  </span><span class="mi">1</span><span class="o">:</span><span class="w"> </span><span class="n">Android</span><span class="o">:///</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">5557</span>
+<span class="n">logfile</span><span class="o">:</span>
+<span class="w">  </span><span class="mi">1</span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="na">txt</span>
+</code></pre></div>
+
+<p>为每个账户单独打开一个<code>cmd/Powershell</code>,均执行<code>cd 代码目录</code>的命令, 然后使用各自账户的配置文件启动</p>
+<div class="codehilite"><pre><span></span><code>autowzry config.0.yaml
+autowzry config.1.yaml
+</code></pre></div>
+
+<h3 id="调试参数">调试参数<a class="headerlink" href="#%E8%B0%83%E8%AF%95%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
+<p><strong>调试参数通常无需设置</strong>, 只有在调试代码或者有特定需求时才需要设置</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>默认值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefix</td>
+<td>None</td>
+<td>程序标志, <strong>推荐设置</strong>为<code>autowzry</code>, 不设置也没问题.</td>
+</tr>
+<tr>
+<td>tmpdir</td>
+<td><code>系统临时目录/airtest_mobileauto/prefix</code></td>
+<td>airtest_mobileauto运行过程中用于同步等功能的临时文件存储目录,自动生成, <strong>通常无需设置</strong>.  如果在电脑上<strong>同时运行了很多脚本</strong>,建议为不同的脚本配置不同的<code>prefix</code>自动生成<code>tmpdir</code>. 万一(不大可能)可以单排,多排总是同步出错,可以清空<code>C:\Users\用户名\AppData\Local\Temp\airtest_mobileauto</code>中的文件再执行脚本.</td>
+</tr>
+<tr>
+<td>outputnode</td>
+<td>None</td>
+<td>只输出账户编号mynode等于outputnode的日志,<strong>无需设置</strong>.</td>
+</tr>
+<tr>
+<td>logger_level</td>
+<td>1</td>
+<td>日志等级,<code>0 DEBUG, 1 INFO, 2 WARNING, 3 ERROR, 4 CRITICAL</code>,<strong>无需设置</strong>.</td>
+</tr>
+<tr>
+<td>figdir</td>
+<td><code>assets</code></td>
+<td>优先从<code>figdir</code>的目录查找图片资源, 找不到则采用默认的图片, <strong>通常无需设置</strong>. 适合于二次开发/调试/游戏更新时, 覆盖掉代码自带的图片资源.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="模拟器参数">模拟器参数<a class="headerlink" href="#%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>模拟器参数可以不设置</strong>.</li>
+<li>设置后,脚本支持控制模拟器的开关机,老板键自动隐藏模拟器等功能.</li>
+<li>一个配置文件中只能配置一种模拟器.仅需关注自己使用的模拟器参数.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>默认值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LDPlayerdir</td>
+<td>None</td>
+<td>雷电模拟器控制程序<code>ldconsole.exe</code>所在的文件夹,例如<code>D:\GreenSoft\雷电模拟器.9.0.65.0.x64.去广告绿色版\LDPlayer</code></td>
+</tr>
+<tr>
+<td>MuMudir</td>
+<td>None</td>
+<td>MuMu模拟器控制程序<code>MuMuManager.exe</code>所在的文件夹,例如<code>D:\Program Files\Netease\MuMu Player 12\shell</code>,新版本的MuMu文件夹为<code>D:\Program Files\Netease\MuMu\nx_main</code></td>
+</tr>
+<tr>
+<td>BlueStackdir</td>
+<td>None</td>
+<td>BlueStack模拟器控制程序<code>HD-Player.exe</code>所在的文件夹,例如<code>C:\Program Files\BlueStacks_nxt</code></td>
+</tr>
+<tr>
+<td>LDPlayer_Instance</td>
+<td>{mynode:"instance"}</td>
+<td>每个账户所在的模拟器在雷电多开管理器内部的<strong>模拟器实例(instance)编号</strong>, 用于启动、关闭mynode账户所在的模拟器实例. <a href="#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB">mynode与instance的区别</a>.</td>
+</tr>
+<tr>
+<td>MuMu_Instance</td>
+<td>{mynode:"instance"}</td>
+<td>每个账户所在的模拟器在MuMu多开管理器内部的<strong>模拟器实例编号</strong>, 用于启动、关闭mynode账户所在的模拟器实例.<a href="#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB">mynode与instance的区别</a>.</td>
+</tr>
+<tr>
+<td>BlueStack_Instance</td>
+<td>{mynode:"Nougat32_instance"}</td>
+<td>每个账户所在的模拟器在BlueStacks多开管理器内部的<strong>模拟器实例编号</strong>, 用于启动mynode账户所在的BlueStacks模拟器实例.<a href="#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB">mynode与instance的区别</a>.</td>
+</tr>
+<tr>
+<td>BlueStack_Windows</td>
+<td>{mynode:"BlueStacks App Player instance"}</td>
+<td>BlueStacks没有提供关闭模拟器的接口,需要使用windows的命令关闭模拟器实例的窗口名称. <strong>建议在多开管理器里修改为简短的名字</strong>,例如<code>BlueStacks0</code>,<code>BlueStacks1</code>等</td>
+</tr>
+<tr>
+<td>start_device</td>
+<td>None</td>
+<td>自定义安卓设备的启动命令. 本脚本内置了<a href="../../exp/moniqi/">BlueStack/LDPlayer/MuMu模拟器</a>的启动指令, 使用<code>xxx_Instance</code>控制模拟器的启动关闭. 如果你使用其他模拟器或者多个模拟器混合使用或者在vmware等虚拟机中安装的安卓系统, 可以利用<code>start_device</code>自定义每个安卓设备的启动命令. 例如<a href="../../exp/iosapp/#%E8%85%BE%E8%AE%AF%E6%89%8B%E6%B8%B8%E5%8A%A9%E6%89%8B%E5%92%8Cmumu%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96%E5%90%AF%E5%8A%A8%E5%92%8C%E6%8E%A7%E5%88%B6">腾讯手游助手和MuMu的组队配置</a></td>
+</tr>
+<tr>
+<td>stop_device</td>
+<td>None</td>
+<td>自定义安卓设备的关闭命令.同<code>start_device</code></td>
+</tr>
+<tr>
+<td>BossKey</td>
+<td>内置</td>
+<td>自定义安卓设备的老板键,<strong>无需设置</strong>,airtest_mobileauto内部已经配置了BlueStack/LDPlayer/MuMu模拟器默认的老板键.本脚本启动模拟器后,会自动隐藏模拟器窗口.若自定义了老板键或有更多需求,自行查看airtest_mobileauto的代码.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="模拟器配置示例">模拟器配置示例<a class="headerlink" href="#%E6%A8%A1%E6%8B%9F%E5%99%A8%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B" title="Permanent link">¶</a></h4>
+<details class="warning">
+<summary>点击展开:雷电模拟器配置示例</summary>
+<p>图中模拟器的Instance被鼠标选中，其对应的配置文件如下
+</p><pre><code>
+mynode: 0
+LINK_dict:
+  0: Android:///127.0.0.1:5555
+LDPlayerdir: D:\GreenSoft\雷电模拟器.9.0.65.0.x64.去广告绿色版\LDPlayer
+LDPlayer_Instance:
+    0: "0"
+</code></pre>
+<img alt="雷电模拟器配置示例" src="../../fig/ld_instance.png">
+</details>
+<details class="note">
+<summary>点击展开:MuMu模拟器配置示例</summary>
+<p>图中模拟器的Instance被鼠标选中，其对应的配置文件如下
+</p><pre><code>
+mynode: 0
+LINK_dict:
+  0: Android:///127.0.0.1:16384
+MuMudir: D:\Program Files\Netease\MuMu Player 12\shell
+MuMu_Instance:
+    0: "0"
+</code></pre>
+<img alt="MuMu模拟器配置示例" src="../../fig/mumu_instance.png">
+</details>
+<details class="question">
+<summary>点击展开:BlueStacks模拟器配置示例</summary>
+<p>图中模拟器的Instance被鼠标选中，其对应的配置文件如下，<strong>注意BlueStacks模拟器要额外提供模拟器的窗口名字<code>BlueStack_Windows</code></strong>
+</p><pre><code>
+mynode: 1
+LINK_dict:
+  1: Android:///127.0.0.1:5565
+BlueStackdir: C:\Program Files\BlueStacks_nxt
+BlueStack_Instance:
+    1: "Pie64_1"
+BlueStack_Windows:
+    1: BlueStacks1
+</code></pre>
+<img alt="BlueStacks模拟器配置示例" src="../../fig/blue_instance.png">
+</details>
+<details class="success">
+<summary>点解展开:自定义安卓启动配置(腾讯手游助手和MuMu混用)示例</summary>
+<p>注意配置文件中的<strong>单引号</strong>和<strong>双引号</strong>, 将自定义的开启关闭命令填写到<code>start_device</code>和<code>stop_device</code>. <br>
+mynode = 0 是腾讯手游助手的模拟器,ios区大号<br>
+mynode = 1 是mumu模拟器,安卓区小号 <br>
+腾讯手游助手暂未找到关闭命令, 可以不配置<br>
+<strong>腾讯手游助手的启动需要管理员权限</strong>,所以要用管理员权限执行python<br>
+2025-10测试发现, 下面的命令<code>AndroidEmulator.exe</code>启动失败, 采用<code>AndroidEmulatorEx.exe</code>成功, 更多见<a href="../../exp/iosapp/">使用32位腾讯手游助手刷ios区的日活</a>,如果以后腾讯手游助手更新了, 你要自行搜索启动和关闭命令进行修改.
+</p><pre><code>
+multiprocessing: True
+totalnode: 2
+LINK_dict:
+    0: Android:///127.0.0.1:5555
+    1: Android:///127.0.0.1:16384
+start_device:
+    0: '"D:\Program Files\TxGameAssistant\ui\AndroidEmulator.exe"  -vm 100'
+    1: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 launch'
+stop_device:
+    1: '"D:\Program Files\Netease\MuMu Player 12\shell\MuMuManager.exe" control -v 0 shutdown'
+</code></pre>
+<img alt="腾讯mumu自动化启动" src="../../fig/txmumuauto.png">
+</details>
+<h4 id="mynode与instance的区别">mynode与Instance的区别<a class="headerlink" href="#mynode%E4%B8%8Einstance%E7%9A%84%E5%8C%BA%E5%88%AB" title="Permanent link">¶</a></h4>
+<ul>
+<li>账户编号<strong>mynode是游戏账户的编号</strong>, 一定是整数, <code>mynode=0,1,2,...,totalnode-1</code>. 脚本根据mynode控制每个游戏账号的行为. 例如<code>LINK_dict[mynode]</code>是模拟器的ADB地址,<code>logfile[mynode]</code>是日志文件,<code>xxx_Instance[mynode]</code>是模拟器的实例编号,<code>WZRY.mynode.运行模式.txt</code>控制mynode账户的对战礼包等模式. 单排时由用户在配置文件中设置<code>mynode: N</code>. 组队时默认从0开始.</li>
+<li>模拟器实例编号<strong>Instance是模拟器的多开管理器内部的编号</strong>. 不同模拟器的编号规则不同, 可能是整数<code>0,1,2</code>,也可能是字符串<code>Pie64,Pie64_1,Pie64_2</code>等. 需要用户自己打开模拟器的设置/创建快捷方式等操作进行查看.</li>
+<li>mynode和Instance之间的映射关系通过<code>xxx_Instance[mynode]=Instance</code>字典指定</li>
+<li><code>xxx_Instance[mynode]</code>是为了控制账户(mynode)所在模拟器(Instance)的启动、关闭、隐藏等操作.</li>
+<li><strong><code>mynode=0</code>的账户必须是多开组队的大号(开房间的账户).但是<code>mynode=0</code>的账户可以使用任意一台模拟器</strong>
+    <br>例如,下面的配置中,大号(<code>mynode=0</code>)使用第1台模拟器(<code>Pie64_1</code>),小号(<code>mynode=1</code>)使用第0台模拟器(<code>Pie64</code>)
+    <pre><code>
+totalnode: 2
+multiprocessing: True
+BlueStackdir: C:\Program Files\BlueStacks_nxt
+BlueStack_Instance:
+    0: Pie64_1
+    1: Pie64
+BlueStack_Windows:
+    0: BlueStacks1
+    1: BlueStacks0
+LINK_dict:
+    0: Android:///127.0.0.1:5565
+    1: Android:///127.0.0.1:5555
+    </code></pre>
+    <img alt="mynode与Instance随意组合" src="../../fig/blue_win.png"></li>
+</ul>
+<h3 id="docker参数">docker参数<a class="headerlink" href="#docker%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
+<ul>
+<li>本脚本支持控制运行在docker中的安卓模拟器<a href="https://github.com/remote-android/">remote-android</a>.</li>
+<li>支持x86、arm服务器, openwrt路由器等环境运行安卓模拟器.</li>
+<li>这是我的完整安装和使用过程: <a href="../../exp/docker/">在甲骨文免费服务器上安装redroid并配置WZRY</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>默认值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dockercontain</td>
+<td><code>{mynode: "androidcontainInstance"}</code></td>
+<td>每个账户所在的容器的容器名称, 用于启动、关闭mynode账户所在的容器.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">remote-android默认开启了root,体验服检测root,会封号体验服账户,请勿在docker中安装体验服.</p>
+</div>
+<p>三个账户组队示例</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span> 节点配置
+totalnode: 3
+multiprocessing: True
+LINK_dict:
+    0: "Android:///127.0.0.1:5555"
+    1: "Android:///127.0.0.1:5565"
+    2: "Android:///127.0.0.1:5575"
+dockercontain:
+    0: "androidcontain0"
+    1: "androidcontain1"
+    2: "androidcontain2"
+</code></pre></div>
+
+<h3 id="iphoneipad参数">Iphone/Ipad参数<a class="headerlink" href="#iphoneipad%E5%8F%82%E6%95%B0" title="Permanent link">¶</a></h3>
+<ul>
+<li>不建议使用Iphone/Ipad, 可以<a href="../../exp/iosapp/">使用32位腾讯手游助手刷ios区的日活</a></li>
+<li>Iphone/Ipad的配置极其复杂, 见<a href="../../qa/qa/#%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8">苹果手机怎么使用</a></li>
+<li>配置参数基本和安卓模拟器的参数相同, 注意<strong>Iphone/Ipad的底层是ios系统, 所以LINK_dict中为<code>ios</code></strong></li>
+<li><strong>腾讯手游助手底层是安卓模拟器</strong>, 使用腾讯手游助手刷ios区时,<strong>LINK_dict仍然是<code>Android</code></strong>, 使用方法同上面的安卓模拟器.</li>
+</ul>
+<p>Android和Iphone/Ipad的配置示例为</p>
+<div class="codehilite"><pre><span></span><code><span class="n">totalnode</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="n">LINK_dict</span><span class="o">:</span>
+<span class="w">  </span><span class="mi">0</span><span class="o">:</span><span class="w"> </span><span class="s2">"ios:///http://169.254.148.222:8100"</span>
+<span class="w">  </span><span class="mi">1</span><span class="o">:</span><span class="w"> </span><span class="s2">"Android:///127.0.0.1:5565"</span>
+</code></pre></div></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 AUTOWZRY
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://cndaqiang.github.io/wzry.doc/" target="_blank" rel="noopener" title="gitpages" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4 4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://autowzry.pages.dev/" target="_blank" rel="noopener" title="untagged" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M144 144v48h160v-48c0-44.2-35.8-80-80-80s-80 35.8-80 80m-64 48v-48C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64v192c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/cndaqiang" target="_blank" rel="noopener" title="author" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/cndaqiang/autowzry" target="_blank" rel="noopener" title="cndaqiang/autowzry" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://cndaqiang.github.io/wzry.doc/feed_rss_updated.xml" target="_blank" rel="noopener" title="rss" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm32 104c0-13.3 10.7-24 24-24 137 0 248 111 248 248 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200-13.3 0-24-10.7-24-24m0 96c0-13.3 10.7-24 24-24 83.9 0 152 68.1 152 152 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104-13.3 0-24-10.7-24-24m0 120a32 32 0 1 1 64 0 32 32 0 1 1-64 0"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://cloud.umami.is/share/YHbP7dG7wOyJTdBg/wzrydoc.readthedocs.io" target="_blank" rel="noopener" title="visitormap" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64v336c0 44.2 35.8 80 80 80h400c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16zm96 288h288c17.7 0 32-14.3 32-32v-68.2c0-7.6-2.7-15-7.7-20.8l-65.8-76.8c-12.1-14.2-33.7-15-46.9-1.8l-21 21c-10 10-26.4 9.2-35.4-1.6l-39.2-47c-12.6-15.1-35.7-15.4-48.7-.6L135.9 215c-5.1 5.8-7.9 13.3-7.9 21.1v84c0 17.7 14.3 32 32 32z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.copy", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
